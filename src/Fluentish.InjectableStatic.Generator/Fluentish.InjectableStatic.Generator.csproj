@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<OutputType>Library</OutputType>
+		<LangVersion>Latest</LangVersion>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<WarningsAsErrors>enable</WarningsAsErrors>
+		<IsPackable>true</IsPackable>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
+		<IncludeBuildOutput>false</IncludeBuildOutput>
+
+		<Title>Fluentish.InjectableStatic</Title>
+		<RepositoryUrl>https://github.com/Filip-Drabinski/Fluentish.InjectableStatic</RepositoryUrl>
+		<VersionPrefix>0.1.0</VersionPrefix>
+		<Description>Generate injectable wrappers for static classes</Description>
+		<PackageProjectUrl>https://github.com/Filip-Drabinski/Fluentish.InjectableStatic</PackageProjectUrl>
+		<RepositoryType>
+		</RepositoryType>
+		<PackageTags>dependency-injection, di, IIncrementalGenerator, wrapper, injectable</PackageTags>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="$(TargetDir)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<None Include=".\..\..\README.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.9.2"  PrivateAssets="all"/>
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<WarningsAsErrors>enable</WarningsAsErrors>
+		<IsPackable>false</IsPackable>
+		<IsTestProject>true</IsTestProject>
+
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>disable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="_Verifier\**" />
+		<EmbeddedResource Remove="_Verifier\**" />
+		<None Remove="_Verifier\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.13.0" />
+		<PackageReference Include="Verify" Version="26.2.0" />
+		<PackageReference Include="Verify.SourceGenerators" Version="2.4.0" />
+		<PackageReference Include="Verify.Xunit" Version="26.2.0" />
+		<PackageReference Include="xunit.runner.visualstudio" Version="2.8.2">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="xunit" Version="2.9.0" />
+		<PackageReference Include="coverlet.collector" Version="6.0.2">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Fluentish.InjectableStatic.Generator\Fluentish.InjectableStatic.Generator.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="_Verifier\EventReturnTypeTests\" />
+	  <Folder Include="_Verifier\GeneratorDebugging\_Playground\" />
+	  <Folder Include="_Verifier\MethodReturnTests\" />
+	</ItemGroup>
+</Project>
