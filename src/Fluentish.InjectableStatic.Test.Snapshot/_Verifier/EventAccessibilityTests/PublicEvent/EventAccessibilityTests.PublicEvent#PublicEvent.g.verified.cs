@@ -5,7 +5,7 @@ namespace Fluentish.Injectable.EventAccessibilityTests
 {
     /// <inheritdoc cref="global::EventAccessibilityTests.PublicEvent"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class PublicEventService: IPublicEvent
+    public class PublicEventService : IPublicEvent
     {
         /// <inheritdoc cref="global::EventAccessibilityTests.PublicEvent.Test"/>
         public event global::System.EventHandler Test

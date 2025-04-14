@@ -6,7 +6,7 @@ namespace Fluentish.Injectable.System
 {
     /// <inheritdoc cref="global::System.Console"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class ConsoleService: IConsole
+    public class ConsoleService : IConsole
     {
         /// <inheritdoc cref="global::System.Console.ReadKey"/>
         [global::System.Diagnostics.DebuggerStepThrough]

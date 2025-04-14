@@ -6,7 +6,7 @@ namespace Fluentish.Injectable.MethodReturnTests
 {
     /// <inheritdoc cref="global::MethodReturnTests.NullableReferenceType"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class NullableReferenceTypeService: INullableReferenceType
+    public class NullableReferenceTypeService : INullableReferenceType
     {
         /// <inheritdoc cref="global::MethodReturnTests.NullableReferenceType.Test"/>
         [global::System.Diagnostics.DebuggerStepThrough]

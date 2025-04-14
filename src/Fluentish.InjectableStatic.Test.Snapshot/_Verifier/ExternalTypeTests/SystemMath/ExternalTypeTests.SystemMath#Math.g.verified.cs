@@ -5,7 +5,7 @@ namespace Fluentish.Injectable.System
 {
     /// <inheritdoc cref="global::System.Math"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class MathService: IMath
+    public class MathService : IMath
     {
         /// <inheritdoc cref="global::System.Math.E"/>
         public double E

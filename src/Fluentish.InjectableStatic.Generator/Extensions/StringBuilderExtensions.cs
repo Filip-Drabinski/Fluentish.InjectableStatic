@@ -8,6 +8,17 @@ namespace Fluentish.InjectableStatic.Generator.Extensions
 {
     internal static class StringBuilderExtensions
     {
+        public static StringBuilder AppendIf(this StringBuilder builder, bool condition, string value)
+        {
+            if (!condition)
+            {
+                return builder;
+            }
+
+            builder.Append(value);
+
+            return builder;
+        }
 
         public static StringBuilder AppendIndentation(this StringBuilder builder, int count = 1)
         {

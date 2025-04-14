@@ -5,7 +5,7 @@ namespace Fluentish.Injectable.MethodReturnTests
 {
     /// <inheritdoc cref="global::MethodReturnTests.NestedGeneric"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class NestedGenericService: INestedGeneric
+    public class NestedGenericService : INestedGeneric
     {
         /// <inheritdoc cref="global::MethodReturnTests.NestedGeneric.Test"/>
         [global::System.Diagnostics.DebuggerStepThrough]

@@ -1,6 +1,7 @@
 ﻿using Fluentish.InjectableStatic.Generator.Attributes;
 using Fluentish.InjectableStatic.Generator.Extensions;
 using Microsoft.CodeAnalysis;
+using System;
 using System.Linq;
 
 namespace Fluentish.InjectableStatic.Generator.ValueProviders
@@ -27,17 +28,25 @@ namespace Fluentish.InjectableStatic.Generator.ValueProviders
                     if (injectableStaticConfigurationAttribute is null)
                     {
                         return new InjectableStaticConfiguration(
-                            @namespace: null,
-                            endLine: newLineSymbol
+                            endLine: newLineSymbol,
+                            namespaceMode: NamespaceMode.Prefix,
+                            @namespace: null
                         );
                     }
+                    var targetTypeArgument = injectableStaticConfigurationAttribute.NamedArguments.FirstOrDefault(x=>x.Key == "Namespace");
+                    var namespaceValue = targetTypeArgument.Key is not null 
+                        ? targetTypeArgument.Value.Value as string
+                    : null;
 
-                    var targetTypeArgument = injectableStaticConfigurationAttribute.ConstructorArguments.First();
-                    var namespacePrefixValue = targetTypeArgument.Value!.ToString();
+                    var namespaceModeArgument = injectableStaticConfigurationAttribute.NamedArguments.FirstOrDefault(x => x.Key == "NamespaceMode");
+                    var namespaceMode = namespaceModeArgument.Key is not null && !namespaceModeArgument.Value.IsNull
+                        ? (NamespaceMode)namespaceModeArgument.Value.Value!
+                        : NamespaceMode.Prefix;
 
                     return new InjectableStaticConfiguration(
-                        namespacePrefixValue,
-                        endLine: newLineSymbol
+                        endLine: newLineSymbol,
+                        namespaceMode: namespaceMode,
+                        @namespace: namespaceValue
                     );
                 });
         }

@@ -6,7 +6,7 @@ namespace Fluentish.Injectable.System.Diagnostics
 {
     /// <inheritdoc cref="global::System.Diagnostics.Trace"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class TraceService: ITrace
+    public class TraceService : ITrace
     {
         /// <inheritdoc cref="global::System.Diagnostics.Trace.Flush"/>
         [global::System.Diagnostics.DebuggerStepThrough]

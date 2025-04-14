@@ -5,7 +5,7 @@ namespace Fluentish.Injectable.MethodReturnTests
 {
     /// <inheritdoc cref="global::MethodReturnTests.ValueType"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class ValueTypeService: IValueType
+    public class ValueTypeService : IValueType
     {
         /// <inheritdoc cref="global::MethodReturnTests.ValueType.Test"/>
         [global::System.Diagnostics.DebuggerStepThrough]

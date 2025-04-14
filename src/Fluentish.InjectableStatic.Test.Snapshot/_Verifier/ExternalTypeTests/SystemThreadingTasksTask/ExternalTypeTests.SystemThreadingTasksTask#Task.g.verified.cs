@@ -6,7 +6,7 @@ namespace Fluentish.Injectable.System.Threading.Tasks
 {
     /// <inheritdoc cref="global::System.Threading.Tasks.Task"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class TaskService: ITask
+    public class TaskService : ITask
     {
         /// <inheritdoc cref="global::System.Threading.Tasks.Task.Yield"/>
         [global::System.Diagnostics.DebuggerStepThrough]

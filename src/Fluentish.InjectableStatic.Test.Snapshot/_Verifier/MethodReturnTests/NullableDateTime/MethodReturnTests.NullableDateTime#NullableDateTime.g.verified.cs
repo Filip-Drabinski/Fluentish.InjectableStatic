@@ -6,7 +6,7 @@ namespace Fluentish.Injectable.MethodReturnTests
 {
     /// <inheritdoc cref="global::MethodReturnTests.NullableDateTime"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class NullableDateTimeService: INullableDateTime
+    public class NullableDateTimeService : INullableDateTime
     {
         /// <inheritdoc cref="global::MethodReturnTests.NullableDateTime.Test"/>
         [global::System.Diagnostics.DebuggerStepThrough]

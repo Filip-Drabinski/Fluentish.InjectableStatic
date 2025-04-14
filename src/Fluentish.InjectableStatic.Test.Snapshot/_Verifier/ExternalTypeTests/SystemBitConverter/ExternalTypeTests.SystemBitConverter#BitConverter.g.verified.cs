@@ -5,7 +5,7 @@ namespace Fluentish.Injectable.System
 {
     /// <inheritdoc cref="global::System.BitConverter"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class BitConverterService: IBitConverter
+    public class BitConverterService : IBitConverter
     {
         /// <inheritdoc cref="global::System.BitConverter.IsLittleEndian"/>
         public bool IsLittleEndian

@@ -49,26 +49,40 @@ namespace Fluentish.InjectableStatic.Generator
 
             var requireNullable = false;
             var typeFullName = classInfo.type.ToDisplayString();
-            var @namespace = classInfo.type.ContainingNamespace.ToDisplayString();
+            var @namespace = configuration.NamespaceMode == NamespaceMode.Const
+                ? string.Empty
+                : classInfo.type.ContainingNamespace.ToDisplayString();
+
+            var baseIndentation = configuration.NamespaceMode == NamespaceMode.Const ? 0 : 1;
 
             var interfaceHint = $"I{classInfo.type.Name}.g.cs";
             var interfaceBuilder = new StringBuilder()
-                .Append("#pragma warning disable").Append(configuration.EndLine)
-                .Append("namespace ").Append(configuration.Namespace).Append(@namespace).Append(configuration.EndLine)
-                .Append("{").Append(configuration.EndLine)
-                .AppendIndentation().AppendInheritdoc(classInfo.type, ref requireNullable).Append(configuration.EndLine)
-                .AppendIndentation().Append("public ").Append(isUnsafe ? "unsafe " : "").Append("interface I").Append(classInfo.type.Name).Append(configuration.EndLine)
-                .AppendIndentation().Append("{").Append(configuration.EndLine);
+                .Append("#pragma warning disable").Append(configuration.EndLine);
+            if (@namespace != string.Empty)
+            {
+                interfaceBuilder
+                    .Append("namespace ").Append(configuration.Namespace).AppendIf(configuration.NamespaceMode == NamespaceMode.Prefix, @namespace).Append(configuration.EndLine)
+                    .Append("{").Append(configuration.EndLine);
+            }
+            interfaceBuilder
+                .AppendIndentation(baseIndentation).AppendInheritdoc(classInfo.type, ref requireNullable).Append(configuration.EndLine)
+                .AppendIndentation(baseIndentation).Append("public ").Append(isUnsafe ? "unsafe " : "").Append("interface I").Append(classInfo.type.Name).Append(configuration.EndLine)
+                .AppendIndentation(baseIndentation).Append("{").Append(configuration.EndLine);
 
             var implementationHint = $"{classInfo.type.Name}.g.cs";
             var implementationBuilder = new StringBuilder()
-                .Append("#pragma warning disable").Append(configuration.EndLine)
-                .Append("namespace ").Append(configuration.Namespace).Append(@namespace).Append(configuration.EndLine)
-                .Append("{").Append(configuration.EndLine)
-                .AppendIndentation().AppendInheritdoc(classInfo.type, ref requireNullable).Append(configuration.EndLine)
-                .AppendIndentation().Append("[global::System.Diagnostics.DebuggerStepThrough]").Append(configuration.EndLine)
-                .AppendIndentation().Append("public ").Append(isUnsafe ? "unsafe " : "").Append("class ").Append(classInfo.type.Name).Append("Service").Append(": I").Append(classInfo.type.Name).Append(configuration.EndLine)
-                .AppendIndentation().Append("{").Append(configuration.EndLine);
+                .Append("#pragma warning disable").Append(configuration.EndLine);
+            if (@namespace != string.Empty)
+            {
+                implementationBuilder
+                    .Append("namespace ").Append(configuration.Namespace).AppendIf(configuration.NamespaceMode == NamespaceMode.Prefix, @namespace).Append(configuration.EndLine)
+                    .Append("{").Append(configuration.EndLine);
+            }
+            implementationBuilder
+                .AppendIndentation(baseIndentation).AppendInheritdoc(classInfo.type, ref requireNullable).Append(configuration.EndLine)
+                .AppendIndentation(baseIndentation).Append("[global::System.Diagnostics.DebuggerStepThrough]").Append(configuration.EndLine)
+                .AppendIndentation(baseIndentation).Append("public ").Append(isUnsafe ? "unsafe " : "").Append("class ").Append(classInfo.type.Name).Append("Service").Append(" : I").Append(classInfo.type.Name).Append(configuration.EndLine)
+                .AppendIndentation(baseIndentation).Append("{").Append(configuration.EndLine);
 
             var allMembers = classInfo.type.GetMembers();
 
@@ -91,19 +105,19 @@ namespace Fluentish.InjectableStatic.Generator
                 }
                 var generatedMember = false;
 
-                if (EventMemberBuilder.TryAppend(classInfo.type, memberSymbol, interfaceBuilder, implementationBuilder, configuration.EndLine, ref requireNullable, out var eventName))
+                if (EventMemberBuilder.TryAppend(classInfo.type, memberSymbol, interfaceBuilder, implementationBuilder, configuration.EndLine, ref requireNullable, out var eventName, baseIndentation))
                 {
                     generatedMember = true;
                 }
-                else if (PropertyMemberBuilder.TryAppend(classInfo.type, memberSymbol, interfaceBuilder, implementationBuilder, configuration.EndLine, ref requireNullable, out var propertyName))
+                else if (PropertyMemberBuilder.TryAppend(classInfo.type, memberSymbol, interfaceBuilder, implementationBuilder, configuration.EndLine, ref requireNullable, out var propertyName, baseIndentation))
                 {
                     generatedMember = true;
                 }
-                else if (FieldMemberBuilder.TryAppend(classInfo.type, memberSymbol, interfaceBuilder, implementationBuilder, configuration.EndLine, ref requireNullable))
+                else if (FieldMemberBuilder.TryAppend(classInfo.type, memberSymbol, interfaceBuilder, implementationBuilder, configuration.EndLine, ref requireNullable, baseIndentation))
                 {
                     generatedMember = true;
                 }
-                else if (MethodMemberBuilder.TryAppend(classInfo.type, memberSymbol, interfaceBuilder, implementationBuilder, configuration.EndLine, ref requireNullable))
+                else if (MethodMemberBuilder.TryAppend(classInfo.type, memberSymbol, interfaceBuilder, implementationBuilder, configuration.EndLine, ref requireNullable, baseIndentation))
                 {
                     generatedMember = true;
                 }
@@ -117,13 +131,23 @@ namespace Fluentish.InjectableStatic.Generator
             }
 
             interfaceBuilder
-                .Append("    }").Append(configuration.EndLine)
-                .Append("}").Append(configuration.EndLine)
+                .AppendIndentation(baseIndentation).Append("}").Append(configuration.EndLine);
+            if (@namespace != string.Empty)
+            {
+                interfaceBuilder
+                    .Append("}").Append(configuration.EndLine);
+            }
+            interfaceBuilder
                 .Append("#pragma warning restore").Append(configuration.EndLine);
 
             implementationBuilder
-                .Append("    }").Append(configuration.EndLine)
-                .Append("}").Append(configuration.EndLine)
+                .AppendIndentation(baseIndentation).Append("}").Append(configuration.EndLine);
+            if (@namespace != string.Empty)
+            {
+                implementationBuilder
+                    .Append("}").Append(configuration.EndLine);
+            }
+            implementationBuilder
                 .Append("#pragma warning restore").Append(configuration.EndLine);
 
             if (requireNullable)

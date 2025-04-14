@@ -5,7 +5,7 @@ namespace Fluentish.Injectable.MethodReturnTests
 {
     /// <inheritdoc cref="global::MethodReturnTests.Void"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class VoidService: IVoid
+    public class VoidService : IVoid
     {
         /// <inheritdoc cref="global::MethodReturnTests.Void.Test"/>
         [global::System.Diagnostics.DebuggerStepThrough]

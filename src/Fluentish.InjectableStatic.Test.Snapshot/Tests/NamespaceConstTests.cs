@@ -1,0 +1,97 @@
+using Fluentish.InjectableStatic.Generator;
+using Fluentish.InjectableStatic.Test.Snapshot.Setup;
+using Fluentish.InjectableStatic.Test.Snapshot.Sources;
+using System.Threading.Tasks;
+using Xunit;
+
+namespace Fluentish.InjectableStatic.Test.Snapshot.Tests
+{
+    public class NamespaceConstTests
+    {
+        private readonly IncrementalGeneratorVerifier<NamespaceConstTests, InjectableStaticGenerator> _verifier = new();
+
+        [Fact]
+        public async Task WhiteSpace()
+        {
+            var res = await _verifier.Verify(
+                diagnosticCodesToIgnore: [],
+                sources: [
+                    StaticSource.Program,
+                    """
+                    [assembly: Fluentish.InjectableStatic.InjectableStaticConfiguration(NamespaceMode = Fluentish.InjectableStatic.NamespaceMode.Const, Namespace = "")]
+                    [assembly: Fluentish.InjectableStatic.Injectable(typeof(NamespaceConstTests.Empty))]
+                    
+                    namespace NamespaceConstTests
+                    {
+                        public static class Empty
+                        {
+                            public static void Test()
+                            {
+                            }
+                        }
+                    }
+                    """
+                ],
+                ignoreResult: generatedResult => generatedResult.IsPostInitializationOutput()
+            );
+
+            res.Assert();
+        }
+
+        [Fact]
+        public async Task Custom()
+        {
+            var res = await _verifier.Verify(
+                diagnosticCodesToIgnore: [],
+                sources: [
+                    StaticSource.Program,
+                    """
+                    [assembly: Fluentish.InjectableStatic.InjectableStaticConfiguration(NamespaceMode = Fluentish.InjectableStatic.NamespaceMode.Const, Namespace = "CustomPrefix")]
+                    [assembly: Fluentish.InjectableStatic.Injectable(typeof(NamespaceConstTests.CustomPrefix))]
+                    
+                    namespace NamespaceConstTests
+                    {
+                        public static class CustomPrefix
+                        {
+                            public static void Test()
+                            {
+                            }
+                        }
+                    }
+                    """
+                ],
+                ignoreResult: generatedResult => generatedResult.IsPostInitializationOutput()
+            );
+
+            res.Assert();
+        }
+
+        [Fact]
+        public async Task CustomDot()
+        {
+            var res = await _verifier.Verify(
+                diagnosticCodesToIgnore: [],
+                sources: [
+                    StaticSource.Program,
+                    """
+                    [assembly: Fluentish.InjectableStatic.InjectableStaticConfiguration(NamespaceMode = Fluentish.InjectableStatic.NamespaceMode.Const, Namespace = "CustomPrefix.")]
+                    [assembly: Fluentish.InjectableStatic.Injectable(typeof(NamespaceConstTests.CustomPrefix))]
+                    
+                    namespace NamespaceConstTests
+                    {
+                        public static class CustomPrefix
+                        {
+                            public static void Test()
+                            {
+                            }
+                        }
+                    }
+                    """
+                ],
+                ignoreResult: generatedResult => generatedResult.IsPostInitializationOutput()
+            );
+
+            res.Assert();
+        }
+    }
+}

@@ -5,7 +5,7 @@ namespace Fluentish.Injectable.MethodReturnTests
 {
     /// <inheritdoc cref="global::MethodReturnTests.PrimitiveArray"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class PrimitiveArrayService: IPrimitiveArray
+    public class PrimitiveArrayService : IPrimitiveArray
     {
         /// <inheritdoc cref="global::MethodReturnTests.PrimitiveArray.Test"/>
         [global::System.Diagnostics.DebuggerStepThrough]

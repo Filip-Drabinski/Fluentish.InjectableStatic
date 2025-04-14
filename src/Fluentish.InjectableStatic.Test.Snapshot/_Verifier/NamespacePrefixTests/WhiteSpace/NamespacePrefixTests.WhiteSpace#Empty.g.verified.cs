@@ -5,7 +5,7 @@ namespace NamespacePrefixTests
 {
     /// <inheritdoc cref="global::NamespacePrefixTests.Empty"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class EmptyService: IEmpty
+    public class EmptyService : IEmpty
     {
         /// <inheritdoc cref="global::NamespacePrefixTests.Empty.Test"/>
         [global::System.Diagnostics.DebuggerStepThrough]

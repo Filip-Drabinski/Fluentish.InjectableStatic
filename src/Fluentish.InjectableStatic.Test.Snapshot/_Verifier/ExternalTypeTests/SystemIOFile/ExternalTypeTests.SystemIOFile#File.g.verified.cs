@@ -6,7 +6,7 @@ namespace Fluentish.Injectable.System.IO
 {
     /// <inheritdoc cref="global::System.IO.File"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class FileService: IFile
+    public class FileService : IFile
     {
         /// <inheritdoc cref="global::System.IO.File.OpenText"/>
         [global::System.Diagnostics.DebuggerStepThrough]

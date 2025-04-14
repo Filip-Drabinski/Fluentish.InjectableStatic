@@ -6,7 +6,7 @@ namespace Fluentish.Injectable.System.Net.NetworkInformation
 {
     /// <inheritdoc cref="global::System.Net.NetworkInformation.NetworkChange"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class NetworkChangeService: INetworkChange
+    public class NetworkChangeService : INetworkChange
     {
         /// <inheritdoc cref="global::System.Net.NetworkInformation.NetworkChange.RegisterNetworkChange"/>
         [global::System.Diagnostics.DebuggerStepThrough]

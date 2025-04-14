@@ -5,7 +5,7 @@ namespace Fluentish.Injectable.FieldReturnTypeTests
 {
     /// <inheritdoc cref="global::FieldReturnTypeTests.ReturnTuple"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class ReturnTupleService: IReturnTuple
+    public class ReturnTupleService : IReturnTuple
     {
         /// <inheritdoc cref="global::FieldReturnTypeTests.ReturnTuple.Test"/>
         public global::System.Tuple<global::FieldReturnTypeTests.Example, global::FieldReturnTypeTests.Example> Test

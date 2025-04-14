@@ -5,7 +5,7 @@ namespace CustomPrefix.NamespacePrefixTests
 {
     /// <inheritdoc cref="global::NamespacePrefixTests.CustomPrefix"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class CustomPrefixService: ICustomPrefix
+    public class CustomPrefixService : ICustomPrefix
     {
         /// <inheritdoc cref="global::NamespacePrefixTests.CustomPrefix.Test"/>
         [global::System.Diagnostics.DebuggerStepThrough]

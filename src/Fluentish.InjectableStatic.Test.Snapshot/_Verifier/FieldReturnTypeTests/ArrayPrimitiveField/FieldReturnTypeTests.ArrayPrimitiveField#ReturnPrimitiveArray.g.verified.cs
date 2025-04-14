@@ -5,7 +5,7 @@ namespace Fluentish.Injectable.FieldReturnTypeTests
 {
     /// <inheritdoc cref="global::FieldReturnTypeTests.ReturnPrimitiveArray"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class ReturnPrimitiveArrayService: IReturnPrimitiveArray
+    public class ReturnPrimitiveArrayService : IReturnPrimitiveArray
     {
         /// <inheritdoc cref="global::FieldReturnTypeTests.ReturnPrimitiveArray.Test"/>
         public object[] Test

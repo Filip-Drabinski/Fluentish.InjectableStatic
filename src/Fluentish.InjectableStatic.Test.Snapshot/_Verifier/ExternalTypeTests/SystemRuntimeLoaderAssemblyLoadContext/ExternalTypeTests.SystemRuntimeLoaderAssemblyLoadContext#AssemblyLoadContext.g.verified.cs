@@ -6,7 +6,7 @@ namespace Fluentish.Injectable.System.Runtime.Loader
 {
     /// <inheritdoc cref="global::System.Runtime.Loader.AssemblyLoadContext"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class AssemblyLoadContextService: IAssemblyLoadContext
+    public class AssemblyLoadContextService : IAssemblyLoadContext
     {
         /// <inheritdoc cref="global::System.Runtime.Loader.AssemblyLoadContext.GetLoadContext"/>
         [global::System.Diagnostics.DebuggerStepThrough]

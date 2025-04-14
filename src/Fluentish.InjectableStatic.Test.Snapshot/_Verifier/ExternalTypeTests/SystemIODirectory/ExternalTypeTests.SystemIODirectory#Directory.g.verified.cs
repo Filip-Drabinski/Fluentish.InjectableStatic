@@ -6,7 +6,7 @@ namespace Fluentish.Injectable.System.IO
 {
     /// <inheritdoc cref="global::System.IO.Directory"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class DirectoryService: IDirectory
+    public class DirectoryService : IDirectory
     {
         /// <inheritdoc cref="global::System.IO.Directory.GetParent"/>
         [global::System.Diagnostics.DebuggerStepThrough]

@@ -6,7 +6,7 @@ namespace Fluentish.Injectable.System
 {
     /// <inheritdoc cref="global::System.Guid"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class GuidService: IGuid
+    public class GuidService : IGuid
     {
         /// <inheritdoc cref="global::System.Guid.Empty"/>
         public global::System.Guid Empty

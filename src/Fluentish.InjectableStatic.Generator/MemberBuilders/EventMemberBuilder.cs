@@ -6,7 +6,7 @@ namespace Fluentish.InjectableStatic.Generator.MemberBuilders
 {
     internal static class EventMemberBuilder
     {
-        public static bool TryAppend(INamedTypeSymbol type, ISymbol symbol, StringBuilder interfaceBuilder, StringBuilder implementationBuilder, string newLineSymbol, ref bool requireNullable, out string name)
+        public static bool TryAppend(INamedTypeSymbol type, ISymbol symbol, StringBuilder interfaceBuilder, StringBuilder implementationBuilder, string newLineSymbol, ref bool requireNullable, out string name, int baseIndentation)
         {
             name = symbol.Name;
 
@@ -16,14 +16,14 @@ namespace Fluentish.InjectableStatic.Generator.MemberBuilders
             }
 
             interfaceBuilder
-                .AppendIndentation(2).AppendInheritdoc(type, eventSymbol.Name, ref requireNullable).Append(newLineSymbol)
-                .AppendIndentation(2).AppendAttributes(eventSymbol.GetAttributes(), ref requireNullable, b => b.Append(newLineSymbol).AppendIndentation(2)).Append("event ").AppendType(eventSymbol.Type, ref requireNullable).Append(" ").Append(eventSymbol.Name).Append(";").Append(newLineSymbol);
+                .AppendIndentation(baseIndentation + 1).AppendInheritdoc(type, eventSymbol.Name, ref requireNullable).Append(newLineSymbol)
+                .AppendIndentation(baseIndentation + 1).AppendAttributes(eventSymbol.GetAttributes(), ref requireNullable, b => b.Append(newLineSymbol).AppendIndentation(baseIndentation + 1)).Append("event ").AppendType(eventSymbol.Type, ref requireNullable).Append(" ").Append(eventSymbol.Name).Append(";").Append(newLineSymbol);
 
             implementationBuilder
-                .AppendIndentation(2).AppendInheritdoc(type, eventSymbol.Name, ref requireNullable).Append(newLineSymbol)
-                .AppendIndentation(2).AppendAttributes(eventSymbol.GetAttributes(), ref requireNullable, b => b.Append(newLineSymbol).AppendIndentation(2)).AppendAccessibility(eventSymbol.DeclaredAccessibility).Append("event ").AppendType(eventSymbol.Type, ref requireNullable).Append(" ").Append(eventSymbol.Name)
+                .AppendIndentation(baseIndentation + 1).AppendInheritdoc(type, eventSymbol.Name, ref requireNullable).Append(newLineSymbol)
+                .AppendIndentation(baseIndentation + 1).AppendAttributes(eventSymbol.GetAttributes(), ref requireNullable, b => b.Append(newLineSymbol).AppendIndentation(baseIndentation + 1)).AppendAccessibility(eventSymbol.DeclaredAccessibility).Append("event ").AppendType(eventSymbol.Type, ref requireNullable).Append(" ").Append(eventSymbol.Name)
                 .Append(newLineSymbol)
-                .AppendIndentation(2).Append("{");
+                .AppendIndentation(baseIndentation + 1).Append("{");
 
             if (eventSymbol.AddMethod is not null && eventSymbol.AddMethod.DeclaredAccessibility == Accessibility.Public)
             {
@@ -38,7 +38,7 @@ namespace Fluentish.InjectableStatic.Generator.MemberBuilders
             }
 
             implementationBuilder.Append(newLineSymbol)
-                .AppendIndentation(2).Append("}").Append(newLineSymbol);
+                .AppendIndentation(baseIndentation + 1).Append("}").Append(newLineSymbol);
 
             return true;
         }

@@ -6,7 +6,7 @@ namespace Fluentish.Injectable.ConstReturnTypeTests
 {
     /// <inheritdoc cref="global::ConstReturnTypeTests.ReturnNullableReferenceType"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class ReturnNullableReferenceTypeService: IReturnNullableReferenceType
+    public class ReturnNullableReferenceTypeService : IReturnNullableReferenceType
     {
         /// <inheritdoc cref="global::ConstReturnTypeTests.ReturnNullableReferenceType.Test"/>
         public global::ConstReturnTypeTests.Example? Test

@@ -7,7 +7,7 @@ namespace Fluentish.InjectableStatic.Generator.MemberBuilders
 {
     internal static class MethodMemberBuilder
     {
-        public static bool TryAppend(INamedTypeSymbol type, ISymbol symbol, StringBuilder interfaceBuilder, StringBuilder implementationBuilder, string newLineSymbol, ref bool requireNullable)
+        public static bool TryAppend(INamedTypeSymbol type, ISymbol symbol, StringBuilder interfaceBuilder, StringBuilder implementationBuilder, string newLineSymbol, ref bool requireNullable, int baseIndentation)
         {
             if (
                 symbol is not IMethodSymbol methodSymbol
@@ -34,17 +34,17 @@ namespace Fluentish.InjectableStatic.Generator.MemberBuilders
 
 
             interfaceBuilder
-                .AppendIndentation(2).AppendInheritdoc(type, methodSymbol.Name, ref requireNullable).Append(newLineSymbol)
-                .AppendIndentation(2).Append("[global::System.Diagnostics.DebuggerStepThrough]").Append(newLineSymbol)
-                .AppendIndentation(2).Append("[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]").Append(newLineSymbol)
-                .AppendIndentation(2).AppendAttributes(methodSymbol.GetAttributes(), ref requireNullable, b => b.Append(newLineSymbol).AppendIndentation(2))
+                .AppendIndentation(baseIndentation + 1).AppendInheritdoc(type, methodSymbol.Name, ref requireNullable).Append(newLineSymbol)
+                .AppendIndentation(baseIndentation + 1).Append("[global::System.Diagnostics.DebuggerStepThrough]").Append(newLineSymbol)
+                .AppendIndentation(baseIndentation + 1).Append("[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]").Append(newLineSymbol)
+                .AppendIndentation(baseIndentation + 1).AppendAttributes(methodSymbol.GetAttributes(), ref requireNullable, b => b.Append(newLineSymbol).AppendIndentation(baseIndentation + 1))
                 .AppendType(methodSymbol.ReturnType, ref requireNullable).Append(" ").Append(methodSymbol.Name).AppendTypeArguments(methodSymbol.TypeArguments).Append("(");
 
             implementationBuilder
-                .AppendIndentation(2).AppendInheritdoc(type, methodSymbol.Name, ref requireNullable).Append(newLineSymbol)
-                .AppendIndentation(2).Append("[global::System.Diagnostics.DebuggerStepThrough]").Append(newLineSymbol)
-                .AppendIndentation(2).Append("[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]").Append(newLineSymbol)
-                .AppendIndentation(2).AppendAttributes(methodSymbol.GetAttributes(), ref requireNullable, b => b.Append(newLineSymbol).AppendIndentation(2))
+                .AppendIndentation(baseIndentation + 1).AppendInheritdoc(type, methodSymbol.Name, ref requireNullable).Append(newLineSymbol)
+                .AppendIndentation(baseIndentation + 1).Append("[global::System.Diagnostics.DebuggerStepThrough]").Append(newLineSymbol)
+                .AppendIndentation(baseIndentation + 1).Append("[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]").Append(newLineSymbol)
+                .AppendIndentation(baseIndentation + 1).AppendAttributes(methodSymbol.GetAttributes(), ref requireNullable, b => b.Append(newLineSymbol).AppendIndentation(baseIndentation + 1))
                 .AppendAccessibility(methodSymbol.DeclaredAccessibility).AppendType(methodSymbol.ReturnType, ref requireNullable).Append(" ").Append(methodSymbol.Name).AppendTypeArguments(methodSymbol.TypeArguments).Append("(");
 
             for (int i = 0; i < methodSymbol.Parameters.Length; i++)

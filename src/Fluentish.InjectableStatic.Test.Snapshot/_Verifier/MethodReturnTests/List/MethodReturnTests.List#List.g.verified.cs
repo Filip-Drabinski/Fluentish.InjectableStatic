@@ -5,7 +5,7 @@ namespace Fluentish.Injectable.MethodReturnTests
 {
     /// <inheritdoc cref="global::MethodReturnTests.List"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class ListService: IList
+    public class ListService : IList
     {
         /// <inheritdoc cref="global::MethodReturnTests.List.Test"/>
         [global::System.Diagnostics.DebuggerStepThrough]

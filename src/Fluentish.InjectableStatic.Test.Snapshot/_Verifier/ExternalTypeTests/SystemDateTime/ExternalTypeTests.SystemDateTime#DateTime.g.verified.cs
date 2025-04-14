@@ -6,7 +6,7 @@ namespace Fluentish.Injectable.System
 {
     /// <inheritdoc cref="global::System.DateTime"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class DateTimeService: IDateTime
+    public class DateTimeService : IDateTime
     {
         /// <inheritdoc cref="global::System.DateTime.MinValue"/>
         public global::System.DateTime MinValue

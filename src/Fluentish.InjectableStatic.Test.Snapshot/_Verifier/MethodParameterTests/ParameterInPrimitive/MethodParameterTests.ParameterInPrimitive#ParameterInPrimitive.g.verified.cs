@@ -5,7 +5,7 @@ namespace Fluentish.Injectable.MethodParameterTests
 {
     /// <inheritdoc cref="global::MethodParameterTests.ParameterInPrimitive"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class ParameterInPrimitiveService: IParameterInPrimitive
+    public class ParameterInPrimitiveService : IParameterInPrimitive
     {
         /// <inheritdoc cref="global::MethodParameterTests.ParameterInPrimitive.Test"/>
         [global::System.Diagnostics.DebuggerStepThrough]

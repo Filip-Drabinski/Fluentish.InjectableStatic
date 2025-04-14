@@ -5,7 +5,7 @@ namespace Fluentish.Injectable.NamespacePrefixTests
 {
     /// <inheritdoc cref="global::NamespacePrefixTests.NotDefined"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class NotDefinedService: INotDefined
+    public class NotDefinedService : INotDefined
     {
         /// <inheritdoc cref="global::NamespacePrefixTests.NotDefined.Test"/>
         [global::System.Diagnostics.DebuggerStepThrough]

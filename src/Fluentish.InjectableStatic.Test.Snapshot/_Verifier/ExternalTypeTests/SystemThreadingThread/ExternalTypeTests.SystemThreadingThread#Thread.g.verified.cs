@@ -6,7 +6,7 @@ namespace Fluentish.Injectable.System.Threading
 {
     /// <inheritdoc cref="global::System.Threading.Thread"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class ThreadService: IThread
+    public class ThreadService : IThread
     {
         /// <inheritdoc cref="global::System.Threading.Thread.SpinWait"/>
         [global::System.Diagnostics.DebuggerStepThrough]

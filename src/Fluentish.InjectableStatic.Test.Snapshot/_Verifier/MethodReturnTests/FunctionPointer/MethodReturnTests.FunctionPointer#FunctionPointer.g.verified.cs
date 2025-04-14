@@ -5,7 +5,7 @@ namespace Fluentish.Injectable.MethodReturnTests
 {
     /// <inheritdoc cref="global::MethodReturnTests.FunctionPointer"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public unsafe class FunctionPointerService: IFunctionPointer
+    public unsafe class FunctionPointerService : IFunctionPointer
     {
         /// <inheritdoc cref="global::MethodReturnTests.FunctionPointer.Test"/>
         [global::System.Diagnostics.DebuggerStepThrough]

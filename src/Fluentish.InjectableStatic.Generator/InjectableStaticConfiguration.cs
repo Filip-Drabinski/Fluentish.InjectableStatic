@@ -1,25 +1,39 @@
 ﻿namespace Fluentish.InjectableStatic.Generator
 {
+    public enum NamespaceMode
+    {
+        Prefix = 0,
+        Const = 1,
+    }
+
     public record InjectableStaticConfiguration
     {
         public string? Namespace { get; set; }
         public string EndLine { get; set; }
+        public NamespaceMode NamespaceMode { get; }
 
         public InjectableStaticConfiguration(
-            string? @namespace,
-            string endLine
+            string endLine,
+            NamespaceMode namespaceMode,
+            string? @namespace
         )
         {
-            Namespace = SanitizeNamespace(@namespace);
             EndLine = endLine;
+            NamespaceMode = namespaceMode;
+            Namespace = SanitizeNamespace(@namespace, namespaceMode);
         }
 
 
-        private static string SanitizeNamespace(string? @namespace)
+        private static string SanitizeNamespace(string? @namespace, NamespaceMode namespaceMode)
         {
-            if (@namespace is null)
+            if (@namespace is null && namespaceMode == NamespaceMode.Prefix)
             {
                 return "Fluentish.Injectable.";
+            }
+
+            if (@namespace is null && namespaceMode == NamespaceMode.Const)
+            {
+                return "Fluentish.Injectable";
             }
 
             if (string.IsNullOrWhiteSpace(@namespace))
@@ -27,9 +41,13 @@
                 return "";
             }
 
-            if (!@namespace.EndsWith("."))
+            if (!@namespace!.EndsWith(".") && namespaceMode == NamespaceMode.Prefix)
             {
                 return @namespace + ".";
+            }
+            if (@namespace!.EndsWith(".") && namespaceMode == NamespaceMode.Const)
+            {
+                return @namespace.Substring(0, @namespace.Length - 1);
             }
 
             return @namespace;

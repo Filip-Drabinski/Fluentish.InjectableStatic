@@ -5,7 +5,7 @@ namespace Fluentish.Injectable.MethodReturnTests
 {
     /// <inheritdoc cref="global::MethodReturnTests.ReferenceType"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class ReferenceTypeService: IReferenceType
+    public class ReferenceTypeService : IReferenceType
     {
         /// <inheritdoc cref="global::MethodReturnTests.ReferenceType.Test"/>
         [global::System.Diagnostics.DebuggerStepThrough]

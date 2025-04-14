@@ -5,7 +5,7 @@ namespace Fluentish.Injectable.ConstReturnTypeTests
 {
     /// <inheritdoc cref="global::ConstReturnTypeTests.ReturnValueType"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class ReturnValueTypeService: IReturnValueType
+    public class ReturnValueTypeService : IReturnValueType
     {
         /// <inheritdoc cref="global::ConstReturnTypeTests.ReturnValueType.Test"/>
         public global::ConstReturnTypeTests.Example Test

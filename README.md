@@ -53,12 +53,12 @@ To avoid name collisions, by default, generated classes are prefixed with `Fluen
 
 To remove it:
 ```csharp
-[assembly: Fluentish.InjectableStatic.InjectableStaticConfigurationAttribute("")]
+[assembly: Fluentish.InjectableStatic.InjectableStaticConfigurationAttribute(Namespace = "")]
 ```
 
 To place wrappers in a custom namespace:
 ```csharp
-[assembly: Fluentish.InjectableStatic.InjectableStaticConfigurationAttribute("My.Namespace")]
+[assembly: Fluentish.InjectableStatic.InjectableStaticConfigurationAttribute(Namespace = "My.Namespace")]
 ```
 
 ### Remarks

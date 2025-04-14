@@ -6,7 +6,7 @@ namespace Fluentish.Injectable.System
 {
     /// <inheritdoc cref="global::System.Environment"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class EnvironmentService: IEnvironment
+    public class EnvironmentService : IEnvironment
     {
         /// <inheritdoc cref="global::System.Environment.Exit"/>
         [global::System.Diagnostics.DebuggerStepThrough]

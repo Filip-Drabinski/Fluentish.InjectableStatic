@@ -5,7 +5,7 @@ namespace Fluentish.Injectable.PropertyAccessibilityTests
 {
     /// <inheritdoc cref="global::PropertyAccessibilityTests.PublicProperty"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class PublicPropertyService: IPublicProperty
+    public class PublicPropertyService : IPublicProperty
     {
         /// <inheritdoc cref="global::PropertyAccessibilityTests.PublicProperty.Test"/>
         public int Test

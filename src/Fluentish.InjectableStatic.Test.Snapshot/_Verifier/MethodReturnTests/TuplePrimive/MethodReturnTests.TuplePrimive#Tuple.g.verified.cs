@@ -5,7 +5,7 @@ namespace Fluentish.Injectable.MethodReturnTests
 {
     /// <inheritdoc cref="global::MethodReturnTests.Tuple"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class TupleService: ITuple
+    public class TupleService : ITuple
     {
         /// <inheritdoc cref="global::MethodReturnTests.Tuple.Test"/>
         [global::System.Diagnostics.DebuggerStepThrough]

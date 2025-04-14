@@ -6,7 +6,7 @@ namespace Fluentish.Injectable.System.IO
 {
     /// <inheritdoc cref="global::System.IO.Path"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class PathService: IPath
+    public class PathService : IPath
     {
         /// <inheritdoc cref="global::System.IO.Path.DirectorySeparatorChar"/>
         public char DirectorySeparatorChar

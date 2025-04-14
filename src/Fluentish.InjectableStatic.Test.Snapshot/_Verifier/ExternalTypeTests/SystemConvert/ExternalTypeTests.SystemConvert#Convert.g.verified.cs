@@ -6,7 +6,7 @@ namespace Fluentish.Injectable.System
 {
     /// <inheritdoc cref="global::System.Convert"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class ConvertService: IConvert
+    public class ConvertService : IConvert
     {
         /// <inheritdoc cref="global::System.Convert.DBNull"/>
         public object DBNull

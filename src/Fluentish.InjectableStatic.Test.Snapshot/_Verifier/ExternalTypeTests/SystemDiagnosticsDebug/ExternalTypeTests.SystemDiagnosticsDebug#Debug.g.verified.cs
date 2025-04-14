@@ -6,7 +6,7 @@ namespace Fluentish.Injectable.System.Diagnostics
 {
     /// <inheritdoc cref="global::System.Diagnostics.Debug"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class DebugService: IDebug
+    public class DebugService : IDebug
     {
         /// <inheritdoc cref="global::System.Diagnostics.Debug.Close"/>
         [global::System.Diagnostics.DebuggerStepThrough]
