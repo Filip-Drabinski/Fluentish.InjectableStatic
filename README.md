@@ -48,17 +48,52 @@ Will generate `Fluentish.Injectable.System.Diagnostics.IDebug` and `Fluentish.In
 Will generate `Fluentish.Injectable.System.Diagnostics.IDebug` and `Fluentish.Injectable.System.Diagnostics.DebugService` containing only the listed members.
 
 ## Configuration
-#### Custom namespace prefix:
-To avoid name collisions, by default, generated classes are prefixed with `Fluentish.Injectable.`, but you can change this behavior with the `InjectableStaticConfigurationAttribute`.
 
-To remove it:
+By default, generated classes are prefixed with `Fluentish.Injectable.` to avoid name collisions. You can customize this behavior using the `InjectableStaticConfigurationAttribute` at the assembly level.
+
+#### Available Options
+
+```csharp
+[assembly: Fluentish.InjectableStatic.InjectableStaticConfigurationAttribute(
+    Namespace = "Your.Custom.Namespace",
+    NamespaceMode = Fluentish.InjectableStatic.NamespaceMode.Prefix // or Fluentish.InjectableStatic.NamespaceMode.Const
+)]
+```
+
+| Property        | Description |
+|----------------|-------------|
+| `Namespace`     | The base namespace for generated wrappers. Set to an empty string (`""`) to disable namespace prefixing entirely. |
+| `NamespaceMode` | Determines how the namespace is applied. See below for details. |
+
+#### Namespace Modes
+
+- `NamespaceMode.Prefix` (default):  
+  The value of `Namespace` is used as a prefix. For example, if set to `"My.Custom"`, generated classes will be in `"My.Custom.Original.Namespace"`.
+
+- `NamespaceMode.Const`:  
+  The value of `Namespace` replaces the entire namespace. All generated classes will reside in exactly the specified namespace.
+
+#### Examples
+
+**Remove the default prefix:**
 ```csharp
 [assembly: Fluentish.InjectableStatic.InjectableStaticConfigurationAttribute(Namespace = "")]
 ```
 
-To place wrappers in a custom namespace:
+**Use a custom namespace as a prefix:**
 ```csharp
-[assembly: Fluentish.InjectableStatic.InjectableStaticConfigurationAttribute(Namespace = "My.Namespace")]
+[assembly: Fluentish.InjectableStatic.InjectableStaticConfigurationAttribute(
+    Namespace = "My.Namespace",
+    NamespaceMode = NamespaceMode.Prefix
+)]
+```
+
+**Force all wrappers into a constant namespace:**
+```csharp
+[assembly: Fluentish.InjectableStatic.InjectableStaticConfigurationAttribute(
+    Namespace = "My.Constant.Namespace",
+    NamespaceMode = NamespaceMode.Const
+)]
 ```
 
 ### Remarks
