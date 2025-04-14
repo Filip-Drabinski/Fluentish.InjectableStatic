@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Fluentish.InjectableStatic.Generator.Attributes
 {
-    internal static class InjectableStaticAttributeSourceExtension
+    internal static class InjectableStaticAttributeExtension
     {
         public static IncrementalGeneratorPostInitializationContext AddInjectableStaticAttribute(this IncrementalGeneratorPostInitializationContext context)
         {
@@ -38,6 +38,11 @@ namespace Fluentish.InjectableStatic.Generator.Attributes
             );
 
             return context;
+        }
+
+        public static INamedTypeSymbol? GetInjectableAttribute(this Compilation compilation)
+        {
+            return compilation.GetTypeByMetadataName("Fluentish.InjectableStatic.InjectableAttribute");
         }
     }
 }

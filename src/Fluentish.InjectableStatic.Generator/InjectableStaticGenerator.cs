@@ -30,7 +30,7 @@ namespace Fluentish.InjectableStatic.Generator
 
                     var attributes = compilation.Assembly.GetAttributes();
 
-                    var injectableAttributeSymbol = compilation.GetTypeByMetadataName("Fluentish.InjectableStatic.InjectableNamespacePrefixAttribute");
+                    var injectableAttributeSymbol = compilation.GetInjectableNamespacePrefixAttribute();
 
                     var injectableNamespacePrefixAttribute = attributes
                         .FirstOrDefault(attr => SymbolEqualityComparer.Default.Equals(attr.AttributeClass, injectableAttributeSymbol));
@@ -57,7 +57,7 @@ namespace Fluentish.InjectableStatic.Generator
                 {
                     var attributes = compilation.Assembly.GetAttributes();
 
-                    var injectableAttributeSymbol = compilation.GetTypeByMetadataName("Fluentish.InjectableStatic.InjectableAttribute");
+                    var injectableAttributeSymbol = compilation.GetInjectableAttribute();
 
                     var matchingAttributes = attributes
                         .Where(attr => SymbolEqualityComparer.Default.Equals(attr.AttributeClass, injectableAttributeSymbol));

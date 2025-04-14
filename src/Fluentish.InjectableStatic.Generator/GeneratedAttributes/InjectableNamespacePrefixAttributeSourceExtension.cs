@@ -28,5 +28,10 @@ namespace Fluentish.InjectableStatic.Generator.Attributes
                 );
             return context;
         }
+
+        public static INamedTypeSymbol? GetInjectableNamespacePrefixAttribute(this Compilation compilation)
+        {
+            return compilation.GetTypeByMetadataName("Fluentish.InjectableStatic.InjectableNamespacePrefixAttribute");
+        }
     }
 }
