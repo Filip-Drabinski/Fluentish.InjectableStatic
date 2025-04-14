@@ -38,7 +38,6 @@ namespace Fluentish.InjectableStatic.Generator
 
         private static void GenerateInjectable(SourceProductionContext SourceProductionContext, InjectableClassInfo classInfo, InjectableStaticConfiguration configuration)
         {
-
             if (classInfo.type is null)
             {
                 return;

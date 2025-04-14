@@ -6,7 +6,7 @@ namespace Fluentish.InjectableStatic.Generator.ValueProviders
 {
     internal static class InjectableClassInfoProvider
     {
-        public static IncrementalValuesProvider<InjectableClassInfo?> GetInjectableClassInfoProvider(this IncrementalGeneratorInitializationContext context)
+        public static IncrementalValuesProvider<InjectableClassInfo> GetInjectableClassInfoProvider(this IncrementalGeneratorInitializationContext context)
         {
             return context.CompilationProvider
                 .SelectMany((compilation, ct) =>
@@ -28,7 +28,7 @@ namespace Fluentish.InjectableStatic.Generator.ValueProviders
 
                             if (injectableAttributeSymbol is null)
                             {
-                                return null;
+                                return InjectableClassInfo.Default;
                             }
 
                             var filterTypeArgument = attribute.NamedArguments.FirstOrDefault(x => x.Key == "FilterType");
@@ -43,7 +43,7 @@ namespace Fluentish.InjectableStatic.Generator.ValueProviders
 
                             return new InjectableClassInfo(injectableAttributeSymbol, filterType, filteredTypes);
                         })
-                        .Where(x => x != default);
+                        .Where(x => x != InjectableClassInfo.Default);
 
                     return selectedTypes;
                 });

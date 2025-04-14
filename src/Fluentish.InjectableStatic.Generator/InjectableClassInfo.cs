@@ -2,15 +2,20 @@
 
 namespace Fluentish.InjectableStatic.Generator
 {
-    internal enum FilterType
+    public enum FilterType
     {
         Exclude = 0,
         Include = 1
     }
 
-    internal class InjectableClassInfo
+    public class InjectableClassInfo
     {
-        public INamedTypeSymbol type; 
+        /// <summary>
+        /// required to avoid nullablility issues after using `Where` with `is not null` filtering
+        /// </summary>
+        public static readonly InjectableClassInfo Default = new(null!, FilterType.Exclude, System.Array.Empty<string>());
+
+        public INamedTypeSymbol type;
         public FilterType filter;
         public string[] members;
 
