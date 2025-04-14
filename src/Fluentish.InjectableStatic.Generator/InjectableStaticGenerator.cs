@@ -35,7 +35,7 @@ namespace Fluentish.InjectableStatic.Generator
                     var injectableNamespacePrefixAttribute = attributes
                         .FirstOrDefault(attr => SymbolEqualityComparer.Default.Equals(attr.AttributeClass, injectableAttributeSymbol));
 
-                    if(injectableNamespacePrefixAttribute is null)
+                    if (injectableNamespacePrefixAttribute is null)
                     {
                         return new InjectableStaticConfiguration(
                             @namespace: null,
@@ -65,39 +65,27 @@ namespace Fluentish.InjectableStatic.Generator
                     var selectedTypes = matchingAttributes
                         .Select(attribute =>
                         {
-                            if (attribute.ConstructorArguments.Length == 1)
+                            var targetTypeArgument = attribute.ConstructorArguments[0];
+                            var targetTypeName = targetTypeArgument.Value!.ToString();
+
+                            var injectableAttributeSymbol = compilation.GetTypeByMetadataName(targetTypeName);
+
+                            if (injectableAttributeSymbol is null)
                             {
-                                var targetTypeArgument = attribute.ConstructorArguments[0];
-                                var targetTypeName = targetTypeArgument.Value!.ToString();
-
-                                var injectableAttributeSymbol = compilation.GetTypeByMetadataName(targetTypeName);
-
-                                if(injectableAttributeSymbol is null)
-                                {
-                                    return null;
-                                }
-
-                                return new InjectableClassInfo(injectableAttributeSymbol, FilterType.Exclude, []);
+                                return null;
                             }
-                            else if (attribute.ConstructorArguments.Length == 3)
-                            {
 
-                                var targetTypeArgument = attribute.ConstructorArguments[0];
-                                var targetTypeName = targetTypeArgument.Value!.ToString();
+                            var filterTypeArgument = attribute.NamedArguments.FirstOrDefault(x => x.Key == "FilterType");
+                            var filterType = filterTypeArgument.Key is not null
+                                ? (FilterType)filterTypeArgument.Value.Value!
+                                : FilterType.Exclude;
 
-                                var filterKind = (FilterType)attribute.ConstructorArguments[1].Value!;
-                                var filteredTypes = attribute.ConstructorArguments[2].Values.Where(x=>!x.IsNull).Select(x => x.Value!.ToString()).ToArray();
+                            var filteredTypesArgument = attribute.NamedArguments.FirstOrDefault(x => x.Key == "FilteredMembers");
+                            string[] filteredTypes = filteredTypesArgument.Key is not null
+                                ? filteredTypesArgument.Value.Values.Where(x => !x.IsNull).Select(x => x.Value!.ToString()).ToArray()
+                                : [];
 
-                                var injectableAttributeSymbol = compilation.GetTypeByMetadataName(targetTypeName);
-
-                                if (injectableAttributeSymbol is null)
-                                {
-                                    return null;
-                                }
-
-                                return new InjectableClassInfo(injectableAttributeSymbol, filterKind, filteredTypes ?? []);
-                            }
-                            return default;
+                            return new InjectableClassInfo(injectableAttributeSymbol, filterType, filteredTypes);
                         })
                         .Where(x => x != default);
 
@@ -159,11 +147,11 @@ namespace Fluentish.InjectableStatic.Generator
                 {
                     continue;
                 }
-                if(classInfo.filter == FilterType.Exclude && classInfo.members.Contains(memberSymbol.Name))
+                if (classInfo.filter == FilterType.Exclude && classInfo.members.Contains(memberSymbol.Name))
                 {
                     continue;
                 }
-                if(classInfo.filter == FilterType.Include && !classInfo.members.Contains(memberSymbol.Name))
+                if (classInfo.filter == FilterType.Include && !classInfo.members.Contains(memberSymbol.Name))
                 {
                     continue;
                 }
