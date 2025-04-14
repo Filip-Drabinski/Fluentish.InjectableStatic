@@ -45,7 +45,7 @@ namespace Fluentish.InjectableStatic.Test.Snapshot.Tests
                 sources: [
                     StaticSource.Program,
                     """
-                    [assembly: Fluentish.InjectableStatic.InjectableNamespacePrefix("")]
+                    [assembly: Fluentish.InjectableStatic.InjectableStaticConfiguration("")]
                     [assembly: Fluentish.InjectableStatic.Injectable(typeof(NamespacePrefixTests.Empty))]
                     
                     namespace NamespacePrefixTests
@@ -73,7 +73,7 @@ namespace Fluentish.InjectableStatic.Test.Snapshot.Tests
                 sources: [
                     StaticSource.Program,
                     """
-                    [assembly: Fluentish.InjectableStatic.InjectableNamespacePrefix(" ")]
+                    [assembly: Fluentish.InjectableStatic.InjectableStaticConfiguration(" ")]
                     [assembly: Fluentish.InjectableStatic.Injectable(typeof(NamespacePrefixTests.Empty))]
                     
                     namespace NamespacePrefixTests
@@ -101,7 +101,7 @@ namespace Fluentish.InjectableStatic.Test.Snapshot.Tests
                 sources: [
                     StaticSource.Program,
                     """
-                    [assembly: Fluentish.InjectableStatic.InjectableNamespacePrefix("CustomPrefix")]
+                    [assembly: Fluentish.InjectableStatic.InjectableStaticConfiguration("CustomPrefix")]
                     [assembly: Fluentish.InjectableStatic.Injectable(typeof(NamespacePrefixTests.CustomPrefix))]
                     
                     namespace NamespacePrefixTests
@@ -129,7 +129,7 @@ namespace Fluentish.InjectableStatic.Test.Snapshot.Tests
                 sources: [
                     StaticSource.Program,
                     """
-                    [assembly: Fluentish.InjectableStatic.InjectableNamespacePrefix("CustomPrefix.")]
+                    [assembly: Fluentish.InjectableStatic.InjectableStaticConfiguration("CustomPrefix.")]
                     [assembly: Fluentish.InjectableStatic.Injectable(typeof(NamespacePrefixTests.CustomPrefix))]
                     
                     namespace NamespacePrefixTests

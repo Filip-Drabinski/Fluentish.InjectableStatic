@@ -18,7 +18,7 @@ namespace Fluentish.InjectableStatic.Generator
             context.RegisterPostInitializationOutput(context =>
             {
                 context.AddInjectableStaticAttribute();
-                context.AddInjectableNamespacePrefixAttribute();
+                context.AddInjectableStaticConfigurationAttribute();
             });
 
             var namespacePrefixProvider = context.GetInjectableStaticConfigurationProvider();

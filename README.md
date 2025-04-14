@@ -49,16 +49,16 @@ Will generate `Fluentish.Injectable.System.Diagnostics.IDebug` and `Fluentish.In
 
 ## Configuration
 #### Custom namespace prefix:
-To avoid name collisions, by default, generated classes are prefixed with `Fluentish.Injectable.`, but you can change this behavior with the `InjectableNamespacePrefixAttribute`.
+To avoid name collisions, by default, generated classes are prefixed with `Fluentish.Injectable.`, but you can change this behavior with the `InjectableStaticConfigurationAttribute`.
 
 To remove it:
 ```csharp
-[assembly: Fluentish.InjectableStatic.InjectableNamespacePrefixAttribute("")]
+[assembly: Fluentish.InjectableStatic.InjectableStaticConfigurationAttribute("")]
 ```
 
 To place wrappers in a custom namespace:
 ```csharp
-[assembly: Fluentish.InjectableStatic.InjectableNamespacePrefixAttribute("My.Namespace")]
+[assembly: Fluentish.InjectableStatic.InjectableStaticConfigurationAttribute("My.Namespace")]
 ```
 
 ### Remarks

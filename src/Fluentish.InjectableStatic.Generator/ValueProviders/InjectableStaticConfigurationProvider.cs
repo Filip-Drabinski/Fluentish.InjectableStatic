@@ -19,12 +19,12 @@ namespace Fluentish.InjectableStatic.Generator.ValueProviders
 
                     var attributes = compilation.Assembly.GetAttributes();
 
-                    var injectableAttributeSymbol = compilation.GetInjectableNamespacePrefixAttribute();
+                    var injectableAttributeSymbol = compilation.GetInjectableStaticConfigurationAttribute();
 
-                    var injectableNamespacePrefixAttribute = attributes
+                    var injectableStaticConfigurationAttribute = attributes
                         .FirstOrDefault(attr => SymbolEqualityComparer.Default.Equals(attr.AttributeClass, injectableAttributeSymbol));
 
-                    if (injectableNamespacePrefixAttribute is null)
+                    if (injectableStaticConfigurationAttribute is null)
                     {
                         return new InjectableStaticConfiguration(
                             @namespace: null,
@@ -32,7 +32,7 @@ namespace Fluentish.InjectableStatic.Generator.ValueProviders
                         );
                     }
 
-                    var targetTypeArgument = injectableNamespacePrefixAttribute.ConstructorArguments.First();
+                    var targetTypeArgument = injectableStaticConfigurationAttribute.ConstructorArguments.First();
                     var namespacePrefixValue = targetTypeArgument.Value!.ToString();
 
                     return new InjectableStaticConfiguration(
