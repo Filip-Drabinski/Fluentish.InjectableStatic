@@ -1,4 +1,5 @@
-﻿using Fluentish.InjectableStatic.Generator.Extensions;
+﻿using Fluentish.InjectableStatic.Generator.Attributes;
+using Fluentish.InjectableStatic.Generator.Extensions;
 using Fluentish.InjectableStatic.Generator.MemberBuilders;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
@@ -21,65 +22,10 @@ namespace Fluentish.InjectableStatic.Generator
         public void Initialize(IncrementalGeneratorInitializationContext context)
         {
 
-            context.RegisterPostInitializationOutput(ctx =>
+            context.RegisterPostInitializationOutput(context =>
             {
-                ctx.AddSource("InjectableStaticAttribute.g.cs",
-                    """
-                    namespace Fluentish.InjectableStatic
-                    {
-                        public enum FilterType
-                        {
-                            Exclude = 0,
-                            Include = 1
-                        }
-
-                        [System.AttributeUsage(System.AttributeTargets.Assembly, AllowMultiple = true)]
-                        public sealed class InjectableAttribute : System.Attribute
-                        {
-                            public System.Type TargetType { get; }
-                            public Fluentish.InjectableStatic.FilterType FilterType { get; }
-                            public string[] FilteredMembers { get; }
-
-                            public InjectableAttribute(System.Type targetType)
-                            {
-                                TargetType = targetType;
-                                FilterType = Fluentish.InjectableStatic.FilterType.Exclude;
-                                FilteredMembers = System.Array.Empty<string>();
-                            }
-                    
-                            public InjectableAttribute(
-                                System.Type targetType,
-                                Fluentish.InjectableStatic.FilterType filterType,
-                                params string[] filteredMembers
-                            )
-                            {
-                                TargetType = targetType;
-                                FilterType = filterType;
-                                FilteredMembers = filteredMembers;
-                            }
-                        }
-                    }
-                    """
-                );
-
-                ctx.AddSource("InjectableNamespacePrefixAttribute.g.cs",
-                    """
-                    namespace Fluentish.InjectableStatic
-                    {
-
-                        [System.AttributeUsage(System.AttributeTargets.Assembly, AllowMultiple = false)]
-                        public sealed class InjectableNamespacePrefixAttribute : System.Attribute
-                        {
-                            public string NamespacePrefix { get; }
-
-                            public InjectableNamespacePrefixAttribute(string namespacePrefix)
-                            {
-                                NamespacePrefix = namespacePrefix;
-                            }
-                        }
-                    }
-                    """
-                );
+                context.AddInjectableStaticAttribute();
+                context.AddInjectableNamespacePrefixAttribute();
             });
 
             var namespacePrefixProvider = context.CompilationProvider
