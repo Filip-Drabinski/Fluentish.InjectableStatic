@@ -8,12 +8,6 @@ using System.Linq;
 using System.Text;
 namespace Fluentish.InjectableStatic.Generator
 {
-    internal enum FilterType
-    {
-        Exclude = 0,
-        Include = 1
-    }
-
     [Generator]
     public class InjectableStaticGenerator : IIncrementalGenerator
     {
@@ -78,7 +72,12 @@ namespace Fluentish.InjectableStatic.Generator
 
                                 var injectableAttributeSymbol = compilation.GetTypeByMetadataName(targetTypeName);
 
-                                return (injectableAttributeSymbol, FilterType.Exclude, System.Array.Empty<string>());
+                                if(injectableAttributeSymbol is null)
+                                {
+                                    return null;
+                                }
+
+                                return new InjectableClassInfo(injectableAttributeSymbol, FilterType.Exclude, []);
                             }
                             else if (attribute.ConstructorArguments.Length == 3)
                             {
@@ -87,11 +86,16 @@ namespace Fluentish.InjectableStatic.Generator
                                 var targetTypeName = targetTypeArgument.Value!.ToString();
 
                                 var filterKind = (FilterType)attribute.ConstructorArguments[1].Value!;
-                                var filteredTypes = attribute.ConstructorArguments[2].Values.Select(x => x.Value?.ToString()).ToArray();
+                                var filteredTypes = attribute.ConstructorArguments[2].Values.Where(x=>!x.IsNull).Select(x => x.Value!.ToString()).ToArray();
 
                                 var injectableAttributeSymbol = compilation.GetTypeByMetadataName(targetTypeName);
 
-                                return (injectableAttributeSymbol, filterKind, filteredTypes);
+                                if (injectableAttributeSymbol is null)
+                                {
+                                    return null;
+                                }
+
+                                return new InjectableClassInfo(injectableAttributeSymbol, filterKind, filteredTypes ?? []);
                             }
                             return default;
                         })
@@ -109,42 +113,42 @@ namespace Fluentish.InjectableStatic.Generator
             });
         }
 
-        private static void GenerateInjectable(SourceProductionContext SourceProductionContext, (INamedTypeSymbol type, FilterType filter, string[] members) data, InjectableStaticConfiguration configuration)
+        private static void GenerateInjectable(SourceProductionContext SourceProductionContext, InjectableClassInfo classInfo, InjectableStaticConfiguration configuration)
         {
 
-            if (data.type is null)
+            if (classInfo.type is null)
             {
                 return;
             }
 
-            var typeModifiers = data.type.DeclaringSyntaxReferences.Select(x => x.GetSyntax()).Cast<TypeDeclarationSyntax>().SelectMany(x => x.Modifiers);
+            var typeModifiers = classInfo.type.DeclaringSyntaxReferences.Select(x => x.GetSyntax()).Cast<TypeDeclarationSyntax>().SelectMany(x => x.Modifiers);
 
             var isUnsafe = typeModifiers.Any(x => x.IsKind(SyntaxKind.UnsafeKeyword));
 
             var requireNullable = false;
-            var typeFullName = data.type.ToDisplayString();
-            var @namespace = data.type.ContainingNamespace.ToDisplayString();
+            var typeFullName = classInfo.type.ToDisplayString();
+            var @namespace = classInfo.type.ContainingNamespace.ToDisplayString();
 
-            var interfaceHint = $"I{data.type.Name}.g.cs";
+            var interfaceHint = $"I{classInfo.type.Name}.g.cs";
             var interfaceBuilder = new StringBuilder()
                 .Append("#pragma warning disable").Append(configuration.EndLine)
                 .Append("namespace ").Append(configuration.Namespace).Append(@namespace).Append(configuration.EndLine)
                 .Append("{").Append(configuration.EndLine)
-                .AppendIndentation().AppendInheritdoc(data.type, ref requireNullable).Append(configuration.EndLine)
-                .AppendIndentation().Append("public ").Append(isUnsafe ? "unsafe " : "").Append("interface I").Append(data.type.Name).Append(configuration.EndLine)
+                .AppendIndentation().AppendInheritdoc(classInfo.type, ref requireNullable).Append(configuration.EndLine)
+                .AppendIndentation().Append("public ").Append(isUnsafe ? "unsafe " : "").Append("interface I").Append(classInfo.type.Name).Append(configuration.EndLine)
                 .AppendIndentation().Append("{").Append(configuration.EndLine);
 
-            var implementationHint = $"{data.type.Name}.g.cs";
+            var implementationHint = $"{classInfo.type.Name}.g.cs";
             var implementationBuilder = new StringBuilder()
                 .Append("#pragma warning disable").Append(configuration.EndLine)
                 .Append("namespace ").Append(configuration.Namespace).Append(@namespace).Append(configuration.EndLine)
                 .Append("{").Append(configuration.EndLine)
-                .AppendIndentation().AppendInheritdoc(data.type, ref requireNullable).Append(configuration.EndLine)
+                .AppendIndentation().AppendInheritdoc(classInfo.type, ref requireNullable).Append(configuration.EndLine)
                 .AppendIndentation().Append("[global::System.Diagnostics.DebuggerStepThrough]").Append(configuration.EndLine)
-                .AppendIndentation().Append("public ").Append(isUnsafe ? "unsafe " : "").Append("class ").Append(data.type.Name).Append("Service").Append(": I").Append(data.type.Name).Append(configuration.EndLine)
+                .AppendIndentation().Append("public ").Append(isUnsafe ? "unsafe " : "").Append("class ").Append(classInfo.type.Name).Append("Service").Append(": I").Append(classInfo.type.Name).Append(configuration.EndLine)
                 .AppendIndentation().Append("{").Append(configuration.EndLine);
 
-            var allMembers = data.type.GetMembers();
+            var allMembers = classInfo.type.GetMembers();
 
             for (int memberIndex = 0; memberIndex < allMembers.Length; memberIndex++)
             {
@@ -155,29 +159,29 @@ namespace Fluentish.InjectableStatic.Generator
                 {
                     continue;
                 }
-                if(data.filter == FilterType.Exclude && data.members.Contains(memberSymbol.Name))
+                if(classInfo.filter == FilterType.Exclude && classInfo.members.Contains(memberSymbol.Name))
                 {
                     continue;
                 }
-                if(data.filter == FilterType.Include && !data.members.Contains(memberSymbol.Name))
+                if(classInfo.filter == FilterType.Include && !classInfo.members.Contains(memberSymbol.Name))
                 {
                     continue;
                 }
                 var generatedMember = false;
 
-                if (EventMemberBuilder.TryAppend(data.type, memberSymbol, interfaceBuilder, implementationBuilder, configuration.EndLine, ref requireNullable, out var eventName))
+                if (EventMemberBuilder.TryAppend(classInfo.type, memberSymbol, interfaceBuilder, implementationBuilder, configuration.EndLine, ref requireNullable, out var eventName))
                 {
                     generatedMember = true;
                 }
-                else if (PropertyMemberBuilder.TryAppend(data.type, memberSymbol, interfaceBuilder, implementationBuilder, configuration.EndLine, ref requireNullable, out var propertyName))
+                else if (PropertyMemberBuilder.TryAppend(classInfo.type, memberSymbol, interfaceBuilder, implementationBuilder, configuration.EndLine, ref requireNullable, out var propertyName))
                 {
                     generatedMember = true;
                 }
-                else if (FieldMemberBuilder.TryAppend(data.type, memberSymbol, interfaceBuilder, implementationBuilder, configuration.EndLine, ref requireNullable))
+                else if (FieldMemberBuilder.TryAppend(classInfo.type, memberSymbol, interfaceBuilder, implementationBuilder, configuration.EndLine, ref requireNullable))
                 {
                     generatedMember = true;
                 }
-                else if (MethodMemberBuilder.TryAppend(data.type, memberSymbol, interfaceBuilder, implementationBuilder, configuration.EndLine, ref requireNullable))
+                else if (MethodMemberBuilder.TryAppend(classInfo.type, memberSymbol, interfaceBuilder, implementationBuilder, configuration.EndLine, ref requireNullable))
                 {
                     generatedMember = true;
                 }
