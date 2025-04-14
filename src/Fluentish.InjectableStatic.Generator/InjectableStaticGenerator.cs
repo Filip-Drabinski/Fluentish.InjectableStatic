@@ -4,8 +4,6 @@ using Fluentish.InjectableStatic.Generator.MemberBuilders;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
-using Microsoft.CodeAnalysis.Diagnostics;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 namespace Fluentish.InjectableStatic.Generator
@@ -29,26 +27,36 @@ namespace Fluentish.InjectableStatic.Generator
             });
 
             var namespacePrefixProvider = context.CompilationProvider
-                .SelectMany((compilation, ct) =>
+                .Combine(context.AnalyzerConfigOptionsProvider)
+                .Select((data, ct) =>
                 {
+                    var (compilation, optionsProvider) = data;
+
+                    var newLineSymbol = optionsProvider.GlobalOptions.GetNewLineSymbol();
+
                     var attributes = compilation.Assembly.GetAttributes();
 
                     var injectableAttributeSymbol = compilation.GetTypeByMetadataName("Fluentish.InjectableStatic.InjectableNamespacePrefixAttribute");
 
-                    var matchingAttributes = attributes
-                        .Where(attr => SymbolEqualityComparer.Default.Equals(attr.AttributeClass, injectableAttributeSymbol));
+                    var injectableNamespacePrefixAttribute = attributes
+                        .FirstOrDefault(attr => SymbolEqualityComparer.Default.Equals(attr.AttributeClass, injectableAttributeSymbol));
 
-                    var selectedTypes = matchingAttributes.Select(attribute =>
+                    if(injectableNamespacePrefixAttribute is null)
                     {
-                        var targetTypeArgument = attribute.ConstructorArguments.First();
-                        var namespacePrefixValue = targetTypeArgument.Value!.ToString();
+                        return new InjectableStaticConfiguration(
+                            @namespace: null,
+                            endLine: newLineSymbol
+                        );
+                    }
 
-                        return namespacePrefixValue;
-                    });
+                    var targetTypeArgument = injectableNamespacePrefixAttribute.ConstructorArguments.First();
+                    var namespacePrefixValue = targetTypeArgument.Value!.ToString();
 
-                    return selectedTypes;
-                })
-                .Collect();
+                    return new InjectableStaticConfiguration(
+                        namespacePrefixValue,
+                        endLine: newLineSymbol
+                    );
+                });
 
             var typesToMakeInjectable = context.CompilationProvider
                 .SelectMany((compilation, ct) =>
@@ -91,33 +99,18 @@ namespace Fluentish.InjectableStatic.Generator
 
                     return selectedTypes;
                 })
-                .Combine(context.AnalyzerConfigOptionsProvider)
                 .Combine(namespacePrefixProvider);
 
             context.RegisterSourceOutput(typesToMakeInjectable, (sourceProductionContext, value) =>
             {
-                var (left, namespacePrefixes) = value;
-                var (data, optionsProvider) = left;
-                var namespacePrefix = namespacePrefixes.FirstOrDefault();
+                var (data, configuration) = value;
 
-                GenerateInjectable(sourceProductionContext, data!, optionsProvider, namespacePrefix);
+                GenerateInjectable(sourceProductionContext, data!, configuration);
             });
         }
 
-        private static void GenerateInjectable(SourceProductionContext SourceProductionContext, (INamedTypeSymbol type, FilterType filter, string[] members) data, AnalyzerConfigOptionsProvider optionsProvider, string? namespacePrefix)
+        private static void GenerateInjectable(SourceProductionContext SourceProductionContext, (INamedTypeSymbol type, FilterType filter, string[] members) data, InjectableStaticConfiguration configuration)
         {
-            var newLineSymbol = optionsProvider.GlobalOptions.GetNewLineSymbol();
-
-            namespacePrefix ??= "Fluentish.Injectable.";
-
-            if (string.IsNullOrWhiteSpace(namespacePrefix))
-            {
-                namespacePrefix = "";
-            }
-            else if (!namespacePrefix.EndsWith("."))
-            {
-                namespacePrefix += ".";
-            }
 
             if (data.type is null)
             {
@@ -134,22 +127,22 @@ namespace Fluentish.InjectableStatic.Generator
 
             var interfaceHint = $"I{data.type.Name}.g.cs";
             var interfaceBuilder = new StringBuilder()
-                .Append("#pragma warning disable").Append(newLineSymbol)
-                .Append("namespace ").Append(namespacePrefix).Append(@namespace).Append(newLineSymbol)
-                .Append("{").Append(newLineSymbol)
-                .AppendIndentation().AppendInheritdoc(data.type, ref requireNullable).Append(newLineSymbol)
-                .AppendIndentation().Append("public ").Append(isUnsafe ? "unsafe " : "").Append("interface I").Append(data.type.Name).Append(newLineSymbol)
-                .AppendIndentation().Append("{").Append(newLineSymbol);
+                .Append("#pragma warning disable").Append(configuration.EndLine)
+                .Append("namespace ").Append(configuration.Namespace).Append(@namespace).Append(configuration.EndLine)
+                .Append("{").Append(configuration.EndLine)
+                .AppendIndentation().AppendInheritdoc(data.type, ref requireNullable).Append(configuration.EndLine)
+                .AppendIndentation().Append("public ").Append(isUnsafe ? "unsafe " : "").Append("interface I").Append(data.type.Name).Append(configuration.EndLine)
+                .AppendIndentation().Append("{").Append(configuration.EndLine);
 
             var implementationHint = $"{data.type.Name}.g.cs";
             var implementationBuilder = new StringBuilder()
-                .Append("#pragma warning disable").Append(newLineSymbol)
-                .Append("namespace ").Append(namespacePrefix).Append(@namespace).Append(newLineSymbol)
-                .Append("{").Append(newLineSymbol)
-                .AppendIndentation().AppendInheritdoc(data.type, ref requireNullable).Append(newLineSymbol)
-                .AppendIndentation().Append("[global::System.Diagnostics.DebuggerStepThrough]").Append(newLineSymbol)
-                .AppendIndentation().Append("public ").Append(isUnsafe ? "unsafe " : "").Append("class ").Append(data.type.Name).Append("Service").Append(": I").Append(data.type.Name).Append(newLineSymbol)
-                .AppendIndentation().Append("{").Append(newLineSymbol);
+                .Append("#pragma warning disable").Append(configuration.EndLine)
+                .Append("namespace ").Append(configuration.Namespace).Append(@namespace).Append(configuration.EndLine)
+                .Append("{").Append(configuration.EndLine)
+                .AppendIndentation().AppendInheritdoc(data.type, ref requireNullable).Append(configuration.EndLine)
+                .AppendIndentation().Append("[global::System.Diagnostics.DebuggerStepThrough]").Append(configuration.EndLine)
+                .AppendIndentation().Append("public ").Append(isUnsafe ? "unsafe " : "").Append("class ").Append(data.type.Name).Append("Service").Append(": I").Append(data.type.Name).Append(configuration.EndLine)
+                .AppendIndentation().Append("{").Append(configuration.EndLine);
 
             var allMembers = data.type.GetMembers();
 
@@ -172,49 +165,49 @@ namespace Fluentish.InjectableStatic.Generator
                 }
                 var generatedMember = false;
 
-                if (EventMemberBuilder.TryAppend(data.type, memberSymbol, interfaceBuilder, implementationBuilder, newLineSymbol, ref requireNullable, out var eventName))
+                if (EventMemberBuilder.TryAppend(data.type, memberSymbol, interfaceBuilder, implementationBuilder, configuration.EndLine, ref requireNullable, out var eventName))
                 {
                     generatedMember = true;
                 }
-                else if (PropertyMemberBuilder.TryAppend(data.type, memberSymbol, interfaceBuilder, implementationBuilder, newLineSymbol, ref requireNullable, out var propertyName))
+                else if (PropertyMemberBuilder.TryAppend(data.type, memberSymbol, interfaceBuilder, implementationBuilder, configuration.EndLine, ref requireNullable, out var propertyName))
                 {
                     generatedMember = true;
                 }
-                else if (FieldMemberBuilder.TryAppend(data.type, memberSymbol, interfaceBuilder, implementationBuilder, newLineSymbol, ref requireNullable))
+                else if (FieldMemberBuilder.TryAppend(data.type, memberSymbol, interfaceBuilder, implementationBuilder, configuration.EndLine, ref requireNullable))
                 {
                     generatedMember = true;
                 }
-                else if (MethodMemberBuilder.TryAppend(data.type, memberSymbol, interfaceBuilder, implementationBuilder, newLineSymbol, ref requireNullable))
+                else if (MethodMemberBuilder.TryAppend(data.type, memberSymbol, interfaceBuilder, implementationBuilder, configuration.EndLine, ref requireNullable))
                 {
                     generatedMember = true;
                 }
 
                 if (generatedMember && memberIndex < allMembers.Length - 1)
                 {
-                    interfaceBuilder.Append(newLineSymbol);
-                    implementationBuilder.Append(newLineSymbol);
+                    interfaceBuilder.Append(configuration.EndLine);
+                    implementationBuilder.Append(configuration.EndLine);
                 }
 
             }
 
             interfaceBuilder
-                .Append("    }").Append(newLineSymbol)
-                .Append("}").Append(newLineSymbol)
-                .Append("#pragma warning restore").Append(newLineSymbol);
+                .Append("    }").Append(configuration.EndLine)
+                .Append("}").Append(configuration.EndLine)
+                .Append("#pragma warning restore").Append(configuration.EndLine);
 
             implementationBuilder
-                .Append("    }").Append(newLineSymbol)
-                .Append("}").Append(newLineSymbol)
-                .Append("#pragma warning restore").Append(newLineSymbol);
+                .Append("    }").Append(configuration.EndLine)
+                .Append("}").Append(configuration.EndLine)
+                .Append("#pragma warning restore").Append(configuration.EndLine);
 
             if (requireNullable)
             {
-                interfaceBuilder.Insert(0, newLineSymbol).Insert(0, "#nullable enable");
-                implementationBuilder.Insert(0, newLineSymbol).Insert(0, "#nullable enable");
+                interfaceBuilder.Insert(0, configuration.EndLine).Insert(0, "#nullable enable");
+                implementationBuilder.Insert(0, configuration.EndLine).Insert(0, "#nullable enable");
             }
 
-            interfaceBuilder.Insert(0, newLineSymbol).Insert(0, "// <auto-generated />");
-            implementationBuilder.Insert(0, newLineSymbol).Insert(0, "// <auto-generated />");
+            interfaceBuilder.Insert(0, configuration.EndLine).Insert(0, "// <auto-generated />");
+            implementationBuilder.Insert(0, configuration.EndLine).Insert(0, "// <auto-generated />");
 
             var interfaceSource = interfaceBuilder.ToString();
             var implementationSource = implementationBuilder.ToString();
