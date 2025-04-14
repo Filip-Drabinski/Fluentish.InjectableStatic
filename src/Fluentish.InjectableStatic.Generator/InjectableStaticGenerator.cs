@@ -1,6 +1,7 @@
 ﻿using Fluentish.InjectableStatic.Generator.Attributes;
 using Fluentish.InjectableStatic.Generator.Extensions;
 using Fluentish.InjectableStatic.Generator.MemberBuilders;
+using Fluentish.InjectableStatic.Generator.ValueProviders;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -20,80 +21,14 @@ namespace Fluentish.InjectableStatic.Generator
                 context.AddInjectableNamespacePrefixAttribute();
             });
 
-            var namespacePrefixProvider = context.CompilationProvider
-                .Combine(context.AnalyzerConfigOptionsProvider)
-                .Select((data, ct) =>
-                {
-                    var (compilation, optionsProvider) = data;
+            var namespacePrefixProvider = context.GetInjectableStaticConfigurationProvider();
 
-                    var newLineSymbol = optionsProvider.GlobalOptions.GetNewLineSymbol();
+            var injectableClassInfoProvider = context.GetInjectableClassInfoProvider();
 
-                    var attributes = compilation.Assembly.GetAttributes();
-
-                    var injectableAttributeSymbol = compilation.GetInjectableNamespacePrefixAttribute();
-
-                    var injectableNamespacePrefixAttribute = attributes
-                        .FirstOrDefault(attr => SymbolEqualityComparer.Default.Equals(attr.AttributeClass, injectableAttributeSymbol));
-
-                    if (injectableNamespacePrefixAttribute is null)
-                    {
-                        return new InjectableStaticConfiguration(
-                            @namespace: null,
-                            endLine: newLineSymbol
-                        );
-                    }
-
-                    var targetTypeArgument = injectableNamespacePrefixAttribute.ConstructorArguments.First();
-                    var namespacePrefixValue = targetTypeArgument.Value!.ToString();
-
-                    return new InjectableStaticConfiguration(
-                        namespacePrefixValue,
-                        endLine: newLineSymbol
-                    );
-                });
-
-            var typesToMakeInjectable = context.CompilationProvider
-                .SelectMany((compilation, ct) =>
-                {
-                    var attributes = compilation.Assembly.GetAttributes();
-
-                    var injectableAttributeSymbol = compilation.GetInjectableAttribute();
-
-                    var matchingAttributes = attributes
-                        .Where(attr => SymbolEqualityComparer.Default.Equals(attr.AttributeClass, injectableAttributeSymbol));
-
-                    var selectedTypes = matchingAttributes
-                        .Select(attribute =>
-                        {
-                            var targetTypeArgument = attribute.ConstructorArguments[0];
-                            var targetTypeName = targetTypeArgument.Value!.ToString();
-
-                            var injectableAttributeSymbol = compilation.GetTypeByMetadataName(targetTypeName);
-
-                            if (injectableAttributeSymbol is null)
-                            {
-                                return null;
-                            }
-
-                            var filterTypeArgument = attribute.NamedArguments.FirstOrDefault(x => x.Key == "FilterType");
-                            var filterType = filterTypeArgument.Key is not null
-                                ? (FilterType)filterTypeArgument.Value.Value!
-                                : FilterType.Exclude;
-
-                            var filteredTypesArgument = attribute.NamedArguments.FirstOrDefault(x => x.Key == "FilteredMembers");
-                            string[] filteredTypes = filteredTypesArgument.Key is not null
-                                ? filteredTypesArgument.Value.Values.Where(x => !x.IsNull).Select(x => x.Value!.ToString()).ToArray()
-                                : [];
-
-                            return new InjectableClassInfo(injectableAttributeSymbol, filterType, filteredTypes);
-                        })
-                        .Where(x => x != default);
-
-                    return selectedTypes;
-                })
+            var sourceProvider = injectableClassInfoProvider
                 .Combine(namespacePrefixProvider);
 
-            context.RegisterSourceOutput(typesToMakeInjectable, (sourceProductionContext, value) =>
+            context.RegisterSourceOutput(sourceProvider, (sourceProductionContext, value) =>
             {
                 var (data, configuration) = value;
 
