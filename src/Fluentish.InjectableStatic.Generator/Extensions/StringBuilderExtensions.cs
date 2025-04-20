@@ -1,7 +1,9 @@
 ﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using System;
+using System.Collections.Generic;
 using System.Collections.Immutable;
+using System.Data;
 using System.Text;
 
 namespace Fluentish.InjectableStatic.Generator.Extensions
@@ -88,6 +90,76 @@ namespace Fluentish.InjectableStatic.Generator.Extensions
             return builder;
         }
 
+        public static StringBuilder AppendTypeConstraints(
+            this StringBuilder builder,
+            ImmutableArray<ITypeSymbol> typeArguments,
+            ImmutableArray<ITypeParameterSymbol> typeParameters,
+            int indentation,
+            string endLine,
+            ref bool requireNullable
+        )
+        {
+            indentation++;
+
+            for (int i = 0; i < typeArguments.Length; i++)
+            {
+                var typeArg = typeArguments[i];
+                var typeParam = typeParameters[i];
+                if (
+                    !typeParam.HasReferenceTypeConstraint
+                    && !typeParam.HasValueTypeConstraint
+                    && !typeParam.HasUnmanagedTypeConstraint
+                    && typeParam.ConstraintTypes.Length == 0
+                    && !typeParam.HasConstructorConstraint
+                    || typeArg.Kind != SymbolKind.TypeParameter
+                )
+                {
+                    continue;
+                }
+
+                builder.AppendIndentation(indentation).Append("where ").Append(typeParam.Name).Append(" : ");
+
+                if (typeParam.HasReferenceTypeConstraint)
+                {
+                    builder.Append("class");
+                }
+
+                if (typeParam.HasValueTypeConstraint)
+                {
+
+                    builder.AppendIf(typeParam.HasReferenceTypeConstraint, ", ").Append("struct");
+                }
+
+                if (typeParam.HasUnmanagedTypeConstraint)
+                {
+                    builder.AppendIf(typeParam.HasValueTypeConstraint || typeParam.HasValueTypeConstraint, ", ").Append("unmanaged");
+                }
+
+
+                for (int j = 0; j < typeParam.ConstraintTypes.Length; j++)
+                {
+                    if (
+                        typeParam.HasValueTypeConstraint
+                        || typeParam.HasValueTypeConstraint
+                        || typeParam.HasReferenceTypeConstraint
+                        || j > 0
+                    )
+                    {
+                        builder.Append(", ");
+                    }
+                    builder.AppendType(typeParam.ConstraintTypes[j], ref requireNullable);
+                }
+
+                if (typeParam.HasConstructorConstraint)
+                {
+                    builder.AppendIf(typeParam.HasValueTypeConstraint || typeParam.HasValueTypeConstraint || typeParam.HasReferenceTypeConstraint || typeParam.ConstraintTypes.Length > 0, ", ").Append("new()");
+                }
+
+                builder.Append(endLine);
+            }
+            return builder;
+        }
+
         public static StringBuilder AppendType(this StringBuilder builder, ITypeSymbol type, ref bool requireNullable)
         {
             switch (type)
@@ -111,7 +183,8 @@ namespace Fluentish.InjectableStatic.Generator.Extensions
                     builder.Append(funcPtr.ToDisplayString(SymbolDisplayFormat.MinimallyQualifiedFormat));
                     break;
                 default:
-                    builder.Append(type.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat));
+                    var aaa = type.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat);
+                    builder.Append(aaa);
                     break;
             }
             requireNullable = requireNullable || type.NullableAnnotation == NullableAnnotation.Annotated;
@@ -141,6 +214,7 @@ namespace Fluentish.InjectableStatic.Generator.Extensions
             if (
                 typeSymbol.SpecialType != SpecialType.None
                 && typeSymbol.SpecialType != SpecialType.System_DateTime
+                && typeSymbol.TypeKind != TypeKind.Interface
             )
             {
                 builder.Append(typeSymbol.ToDisplayString(SymbolDisplayFormat.MinimallyQualifiedFormat));

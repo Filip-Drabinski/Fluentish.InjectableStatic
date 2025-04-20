@@ -22,9 +22,9 @@ namespace Fluentish.InjectableStatic.Generator.ValueProviders
                         .Select(attribute =>
                         {
                             var targetTypeArgument = attribute.ConstructorArguments[0];
-                            var targetTypeName = targetTypeArgument.Value!.ToString();
-
-                            var injectableAttributeSymbol = compilation.GetTypeByMetadataName(targetTypeName);
+                            var targetType = (ITypeSymbol)targetTypeArgument.Value!;
+                            var fullMetadataName = targetType.ContainingNamespace + "." + targetType.MetadataName;
+                            var injectableAttributeSymbol = compilation.GetTypeByMetadataName(fullMetadataName);
 
                             if (injectableAttributeSymbol is null)
                             {

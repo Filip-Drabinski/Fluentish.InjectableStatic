@@ -66,7 +66,15 @@ namespace Fluentish.InjectableStatic.Generator
             }
             interfaceBuilder
                 .AppendIndentation(baseIndentation).AppendInheritdoc(classInfo.type, ref requireNullable).Append(configuration.EndLine)
-                .AppendIndentation(baseIndentation).Append("public ").Append(isUnsafe ? "unsafe " : "").Append("interface I").Append(classInfo.type.Name).Append(configuration.EndLine)
+                .AppendIndentation(baseIndentation).Append("public ").Append(isUnsafe ? "unsafe " : "").Append("interface I").Append(classInfo.type.Name);
+
+            if (classInfo.type.IsGenericType)
+            {
+                interfaceBuilder.AppendTypeArguments(classInfo.type.TypeArguments);
+            }
+
+            interfaceBuilder.Append(configuration.EndLine)
+                .AppendTypeConstraints(classInfo.type.TypeArguments, classInfo.type.OriginalDefinition.TypeParameters, baseIndentation, configuration.EndLine, ref requireNullable)
                 .AppendIndentation(baseIndentation).Append("{").Append(configuration.EndLine);
 
             var implementationHint = $"{classInfo.type.Name}.g.cs";
@@ -81,7 +89,19 @@ namespace Fluentish.InjectableStatic.Generator
             implementationBuilder
                 .AppendIndentation(baseIndentation).AppendInheritdoc(classInfo.type, ref requireNullable).Append(configuration.EndLine)
                 .AppendIndentation(baseIndentation).Append("[global::System.Diagnostics.DebuggerStepThrough]").Append(configuration.EndLine)
-                .AppendIndentation(baseIndentation).Append("public ").Append(isUnsafe ? "unsafe " : "").Append("class ").Append(classInfo.type.Name).Append("Service").Append(" : I").Append(classInfo.type.Name).Append(configuration.EndLine)
+                .AppendIndentation(baseIndentation).Append("public ").Append(isUnsafe ? "unsafe " : "").Append("class ").Append(classInfo.type.Name).Append("Service");
+
+            if (!classInfo.type.IsGenericType)
+            {
+                implementationBuilder.Append(" : I").Append(classInfo.type.Name);
+            }
+            else
+            {
+                implementationBuilder.AppendTypeArguments(classInfo.type.TypeArguments).Append(" : I").Append(classInfo.type.Name).AppendTypeArguments(classInfo.type.TypeArguments);
+            }
+
+            implementationBuilder.Append(configuration.EndLine)
+                .AppendTypeConstraints(classInfo.type.TypeArguments, classInfo.type.OriginalDefinition.TypeParameters, baseIndentation, configuration.EndLine, ref requireNullable)
                 .AppendIndentation(baseIndentation).Append("{").Append(configuration.EndLine);
 
             var allMembers = classInfo.type.GetMembers();
