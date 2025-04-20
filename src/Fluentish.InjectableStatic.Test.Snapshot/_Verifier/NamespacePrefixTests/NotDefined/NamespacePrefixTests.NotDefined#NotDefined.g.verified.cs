@@ -10,7 +10,8 @@ namespace Fluentish.Injectable.NamespacePrefixTests
         /// <inheritdoc cref="global::NamespacePrefixTests.NotDefined.Test"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void Test() => global::NamespacePrefixTests.NotDefined.Test();
+        public void Test()
+             => global::NamespacePrefixTests.NotDefined.Test();
     }
 }
 #pragma warning restore

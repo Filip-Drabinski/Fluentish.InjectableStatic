@@ -16,315 +16,374 @@ namespace Fluentish.Injectable.System
         /// <inheritdoc cref="global::System.BitConverter.GetBytes"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public byte[] GetBytes(bool value) => global::System.BitConverter.GetBytes(value);
+        public byte[] GetBytes(bool value)
+             => global::System.BitConverter.GetBytes(value);
 
         /// <inheritdoc cref="global::System.BitConverter.TryWriteBytes"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public bool TryWriteBytes(global::System.Span<byte> destination, bool value) => global::System.BitConverter.TryWriteBytes(destination, value);
+        public bool TryWriteBytes(global::System.Span<byte> destination, bool value)
+             => global::System.BitConverter.TryWriteBytes(destination, value);
 
         /// <inheritdoc cref="global::System.BitConverter.GetBytes"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public byte[] GetBytes(char value) => global::System.BitConverter.GetBytes(value);
+        public byte[] GetBytes(char value)
+             => global::System.BitConverter.GetBytes(value);
 
         /// <inheritdoc cref="global::System.BitConverter.TryWriteBytes"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public bool TryWriteBytes(global::System.Span<byte> destination, char value) => global::System.BitConverter.TryWriteBytes(destination, value);
+        public bool TryWriteBytes(global::System.Span<byte> destination, char value)
+             => global::System.BitConverter.TryWriteBytes(destination, value);
 
         /// <inheritdoc cref="global::System.BitConverter.GetBytes"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public byte[] GetBytes(short value) => global::System.BitConverter.GetBytes(value);
+        public byte[] GetBytes(short value)
+             => global::System.BitConverter.GetBytes(value);
 
         /// <inheritdoc cref="global::System.BitConverter.TryWriteBytes"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public bool TryWriteBytes(global::System.Span<byte> destination, short value) => global::System.BitConverter.TryWriteBytes(destination, value);
+        public bool TryWriteBytes(global::System.Span<byte> destination, short value)
+             => global::System.BitConverter.TryWriteBytes(destination, value);
 
         /// <inheritdoc cref="global::System.BitConverter.GetBytes"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public byte[] GetBytes(int value) => global::System.BitConverter.GetBytes(value);
+        public byte[] GetBytes(int value)
+             => global::System.BitConverter.GetBytes(value);
 
         /// <inheritdoc cref="global::System.BitConverter.TryWriteBytes"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public bool TryWriteBytes(global::System.Span<byte> destination, int value) => global::System.BitConverter.TryWriteBytes(destination, value);
+        public bool TryWriteBytes(global::System.Span<byte> destination, int value)
+             => global::System.BitConverter.TryWriteBytes(destination, value);
 
         /// <inheritdoc cref="global::System.BitConverter.GetBytes"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public byte[] GetBytes(long value) => global::System.BitConverter.GetBytes(value);
+        public byte[] GetBytes(long value)
+             => global::System.BitConverter.GetBytes(value);
 
         /// <inheritdoc cref="global::System.BitConverter.TryWriteBytes"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public bool TryWriteBytes(global::System.Span<byte> destination, long value) => global::System.BitConverter.TryWriteBytes(destination, value);
+        public bool TryWriteBytes(global::System.Span<byte> destination, long value)
+             => global::System.BitConverter.TryWriteBytes(destination, value);
 
         /// <inheritdoc cref="global::System.BitConverter.GetBytes"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public byte[] GetBytes(ushort value) => global::System.BitConverter.GetBytes(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public byte[] GetBytes(ushort value)
+             => global::System.BitConverter.GetBytes(value);
 
         /// <inheritdoc cref="global::System.BitConverter.TryWriteBytes"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public bool TryWriteBytes(global::System.Span<byte> destination, ushort value) => global::System.BitConverter.TryWriteBytes(destination, value);
+        [global::System.CLSCompliantAttribute(false)]
+        public bool TryWriteBytes(global::System.Span<byte> destination, ushort value)
+             => global::System.BitConverter.TryWriteBytes(destination, value);
 
         /// <inheritdoc cref="global::System.BitConverter.GetBytes"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public byte[] GetBytes(uint value) => global::System.BitConverter.GetBytes(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public byte[] GetBytes(uint value)
+             => global::System.BitConverter.GetBytes(value);
 
         /// <inheritdoc cref="global::System.BitConverter.TryWriteBytes"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public bool TryWriteBytes(global::System.Span<byte> destination, uint value) => global::System.BitConverter.TryWriteBytes(destination, value);
+        [global::System.CLSCompliantAttribute(false)]
+        public bool TryWriteBytes(global::System.Span<byte> destination, uint value)
+             => global::System.BitConverter.TryWriteBytes(destination, value);
 
         /// <inheritdoc cref="global::System.BitConverter.GetBytes"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public byte[] GetBytes(ulong value) => global::System.BitConverter.GetBytes(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public byte[] GetBytes(ulong value)
+             => global::System.BitConverter.GetBytes(value);
 
         /// <inheritdoc cref="global::System.BitConverter.TryWriteBytes"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public bool TryWriteBytes(global::System.Span<byte> destination, ulong value) => global::System.BitConverter.TryWriteBytes(destination, value);
+        [global::System.CLSCompliantAttribute(false)]
+        public bool TryWriteBytes(global::System.Span<byte> destination, ulong value)
+             => global::System.BitConverter.TryWriteBytes(destination, value);
 
         /// <inheritdoc cref="global::System.BitConverter.GetBytes"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public byte[] GetBytes(global::System.Half value) => global::System.BitConverter.GetBytes(value);
+        public byte[] GetBytes(global::System.Half value)
+             => global::System.BitConverter.GetBytes(value);
 
         /// <inheritdoc cref="global::System.BitConverter.TryWriteBytes"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public bool TryWriteBytes(global::System.Span<byte> destination, global::System.Half value) => global::System.BitConverter.TryWriteBytes(destination, value);
+        public bool TryWriteBytes(global::System.Span<byte> destination, global::System.Half value)
+             => global::System.BitConverter.TryWriteBytes(destination, value);
 
         /// <inheritdoc cref="global::System.BitConverter.GetBytes"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public byte[] GetBytes(float value) => global::System.BitConverter.GetBytes(value);
+        public byte[] GetBytes(float value)
+             => global::System.BitConverter.GetBytes(value);
 
         /// <inheritdoc cref="global::System.BitConverter.TryWriteBytes"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public bool TryWriteBytes(global::System.Span<byte> destination, float value) => global::System.BitConverter.TryWriteBytes(destination, value);
+        public bool TryWriteBytes(global::System.Span<byte> destination, float value)
+             => global::System.BitConverter.TryWriteBytes(destination, value);
 
         /// <inheritdoc cref="global::System.BitConverter.GetBytes"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public byte[] GetBytes(double value) => global::System.BitConverter.GetBytes(value);
+        public byte[] GetBytes(double value)
+             => global::System.BitConverter.GetBytes(value);
 
         /// <inheritdoc cref="global::System.BitConverter.TryWriteBytes"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public bool TryWriteBytes(global::System.Span<byte> destination, double value) => global::System.BitConverter.TryWriteBytes(destination, value);
+        public bool TryWriteBytes(global::System.Span<byte> destination, double value)
+             => global::System.BitConverter.TryWriteBytes(destination, value);
 
         /// <inheritdoc cref="global::System.BitConverter.ToChar"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public char ToChar(byte[] value, int startIndex) => global::System.BitConverter.ToChar(value, startIndex);
+        public char ToChar(byte[] value, int startIndex)
+             => global::System.BitConverter.ToChar(value, startIndex);
 
         /// <inheritdoc cref="global::System.BitConverter.ToChar"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public char ToChar(global::System.ReadOnlySpan<byte> value) => global::System.BitConverter.ToChar(value);
+        public char ToChar(global::System.ReadOnlySpan<byte> value)
+             => global::System.BitConverter.ToChar(value);
 
         /// <inheritdoc cref="global::System.BitConverter.ToInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public short ToInt16(byte[] value, int startIndex) => global::System.BitConverter.ToInt16(value, startIndex);
+        public short ToInt16(byte[] value, int startIndex)
+             => global::System.BitConverter.ToInt16(value, startIndex);
 
         /// <inheritdoc cref="global::System.BitConverter.ToInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public short ToInt16(global::System.ReadOnlySpan<byte> value) => global::System.BitConverter.ToInt16(value);
+        public short ToInt16(global::System.ReadOnlySpan<byte> value)
+             => global::System.BitConverter.ToInt16(value);
 
         /// <inheritdoc cref="global::System.BitConverter.ToInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int ToInt32(byte[] value, int startIndex) => global::System.BitConverter.ToInt32(value, startIndex);
+        public int ToInt32(byte[] value, int startIndex)
+             => global::System.BitConverter.ToInt32(value, startIndex);
 
         /// <inheritdoc cref="global::System.BitConverter.ToInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int ToInt32(global::System.ReadOnlySpan<byte> value) => global::System.BitConverter.ToInt32(value);
+        public int ToInt32(global::System.ReadOnlySpan<byte> value)
+             => global::System.BitConverter.ToInt32(value);
 
         /// <inheritdoc cref="global::System.BitConverter.ToInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public long ToInt64(byte[] value, int startIndex) => global::System.BitConverter.ToInt64(value, startIndex);
+        public long ToInt64(byte[] value, int startIndex)
+             => global::System.BitConverter.ToInt64(value, startIndex);
 
         /// <inheritdoc cref="global::System.BitConverter.ToInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public long ToInt64(global::System.ReadOnlySpan<byte> value) => global::System.BitConverter.ToInt64(value);
+        public long ToInt64(global::System.ReadOnlySpan<byte> value)
+             => global::System.BitConverter.ToInt64(value);
 
         /// <inheritdoc cref="global::System.BitConverter.ToUInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ushort ToUInt16(byte[] value, int startIndex) => global::System.BitConverter.ToUInt16(value, startIndex);
+        [global::System.CLSCompliantAttribute(false)]
+        public ushort ToUInt16(byte[] value, int startIndex)
+             => global::System.BitConverter.ToUInt16(value, startIndex);
 
         /// <inheritdoc cref="global::System.BitConverter.ToUInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ushort ToUInt16(global::System.ReadOnlySpan<byte> value) => global::System.BitConverter.ToUInt16(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ushort ToUInt16(global::System.ReadOnlySpan<byte> value)
+             => global::System.BitConverter.ToUInt16(value);
 
         /// <inheritdoc cref="global::System.BitConverter.ToUInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public uint ToUInt32(byte[] value, int startIndex) => global::System.BitConverter.ToUInt32(value, startIndex);
+        [global::System.CLSCompliantAttribute(false)]
+        public uint ToUInt32(byte[] value, int startIndex)
+             => global::System.BitConverter.ToUInt32(value, startIndex);
 
         /// <inheritdoc cref="global::System.BitConverter.ToUInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public uint ToUInt32(global::System.ReadOnlySpan<byte> value) => global::System.BitConverter.ToUInt32(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public uint ToUInt32(global::System.ReadOnlySpan<byte> value)
+             => global::System.BitConverter.ToUInt32(value);
 
         /// <inheritdoc cref="global::System.BitConverter.ToUInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ulong ToUInt64(byte[] value, int startIndex) => global::System.BitConverter.ToUInt64(value, startIndex);
+        [global::System.CLSCompliantAttribute(false)]
+        public ulong ToUInt64(byte[] value, int startIndex)
+             => global::System.BitConverter.ToUInt64(value, startIndex);
 
         /// <inheritdoc cref="global::System.BitConverter.ToUInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ulong ToUInt64(global::System.ReadOnlySpan<byte> value) => global::System.BitConverter.ToUInt64(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ulong ToUInt64(global::System.ReadOnlySpan<byte> value)
+             => global::System.BitConverter.ToUInt64(value);
 
         /// <inheritdoc cref="global::System.BitConverter.ToHalf"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Half ToHalf(byte[] value, int startIndex) => global::System.BitConverter.ToHalf(value, startIndex);
+        public global::System.Half ToHalf(byte[] value, int startIndex)
+             => global::System.BitConverter.ToHalf(value, startIndex);
 
         /// <inheritdoc cref="global::System.BitConverter.ToHalf"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Half ToHalf(global::System.ReadOnlySpan<byte> value) => global::System.BitConverter.ToHalf(value);
+        public global::System.Half ToHalf(global::System.ReadOnlySpan<byte> value)
+             => global::System.BitConverter.ToHalf(value);
 
         /// <inheritdoc cref="global::System.BitConverter.ToSingle"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public float ToSingle(byte[] value, int startIndex) => global::System.BitConverter.ToSingle(value, startIndex);
+        public float ToSingle(byte[] value, int startIndex)
+             => global::System.BitConverter.ToSingle(value, startIndex);
 
         /// <inheritdoc cref="global::System.BitConverter.ToSingle"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public float ToSingle(global::System.ReadOnlySpan<byte> value) => global::System.BitConverter.ToSingle(value);
+        public float ToSingle(global::System.ReadOnlySpan<byte> value)
+             => global::System.BitConverter.ToSingle(value);
 
         /// <inheritdoc cref="global::System.BitConverter.ToDouble"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double ToDouble(byte[] value, int startIndex) => global::System.BitConverter.ToDouble(value, startIndex);
+        public double ToDouble(byte[] value, int startIndex)
+             => global::System.BitConverter.ToDouble(value, startIndex);
 
         /// <inheritdoc cref="global::System.BitConverter.ToDouble"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double ToDouble(global::System.ReadOnlySpan<byte> value) => global::System.BitConverter.ToDouble(value);
+        public double ToDouble(global::System.ReadOnlySpan<byte> value)
+             => global::System.BitConverter.ToDouble(value);
 
         /// <inheritdoc cref="global::System.BitConverter.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToString(byte[] value, int startIndex, int length) => global::System.BitConverter.ToString(value, startIndex, length);
+        public string ToString(byte[] value, int startIndex, int length)
+             => global::System.BitConverter.ToString(value, startIndex, length);
 
         /// <inheritdoc cref="global::System.BitConverter.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToString(byte[] value) => global::System.BitConverter.ToString(value);
+        public string ToString(byte[] value)
+             => global::System.BitConverter.ToString(value);
 
         /// <inheritdoc cref="global::System.BitConverter.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToString(byte[] value, int startIndex) => global::System.BitConverter.ToString(value, startIndex);
+        public string ToString(byte[] value, int startIndex)
+             => global::System.BitConverter.ToString(value, startIndex);
 
         /// <inheritdoc cref="global::System.BitConverter.ToBoolean"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public bool ToBoolean(byte[] value, int startIndex) => global::System.BitConverter.ToBoolean(value, startIndex);
+        public bool ToBoolean(byte[] value, int startIndex)
+             => global::System.BitConverter.ToBoolean(value, startIndex);
 
         /// <inheritdoc cref="global::System.BitConverter.ToBoolean"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public bool ToBoolean(global::System.ReadOnlySpan<byte> value) => global::System.BitConverter.ToBoolean(value);
+        public bool ToBoolean(global::System.ReadOnlySpan<byte> value)
+             => global::System.BitConverter.ToBoolean(value);
 
         /// <inheritdoc cref="global::System.BitConverter.DoubleToInt64Bits"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public long DoubleToInt64Bits(double value) => global::System.BitConverter.DoubleToInt64Bits(value);
+        public long DoubleToInt64Bits(double value)
+             => global::System.BitConverter.DoubleToInt64Bits(value);
 
         /// <inheritdoc cref="global::System.BitConverter.Int64BitsToDouble"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double Int64BitsToDouble(long value) => global::System.BitConverter.Int64BitsToDouble(value);
+        public double Int64BitsToDouble(long value)
+             => global::System.BitConverter.Int64BitsToDouble(value);
 
         /// <inheritdoc cref="global::System.BitConverter.SingleToInt32Bits"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int SingleToInt32Bits(float value) => global::System.BitConverter.SingleToInt32Bits(value);
+        public int SingleToInt32Bits(float value)
+             => global::System.BitConverter.SingleToInt32Bits(value);
 
         /// <inheritdoc cref="global::System.BitConverter.Int32BitsToSingle"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public float Int32BitsToSingle(int value) => global::System.BitConverter.Int32BitsToSingle(value);
+        public float Int32BitsToSingle(int value)
+             => global::System.BitConverter.Int32BitsToSingle(value);
 
         /// <inheritdoc cref="global::System.BitConverter.HalfToInt16Bits"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public short HalfToInt16Bits(global::System.Half value) => global::System.BitConverter.HalfToInt16Bits(value);
+        public short HalfToInt16Bits(global::System.Half value)
+             => global::System.BitConverter.HalfToInt16Bits(value);
 
         /// <inheritdoc cref="global::System.BitConverter.Int16BitsToHalf"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Half Int16BitsToHalf(short value) => global::System.BitConverter.Int16BitsToHalf(value);
+        public global::System.Half Int16BitsToHalf(short value)
+             => global::System.BitConverter.Int16BitsToHalf(value);
 
         /// <inheritdoc cref="global::System.BitConverter.DoubleToUInt64Bits"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ulong DoubleToUInt64Bits(double value) => global::System.BitConverter.DoubleToUInt64Bits(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ulong DoubleToUInt64Bits(double value)
+             => global::System.BitConverter.DoubleToUInt64Bits(value);
 
         /// <inheritdoc cref="global::System.BitConverter.UInt64BitsToDouble"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public double UInt64BitsToDouble(ulong value) => global::System.BitConverter.UInt64BitsToDouble(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public double UInt64BitsToDouble(ulong value)
+             => global::System.BitConverter.UInt64BitsToDouble(value);
 
         /// <inheritdoc cref="global::System.BitConverter.SingleToUInt32Bits"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public uint SingleToUInt32Bits(float value) => global::System.BitConverter.SingleToUInt32Bits(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public uint SingleToUInt32Bits(float value)
+             => global::System.BitConverter.SingleToUInt32Bits(value);
 
         /// <inheritdoc cref="global::System.BitConverter.UInt32BitsToSingle"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public float UInt32BitsToSingle(uint value) => global::System.BitConverter.UInt32BitsToSingle(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public float UInt32BitsToSingle(uint value)
+             => global::System.BitConverter.UInt32BitsToSingle(value);
 
         /// <inheritdoc cref="global::System.BitConverter.HalfToUInt16Bits"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ushort HalfToUInt16Bits(global::System.Half value) => global::System.BitConverter.HalfToUInt16Bits(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ushort HalfToUInt16Bits(global::System.Half value)
+             => global::System.BitConverter.HalfToUInt16Bits(value);
 
         /// <inheritdoc cref="global::System.BitConverter.UInt16BitsToHalf"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public global::System.Half UInt16BitsToHalf(ushort value) => global::System.BitConverter.UInt16BitsToHalf(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public global::System.Half UInt16BitsToHalf(ushort value)
+             => global::System.BitConverter.UInt16BitsToHalf(value);
     }
 }
 #pragma warning restore

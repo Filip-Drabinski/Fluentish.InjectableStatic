@@ -10,7 +10,8 @@ namespace Fluentish.Injectable.MethodReturnTests
         /// <inheritdoc cref="global::MethodReturnTests.Array.Test"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::MethodReturnTests.Example[] Test() => global::MethodReturnTests.Array.Test();
+        public global::MethodReturnTests.Example[] Test()
+             => global::MethodReturnTests.Array.Test();
     }
 }
 #pragma warning restore

@@ -20,7 +20,7 @@ namespace Fluentish.Injectable.System.IO
         /// <inheritdoc cref="global::System.IO.Directory.CreateDirectory"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("windows")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("windows")]
         global::System.IO.DirectoryInfo CreateDirectory(string path, global::System.IO.UnixFileMode unixCreateMode);
 
         /// <inheritdoc cref="global::System.IO.Directory.CreateTempSubdirectory"/>

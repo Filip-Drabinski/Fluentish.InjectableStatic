@@ -10,7 +10,8 @@ namespace Fluentish.Injectable.MethodReturnTests
         /// <inheritdoc cref="global::MethodReturnTests.Dynamic.Test"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public dynamic Test() => global::MethodReturnTests.Dynamic.Test();
+        public dynamic Test()
+             => global::MethodReturnTests.Dynamic.Test();
     }
 }
 #pragma warning restore

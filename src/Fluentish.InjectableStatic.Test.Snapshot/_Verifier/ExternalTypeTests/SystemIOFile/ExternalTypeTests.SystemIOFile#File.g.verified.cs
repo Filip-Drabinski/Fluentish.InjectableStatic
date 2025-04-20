@@ -11,463 +11,554 @@ namespace Fluentish.Injectable.System.IO
         /// <inheritdoc cref="global::System.IO.File.OpenText"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.IO.StreamReader OpenText(string path) => global::System.IO.File.OpenText(path);
+        public global::System.IO.StreamReader OpenText(string path)
+             => global::System.IO.File.OpenText(path);
 
         /// <inheritdoc cref="global::System.IO.File.CreateText"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.IO.StreamWriter CreateText(string path) => global::System.IO.File.CreateText(path);
+        public global::System.IO.StreamWriter CreateText(string path)
+             => global::System.IO.File.CreateText(path);
 
         /// <inheritdoc cref="global::System.IO.File.AppendText"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.IO.StreamWriter AppendText(string path) => global::System.IO.File.AppendText(path);
+        public global::System.IO.StreamWriter AppendText(string path)
+             => global::System.IO.File.AppendText(path);
 
         /// <inheritdoc cref="global::System.IO.File.Copy"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void Copy(string sourceFileName, string destFileName) => global::System.IO.File.Copy(sourceFileName, destFileName);
+        public void Copy(string sourceFileName, string destFileName)
+             => global::System.IO.File.Copy(sourceFileName, destFileName);
 
         /// <inheritdoc cref="global::System.IO.File.Copy"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void Copy(string sourceFileName, string destFileName, bool overwrite) => global::System.IO.File.Copy(sourceFileName, destFileName, overwrite);
+        public void Copy(string sourceFileName, string destFileName, bool overwrite)
+             => global::System.IO.File.Copy(sourceFileName, destFileName, overwrite);
 
         /// <inheritdoc cref="global::System.IO.File.Create"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.IO.FileStream Create(string path) => global::System.IO.File.Create(path);
+        public global::System.IO.FileStream Create(string path)
+             => global::System.IO.File.Create(path);
 
         /// <inheritdoc cref="global::System.IO.File.Create"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.IO.FileStream Create(string path, int bufferSize) => global::System.IO.File.Create(path, bufferSize);
+        public global::System.IO.FileStream Create(string path, int bufferSize)
+             => global::System.IO.File.Create(path, bufferSize);
 
         /// <inheritdoc cref="global::System.IO.File.Create"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.IO.FileStream Create(string path, int bufferSize, global::System.IO.FileOptions options) => global::System.IO.File.Create(path, bufferSize, options);
+        public global::System.IO.FileStream Create(string path, int bufferSize, global::System.IO.FileOptions options)
+             => global::System.IO.File.Create(path, bufferSize, options);
 
         /// <inheritdoc cref="global::System.IO.File.Delete"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void Delete(string path) => global::System.IO.File.Delete(path);
+        public void Delete(string path)
+             => global::System.IO.File.Delete(path);
 
         /// <inheritdoc cref="global::System.IO.File.Exists"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public bool Exists([global::System.Diagnostics.CodeAnalysis.NotNullWhenAttribute(true)] string? path) => global::System.IO.File.Exists(path);
+        public bool Exists([global::System.Diagnostics.CodeAnalysis.NotNullWhenAttribute(true)] string? path)
+             => global::System.IO.File.Exists(path);
 
         /// <inheritdoc cref="global::System.IO.File.Open"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.IO.FileStream Open(string path, global::System.IO.FileStreamOptions options) => global::System.IO.File.Open(path, options);
+        public global::System.IO.FileStream Open(string path, global::System.IO.FileStreamOptions options)
+             => global::System.IO.File.Open(path, options);
 
         /// <inheritdoc cref="global::System.IO.File.Open"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.IO.FileStream Open(string path, global::System.IO.FileMode mode) => global::System.IO.File.Open(path, mode);
+        public global::System.IO.FileStream Open(string path, global::System.IO.FileMode mode)
+             => global::System.IO.File.Open(path, mode);
 
         /// <inheritdoc cref="global::System.IO.File.Open"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.IO.FileStream Open(string path, global::System.IO.FileMode mode, global::System.IO.FileAccess access) => global::System.IO.File.Open(path, mode, access);
+        public global::System.IO.FileStream Open(string path, global::System.IO.FileMode mode, global::System.IO.FileAccess access)
+             => global::System.IO.File.Open(path, mode, access);
 
         /// <inheritdoc cref="global::System.IO.File.Open"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.IO.FileStream Open(string path, global::System.IO.FileMode mode, global::System.IO.FileAccess access, global::System.IO.FileShare share) => global::System.IO.File.Open(path, mode, access, share);
+        public global::System.IO.FileStream Open(string path, global::System.IO.FileMode mode, global::System.IO.FileAccess access, global::System.IO.FileShare share)
+             => global::System.IO.File.Open(path, mode, access, share);
 
         /// <inheritdoc cref="global::System.IO.File.OpenHandle"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::Microsoft.Win32.SafeHandles.SafeFileHandle OpenHandle(string path, global::System.IO.FileMode mode, global::System.IO.FileAccess access, global::System.IO.FileShare share, global::System.IO.FileOptions options, long preallocationSize) => global::System.IO.File.OpenHandle(path, mode, access, share, options, preallocationSize);
+        public global::Microsoft.Win32.SafeHandles.SafeFileHandle OpenHandle(string path, global::System.IO.FileMode mode, global::System.IO.FileAccess access, global::System.IO.FileShare share, global::System.IO.FileOptions options, long preallocationSize)
+             => global::System.IO.File.OpenHandle(path, mode, access, share, options, preallocationSize);
 
         /// <inheritdoc cref="global::System.IO.File.SetCreationTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void SetCreationTime(string path, global::System.DateTime creationTime) => global::System.IO.File.SetCreationTime(path, creationTime);
+        public void SetCreationTime(string path, global::System.DateTime creationTime)
+             => global::System.IO.File.SetCreationTime(path, creationTime);
 
         /// <inheritdoc cref="global::System.IO.File.SetCreationTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void SetCreationTime(global::Microsoft.Win32.SafeHandles.SafeFileHandle fileHandle, global::System.DateTime creationTime) => global::System.IO.File.SetCreationTime(fileHandle, creationTime);
+        public void SetCreationTime(global::Microsoft.Win32.SafeHandles.SafeFileHandle fileHandle, global::System.DateTime creationTime)
+             => global::System.IO.File.SetCreationTime(fileHandle, creationTime);
 
         /// <inheritdoc cref="global::System.IO.File.SetCreationTimeUtc"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void SetCreationTimeUtc(string path, global::System.DateTime creationTimeUtc) => global::System.IO.File.SetCreationTimeUtc(path, creationTimeUtc);
+        public void SetCreationTimeUtc(string path, global::System.DateTime creationTimeUtc)
+             => global::System.IO.File.SetCreationTimeUtc(path, creationTimeUtc);
 
         /// <inheritdoc cref="global::System.IO.File.SetCreationTimeUtc"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void SetCreationTimeUtc(global::Microsoft.Win32.SafeHandles.SafeFileHandle fileHandle, global::System.DateTime creationTimeUtc) => global::System.IO.File.SetCreationTimeUtc(fileHandle, creationTimeUtc);
+        public void SetCreationTimeUtc(global::Microsoft.Win32.SafeHandles.SafeFileHandle fileHandle, global::System.DateTime creationTimeUtc)
+             => global::System.IO.File.SetCreationTimeUtc(fileHandle, creationTimeUtc);
 
         /// <inheritdoc cref="global::System.IO.File.GetCreationTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.DateTime GetCreationTime(string path) => global::System.IO.File.GetCreationTime(path);
+        public global::System.DateTime GetCreationTime(string path)
+             => global::System.IO.File.GetCreationTime(path);
 
         /// <inheritdoc cref="global::System.IO.File.GetCreationTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.DateTime GetCreationTime(global::Microsoft.Win32.SafeHandles.SafeFileHandle fileHandle) => global::System.IO.File.GetCreationTime(fileHandle);
+        public global::System.DateTime GetCreationTime(global::Microsoft.Win32.SafeHandles.SafeFileHandle fileHandle)
+             => global::System.IO.File.GetCreationTime(fileHandle);
 
         /// <inheritdoc cref="global::System.IO.File.GetCreationTimeUtc"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.DateTime GetCreationTimeUtc(string path) => global::System.IO.File.GetCreationTimeUtc(path);
+        public global::System.DateTime GetCreationTimeUtc(string path)
+             => global::System.IO.File.GetCreationTimeUtc(path);
 
         /// <inheritdoc cref="global::System.IO.File.GetCreationTimeUtc"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.DateTime GetCreationTimeUtc(global::Microsoft.Win32.SafeHandles.SafeFileHandle fileHandle) => global::System.IO.File.GetCreationTimeUtc(fileHandle);
+        public global::System.DateTime GetCreationTimeUtc(global::Microsoft.Win32.SafeHandles.SafeFileHandle fileHandle)
+             => global::System.IO.File.GetCreationTimeUtc(fileHandle);
 
         /// <inheritdoc cref="global::System.IO.File.SetLastAccessTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void SetLastAccessTime(string path, global::System.DateTime lastAccessTime) => global::System.IO.File.SetLastAccessTime(path, lastAccessTime);
+        public void SetLastAccessTime(string path, global::System.DateTime lastAccessTime)
+             => global::System.IO.File.SetLastAccessTime(path, lastAccessTime);
 
         /// <inheritdoc cref="global::System.IO.File.SetLastAccessTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void SetLastAccessTime(global::Microsoft.Win32.SafeHandles.SafeFileHandle fileHandle, global::System.DateTime lastAccessTime) => global::System.IO.File.SetLastAccessTime(fileHandle, lastAccessTime);
+        public void SetLastAccessTime(global::Microsoft.Win32.SafeHandles.SafeFileHandle fileHandle, global::System.DateTime lastAccessTime)
+             => global::System.IO.File.SetLastAccessTime(fileHandle, lastAccessTime);
 
         /// <inheritdoc cref="global::System.IO.File.SetLastAccessTimeUtc"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void SetLastAccessTimeUtc(string path, global::System.DateTime lastAccessTimeUtc) => global::System.IO.File.SetLastAccessTimeUtc(path, lastAccessTimeUtc);
+        public void SetLastAccessTimeUtc(string path, global::System.DateTime lastAccessTimeUtc)
+             => global::System.IO.File.SetLastAccessTimeUtc(path, lastAccessTimeUtc);
 
         /// <inheritdoc cref="global::System.IO.File.SetLastAccessTimeUtc"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void SetLastAccessTimeUtc(global::Microsoft.Win32.SafeHandles.SafeFileHandle fileHandle, global::System.DateTime lastAccessTimeUtc) => global::System.IO.File.SetLastAccessTimeUtc(fileHandle, lastAccessTimeUtc);
+        public void SetLastAccessTimeUtc(global::Microsoft.Win32.SafeHandles.SafeFileHandle fileHandle, global::System.DateTime lastAccessTimeUtc)
+             => global::System.IO.File.SetLastAccessTimeUtc(fileHandle, lastAccessTimeUtc);
 
         /// <inheritdoc cref="global::System.IO.File.GetLastAccessTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.DateTime GetLastAccessTime(string path) => global::System.IO.File.GetLastAccessTime(path);
+        public global::System.DateTime GetLastAccessTime(string path)
+             => global::System.IO.File.GetLastAccessTime(path);
 
         /// <inheritdoc cref="global::System.IO.File.GetLastAccessTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.DateTime GetLastAccessTime(global::Microsoft.Win32.SafeHandles.SafeFileHandle fileHandle) => global::System.IO.File.GetLastAccessTime(fileHandle);
+        public global::System.DateTime GetLastAccessTime(global::Microsoft.Win32.SafeHandles.SafeFileHandle fileHandle)
+             => global::System.IO.File.GetLastAccessTime(fileHandle);
 
         /// <inheritdoc cref="global::System.IO.File.GetLastAccessTimeUtc"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.DateTime GetLastAccessTimeUtc(string path) => global::System.IO.File.GetLastAccessTimeUtc(path);
+        public global::System.DateTime GetLastAccessTimeUtc(string path)
+             => global::System.IO.File.GetLastAccessTimeUtc(path);
 
         /// <inheritdoc cref="global::System.IO.File.GetLastAccessTimeUtc"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.DateTime GetLastAccessTimeUtc(global::Microsoft.Win32.SafeHandles.SafeFileHandle fileHandle) => global::System.IO.File.GetLastAccessTimeUtc(fileHandle);
+        public global::System.DateTime GetLastAccessTimeUtc(global::Microsoft.Win32.SafeHandles.SafeFileHandle fileHandle)
+             => global::System.IO.File.GetLastAccessTimeUtc(fileHandle);
 
         /// <inheritdoc cref="global::System.IO.File.SetLastWriteTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void SetLastWriteTime(string path, global::System.DateTime lastWriteTime) => global::System.IO.File.SetLastWriteTime(path, lastWriteTime);
+        public void SetLastWriteTime(string path, global::System.DateTime lastWriteTime)
+             => global::System.IO.File.SetLastWriteTime(path, lastWriteTime);
 
         /// <inheritdoc cref="global::System.IO.File.SetLastWriteTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void SetLastWriteTime(global::Microsoft.Win32.SafeHandles.SafeFileHandle fileHandle, global::System.DateTime lastWriteTime) => global::System.IO.File.SetLastWriteTime(fileHandle, lastWriteTime);
+        public void SetLastWriteTime(global::Microsoft.Win32.SafeHandles.SafeFileHandle fileHandle, global::System.DateTime lastWriteTime)
+             => global::System.IO.File.SetLastWriteTime(fileHandle, lastWriteTime);
 
         /// <inheritdoc cref="global::System.IO.File.SetLastWriteTimeUtc"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void SetLastWriteTimeUtc(string path, global::System.DateTime lastWriteTimeUtc) => global::System.IO.File.SetLastWriteTimeUtc(path, lastWriteTimeUtc);
+        public void SetLastWriteTimeUtc(string path, global::System.DateTime lastWriteTimeUtc)
+             => global::System.IO.File.SetLastWriteTimeUtc(path, lastWriteTimeUtc);
 
         /// <inheritdoc cref="global::System.IO.File.SetLastWriteTimeUtc"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void SetLastWriteTimeUtc(global::Microsoft.Win32.SafeHandles.SafeFileHandle fileHandle, global::System.DateTime lastWriteTimeUtc) => global::System.IO.File.SetLastWriteTimeUtc(fileHandle, lastWriteTimeUtc);
+        public void SetLastWriteTimeUtc(global::Microsoft.Win32.SafeHandles.SafeFileHandle fileHandle, global::System.DateTime lastWriteTimeUtc)
+             => global::System.IO.File.SetLastWriteTimeUtc(fileHandle, lastWriteTimeUtc);
 
         /// <inheritdoc cref="global::System.IO.File.GetLastWriteTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.DateTime GetLastWriteTime(string path) => global::System.IO.File.GetLastWriteTime(path);
+        public global::System.DateTime GetLastWriteTime(string path)
+             => global::System.IO.File.GetLastWriteTime(path);
 
         /// <inheritdoc cref="global::System.IO.File.GetLastWriteTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.DateTime GetLastWriteTime(global::Microsoft.Win32.SafeHandles.SafeFileHandle fileHandle) => global::System.IO.File.GetLastWriteTime(fileHandle);
+        public global::System.DateTime GetLastWriteTime(global::Microsoft.Win32.SafeHandles.SafeFileHandle fileHandle)
+             => global::System.IO.File.GetLastWriteTime(fileHandle);
 
         /// <inheritdoc cref="global::System.IO.File.GetLastWriteTimeUtc"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.DateTime GetLastWriteTimeUtc(string path) => global::System.IO.File.GetLastWriteTimeUtc(path);
+        public global::System.DateTime GetLastWriteTimeUtc(string path)
+             => global::System.IO.File.GetLastWriteTimeUtc(path);
 
         /// <inheritdoc cref="global::System.IO.File.GetLastWriteTimeUtc"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.DateTime GetLastWriteTimeUtc(global::Microsoft.Win32.SafeHandles.SafeFileHandle fileHandle) => global::System.IO.File.GetLastWriteTimeUtc(fileHandle);
+        public global::System.DateTime GetLastWriteTimeUtc(global::Microsoft.Win32.SafeHandles.SafeFileHandle fileHandle)
+             => global::System.IO.File.GetLastWriteTimeUtc(fileHandle);
 
         /// <inheritdoc cref="global::System.IO.File.GetAttributes"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.IO.FileAttributes GetAttributes(string path) => global::System.IO.File.GetAttributes(path);
+        public global::System.IO.FileAttributes GetAttributes(string path)
+             => global::System.IO.File.GetAttributes(path);
 
         /// <inheritdoc cref="global::System.IO.File.GetAttributes"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.IO.FileAttributes GetAttributes(global::Microsoft.Win32.SafeHandles.SafeFileHandle fileHandle) => global::System.IO.File.GetAttributes(fileHandle);
+        public global::System.IO.FileAttributes GetAttributes(global::Microsoft.Win32.SafeHandles.SafeFileHandle fileHandle)
+             => global::System.IO.File.GetAttributes(fileHandle);
 
         /// <inheritdoc cref="global::System.IO.File.SetAttributes"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void SetAttributes(string path, global::System.IO.FileAttributes fileAttributes) => global::System.IO.File.SetAttributes(path, fileAttributes);
+        public void SetAttributes(string path, global::System.IO.FileAttributes fileAttributes)
+             => global::System.IO.File.SetAttributes(path, fileAttributes);
 
         /// <inheritdoc cref="global::System.IO.File.SetAttributes"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void SetAttributes(global::Microsoft.Win32.SafeHandles.SafeFileHandle fileHandle, global::System.IO.FileAttributes fileAttributes) => global::System.IO.File.SetAttributes(fileHandle, fileAttributes);
+        public void SetAttributes(global::Microsoft.Win32.SafeHandles.SafeFileHandle fileHandle, global::System.IO.FileAttributes fileAttributes)
+             => global::System.IO.File.SetAttributes(fileHandle, fileAttributes);
 
         /// <inheritdoc cref="global::System.IO.File.GetUnixFileMode"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("windows")] 
-        public global::System.IO.UnixFileMode GetUnixFileMode(string path) => global::System.IO.File.GetUnixFileMode(path);
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("windows")]
+        public global::System.IO.UnixFileMode GetUnixFileMode(string path)
+             => global::System.IO.File.GetUnixFileMode(path);
 
         /// <inheritdoc cref="global::System.IO.File.GetUnixFileMode"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("windows")] 
-        public global::System.IO.UnixFileMode GetUnixFileMode(global::Microsoft.Win32.SafeHandles.SafeFileHandle fileHandle) => global::System.IO.File.GetUnixFileMode(fileHandle);
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("windows")]
+        public global::System.IO.UnixFileMode GetUnixFileMode(global::Microsoft.Win32.SafeHandles.SafeFileHandle fileHandle)
+             => global::System.IO.File.GetUnixFileMode(fileHandle);
 
         /// <inheritdoc cref="global::System.IO.File.SetUnixFileMode"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("windows")] 
-        public void SetUnixFileMode(string path, global::System.IO.UnixFileMode mode) => global::System.IO.File.SetUnixFileMode(path, mode);
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("windows")]
+        public void SetUnixFileMode(string path, global::System.IO.UnixFileMode mode)
+             => global::System.IO.File.SetUnixFileMode(path, mode);
 
         /// <inheritdoc cref="global::System.IO.File.SetUnixFileMode"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("windows")] 
-        public void SetUnixFileMode(global::Microsoft.Win32.SafeHandles.SafeFileHandle fileHandle, global::System.IO.UnixFileMode mode) => global::System.IO.File.SetUnixFileMode(fileHandle, mode);
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("windows")]
+        public void SetUnixFileMode(global::Microsoft.Win32.SafeHandles.SafeFileHandle fileHandle, global::System.IO.UnixFileMode mode)
+             => global::System.IO.File.SetUnixFileMode(fileHandle, mode);
 
         /// <inheritdoc cref="global::System.IO.File.OpenRead"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.IO.FileStream OpenRead(string path) => global::System.IO.File.OpenRead(path);
+        public global::System.IO.FileStream OpenRead(string path)
+             => global::System.IO.File.OpenRead(path);
 
         /// <inheritdoc cref="global::System.IO.File.OpenWrite"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.IO.FileStream OpenWrite(string path) => global::System.IO.File.OpenWrite(path);
+        public global::System.IO.FileStream OpenWrite(string path)
+             => global::System.IO.File.OpenWrite(path);
 
         /// <inheritdoc cref="global::System.IO.File.ReadAllText"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ReadAllText(string path) => global::System.IO.File.ReadAllText(path);
+        public string ReadAllText(string path)
+             => global::System.IO.File.ReadAllText(path);
 
         /// <inheritdoc cref="global::System.IO.File.ReadAllText"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ReadAllText(string path, global::System.Text.Encoding encoding) => global::System.IO.File.ReadAllText(path, encoding);
+        public string ReadAllText(string path, global::System.Text.Encoding encoding)
+             => global::System.IO.File.ReadAllText(path, encoding);
 
         /// <inheritdoc cref="global::System.IO.File.WriteAllText"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void WriteAllText(string path, string? contents) => global::System.IO.File.WriteAllText(path, contents);
+        public void WriteAllText(string path, string? contents)
+             => global::System.IO.File.WriteAllText(path, contents);
 
         /// <inheritdoc cref="global::System.IO.File.WriteAllText"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void WriteAllText(string path, string? contents, global::System.Text.Encoding encoding) => global::System.IO.File.WriteAllText(path, contents, encoding);
+        public void WriteAllText(string path, string? contents, global::System.Text.Encoding encoding)
+             => global::System.IO.File.WriteAllText(path, contents, encoding);
 
         /// <inheritdoc cref="global::System.IO.File.ReadAllBytes"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public byte[] ReadAllBytes(string path) => global::System.IO.File.ReadAllBytes(path);
+        public byte[] ReadAllBytes(string path)
+             => global::System.IO.File.ReadAllBytes(path);
 
         /// <inheritdoc cref="global::System.IO.File.WriteAllBytes"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void WriteAllBytes(string path, byte[] bytes) => global::System.IO.File.WriteAllBytes(path, bytes);
+        public void WriteAllBytes(string path, byte[] bytes)
+             => global::System.IO.File.WriteAllBytes(path, bytes);
 
         /// <inheritdoc cref="global::System.IO.File.ReadAllLines"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string[] ReadAllLines(string path) => global::System.IO.File.ReadAllLines(path);
+        public string[] ReadAllLines(string path)
+             => global::System.IO.File.ReadAllLines(path);
 
         /// <inheritdoc cref="global::System.IO.File.ReadAllLines"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string[] ReadAllLines(string path, global::System.Text.Encoding encoding) => global::System.IO.File.ReadAllLines(path, encoding);
+        public string[] ReadAllLines(string path, global::System.Text.Encoding encoding)
+             => global::System.IO.File.ReadAllLines(path, encoding);
 
         /// <inheritdoc cref="global::System.IO.File.ReadLines"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Collections.Generic.IEnumerable<string> ReadLines(string path) => global::System.IO.File.ReadLines(path);
+        public global::System.Collections.Generic.IEnumerable<string> ReadLines(string path)
+             => global::System.IO.File.ReadLines(path);
 
         /// <inheritdoc cref="global::System.IO.File.ReadLines"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Collections.Generic.IEnumerable<string> ReadLines(string path, global::System.Text.Encoding encoding) => global::System.IO.File.ReadLines(path, encoding);
+        public global::System.Collections.Generic.IEnumerable<string> ReadLines(string path, global::System.Text.Encoding encoding)
+             => global::System.IO.File.ReadLines(path, encoding);
 
         /// <inheritdoc cref="global::System.IO.File.ReadLinesAsync"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Collections.Generic.IAsyncEnumerable<string> ReadLinesAsync(string path, global::System.Threading.CancellationToken cancellationToken) => global::System.IO.File.ReadLinesAsync(path, cancellationToken);
+        public global::System.Collections.Generic.IAsyncEnumerable<string> ReadLinesAsync(string path, global::System.Threading.CancellationToken cancellationToken)
+             => global::System.IO.File.ReadLinesAsync(path, cancellationToken);
 
         /// <inheritdoc cref="global::System.IO.File.ReadLinesAsync"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Collections.Generic.IAsyncEnumerable<string> ReadLinesAsync(string path, global::System.Text.Encoding encoding, global::System.Threading.CancellationToken cancellationToken) => global::System.IO.File.ReadLinesAsync(path, encoding, cancellationToken);
+        public global::System.Collections.Generic.IAsyncEnumerable<string> ReadLinesAsync(string path, global::System.Text.Encoding encoding, global::System.Threading.CancellationToken cancellationToken)
+             => global::System.IO.File.ReadLinesAsync(path, encoding, cancellationToken);
 
         /// <inheritdoc cref="global::System.IO.File.WriteAllLines"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void WriteAllLines(string path, string[] contents) => global::System.IO.File.WriteAllLines(path, contents);
+        public void WriteAllLines(string path, string[] contents)
+             => global::System.IO.File.WriteAllLines(path, contents);
 
         /// <inheritdoc cref="global::System.IO.File.WriteAllLines"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void WriteAllLines(string path, global::System.Collections.Generic.IEnumerable<string> contents) => global::System.IO.File.WriteAllLines(path, contents);
+        public void WriteAllLines(string path, global::System.Collections.Generic.IEnumerable<string> contents)
+             => global::System.IO.File.WriteAllLines(path, contents);
 
         /// <inheritdoc cref="global::System.IO.File.WriteAllLines"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void WriteAllLines(string path, string[] contents, global::System.Text.Encoding encoding) => global::System.IO.File.WriteAllLines(path, contents, encoding);
+        public void WriteAllLines(string path, string[] contents, global::System.Text.Encoding encoding)
+             => global::System.IO.File.WriteAllLines(path, contents, encoding);
 
         /// <inheritdoc cref="global::System.IO.File.WriteAllLines"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void WriteAllLines(string path, global::System.Collections.Generic.IEnumerable<string> contents, global::System.Text.Encoding encoding) => global::System.IO.File.WriteAllLines(path, contents, encoding);
+        public void WriteAllLines(string path, global::System.Collections.Generic.IEnumerable<string> contents, global::System.Text.Encoding encoding)
+             => global::System.IO.File.WriteAllLines(path, contents, encoding);
 
         /// <inheritdoc cref="global::System.IO.File.AppendAllText"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void AppendAllText(string path, string? contents) => global::System.IO.File.AppendAllText(path, contents);
+        public void AppendAllText(string path, string? contents)
+             => global::System.IO.File.AppendAllText(path, contents);
 
         /// <inheritdoc cref="global::System.IO.File.AppendAllText"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void AppendAllText(string path, string? contents, global::System.Text.Encoding encoding) => global::System.IO.File.AppendAllText(path, contents, encoding);
+        public void AppendAllText(string path, string? contents, global::System.Text.Encoding encoding)
+             => global::System.IO.File.AppendAllText(path, contents, encoding);
 
         /// <inheritdoc cref="global::System.IO.File.AppendAllLines"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void AppendAllLines(string path, global::System.Collections.Generic.IEnumerable<string> contents) => global::System.IO.File.AppendAllLines(path, contents);
+        public void AppendAllLines(string path, global::System.Collections.Generic.IEnumerable<string> contents)
+             => global::System.IO.File.AppendAllLines(path, contents);
 
         /// <inheritdoc cref="global::System.IO.File.AppendAllLines"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void AppendAllLines(string path, global::System.Collections.Generic.IEnumerable<string> contents, global::System.Text.Encoding encoding) => global::System.IO.File.AppendAllLines(path, contents, encoding);
+        public void AppendAllLines(string path, global::System.Collections.Generic.IEnumerable<string> contents, global::System.Text.Encoding encoding)
+             => global::System.IO.File.AppendAllLines(path, contents, encoding);
 
         /// <inheritdoc cref="global::System.IO.File.Replace"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void Replace(string sourceFileName, string destinationFileName, string? destinationBackupFileName) => global::System.IO.File.Replace(sourceFileName, destinationFileName, destinationBackupFileName);
+        public void Replace(string sourceFileName, string destinationFileName, string? destinationBackupFileName)
+             => global::System.IO.File.Replace(sourceFileName, destinationFileName, destinationBackupFileName);
 
         /// <inheritdoc cref="global::System.IO.File.Replace"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void Replace(string sourceFileName, string destinationFileName, string? destinationBackupFileName, bool ignoreMetadataErrors) => global::System.IO.File.Replace(sourceFileName, destinationFileName, destinationBackupFileName, ignoreMetadataErrors);
+        public void Replace(string sourceFileName, string destinationFileName, string? destinationBackupFileName, bool ignoreMetadataErrors)
+             => global::System.IO.File.Replace(sourceFileName, destinationFileName, destinationBackupFileName, ignoreMetadataErrors);
 
         /// <inheritdoc cref="global::System.IO.File.Move"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void Move(string sourceFileName, string destFileName) => global::System.IO.File.Move(sourceFileName, destFileName);
+        public void Move(string sourceFileName, string destFileName)
+             => global::System.IO.File.Move(sourceFileName, destFileName);
 
         /// <inheritdoc cref="global::System.IO.File.Move"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void Move(string sourceFileName, string destFileName, bool overwrite) => global::System.IO.File.Move(sourceFileName, destFileName, overwrite);
+        public void Move(string sourceFileName, string destFileName, bool overwrite)
+             => global::System.IO.File.Move(sourceFileName, destFileName, overwrite);
 
         /// <inheritdoc cref="global::System.IO.File.Encrypt"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.SupportedOSPlatformAttribute("windows")] 
-        public void Encrypt(string path) => global::System.IO.File.Encrypt(path);
+        [global::System.Runtime.Versioning.SupportedOSPlatformAttribute("windows")]
+        public void Encrypt(string path)
+             => global::System.IO.File.Encrypt(path);
 
         /// <inheritdoc cref="global::System.IO.File.Decrypt"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.SupportedOSPlatformAttribute("windows")] 
-        public void Decrypt(string path) => global::System.IO.File.Decrypt(path);
+        [global::System.Runtime.Versioning.SupportedOSPlatformAttribute("windows")]
+        public void Decrypt(string path)
+             => global::System.IO.File.Decrypt(path);
 
         /// <inheritdoc cref="global::System.IO.File.ReadAllTextAsync"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task<string> ReadAllTextAsync(string path, global::System.Threading.CancellationToken cancellationToken) => global::System.IO.File.ReadAllTextAsync(path, cancellationToken);
+        public global::System.Threading.Tasks.Task<string> ReadAllTextAsync(string path, global::System.Threading.CancellationToken cancellationToken)
+             => global::System.IO.File.ReadAllTextAsync(path, cancellationToken);
 
         /// <inheritdoc cref="global::System.IO.File.ReadAllTextAsync"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task<string> ReadAllTextAsync(string path, global::System.Text.Encoding encoding, global::System.Threading.CancellationToken cancellationToken) => global::System.IO.File.ReadAllTextAsync(path, encoding, cancellationToken);
+        public global::System.Threading.Tasks.Task<string> ReadAllTextAsync(string path, global::System.Text.Encoding encoding, global::System.Threading.CancellationToken cancellationToken)
+             => global::System.IO.File.ReadAllTextAsync(path, encoding, cancellationToken);
 
         /// <inheritdoc cref="global::System.IO.File.WriteAllTextAsync"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task WriteAllTextAsync(string path, string? contents, global::System.Threading.CancellationToken cancellationToken) => global::System.IO.File.WriteAllTextAsync(path, contents, cancellationToken);
+        public global::System.Threading.Tasks.Task WriteAllTextAsync(string path, string? contents, global::System.Threading.CancellationToken cancellationToken)
+             => global::System.IO.File.WriteAllTextAsync(path, contents, cancellationToken);
 
         /// <inheritdoc cref="global::System.IO.File.WriteAllTextAsync"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task WriteAllTextAsync(string path, string? contents, global::System.Text.Encoding encoding, global::System.Threading.CancellationToken cancellationToken) => global::System.IO.File.WriteAllTextAsync(path, contents, encoding, cancellationToken);
+        public global::System.Threading.Tasks.Task WriteAllTextAsync(string path, string? contents, global::System.Text.Encoding encoding, global::System.Threading.CancellationToken cancellationToken)
+             => global::System.IO.File.WriteAllTextAsync(path, contents, encoding, cancellationToken);
 
         /// <inheritdoc cref="global::System.IO.File.ReadAllBytesAsync"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task<byte[]> ReadAllBytesAsync(string path, global::System.Threading.CancellationToken cancellationToken) => global::System.IO.File.ReadAllBytesAsync(path, cancellationToken);
+        public global::System.Threading.Tasks.Task<byte[]> ReadAllBytesAsync(string path, global::System.Threading.CancellationToken cancellationToken)
+             => global::System.IO.File.ReadAllBytesAsync(path, cancellationToken);
 
         /// <inheritdoc cref="global::System.IO.File.WriteAllBytesAsync"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task WriteAllBytesAsync(string path, byte[] bytes, global::System.Threading.CancellationToken cancellationToken) => global::System.IO.File.WriteAllBytesAsync(path, bytes, cancellationToken);
+        public global::System.Threading.Tasks.Task WriteAllBytesAsync(string path, byte[] bytes, global::System.Threading.CancellationToken cancellationToken)
+             => global::System.IO.File.WriteAllBytesAsync(path, bytes, cancellationToken);
 
         /// <inheritdoc cref="global::System.IO.File.ReadAllLinesAsync"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task<string[]> ReadAllLinesAsync(string path, global::System.Threading.CancellationToken cancellationToken) => global::System.IO.File.ReadAllLinesAsync(path, cancellationToken);
+        public global::System.Threading.Tasks.Task<string[]> ReadAllLinesAsync(string path, global::System.Threading.CancellationToken cancellationToken)
+             => global::System.IO.File.ReadAllLinesAsync(path, cancellationToken);
 
         /// <inheritdoc cref="global::System.IO.File.ReadAllLinesAsync"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task<string[]> ReadAllLinesAsync(string path, global::System.Text.Encoding encoding, global::System.Threading.CancellationToken cancellationToken) => global::System.IO.File.ReadAllLinesAsync(path, encoding, cancellationToken);
+        public global::System.Threading.Tasks.Task<string[]> ReadAllLinesAsync(string path, global::System.Text.Encoding encoding, global::System.Threading.CancellationToken cancellationToken)
+             => global::System.IO.File.ReadAllLinesAsync(path, encoding, cancellationToken);
 
         /// <inheritdoc cref="global::System.IO.File.WriteAllLinesAsync"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task WriteAllLinesAsync(string path, global::System.Collections.Generic.IEnumerable<string> contents, global::System.Threading.CancellationToken cancellationToken) => global::System.IO.File.WriteAllLinesAsync(path, contents, cancellationToken);
+        public global::System.Threading.Tasks.Task WriteAllLinesAsync(string path, global::System.Collections.Generic.IEnumerable<string> contents, global::System.Threading.CancellationToken cancellationToken)
+             => global::System.IO.File.WriteAllLinesAsync(path, contents, cancellationToken);
 
         /// <inheritdoc cref="global::System.IO.File.WriteAllLinesAsync"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task WriteAllLinesAsync(string path, global::System.Collections.Generic.IEnumerable<string> contents, global::System.Text.Encoding encoding, global::System.Threading.CancellationToken cancellationToken) => global::System.IO.File.WriteAllLinesAsync(path, contents, encoding, cancellationToken);
+        public global::System.Threading.Tasks.Task WriteAllLinesAsync(string path, global::System.Collections.Generic.IEnumerable<string> contents, global::System.Text.Encoding encoding, global::System.Threading.CancellationToken cancellationToken)
+             => global::System.IO.File.WriteAllLinesAsync(path, contents, encoding, cancellationToken);
 
         /// <inheritdoc cref="global::System.IO.File.AppendAllTextAsync"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task AppendAllTextAsync(string path, string? contents, global::System.Threading.CancellationToken cancellationToken) => global::System.IO.File.AppendAllTextAsync(path, contents, cancellationToken);
+        public global::System.Threading.Tasks.Task AppendAllTextAsync(string path, string? contents, global::System.Threading.CancellationToken cancellationToken)
+             => global::System.IO.File.AppendAllTextAsync(path, contents, cancellationToken);
 
         /// <inheritdoc cref="global::System.IO.File.AppendAllTextAsync"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task AppendAllTextAsync(string path, string? contents, global::System.Text.Encoding encoding, global::System.Threading.CancellationToken cancellationToken) => global::System.IO.File.AppendAllTextAsync(path, contents, encoding, cancellationToken);
+        public global::System.Threading.Tasks.Task AppendAllTextAsync(string path, string? contents, global::System.Text.Encoding encoding, global::System.Threading.CancellationToken cancellationToken)
+             => global::System.IO.File.AppendAllTextAsync(path, contents, encoding, cancellationToken);
 
         /// <inheritdoc cref="global::System.IO.File.AppendAllLinesAsync"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task AppendAllLinesAsync(string path, global::System.Collections.Generic.IEnumerable<string> contents, global::System.Threading.CancellationToken cancellationToken) => global::System.IO.File.AppendAllLinesAsync(path, contents, cancellationToken);
+        public global::System.Threading.Tasks.Task AppendAllLinesAsync(string path, global::System.Collections.Generic.IEnumerable<string> contents, global::System.Threading.CancellationToken cancellationToken)
+             => global::System.IO.File.AppendAllLinesAsync(path, contents, cancellationToken);
 
         /// <inheritdoc cref="global::System.IO.File.AppendAllLinesAsync"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task AppendAllLinesAsync(string path, global::System.Collections.Generic.IEnumerable<string> contents, global::System.Text.Encoding encoding, global::System.Threading.CancellationToken cancellationToken) => global::System.IO.File.AppendAllLinesAsync(path, contents, encoding, cancellationToken);
+        public global::System.Threading.Tasks.Task AppendAllLinesAsync(string path, global::System.Collections.Generic.IEnumerable<string> contents, global::System.Text.Encoding encoding, global::System.Threading.CancellationToken cancellationToken)
+             => global::System.IO.File.AppendAllLinesAsync(path, contents, encoding, cancellationToken);
 
         /// <inheritdoc cref="global::System.IO.File.CreateSymbolicLink"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.IO.FileSystemInfo CreateSymbolicLink(string path, string pathToTarget) => global::System.IO.File.CreateSymbolicLink(path, pathToTarget);
+        public global::System.IO.FileSystemInfo CreateSymbolicLink(string path, string pathToTarget)
+             => global::System.IO.File.CreateSymbolicLink(path, pathToTarget);
 
         /// <inheritdoc cref="global::System.IO.File.ResolveLinkTarget"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.IO.FileSystemInfo? ResolveLinkTarget(string linkPath, bool returnFinalTarget) => global::System.IO.File.ResolveLinkTarget(linkPath, returnFinalTarget);
+        public global::System.IO.FileSystemInfo? ResolveLinkTarget(string linkPath, bool returnFinalTarget)
+             => global::System.IO.File.ResolveLinkTarget(linkPath, returnFinalTarget);
 
     }
 }

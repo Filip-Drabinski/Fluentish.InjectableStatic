@@ -10,19 +10,19 @@ namespace Fluentish.Injectable.System
         /// <inheritdoc cref="global::System.Environment.Exit"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute()] 
+        [global::System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute()]
         void Exit(int exitCode);
 
         /// <inheritdoc cref="global::System.Environment.FailFast"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute()] 
+        [global::System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute()]
         void FailFast(string? message);
 
         /// <inheritdoc cref="global::System.Environment.FailFast"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute()] 
+        [global::System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute()]
         void FailFast(string? message, global::System.Exception? exception);
 
         /// <inheritdoc cref="global::System.Environment.GetEnvironmentVariable"/>

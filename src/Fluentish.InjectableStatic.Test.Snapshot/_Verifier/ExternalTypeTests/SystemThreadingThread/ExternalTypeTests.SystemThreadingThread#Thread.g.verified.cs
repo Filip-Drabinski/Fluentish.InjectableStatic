@@ -11,238 +11,283 @@ namespace Fluentish.Injectable.System.Threading
         /// <inheritdoc cref="global::System.Threading.Thread.SpinWait"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void SpinWait(int iterations) => global::System.Threading.Thread.SpinWait(iterations);
+        public void SpinWait(int iterations)
+             => global::System.Threading.Thread.SpinWait(iterations);
 
         /// <inheritdoc cref="global::System.Threading.Thread.Yield"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public bool Yield() => global::System.Threading.Thread.Yield();
+        public bool Yield()
+             => global::System.Threading.Thread.Yield();
 
         /// <inheritdoc cref="global::System.Threading.Thread.Sleep"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void Sleep(int millisecondsTimeout) => global::System.Threading.Thread.Sleep(millisecondsTimeout);
+        public void Sleep(int millisecondsTimeout)
+             => global::System.Threading.Thread.Sleep(millisecondsTimeout);
 
         /// <inheritdoc cref="global::System.Threading.Thread.ResetAbort"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.ObsoleteAttribute("Thread.ResetAbort is not supported and throws PlatformNotSupportedException.", DiagnosticId = "SYSLIB0006", UrlFormat = "https://aka.ms/dotnet-warnings/{0}")] 
-        public void ResetAbort() => global::System.Threading.Thread.ResetAbort();
+        [global::System.ObsoleteAttribute("Thread.ResetAbort is not supported and throws PlatformNotSupportedException.", DiagnosticId = "SYSLIB0006", UrlFormat = "https://aka.ms/dotnet-warnings/{0}")]
+        public void ResetAbort()
+             => global::System.Threading.Thread.ResetAbort();
 
         /// <inheritdoc cref="global::System.Threading.Thread.BeginCriticalRegion"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void BeginCriticalRegion() => global::System.Threading.Thread.BeginCriticalRegion();
+        public void BeginCriticalRegion()
+             => global::System.Threading.Thread.BeginCriticalRegion();
 
         /// <inheritdoc cref="global::System.Threading.Thread.EndCriticalRegion"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void EndCriticalRegion() => global::System.Threading.Thread.EndCriticalRegion();
+        public void EndCriticalRegion()
+             => global::System.Threading.Thread.EndCriticalRegion();
 
         /// <inheritdoc cref="global::System.Threading.Thread.BeginThreadAffinity"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void BeginThreadAffinity() => global::System.Threading.Thread.BeginThreadAffinity();
+        public void BeginThreadAffinity()
+             => global::System.Threading.Thread.BeginThreadAffinity();
 
         /// <inheritdoc cref="global::System.Threading.Thread.EndThreadAffinity"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void EndThreadAffinity() => global::System.Threading.Thread.EndThreadAffinity();
+        public void EndThreadAffinity()
+             => global::System.Threading.Thread.EndThreadAffinity();
 
         /// <inheritdoc cref="global::System.Threading.Thread.AllocateDataSlot"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.LocalDataStoreSlot AllocateDataSlot() => global::System.Threading.Thread.AllocateDataSlot();
+        public global::System.LocalDataStoreSlot AllocateDataSlot()
+             => global::System.Threading.Thread.AllocateDataSlot();
 
         /// <inheritdoc cref="global::System.Threading.Thread.AllocateNamedDataSlot"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.LocalDataStoreSlot AllocateNamedDataSlot(string name) => global::System.Threading.Thread.AllocateNamedDataSlot(name);
+        public global::System.LocalDataStoreSlot AllocateNamedDataSlot(string name)
+             => global::System.Threading.Thread.AllocateNamedDataSlot(name);
 
         /// <inheritdoc cref="global::System.Threading.Thread.GetNamedDataSlot"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.LocalDataStoreSlot GetNamedDataSlot(string name) => global::System.Threading.Thread.GetNamedDataSlot(name);
+        public global::System.LocalDataStoreSlot GetNamedDataSlot(string name)
+             => global::System.Threading.Thread.GetNamedDataSlot(name);
 
         /// <inheritdoc cref="global::System.Threading.Thread.FreeNamedDataSlot"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void FreeNamedDataSlot(string name) => global::System.Threading.Thread.FreeNamedDataSlot(name);
+        public void FreeNamedDataSlot(string name)
+             => global::System.Threading.Thread.FreeNamedDataSlot(name);
 
         /// <inheritdoc cref="global::System.Threading.Thread.GetData"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public object? GetData(global::System.LocalDataStoreSlot slot) => global::System.Threading.Thread.GetData(slot);
+        public object? GetData(global::System.LocalDataStoreSlot slot)
+             => global::System.Threading.Thread.GetData(slot);
 
         /// <inheritdoc cref="global::System.Threading.Thread.SetData"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void SetData(global::System.LocalDataStoreSlot slot, object? data) => global::System.Threading.Thread.SetData(slot, data);
+        public void SetData(global::System.LocalDataStoreSlot slot, object? data)
+             => global::System.Threading.Thread.SetData(slot, data);
 
         /// <inheritdoc cref="global::System.Threading.Thread.GetDomain"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.AppDomain GetDomain() => global::System.Threading.Thread.GetDomain();
+        public global::System.AppDomain GetDomain()
+             => global::System.Threading.Thread.GetDomain();
 
         /// <inheritdoc cref="global::System.Threading.Thread.GetDomainID"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int GetDomainID() => global::System.Threading.Thread.GetDomainID();
+        public int GetDomainID()
+             => global::System.Threading.Thread.GetDomainID();
 
         /// <inheritdoc cref="global::System.Threading.Thread.MemoryBarrier"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void MemoryBarrier() => global::System.Threading.Thread.MemoryBarrier();
+        public void MemoryBarrier()
+             => global::System.Threading.Thread.MemoryBarrier();
 
         /// <inheritdoc cref="global::System.Threading.Thread.Sleep"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void Sleep(global::System.TimeSpan timeout) => global::System.Threading.Thread.Sleep(timeout);
+        public void Sleep(global::System.TimeSpan timeout)
+             => global::System.Threading.Thread.Sleep(timeout);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileRead"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public byte VolatileRead(ref byte address) => global::System.Threading.Thread.VolatileRead(ref address);
+        public byte VolatileRead(ref byte address)
+             => global::System.Threading.Thread.VolatileRead(ref address);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileRead"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double VolatileRead(ref double address) => global::System.Threading.Thread.VolatileRead(ref address);
+        public double VolatileRead(ref double address)
+             => global::System.Threading.Thread.VolatileRead(ref address);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileRead"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public short VolatileRead(ref short address) => global::System.Threading.Thread.VolatileRead(ref address);
+        public short VolatileRead(ref short address)
+             => global::System.Threading.Thread.VolatileRead(ref address);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileRead"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int VolatileRead(ref int address) => global::System.Threading.Thread.VolatileRead(ref address);
+        public int VolatileRead(ref int address)
+             => global::System.Threading.Thread.VolatileRead(ref address);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileRead"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public long VolatileRead(ref long address) => global::System.Threading.Thread.VolatileRead(ref address);
+        public long VolatileRead(ref long address)
+             => global::System.Threading.Thread.VolatileRead(ref address);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileRead"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public nint VolatileRead(ref nint address) => global::System.Threading.Thread.VolatileRead(ref address);
+        public nint VolatileRead(ref nint address)
+             => global::System.Threading.Thread.VolatileRead(ref address);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileRead"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public object? VolatileRead([global::System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute("address")] ref object? address) => global::System.Threading.Thread.VolatileRead(ref address);
+        public object? VolatileRead([global::System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute("address")] ref object? address)
+             => global::System.Threading.Thread.VolatileRead(ref address);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileRead"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public sbyte VolatileRead(ref sbyte address) => global::System.Threading.Thread.VolatileRead(ref address);
+        [global::System.CLSCompliantAttribute(false)]
+        public sbyte VolatileRead(ref sbyte address)
+             => global::System.Threading.Thread.VolatileRead(ref address);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileRead"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public float VolatileRead(ref float address) => global::System.Threading.Thread.VolatileRead(ref address);
+        public float VolatileRead(ref float address)
+             => global::System.Threading.Thread.VolatileRead(ref address);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileRead"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ushort VolatileRead(ref ushort address) => global::System.Threading.Thread.VolatileRead(ref address);
+        [global::System.CLSCompliantAttribute(false)]
+        public ushort VolatileRead(ref ushort address)
+             => global::System.Threading.Thread.VolatileRead(ref address);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileRead"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public uint VolatileRead(ref uint address) => global::System.Threading.Thread.VolatileRead(ref address);
+        [global::System.CLSCompliantAttribute(false)]
+        public uint VolatileRead(ref uint address)
+             => global::System.Threading.Thread.VolatileRead(ref address);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileRead"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ulong VolatileRead(ref ulong address) => global::System.Threading.Thread.VolatileRead(ref address);
+        [global::System.CLSCompliantAttribute(false)]
+        public ulong VolatileRead(ref ulong address)
+             => global::System.Threading.Thread.VolatileRead(ref address);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileRead"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public nuint VolatileRead(ref nuint address) => global::System.Threading.Thread.VolatileRead(ref address);
+        [global::System.CLSCompliantAttribute(false)]
+        public nuint VolatileRead(ref nuint address)
+             => global::System.Threading.Thread.VolatileRead(ref address);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileWrite"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void VolatileWrite(ref byte address, byte value) => global::System.Threading.Thread.VolatileWrite(ref address, value);
+        public void VolatileWrite(ref byte address, byte value)
+             => global::System.Threading.Thread.VolatileWrite(ref address, value);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileWrite"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void VolatileWrite(ref double address, double value) => global::System.Threading.Thread.VolatileWrite(ref address, value);
+        public void VolatileWrite(ref double address, double value)
+             => global::System.Threading.Thread.VolatileWrite(ref address, value);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileWrite"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void VolatileWrite(ref short address, short value) => global::System.Threading.Thread.VolatileWrite(ref address, value);
+        public void VolatileWrite(ref short address, short value)
+             => global::System.Threading.Thread.VolatileWrite(ref address, value);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileWrite"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void VolatileWrite(ref int address, int value) => global::System.Threading.Thread.VolatileWrite(ref address, value);
+        public void VolatileWrite(ref int address, int value)
+             => global::System.Threading.Thread.VolatileWrite(ref address, value);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileWrite"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void VolatileWrite(ref long address, long value) => global::System.Threading.Thread.VolatileWrite(ref address, value);
+        public void VolatileWrite(ref long address, long value)
+             => global::System.Threading.Thread.VolatileWrite(ref address, value);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileWrite"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void VolatileWrite(ref nint address, nint value) => global::System.Threading.Thread.VolatileWrite(ref address, value);
+        public void VolatileWrite(ref nint address, nint value)
+             => global::System.Threading.Thread.VolatileWrite(ref address, value);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileWrite"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void VolatileWrite([global::System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute("value")] ref object? address, object? value) => global::System.Threading.Thread.VolatileWrite(ref address, value);
+        public void VolatileWrite([global::System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute("value")] ref object? address, object? value)
+             => global::System.Threading.Thread.VolatileWrite(ref address, value);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileWrite"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public void VolatileWrite(ref sbyte address, sbyte value) => global::System.Threading.Thread.VolatileWrite(ref address, value);
+        [global::System.CLSCompliantAttribute(false)]
+        public void VolatileWrite(ref sbyte address, sbyte value)
+             => global::System.Threading.Thread.VolatileWrite(ref address, value);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileWrite"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void VolatileWrite(ref float address, float value) => global::System.Threading.Thread.VolatileWrite(ref address, value);
+        public void VolatileWrite(ref float address, float value)
+             => global::System.Threading.Thread.VolatileWrite(ref address, value);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileWrite"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public void VolatileWrite(ref ushort address, ushort value) => global::System.Threading.Thread.VolatileWrite(ref address, value);
+        [global::System.CLSCompliantAttribute(false)]
+        public void VolatileWrite(ref ushort address, ushort value)
+             => global::System.Threading.Thread.VolatileWrite(ref address, value);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileWrite"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public void VolatileWrite(ref uint address, uint value) => global::System.Threading.Thread.VolatileWrite(ref address, value);
+        [global::System.CLSCompliantAttribute(false)]
+        public void VolatileWrite(ref uint address, uint value)
+             => global::System.Threading.Thread.VolatileWrite(ref address, value);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileWrite"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public void VolatileWrite(ref ulong address, ulong value) => global::System.Threading.Thread.VolatileWrite(ref address, value);
+        [global::System.CLSCompliantAttribute(false)]
+        public void VolatileWrite(ref ulong address, ulong value)
+             => global::System.Threading.Thread.VolatileWrite(ref address, value);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileWrite"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public void VolatileWrite(ref nuint address, nuint value) => global::System.Threading.Thread.VolatileWrite(ref address, value);
+        [global::System.CLSCompliantAttribute(false)]
+        public void VolatileWrite(ref nuint address, nuint value)
+             => global::System.Threading.Thread.VolatileWrite(ref address, value);
 
         /// <inheritdoc cref="global::System.Threading.Thread.GetCurrentProcessorId"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int GetCurrentProcessorId() => global::System.Threading.Thread.GetCurrentProcessorId();
+        public int GetCurrentProcessorId()
+             => global::System.Threading.Thread.GetCurrentProcessorId();
 
         /// <inheritdoc cref="global::System.Threading.Thread.CurrentPrincipal"/>
         public global::System.Security.Principal.IPrincipal? CurrentPrincipal

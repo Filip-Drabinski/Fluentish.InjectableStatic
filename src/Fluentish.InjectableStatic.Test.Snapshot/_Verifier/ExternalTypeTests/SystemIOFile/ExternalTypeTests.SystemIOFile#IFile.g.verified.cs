@@ -225,25 +225,25 @@ namespace Fluentish.Injectable.System.IO
         /// <inheritdoc cref="global::System.IO.File.GetUnixFileMode"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("windows")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("windows")]
         global::System.IO.UnixFileMode GetUnixFileMode(string path);
 
         /// <inheritdoc cref="global::System.IO.File.GetUnixFileMode"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("windows")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("windows")]
         global::System.IO.UnixFileMode GetUnixFileMode(global::Microsoft.Win32.SafeHandles.SafeFileHandle fileHandle);
 
         /// <inheritdoc cref="global::System.IO.File.SetUnixFileMode"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("windows")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("windows")]
         void SetUnixFileMode(string path, global::System.IO.UnixFileMode mode);
 
         /// <inheritdoc cref="global::System.IO.File.SetUnixFileMode"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("windows")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("windows")]
         void SetUnixFileMode(global::Microsoft.Win32.SafeHandles.SafeFileHandle fileHandle, global::System.IO.UnixFileMode mode);
 
         /// <inheritdoc cref="global::System.IO.File.OpenRead"/>
@@ -379,13 +379,13 @@ namespace Fluentish.Injectable.System.IO
         /// <inheritdoc cref="global::System.IO.File.Encrypt"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.SupportedOSPlatformAttribute("windows")] 
+        [global::System.Runtime.Versioning.SupportedOSPlatformAttribute("windows")]
         void Encrypt(string path);
 
         /// <inheritdoc cref="global::System.IO.File.Decrypt"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.SupportedOSPlatformAttribute("windows")] 
+        [global::System.Runtime.Versioning.SupportedOSPlatformAttribute("windows")]
         void Decrypt(string path);
 
         /// <inheritdoc cref="global::System.IO.File.ReadAllTextAsync"/>

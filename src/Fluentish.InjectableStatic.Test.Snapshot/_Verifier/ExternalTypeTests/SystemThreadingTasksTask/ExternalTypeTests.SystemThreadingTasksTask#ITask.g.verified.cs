@@ -15,31 +15,31 @@ namespace Fluentish.Injectable.System.Threading.Tasks
         /// <inheritdoc cref="global::System.Threading.Tasks.Task.WaitAll"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser")]
         void WaitAll(params global::System.Threading.Tasks.Task[] tasks);
 
         /// <inheritdoc cref="global::System.Threading.Tasks.Task.WaitAll"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser")]
         bool WaitAll(global::System.Threading.Tasks.Task[] tasks, global::System.TimeSpan timeout);
 
         /// <inheritdoc cref="global::System.Threading.Tasks.Task.WaitAll"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser")]
         bool WaitAll(global::System.Threading.Tasks.Task[] tasks, int millisecondsTimeout);
 
         /// <inheritdoc cref="global::System.Threading.Tasks.Task.WaitAll"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser")]
         void WaitAll(global::System.Threading.Tasks.Task[] tasks, global::System.Threading.CancellationToken cancellationToken);
 
         /// <inheritdoc cref="global::System.Threading.Tasks.Task.WaitAll"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser")]
         bool WaitAll(global::System.Threading.Tasks.Task[] tasks, int millisecondsTimeout, global::System.Threading.CancellationToken cancellationToken);
 
         /// <inheritdoc cref="global::System.Threading.Tasks.Task.WaitAny"/>

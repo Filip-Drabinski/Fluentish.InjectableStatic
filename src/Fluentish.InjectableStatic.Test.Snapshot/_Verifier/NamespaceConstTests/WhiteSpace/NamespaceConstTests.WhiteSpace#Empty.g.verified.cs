@@ -8,6 +8,7 @@ public class EmptyService : IEmpty
     /// <inheritdoc cref="global::NamespaceConstTests.Empty.Test"/>
     [global::System.Diagnostics.DebuggerStepThrough]
     [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-    public void Test() => global::NamespaceConstTests.Empty.Test();
+    public void Test()
+         => global::NamespaceConstTests.Empty.Test();
 }
 #pragma warning restore

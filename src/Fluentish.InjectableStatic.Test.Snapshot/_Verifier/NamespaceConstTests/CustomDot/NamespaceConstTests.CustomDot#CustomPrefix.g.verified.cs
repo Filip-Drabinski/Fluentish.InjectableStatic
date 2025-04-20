@@ -8,6 +8,7 @@ public class CustomPrefixService : ICustomPrefix
     /// <inheritdoc cref="global::NamespaceConstTests.CustomPrefix.Test"/>
     [global::System.Diagnostics.DebuggerStepThrough]
     [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-    public void Test() => global::NamespaceConstTests.CustomPrefix.Test();
+    public void Test()
+         => global::NamespaceConstTests.CustomPrefix.Test();
 }
 #pragma warning restore

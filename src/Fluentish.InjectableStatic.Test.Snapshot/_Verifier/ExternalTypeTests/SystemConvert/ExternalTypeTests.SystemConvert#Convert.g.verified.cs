@@ -17,1721 +17,2040 @@ namespace Fluentish.Injectable.System
         /// <inheritdoc cref="global::System.Convert.GetTypeCode"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.TypeCode GetTypeCode(object? value) => global::System.Convert.GetTypeCode(value);
+        public global::System.TypeCode GetTypeCode(object? value)
+             => global::System.Convert.GetTypeCode(value);
 
         /// <inheritdoc cref="global::System.Convert.IsDBNull"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public bool IsDBNull([global::System.Diagnostics.CodeAnalysis.NotNullWhenAttribute(true)] object? value) => global::System.Convert.IsDBNull(value);
+        public bool IsDBNull([global::System.Diagnostics.CodeAnalysis.NotNullWhenAttribute(true)] object? value)
+             => global::System.Convert.IsDBNull(value);
 
         /// <inheritdoc cref="global::System.Convert.ChangeType"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public object? ChangeType(object? value, global::System.TypeCode typeCode) => global::System.Convert.ChangeType(value, typeCode);
+        public object? ChangeType(object? value, global::System.TypeCode typeCode)
+             => global::System.Convert.ChangeType(value, typeCode);
 
         /// <inheritdoc cref="global::System.Convert.ChangeType"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public object? ChangeType(object? value, global::System.TypeCode typeCode, global::System.IFormatProvider? provider) => global::System.Convert.ChangeType(value, typeCode, provider);
+        public object? ChangeType(object? value, global::System.TypeCode typeCode, global::System.IFormatProvider? provider)
+             => global::System.Convert.ChangeType(value, typeCode, provider);
 
         /// <inheritdoc cref="global::System.Convert.ChangeType"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public object? ChangeType(object? value, global::System.Type conversionType) => global::System.Convert.ChangeType(value, conversionType);
+        public object? ChangeType(object? value, global::System.Type conversionType)
+             => global::System.Convert.ChangeType(value, conversionType);
 
         /// <inheritdoc cref="global::System.Convert.ChangeType"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public object? ChangeType(object? value, global::System.Type conversionType, global::System.IFormatProvider? provider) => global::System.Convert.ChangeType(value, conversionType, provider);
+        public object? ChangeType(object? value, global::System.Type conversionType, global::System.IFormatProvider? provider)
+             => global::System.Convert.ChangeType(value, conversionType, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToBoolean"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public bool ToBoolean([global::System.Diagnostics.CodeAnalysis.NotNullWhenAttribute(true)] object? value) => global::System.Convert.ToBoolean(value);
+        public bool ToBoolean([global::System.Diagnostics.CodeAnalysis.NotNullWhenAttribute(true)] object? value)
+             => global::System.Convert.ToBoolean(value);
 
         /// <inheritdoc cref="global::System.Convert.ToBoolean"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public bool ToBoolean([global::System.Diagnostics.CodeAnalysis.NotNullWhenAttribute(true)] object? value, global::System.IFormatProvider? provider) => global::System.Convert.ToBoolean(value, provider);
+        public bool ToBoolean([global::System.Diagnostics.CodeAnalysis.NotNullWhenAttribute(true)] object? value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToBoolean(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToBoolean"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public bool ToBoolean(bool value) => global::System.Convert.ToBoolean(value);
+        public bool ToBoolean(bool value)
+             => global::System.Convert.ToBoolean(value);
 
         /// <inheritdoc cref="global::System.Convert.ToBoolean"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public bool ToBoolean(sbyte value) => global::System.Convert.ToBoolean(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public bool ToBoolean(sbyte value)
+             => global::System.Convert.ToBoolean(value);
 
         /// <inheritdoc cref="global::System.Convert.ToBoolean"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public bool ToBoolean(char value) => global::System.Convert.ToBoolean(value);
+        public bool ToBoolean(char value)
+             => global::System.Convert.ToBoolean(value);
 
         /// <inheritdoc cref="global::System.Convert.ToBoolean"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public bool ToBoolean(byte value) => global::System.Convert.ToBoolean(value);
+        public bool ToBoolean(byte value)
+             => global::System.Convert.ToBoolean(value);
 
         /// <inheritdoc cref="global::System.Convert.ToBoolean"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public bool ToBoolean(short value) => global::System.Convert.ToBoolean(value);
+        public bool ToBoolean(short value)
+             => global::System.Convert.ToBoolean(value);
 
         /// <inheritdoc cref="global::System.Convert.ToBoolean"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public bool ToBoolean(ushort value) => global::System.Convert.ToBoolean(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public bool ToBoolean(ushort value)
+             => global::System.Convert.ToBoolean(value);
 
         /// <inheritdoc cref="global::System.Convert.ToBoolean"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public bool ToBoolean(int value) => global::System.Convert.ToBoolean(value);
+        public bool ToBoolean(int value)
+             => global::System.Convert.ToBoolean(value);
 
         /// <inheritdoc cref="global::System.Convert.ToBoolean"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public bool ToBoolean(uint value) => global::System.Convert.ToBoolean(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public bool ToBoolean(uint value)
+             => global::System.Convert.ToBoolean(value);
 
         /// <inheritdoc cref="global::System.Convert.ToBoolean"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public bool ToBoolean(long value) => global::System.Convert.ToBoolean(value);
+        public bool ToBoolean(long value)
+             => global::System.Convert.ToBoolean(value);
 
         /// <inheritdoc cref="global::System.Convert.ToBoolean"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public bool ToBoolean(ulong value) => global::System.Convert.ToBoolean(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public bool ToBoolean(ulong value)
+             => global::System.Convert.ToBoolean(value);
 
         /// <inheritdoc cref="global::System.Convert.ToBoolean"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public bool ToBoolean([global::System.Diagnostics.CodeAnalysis.NotNullWhenAttribute(true)] string? value) => global::System.Convert.ToBoolean(value);
+        public bool ToBoolean([global::System.Diagnostics.CodeAnalysis.NotNullWhenAttribute(true)] string? value)
+             => global::System.Convert.ToBoolean(value);
 
         /// <inheritdoc cref="global::System.Convert.ToBoolean"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public bool ToBoolean([global::System.Diagnostics.CodeAnalysis.NotNullWhenAttribute(true)] string? value, global::System.IFormatProvider? provider) => global::System.Convert.ToBoolean(value, provider);
+        public bool ToBoolean([global::System.Diagnostics.CodeAnalysis.NotNullWhenAttribute(true)] string? value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToBoolean(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToBoolean"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public bool ToBoolean(float value) => global::System.Convert.ToBoolean(value);
+        public bool ToBoolean(float value)
+             => global::System.Convert.ToBoolean(value);
 
         /// <inheritdoc cref="global::System.Convert.ToBoolean"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public bool ToBoolean(double value) => global::System.Convert.ToBoolean(value);
+        public bool ToBoolean(double value)
+             => global::System.Convert.ToBoolean(value);
 
         /// <inheritdoc cref="global::System.Convert.ToBoolean"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public bool ToBoolean(decimal value) => global::System.Convert.ToBoolean(value);
+        public bool ToBoolean(decimal value)
+             => global::System.Convert.ToBoolean(value);
 
         /// <inheritdoc cref="global::System.Convert.ToBoolean"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public bool ToBoolean(global::System.DateTime value) => global::System.Convert.ToBoolean(value);
+        public bool ToBoolean(global::System.DateTime value)
+             => global::System.Convert.ToBoolean(value);
 
         /// <inheritdoc cref="global::System.Convert.ToChar"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public char ToChar(object? value) => global::System.Convert.ToChar(value);
+        public char ToChar(object? value)
+             => global::System.Convert.ToChar(value);
 
         /// <inheritdoc cref="global::System.Convert.ToChar"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public char ToChar(object? value, global::System.IFormatProvider? provider) => global::System.Convert.ToChar(value, provider);
+        public char ToChar(object? value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToChar(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToChar"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public char ToChar(bool value) => global::System.Convert.ToChar(value);
+        public char ToChar(bool value)
+             => global::System.Convert.ToChar(value);
 
         /// <inheritdoc cref="global::System.Convert.ToChar"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public char ToChar(char value) => global::System.Convert.ToChar(value);
+        public char ToChar(char value)
+             => global::System.Convert.ToChar(value);
 
         /// <inheritdoc cref="global::System.Convert.ToChar"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public char ToChar(sbyte value) => global::System.Convert.ToChar(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public char ToChar(sbyte value)
+             => global::System.Convert.ToChar(value);
 
         /// <inheritdoc cref="global::System.Convert.ToChar"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public char ToChar(byte value) => global::System.Convert.ToChar(value);
+        public char ToChar(byte value)
+             => global::System.Convert.ToChar(value);
 
         /// <inheritdoc cref="global::System.Convert.ToChar"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public char ToChar(short value) => global::System.Convert.ToChar(value);
+        public char ToChar(short value)
+             => global::System.Convert.ToChar(value);
 
         /// <inheritdoc cref="global::System.Convert.ToChar"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public char ToChar(ushort value) => global::System.Convert.ToChar(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public char ToChar(ushort value)
+             => global::System.Convert.ToChar(value);
 
         /// <inheritdoc cref="global::System.Convert.ToChar"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public char ToChar(int value) => global::System.Convert.ToChar(value);
+        public char ToChar(int value)
+             => global::System.Convert.ToChar(value);
 
         /// <inheritdoc cref="global::System.Convert.ToChar"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public char ToChar(uint value) => global::System.Convert.ToChar(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public char ToChar(uint value)
+             => global::System.Convert.ToChar(value);
 
         /// <inheritdoc cref="global::System.Convert.ToChar"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public char ToChar(long value) => global::System.Convert.ToChar(value);
+        public char ToChar(long value)
+             => global::System.Convert.ToChar(value);
 
         /// <inheritdoc cref="global::System.Convert.ToChar"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public char ToChar(ulong value) => global::System.Convert.ToChar(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public char ToChar(ulong value)
+             => global::System.Convert.ToChar(value);
 
         /// <inheritdoc cref="global::System.Convert.ToChar"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public char ToChar(string value) => global::System.Convert.ToChar(value);
+        public char ToChar(string value)
+             => global::System.Convert.ToChar(value);
 
         /// <inheritdoc cref="global::System.Convert.ToChar"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public char ToChar(string value, global::System.IFormatProvider? provider) => global::System.Convert.ToChar(value, provider);
+        public char ToChar(string value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToChar(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToChar"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public char ToChar(float value) => global::System.Convert.ToChar(value);
+        public char ToChar(float value)
+             => global::System.Convert.ToChar(value);
 
         /// <inheritdoc cref="global::System.Convert.ToChar"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public char ToChar(double value) => global::System.Convert.ToChar(value);
+        public char ToChar(double value)
+             => global::System.Convert.ToChar(value);
 
         /// <inheritdoc cref="global::System.Convert.ToChar"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public char ToChar(decimal value) => global::System.Convert.ToChar(value);
+        public char ToChar(decimal value)
+             => global::System.Convert.ToChar(value);
 
         /// <inheritdoc cref="global::System.Convert.ToChar"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public char ToChar(global::System.DateTime value) => global::System.Convert.ToChar(value);
+        public char ToChar(global::System.DateTime value)
+             => global::System.Convert.ToChar(value);
 
         /// <inheritdoc cref="global::System.Convert.ToSByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public sbyte ToSByte(object? value) => global::System.Convert.ToSByte(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public sbyte ToSByte(object? value)
+             => global::System.Convert.ToSByte(value);
 
         /// <inheritdoc cref="global::System.Convert.ToSByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public sbyte ToSByte(object? value, global::System.IFormatProvider? provider) => global::System.Convert.ToSByte(value, provider);
+        [global::System.CLSCompliantAttribute(false)]
+        public sbyte ToSByte(object? value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToSByte(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToSByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public sbyte ToSByte(bool value) => global::System.Convert.ToSByte(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public sbyte ToSByte(bool value)
+             => global::System.Convert.ToSByte(value);
 
         /// <inheritdoc cref="global::System.Convert.ToSByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public sbyte ToSByte(sbyte value) => global::System.Convert.ToSByte(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public sbyte ToSByte(sbyte value)
+             => global::System.Convert.ToSByte(value);
 
         /// <inheritdoc cref="global::System.Convert.ToSByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public sbyte ToSByte(char value) => global::System.Convert.ToSByte(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public sbyte ToSByte(char value)
+             => global::System.Convert.ToSByte(value);
 
         /// <inheritdoc cref="global::System.Convert.ToSByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public sbyte ToSByte(byte value) => global::System.Convert.ToSByte(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public sbyte ToSByte(byte value)
+             => global::System.Convert.ToSByte(value);
 
         /// <inheritdoc cref="global::System.Convert.ToSByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public sbyte ToSByte(short value) => global::System.Convert.ToSByte(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public sbyte ToSByte(short value)
+             => global::System.Convert.ToSByte(value);
 
         /// <inheritdoc cref="global::System.Convert.ToSByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public sbyte ToSByte(ushort value) => global::System.Convert.ToSByte(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public sbyte ToSByte(ushort value)
+             => global::System.Convert.ToSByte(value);
 
         /// <inheritdoc cref="global::System.Convert.ToSByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public sbyte ToSByte(int value) => global::System.Convert.ToSByte(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public sbyte ToSByte(int value)
+             => global::System.Convert.ToSByte(value);
 
         /// <inheritdoc cref="global::System.Convert.ToSByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public sbyte ToSByte(uint value) => global::System.Convert.ToSByte(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public sbyte ToSByte(uint value)
+             => global::System.Convert.ToSByte(value);
 
         /// <inheritdoc cref="global::System.Convert.ToSByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public sbyte ToSByte(long value) => global::System.Convert.ToSByte(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public sbyte ToSByte(long value)
+             => global::System.Convert.ToSByte(value);
 
         /// <inheritdoc cref="global::System.Convert.ToSByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public sbyte ToSByte(ulong value) => global::System.Convert.ToSByte(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public sbyte ToSByte(ulong value)
+             => global::System.Convert.ToSByte(value);
 
         /// <inheritdoc cref="global::System.Convert.ToSByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public sbyte ToSByte(float value) => global::System.Convert.ToSByte(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public sbyte ToSByte(float value)
+             => global::System.Convert.ToSByte(value);
 
         /// <inheritdoc cref="global::System.Convert.ToSByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public sbyte ToSByte(double value) => global::System.Convert.ToSByte(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public sbyte ToSByte(double value)
+             => global::System.Convert.ToSByte(value);
 
         /// <inheritdoc cref="global::System.Convert.ToSByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public sbyte ToSByte(decimal value) => global::System.Convert.ToSByte(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public sbyte ToSByte(decimal value)
+             => global::System.Convert.ToSByte(value);
 
         /// <inheritdoc cref="global::System.Convert.ToSByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public sbyte ToSByte(string? value) => global::System.Convert.ToSByte(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public sbyte ToSByte(string? value)
+             => global::System.Convert.ToSByte(value);
 
         /// <inheritdoc cref="global::System.Convert.ToSByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public sbyte ToSByte(string value, global::System.IFormatProvider? provider) => global::System.Convert.ToSByte(value, provider);
+        [global::System.CLSCompliantAttribute(false)]
+        public sbyte ToSByte(string value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToSByte(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToSByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public sbyte ToSByte(global::System.DateTime value) => global::System.Convert.ToSByte(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public sbyte ToSByte(global::System.DateTime value)
+             => global::System.Convert.ToSByte(value);
 
         /// <inheritdoc cref="global::System.Convert.ToByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public byte ToByte(object? value) => global::System.Convert.ToByte(value);
+        public byte ToByte(object? value)
+             => global::System.Convert.ToByte(value);
 
         /// <inheritdoc cref="global::System.Convert.ToByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public byte ToByte(object? value, global::System.IFormatProvider? provider) => global::System.Convert.ToByte(value, provider);
+        public byte ToByte(object? value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToByte(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public byte ToByte(bool value) => global::System.Convert.ToByte(value);
+        public byte ToByte(bool value)
+             => global::System.Convert.ToByte(value);
 
         /// <inheritdoc cref="global::System.Convert.ToByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public byte ToByte(byte value) => global::System.Convert.ToByte(value);
+        public byte ToByte(byte value)
+             => global::System.Convert.ToByte(value);
 
         /// <inheritdoc cref="global::System.Convert.ToByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public byte ToByte(char value) => global::System.Convert.ToByte(value);
+        public byte ToByte(char value)
+             => global::System.Convert.ToByte(value);
 
         /// <inheritdoc cref="global::System.Convert.ToByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public byte ToByte(sbyte value) => global::System.Convert.ToByte(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public byte ToByte(sbyte value)
+             => global::System.Convert.ToByte(value);
 
         /// <inheritdoc cref="global::System.Convert.ToByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public byte ToByte(short value) => global::System.Convert.ToByte(value);
+        public byte ToByte(short value)
+             => global::System.Convert.ToByte(value);
 
         /// <inheritdoc cref="global::System.Convert.ToByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public byte ToByte(ushort value) => global::System.Convert.ToByte(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public byte ToByte(ushort value)
+             => global::System.Convert.ToByte(value);
 
         /// <inheritdoc cref="global::System.Convert.ToByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public byte ToByte(int value) => global::System.Convert.ToByte(value);
+        public byte ToByte(int value)
+             => global::System.Convert.ToByte(value);
 
         /// <inheritdoc cref="global::System.Convert.ToByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public byte ToByte(uint value) => global::System.Convert.ToByte(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public byte ToByte(uint value)
+             => global::System.Convert.ToByte(value);
 
         /// <inheritdoc cref="global::System.Convert.ToByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public byte ToByte(long value) => global::System.Convert.ToByte(value);
+        public byte ToByte(long value)
+             => global::System.Convert.ToByte(value);
 
         /// <inheritdoc cref="global::System.Convert.ToByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public byte ToByte(ulong value) => global::System.Convert.ToByte(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public byte ToByte(ulong value)
+             => global::System.Convert.ToByte(value);
 
         /// <inheritdoc cref="global::System.Convert.ToByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public byte ToByte(float value) => global::System.Convert.ToByte(value);
+        public byte ToByte(float value)
+             => global::System.Convert.ToByte(value);
 
         /// <inheritdoc cref="global::System.Convert.ToByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public byte ToByte(double value) => global::System.Convert.ToByte(value);
+        public byte ToByte(double value)
+             => global::System.Convert.ToByte(value);
 
         /// <inheritdoc cref="global::System.Convert.ToByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public byte ToByte(decimal value) => global::System.Convert.ToByte(value);
+        public byte ToByte(decimal value)
+             => global::System.Convert.ToByte(value);
 
         /// <inheritdoc cref="global::System.Convert.ToByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public byte ToByte(string? value) => global::System.Convert.ToByte(value);
+        public byte ToByte(string? value)
+             => global::System.Convert.ToByte(value);
 
         /// <inheritdoc cref="global::System.Convert.ToByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public byte ToByte(string? value, global::System.IFormatProvider? provider) => global::System.Convert.ToByte(value, provider);
+        public byte ToByte(string? value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToByte(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public byte ToByte(global::System.DateTime value) => global::System.Convert.ToByte(value);
+        public byte ToByte(global::System.DateTime value)
+             => global::System.Convert.ToByte(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public short ToInt16(object? value) => global::System.Convert.ToInt16(value);
+        public short ToInt16(object? value)
+             => global::System.Convert.ToInt16(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public short ToInt16(object? value, global::System.IFormatProvider? provider) => global::System.Convert.ToInt16(value, provider);
+        public short ToInt16(object? value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToInt16(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public short ToInt16(bool value) => global::System.Convert.ToInt16(value);
+        public short ToInt16(bool value)
+             => global::System.Convert.ToInt16(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public short ToInt16(char value) => global::System.Convert.ToInt16(value);
+        public short ToInt16(char value)
+             => global::System.Convert.ToInt16(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public short ToInt16(sbyte value) => global::System.Convert.ToInt16(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public short ToInt16(sbyte value)
+             => global::System.Convert.ToInt16(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public short ToInt16(byte value) => global::System.Convert.ToInt16(value);
+        public short ToInt16(byte value)
+             => global::System.Convert.ToInt16(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public short ToInt16(ushort value) => global::System.Convert.ToInt16(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public short ToInt16(ushort value)
+             => global::System.Convert.ToInt16(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public short ToInt16(int value) => global::System.Convert.ToInt16(value);
+        public short ToInt16(int value)
+             => global::System.Convert.ToInt16(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public short ToInt16(uint value) => global::System.Convert.ToInt16(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public short ToInt16(uint value)
+             => global::System.Convert.ToInt16(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public short ToInt16(short value) => global::System.Convert.ToInt16(value);
+        public short ToInt16(short value)
+             => global::System.Convert.ToInt16(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public short ToInt16(long value) => global::System.Convert.ToInt16(value);
+        public short ToInt16(long value)
+             => global::System.Convert.ToInt16(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public short ToInt16(ulong value) => global::System.Convert.ToInt16(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public short ToInt16(ulong value)
+             => global::System.Convert.ToInt16(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public short ToInt16(float value) => global::System.Convert.ToInt16(value);
+        public short ToInt16(float value)
+             => global::System.Convert.ToInt16(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public short ToInt16(double value) => global::System.Convert.ToInt16(value);
+        public short ToInt16(double value)
+             => global::System.Convert.ToInt16(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public short ToInt16(decimal value) => global::System.Convert.ToInt16(value);
+        public short ToInt16(decimal value)
+             => global::System.Convert.ToInt16(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public short ToInt16(string? value) => global::System.Convert.ToInt16(value);
+        public short ToInt16(string? value)
+             => global::System.Convert.ToInt16(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public short ToInt16(string? value, global::System.IFormatProvider? provider) => global::System.Convert.ToInt16(value, provider);
+        public short ToInt16(string? value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToInt16(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public short ToInt16(global::System.DateTime value) => global::System.Convert.ToInt16(value);
+        public short ToInt16(global::System.DateTime value)
+             => global::System.Convert.ToInt16(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ushort ToUInt16(object? value) => global::System.Convert.ToUInt16(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ushort ToUInt16(object? value)
+             => global::System.Convert.ToUInt16(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ushort ToUInt16(object? value, global::System.IFormatProvider? provider) => global::System.Convert.ToUInt16(value, provider);
+        [global::System.CLSCompliantAttribute(false)]
+        public ushort ToUInt16(object? value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToUInt16(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ushort ToUInt16(bool value) => global::System.Convert.ToUInt16(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ushort ToUInt16(bool value)
+             => global::System.Convert.ToUInt16(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ushort ToUInt16(char value) => global::System.Convert.ToUInt16(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ushort ToUInt16(char value)
+             => global::System.Convert.ToUInt16(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ushort ToUInt16(sbyte value) => global::System.Convert.ToUInt16(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ushort ToUInt16(sbyte value)
+             => global::System.Convert.ToUInt16(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ushort ToUInt16(byte value) => global::System.Convert.ToUInt16(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ushort ToUInt16(byte value)
+             => global::System.Convert.ToUInt16(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ushort ToUInt16(short value) => global::System.Convert.ToUInt16(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ushort ToUInt16(short value)
+             => global::System.Convert.ToUInt16(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ushort ToUInt16(int value) => global::System.Convert.ToUInt16(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ushort ToUInt16(int value)
+             => global::System.Convert.ToUInt16(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ushort ToUInt16(ushort value) => global::System.Convert.ToUInt16(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ushort ToUInt16(ushort value)
+             => global::System.Convert.ToUInt16(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ushort ToUInt16(uint value) => global::System.Convert.ToUInt16(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ushort ToUInt16(uint value)
+             => global::System.Convert.ToUInt16(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ushort ToUInt16(long value) => global::System.Convert.ToUInt16(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ushort ToUInt16(long value)
+             => global::System.Convert.ToUInt16(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ushort ToUInt16(ulong value) => global::System.Convert.ToUInt16(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ushort ToUInt16(ulong value)
+             => global::System.Convert.ToUInt16(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ushort ToUInt16(float value) => global::System.Convert.ToUInt16(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ushort ToUInt16(float value)
+             => global::System.Convert.ToUInt16(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ushort ToUInt16(double value) => global::System.Convert.ToUInt16(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ushort ToUInt16(double value)
+             => global::System.Convert.ToUInt16(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ushort ToUInt16(decimal value) => global::System.Convert.ToUInt16(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ushort ToUInt16(decimal value)
+             => global::System.Convert.ToUInt16(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ushort ToUInt16(string? value) => global::System.Convert.ToUInt16(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ushort ToUInt16(string? value)
+             => global::System.Convert.ToUInt16(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ushort ToUInt16(string? value, global::System.IFormatProvider? provider) => global::System.Convert.ToUInt16(value, provider);
+        [global::System.CLSCompliantAttribute(false)]
+        public ushort ToUInt16(string? value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToUInt16(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ushort ToUInt16(global::System.DateTime value) => global::System.Convert.ToUInt16(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ushort ToUInt16(global::System.DateTime value)
+             => global::System.Convert.ToUInt16(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int ToInt32(object? value) => global::System.Convert.ToInt32(value);
+        public int ToInt32(object? value)
+             => global::System.Convert.ToInt32(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int ToInt32(object? value, global::System.IFormatProvider? provider) => global::System.Convert.ToInt32(value, provider);
+        public int ToInt32(object? value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToInt32(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int ToInt32(bool value) => global::System.Convert.ToInt32(value);
+        public int ToInt32(bool value)
+             => global::System.Convert.ToInt32(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int ToInt32(char value) => global::System.Convert.ToInt32(value);
+        public int ToInt32(char value)
+             => global::System.Convert.ToInt32(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public int ToInt32(sbyte value) => global::System.Convert.ToInt32(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public int ToInt32(sbyte value)
+             => global::System.Convert.ToInt32(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int ToInt32(byte value) => global::System.Convert.ToInt32(value);
+        public int ToInt32(byte value)
+             => global::System.Convert.ToInt32(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int ToInt32(short value) => global::System.Convert.ToInt32(value);
+        public int ToInt32(short value)
+             => global::System.Convert.ToInt32(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public int ToInt32(ushort value) => global::System.Convert.ToInt32(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public int ToInt32(ushort value)
+             => global::System.Convert.ToInt32(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public int ToInt32(uint value) => global::System.Convert.ToInt32(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public int ToInt32(uint value)
+             => global::System.Convert.ToInt32(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int ToInt32(int value) => global::System.Convert.ToInt32(value);
+        public int ToInt32(int value)
+             => global::System.Convert.ToInt32(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int ToInt32(long value) => global::System.Convert.ToInt32(value);
+        public int ToInt32(long value)
+             => global::System.Convert.ToInt32(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public int ToInt32(ulong value) => global::System.Convert.ToInt32(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public int ToInt32(ulong value)
+             => global::System.Convert.ToInt32(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int ToInt32(float value) => global::System.Convert.ToInt32(value);
+        public int ToInt32(float value)
+             => global::System.Convert.ToInt32(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int ToInt32(double value) => global::System.Convert.ToInt32(value);
+        public int ToInt32(double value)
+             => global::System.Convert.ToInt32(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int ToInt32(decimal value) => global::System.Convert.ToInt32(value);
+        public int ToInt32(decimal value)
+             => global::System.Convert.ToInt32(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int ToInt32(string? value) => global::System.Convert.ToInt32(value);
+        public int ToInt32(string? value)
+             => global::System.Convert.ToInt32(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int ToInt32(string? value, global::System.IFormatProvider? provider) => global::System.Convert.ToInt32(value, provider);
+        public int ToInt32(string? value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToInt32(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int ToInt32(global::System.DateTime value) => global::System.Convert.ToInt32(value);
+        public int ToInt32(global::System.DateTime value)
+             => global::System.Convert.ToInt32(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public uint ToUInt32(object? value) => global::System.Convert.ToUInt32(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public uint ToUInt32(object? value)
+             => global::System.Convert.ToUInt32(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public uint ToUInt32(object? value, global::System.IFormatProvider? provider) => global::System.Convert.ToUInt32(value, provider);
+        [global::System.CLSCompliantAttribute(false)]
+        public uint ToUInt32(object? value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToUInt32(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public uint ToUInt32(bool value) => global::System.Convert.ToUInt32(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public uint ToUInt32(bool value)
+             => global::System.Convert.ToUInt32(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public uint ToUInt32(char value) => global::System.Convert.ToUInt32(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public uint ToUInt32(char value)
+             => global::System.Convert.ToUInt32(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public uint ToUInt32(sbyte value) => global::System.Convert.ToUInt32(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public uint ToUInt32(sbyte value)
+             => global::System.Convert.ToUInt32(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public uint ToUInt32(byte value) => global::System.Convert.ToUInt32(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public uint ToUInt32(byte value)
+             => global::System.Convert.ToUInt32(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public uint ToUInt32(short value) => global::System.Convert.ToUInt32(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public uint ToUInt32(short value)
+             => global::System.Convert.ToUInt32(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public uint ToUInt32(ushort value) => global::System.Convert.ToUInt32(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public uint ToUInt32(ushort value)
+             => global::System.Convert.ToUInt32(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public uint ToUInt32(int value) => global::System.Convert.ToUInt32(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public uint ToUInt32(int value)
+             => global::System.Convert.ToUInt32(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public uint ToUInt32(uint value) => global::System.Convert.ToUInt32(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public uint ToUInt32(uint value)
+             => global::System.Convert.ToUInt32(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public uint ToUInt32(long value) => global::System.Convert.ToUInt32(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public uint ToUInt32(long value)
+             => global::System.Convert.ToUInt32(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public uint ToUInt32(ulong value) => global::System.Convert.ToUInt32(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public uint ToUInt32(ulong value)
+             => global::System.Convert.ToUInt32(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public uint ToUInt32(float value) => global::System.Convert.ToUInt32(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public uint ToUInt32(float value)
+             => global::System.Convert.ToUInt32(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public uint ToUInt32(double value) => global::System.Convert.ToUInt32(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public uint ToUInt32(double value)
+             => global::System.Convert.ToUInt32(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public uint ToUInt32(decimal value) => global::System.Convert.ToUInt32(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public uint ToUInt32(decimal value)
+             => global::System.Convert.ToUInt32(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public uint ToUInt32(string? value) => global::System.Convert.ToUInt32(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public uint ToUInt32(string? value)
+             => global::System.Convert.ToUInt32(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public uint ToUInt32(string? value, global::System.IFormatProvider? provider) => global::System.Convert.ToUInt32(value, provider);
+        [global::System.CLSCompliantAttribute(false)]
+        public uint ToUInt32(string? value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToUInt32(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public uint ToUInt32(global::System.DateTime value) => global::System.Convert.ToUInt32(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public uint ToUInt32(global::System.DateTime value)
+             => global::System.Convert.ToUInt32(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public long ToInt64(object? value) => global::System.Convert.ToInt64(value);
+        public long ToInt64(object? value)
+             => global::System.Convert.ToInt64(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public long ToInt64(object? value, global::System.IFormatProvider? provider) => global::System.Convert.ToInt64(value, provider);
+        public long ToInt64(object? value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToInt64(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public long ToInt64(bool value) => global::System.Convert.ToInt64(value);
+        public long ToInt64(bool value)
+             => global::System.Convert.ToInt64(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public long ToInt64(char value) => global::System.Convert.ToInt64(value);
+        public long ToInt64(char value)
+             => global::System.Convert.ToInt64(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public long ToInt64(sbyte value) => global::System.Convert.ToInt64(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public long ToInt64(sbyte value)
+             => global::System.Convert.ToInt64(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public long ToInt64(byte value) => global::System.Convert.ToInt64(value);
+        public long ToInt64(byte value)
+             => global::System.Convert.ToInt64(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public long ToInt64(short value) => global::System.Convert.ToInt64(value);
+        public long ToInt64(short value)
+             => global::System.Convert.ToInt64(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public long ToInt64(ushort value) => global::System.Convert.ToInt64(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public long ToInt64(ushort value)
+             => global::System.Convert.ToInt64(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public long ToInt64(int value) => global::System.Convert.ToInt64(value);
+        public long ToInt64(int value)
+             => global::System.Convert.ToInt64(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public long ToInt64(uint value) => global::System.Convert.ToInt64(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public long ToInt64(uint value)
+             => global::System.Convert.ToInt64(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public long ToInt64(ulong value) => global::System.Convert.ToInt64(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public long ToInt64(ulong value)
+             => global::System.Convert.ToInt64(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public long ToInt64(long value) => global::System.Convert.ToInt64(value);
+        public long ToInt64(long value)
+             => global::System.Convert.ToInt64(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public long ToInt64(float value) => global::System.Convert.ToInt64(value);
+        public long ToInt64(float value)
+             => global::System.Convert.ToInt64(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public long ToInt64(double value) => global::System.Convert.ToInt64(value);
+        public long ToInt64(double value)
+             => global::System.Convert.ToInt64(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public long ToInt64(decimal value) => global::System.Convert.ToInt64(value);
+        public long ToInt64(decimal value)
+             => global::System.Convert.ToInt64(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public long ToInt64(string? value) => global::System.Convert.ToInt64(value);
+        public long ToInt64(string? value)
+             => global::System.Convert.ToInt64(value);
 
         /// <inheritdoc cref="global::System.Convert.ToInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public long ToInt64(string? value, global::System.IFormatProvider? provider) => global::System.Convert.ToInt64(value, provider);
+        public long ToInt64(string? value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToInt64(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public long ToInt64(global::System.DateTime value) => global::System.Convert.ToInt64(value);
+        public long ToInt64(global::System.DateTime value)
+             => global::System.Convert.ToInt64(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ulong ToUInt64(object? value) => global::System.Convert.ToUInt64(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ulong ToUInt64(object? value)
+             => global::System.Convert.ToUInt64(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ulong ToUInt64(object? value, global::System.IFormatProvider? provider) => global::System.Convert.ToUInt64(value, provider);
+        [global::System.CLSCompliantAttribute(false)]
+        public ulong ToUInt64(object? value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToUInt64(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ulong ToUInt64(bool value) => global::System.Convert.ToUInt64(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ulong ToUInt64(bool value)
+             => global::System.Convert.ToUInt64(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ulong ToUInt64(char value) => global::System.Convert.ToUInt64(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ulong ToUInt64(char value)
+             => global::System.Convert.ToUInt64(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ulong ToUInt64(sbyte value) => global::System.Convert.ToUInt64(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ulong ToUInt64(sbyte value)
+             => global::System.Convert.ToUInt64(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ulong ToUInt64(byte value) => global::System.Convert.ToUInt64(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ulong ToUInt64(byte value)
+             => global::System.Convert.ToUInt64(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ulong ToUInt64(short value) => global::System.Convert.ToUInt64(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ulong ToUInt64(short value)
+             => global::System.Convert.ToUInt64(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ulong ToUInt64(ushort value) => global::System.Convert.ToUInt64(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ulong ToUInt64(ushort value)
+             => global::System.Convert.ToUInt64(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ulong ToUInt64(int value) => global::System.Convert.ToUInt64(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ulong ToUInt64(int value)
+             => global::System.Convert.ToUInt64(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ulong ToUInt64(uint value) => global::System.Convert.ToUInt64(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ulong ToUInt64(uint value)
+             => global::System.Convert.ToUInt64(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ulong ToUInt64(long value) => global::System.Convert.ToUInt64(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ulong ToUInt64(long value)
+             => global::System.Convert.ToUInt64(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ulong ToUInt64(ulong value) => global::System.Convert.ToUInt64(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ulong ToUInt64(ulong value)
+             => global::System.Convert.ToUInt64(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ulong ToUInt64(float value) => global::System.Convert.ToUInt64(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ulong ToUInt64(float value)
+             => global::System.Convert.ToUInt64(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ulong ToUInt64(double value) => global::System.Convert.ToUInt64(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ulong ToUInt64(double value)
+             => global::System.Convert.ToUInt64(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ulong ToUInt64(decimal value) => global::System.Convert.ToUInt64(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ulong ToUInt64(decimal value)
+             => global::System.Convert.ToUInt64(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ulong ToUInt64(string? value) => global::System.Convert.ToUInt64(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ulong ToUInt64(string? value)
+             => global::System.Convert.ToUInt64(value);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ulong ToUInt64(string? value, global::System.IFormatProvider? provider) => global::System.Convert.ToUInt64(value, provider);
+        [global::System.CLSCompliantAttribute(false)]
+        public ulong ToUInt64(string? value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToUInt64(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ulong ToUInt64(global::System.DateTime value) => global::System.Convert.ToUInt64(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public ulong ToUInt64(global::System.DateTime value)
+             => global::System.Convert.ToUInt64(value);
 
         /// <inheritdoc cref="global::System.Convert.ToSingle"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public float ToSingle(object? value) => global::System.Convert.ToSingle(value);
+        public float ToSingle(object? value)
+             => global::System.Convert.ToSingle(value);
 
         /// <inheritdoc cref="global::System.Convert.ToSingle"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public float ToSingle(object? value, global::System.IFormatProvider? provider) => global::System.Convert.ToSingle(value, provider);
+        public float ToSingle(object? value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToSingle(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToSingle"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public float ToSingle(sbyte value) => global::System.Convert.ToSingle(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public float ToSingle(sbyte value)
+             => global::System.Convert.ToSingle(value);
 
         /// <inheritdoc cref="global::System.Convert.ToSingle"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public float ToSingle(byte value) => global::System.Convert.ToSingle(value);
+        public float ToSingle(byte value)
+             => global::System.Convert.ToSingle(value);
 
         /// <inheritdoc cref="global::System.Convert.ToSingle"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public float ToSingle(char value) => global::System.Convert.ToSingle(value);
+        public float ToSingle(char value)
+             => global::System.Convert.ToSingle(value);
 
         /// <inheritdoc cref="global::System.Convert.ToSingle"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public float ToSingle(short value) => global::System.Convert.ToSingle(value);
+        public float ToSingle(short value)
+             => global::System.Convert.ToSingle(value);
 
         /// <inheritdoc cref="global::System.Convert.ToSingle"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public float ToSingle(ushort value) => global::System.Convert.ToSingle(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public float ToSingle(ushort value)
+             => global::System.Convert.ToSingle(value);
 
         /// <inheritdoc cref="global::System.Convert.ToSingle"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public float ToSingle(int value) => global::System.Convert.ToSingle(value);
+        public float ToSingle(int value)
+             => global::System.Convert.ToSingle(value);
 
         /// <inheritdoc cref="global::System.Convert.ToSingle"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public float ToSingle(uint value) => global::System.Convert.ToSingle(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public float ToSingle(uint value)
+             => global::System.Convert.ToSingle(value);
 
         /// <inheritdoc cref="global::System.Convert.ToSingle"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public float ToSingle(long value) => global::System.Convert.ToSingle(value);
+        public float ToSingle(long value)
+             => global::System.Convert.ToSingle(value);
 
         /// <inheritdoc cref="global::System.Convert.ToSingle"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public float ToSingle(ulong value) => global::System.Convert.ToSingle(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public float ToSingle(ulong value)
+             => global::System.Convert.ToSingle(value);
 
         /// <inheritdoc cref="global::System.Convert.ToSingle"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public float ToSingle(float value) => global::System.Convert.ToSingle(value);
+        public float ToSingle(float value)
+             => global::System.Convert.ToSingle(value);
 
         /// <inheritdoc cref="global::System.Convert.ToSingle"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public float ToSingle(double value) => global::System.Convert.ToSingle(value);
+        public float ToSingle(double value)
+             => global::System.Convert.ToSingle(value);
 
         /// <inheritdoc cref="global::System.Convert.ToSingle"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public float ToSingle(decimal value) => global::System.Convert.ToSingle(value);
+        public float ToSingle(decimal value)
+             => global::System.Convert.ToSingle(value);
 
         /// <inheritdoc cref="global::System.Convert.ToSingle"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public float ToSingle(string? value) => global::System.Convert.ToSingle(value);
+        public float ToSingle(string? value)
+             => global::System.Convert.ToSingle(value);
 
         /// <inheritdoc cref="global::System.Convert.ToSingle"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public float ToSingle(string? value, global::System.IFormatProvider? provider) => global::System.Convert.ToSingle(value, provider);
+        public float ToSingle(string? value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToSingle(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToSingle"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public float ToSingle(bool value) => global::System.Convert.ToSingle(value);
+        public float ToSingle(bool value)
+             => global::System.Convert.ToSingle(value);
 
         /// <inheritdoc cref="global::System.Convert.ToSingle"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public float ToSingle(global::System.DateTime value) => global::System.Convert.ToSingle(value);
+        public float ToSingle(global::System.DateTime value)
+             => global::System.Convert.ToSingle(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDouble"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double ToDouble(object? value) => global::System.Convert.ToDouble(value);
+        public double ToDouble(object? value)
+             => global::System.Convert.ToDouble(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDouble"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double ToDouble(object? value, global::System.IFormatProvider? provider) => global::System.Convert.ToDouble(value, provider);
+        public double ToDouble(object? value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToDouble(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToDouble"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public double ToDouble(sbyte value) => global::System.Convert.ToDouble(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public double ToDouble(sbyte value)
+             => global::System.Convert.ToDouble(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDouble"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double ToDouble(byte value) => global::System.Convert.ToDouble(value);
+        public double ToDouble(byte value)
+             => global::System.Convert.ToDouble(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDouble"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double ToDouble(short value) => global::System.Convert.ToDouble(value);
+        public double ToDouble(short value)
+             => global::System.Convert.ToDouble(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDouble"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double ToDouble(char value) => global::System.Convert.ToDouble(value);
+        public double ToDouble(char value)
+             => global::System.Convert.ToDouble(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDouble"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public double ToDouble(ushort value) => global::System.Convert.ToDouble(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public double ToDouble(ushort value)
+             => global::System.Convert.ToDouble(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDouble"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double ToDouble(int value) => global::System.Convert.ToDouble(value);
+        public double ToDouble(int value)
+             => global::System.Convert.ToDouble(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDouble"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public double ToDouble(uint value) => global::System.Convert.ToDouble(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public double ToDouble(uint value)
+             => global::System.Convert.ToDouble(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDouble"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double ToDouble(long value) => global::System.Convert.ToDouble(value);
+        public double ToDouble(long value)
+             => global::System.Convert.ToDouble(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDouble"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public double ToDouble(ulong value) => global::System.Convert.ToDouble(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public double ToDouble(ulong value)
+             => global::System.Convert.ToDouble(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDouble"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double ToDouble(float value) => global::System.Convert.ToDouble(value);
+        public double ToDouble(float value)
+             => global::System.Convert.ToDouble(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDouble"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double ToDouble(double value) => global::System.Convert.ToDouble(value);
+        public double ToDouble(double value)
+             => global::System.Convert.ToDouble(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDouble"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double ToDouble(decimal value) => global::System.Convert.ToDouble(value);
+        public double ToDouble(decimal value)
+             => global::System.Convert.ToDouble(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDouble"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double ToDouble(string? value) => global::System.Convert.ToDouble(value);
+        public double ToDouble(string? value)
+             => global::System.Convert.ToDouble(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDouble"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double ToDouble(string? value, global::System.IFormatProvider? provider) => global::System.Convert.ToDouble(value, provider);
+        public double ToDouble(string? value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToDouble(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToDouble"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double ToDouble(bool value) => global::System.Convert.ToDouble(value);
+        public double ToDouble(bool value)
+             => global::System.Convert.ToDouble(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDouble"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double ToDouble(global::System.DateTime value) => global::System.Convert.ToDouble(value);
+        public double ToDouble(global::System.DateTime value)
+             => global::System.Convert.ToDouble(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDecimal"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public decimal ToDecimal(object? value) => global::System.Convert.ToDecimal(value);
+        public decimal ToDecimal(object? value)
+             => global::System.Convert.ToDecimal(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDecimal"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public decimal ToDecimal(object? value, global::System.IFormatProvider? provider) => global::System.Convert.ToDecimal(value, provider);
+        public decimal ToDecimal(object? value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToDecimal(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToDecimal"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public decimal ToDecimal(sbyte value) => global::System.Convert.ToDecimal(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public decimal ToDecimal(sbyte value)
+             => global::System.Convert.ToDecimal(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDecimal"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public decimal ToDecimal(byte value) => global::System.Convert.ToDecimal(value);
+        public decimal ToDecimal(byte value)
+             => global::System.Convert.ToDecimal(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDecimal"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public decimal ToDecimal(char value) => global::System.Convert.ToDecimal(value);
+        public decimal ToDecimal(char value)
+             => global::System.Convert.ToDecimal(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDecimal"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public decimal ToDecimal(short value) => global::System.Convert.ToDecimal(value);
+        public decimal ToDecimal(short value)
+             => global::System.Convert.ToDecimal(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDecimal"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public decimal ToDecimal(ushort value) => global::System.Convert.ToDecimal(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public decimal ToDecimal(ushort value)
+             => global::System.Convert.ToDecimal(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDecimal"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public decimal ToDecimal(int value) => global::System.Convert.ToDecimal(value);
+        public decimal ToDecimal(int value)
+             => global::System.Convert.ToDecimal(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDecimal"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public decimal ToDecimal(uint value) => global::System.Convert.ToDecimal(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public decimal ToDecimal(uint value)
+             => global::System.Convert.ToDecimal(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDecimal"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public decimal ToDecimal(long value) => global::System.Convert.ToDecimal(value);
+        public decimal ToDecimal(long value)
+             => global::System.Convert.ToDecimal(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDecimal"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public decimal ToDecimal(ulong value) => global::System.Convert.ToDecimal(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public decimal ToDecimal(ulong value)
+             => global::System.Convert.ToDecimal(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDecimal"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public decimal ToDecimal(float value) => global::System.Convert.ToDecimal(value);
+        public decimal ToDecimal(float value)
+             => global::System.Convert.ToDecimal(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDecimal"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public decimal ToDecimal(double value) => global::System.Convert.ToDecimal(value);
+        public decimal ToDecimal(double value)
+             => global::System.Convert.ToDecimal(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDecimal"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public decimal ToDecimal(string? value) => global::System.Convert.ToDecimal(value);
+        public decimal ToDecimal(string? value)
+             => global::System.Convert.ToDecimal(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDecimal"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public decimal ToDecimal(string? value, global::System.IFormatProvider? provider) => global::System.Convert.ToDecimal(value, provider);
+        public decimal ToDecimal(string? value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToDecimal(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToDecimal"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public decimal ToDecimal(decimal value) => global::System.Convert.ToDecimal(value);
+        public decimal ToDecimal(decimal value)
+             => global::System.Convert.ToDecimal(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDecimal"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public decimal ToDecimal(bool value) => global::System.Convert.ToDecimal(value);
+        public decimal ToDecimal(bool value)
+             => global::System.Convert.ToDecimal(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDecimal"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public decimal ToDecimal(global::System.DateTime value) => global::System.Convert.ToDecimal(value);
+        public decimal ToDecimal(global::System.DateTime value)
+             => global::System.Convert.ToDecimal(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDateTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.DateTime ToDateTime(global::System.DateTime value) => global::System.Convert.ToDateTime(value);
+        public global::System.DateTime ToDateTime(global::System.DateTime value)
+             => global::System.Convert.ToDateTime(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDateTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.DateTime ToDateTime(object? value) => global::System.Convert.ToDateTime(value);
+        public global::System.DateTime ToDateTime(object? value)
+             => global::System.Convert.ToDateTime(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDateTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.DateTime ToDateTime(object? value, global::System.IFormatProvider? provider) => global::System.Convert.ToDateTime(value, provider);
+        public global::System.DateTime ToDateTime(object? value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToDateTime(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToDateTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.DateTime ToDateTime(string? value) => global::System.Convert.ToDateTime(value);
+        public global::System.DateTime ToDateTime(string? value)
+             => global::System.Convert.ToDateTime(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDateTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.DateTime ToDateTime(string? value, global::System.IFormatProvider? provider) => global::System.Convert.ToDateTime(value, provider);
+        public global::System.DateTime ToDateTime(string? value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToDateTime(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToDateTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public global::System.DateTime ToDateTime(sbyte value) => global::System.Convert.ToDateTime(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public global::System.DateTime ToDateTime(sbyte value)
+             => global::System.Convert.ToDateTime(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDateTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.DateTime ToDateTime(byte value) => global::System.Convert.ToDateTime(value);
+        public global::System.DateTime ToDateTime(byte value)
+             => global::System.Convert.ToDateTime(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDateTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.DateTime ToDateTime(short value) => global::System.Convert.ToDateTime(value);
+        public global::System.DateTime ToDateTime(short value)
+             => global::System.Convert.ToDateTime(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDateTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public global::System.DateTime ToDateTime(ushort value) => global::System.Convert.ToDateTime(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public global::System.DateTime ToDateTime(ushort value)
+             => global::System.Convert.ToDateTime(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDateTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.DateTime ToDateTime(int value) => global::System.Convert.ToDateTime(value);
+        public global::System.DateTime ToDateTime(int value)
+             => global::System.Convert.ToDateTime(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDateTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public global::System.DateTime ToDateTime(uint value) => global::System.Convert.ToDateTime(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public global::System.DateTime ToDateTime(uint value)
+             => global::System.Convert.ToDateTime(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDateTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.DateTime ToDateTime(long value) => global::System.Convert.ToDateTime(value);
+        public global::System.DateTime ToDateTime(long value)
+             => global::System.Convert.ToDateTime(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDateTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public global::System.DateTime ToDateTime(ulong value) => global::System.Convert.ToDateTime(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public global::System.DateTime ToDateTime(ulong value)
+             => global::System.Convert.ToDateTime(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDateTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.DateTime ToDateTime(bool value) => global::System.Convert.ToDateTime(value);
+        public global::System.DateTime ToDateTime(bool value)
+             => global::System.Convert.ToDateTime(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDateTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.DateTime ToDateTime(char value) => global::System.Convert.ToDateTime(value);
+        public global::System.DateTime ToDateTime(char value)
+             => global::System.Convert.ToDateTime(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDateTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.DateTime ToDateTime(float value) => global::System.Convert.ToDateTime(value);
+        public global::System.DateTime ToDateTime(float value)
+             => global::System.Convert.ToDateTime(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDateTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.DateTime ToDateTime(double value) => global::System.Convert.ToDateTime(value);
+        public global::System.DateTime ToDateTime(double value)
+             => global::System.Convert.ToDateTime(value);
 
         /// <inheritdoc cref="global::System.Convert.ToDateTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.DateTime ToDateTime(decimal value) => global::System.Convert.ToDateTime(value);
+        public global::System.DateTime ToDateTime(decimal value)
+             => global::System.Convert.ToDateTime(value);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string? ToString(object? value) => global::System.Convert.ToString(value);
+        public string? ToString(object? value)
+             => global::System.Convert.ToString(value);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string? ToString(object? value, global::System.IFormatProvider? provider) => global::System.Convert.ToString(value, provider);
+        public string? ToString(object? value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToString(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToString(bool value) => global::System.Convert.ToString(value);
+        public string ToString(bool value)
+             => global::System.Convert.ToString(value);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToString(bool value, global::System.IFormatProvider? provider) => global::System.Convert.ToString(value, provider);
+        public string ToString(bool value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToString(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToString(char value) => global::System.Convert.ToString(value);
+        public string ToString(char value)
+             => global::System.Convert.ToString(value);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToString(char value, global::System.IFormatProvider? provider) => global::System.Convert.ToString(value, provider);
+        public string ToString(char value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToString(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public string ToString(sbyte value) => global::System.Convert.ToString(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public string ToString(sbyte value)
+             => global::System.Convert.ToString(value);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public string ToString(sbyte value, global::System.IFormatProvider? provider) => global::System.Convert.ToString(value, provider);
+        [global::System.CLSCompliantAttribute(false)]
+        public string ToString(sbyte value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToString(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToString(byte value) => global::System.Convert.ToString(value);
+        public string ToString(byte value)
+             => global::System.Convert.ToString(value);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToString(byte value, global::System.IFormatProvider? provider) => global::System.Convert.ToString(value, provider);
+        public string ToString(byte value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToString(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToString(short value) => global::System.Convert.ToString(value);
+        public string ToString(short value)
+             => global::System.Convert.ToString(value);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToString(short value, global::System.IFormatProvider? provider) => global::System.Convert.ToString(value, provider);
+        public string ToString(short value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToString(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public string ToString(ushort value) => global::System.Convert.ToString(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public string ToString(ushort value)
+             => global::System.Convert.ToString(value);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public string ToString(ushort value, global::System.IFormatProvider? provider) => global::System.Convert.ToString(value, provider);
+        [global::System.CLSCompliantAttribute(false)]
+        public string ToString(ushort value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToString(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToString(int value) => global::System.Convert.ToString(value);
+        public string ToString(int value)
+             => global::System.Convert.ToString(value);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToString(int value, global::System.IFormatProvider? provider) => global::System.Convert.ToString(value, provider);
+        public string ToString(int value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToString(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public string ToString(uint value) => global::System.Convert.ToString(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public string ToString(uint value)
+             => global::System.Convert.ToString(value);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public string ToString(uint value, global::System.IFormatProvider? provider) => global::System.Convert.ToString(value, provider);
+        [global::System.CLSCompliantAttribute(false)]
+        public string ToString(uint value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToString(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToString(long value) => global::System.Convert.ToString(value);
+        public string ToString(long value)
+             => global::System.Convert.ToString(value);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToString(long value, global::System.IFormatProvider? provider) => global::System.Convert.ToString(value, provider);
+        public string ToString(long value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToString(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public string ToString(ulong value) => global::System.Convert.ToString(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public string ToString(ulong value)
+             => global::System.Convert.ToString(value);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public string ToString(ulong value, global::System.IFormatProvider? provider) => global::System.Convert.ToString(value, provider);
+        [global::System.CLSCompliantAttribute(false)]
+        public string ToString(ulong value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToString(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToString(float value) => global::System.Convert.ToString(value);
+        public string ToString(float value)
+             => global::System.Convert.ToString(value);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToString(float value, global::System.IFormatProvider? provider) => global::System.Convert.ToString(value, provider);
+        public string ToString(float value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToString(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToString(double value) => global::System.Convert.ToString(value);
+        public string ToString(double value)
+             => global::System.Convert.ToString(value);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToString(double value, global::System.IFormatProvider? provider) => global::System.Convert.ToString(value, provider);
+        public string ToString(double value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToString(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToString(decimal value) => global::System.Convert.ToString(value);
+        public string ToString(decimal value)
+             => global::System.Convert.ToString(value);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToString(decimal value, global::System.IFormatProvider? provider) => global::System.Convert.ToString(value, provider);
+        public string ToString(decimal value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToString(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToString(global::System.DateTime value) => global::System.Convert.ToString(value);
+        public string ToString(global::System.DateTime value)
+             => global::System.Convert.ToString(value);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToString(global::System.DateTime value, global::System.IFormatProvider? provider) => global::System.Convert.ToString(value, provider);
+        public string ToString(global::System.DateTime value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToString(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string? ToString(string? value) => global::System.Convert.ToString(value);
+        public string? ToString(string? value)
+             => global::System.Convert.ToString(value);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string? ToString(string? value, global::System.IFormatProvider? provider) => global::System.Convert.ToString(value, provider);
+        public string? ToString(string? value, global::System.IFormatProvider? provider)
+             => global::System.Convert.ToString(value, provider);
 
         /// <inheritdoc cref="global::System.Convert.ToByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public byte ToByte(string? value, int fromBase) => global::System.Convert.ToByte(value, fromBase);
+        public byte ToByte(string? value, int fromBase)
+             => global::System.Convert.ToByte(value, fromBase);
 
         /// <inheritdoc cref="global::System.Convert.ToSByte"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public sbyte ToSByte(string? value, int fromBase) => global::System.Convert.ToSByte(value, fromBase);
+        [global::System.CLSCompliantAttribute(false)]
+        public sbyte ToSByte(string? value, int fromBase)
+             => global::System.Convert.ToSByte(value, fromBase);
 
         /// <inheritdoc cref="global::System.Convert.ToInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public short ToInt16(string? value, int fromBase) => global::System.Convert.ToInt16(value, fromBase);
+        public short ToInt16(string? value, int fromBase)
+             => global::System.Convert.ToInt16(value, fromBase);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ushort ToUInt16(string? value, int fromBase) => global::System.Convert.ToUInt16(value, fromBase);
+        [global::System.CLSCompliantAttribute(false)]
+        public ushort ToUInt16(string? value, int fromBase)
+             => global::System.Convert.ToUInt16(value, fromBase);
 
         /// <inheritdoc cref="global::System.Convert.ToInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int ToInt32(string? value, int fromBase) => global::System.Convert.ToInt32(value, fromBase);
+        public int ToInt32(string? value, int fromBase)
+             => global::System.Convert.ToInt32(value, fromBase);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public uint ToUInt32(string? value, int fromBase) => global::System.Convert.ToUInt32(value, fromBase);
+        [global::System.CLSCompliantAttribute(false)]
+        public uint ToUInt32(string? value, int fromBase)
+             => global::System.Convert.ToUInt32(value, fromBase);
 
         /// <inheritdoc cref="global::System.Convert.ToInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public long ToInt64(string? value, int fromBase) => global::System.Convert.ToInt64(value, fromBase);
+        public long ToInt64(string? value, int fromBase)
+             => global::System.Convert.ToInt64(value, fromBase);
 
         /// <inheritdoc cref="global::System.Convert.ToUInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ulong ToUInt64(string? value, int fromBase) => global::System.Convert.ToUInt64(value, fromBase);
+        [global::System.CLSCompliantAttribute(false)]
+        public ulong ToUInt64(string? value, int fromBase)
+             => global::System.Convert.ToUInt64(value, fromBase);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToString(byte value, int toBase) => global::System.Convert.ToString(value, toBase);
+        public string ToString(byte value, int toBase)
+             => global::System.Convert.ToString(value, toBase);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToString(short value, int toBase) => global::System.Convert.ToString(value, toBase);
+        public string ToString(short value, int toBase)
+             => global::System.Convert.ToString(value, toBase);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToString(int value, int toBase) => global::System.Convert.ToString(value, toBase);
+        public string ToString(int value, int toBase)
+             => global::System.Convert.ToString(value, toBase);
 
         /// <inheritdoc cref="global::System.Convert.ToString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToString(long value, int toBase) => global::System.Convert.ToString(value, toBase);
+        public string ToString(long value, int toBase)
+             => global::System.Convert.ToString(value, toBase);
 
         /// <inheritdoc cref="global::System.Convert.ToBase64String"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToBase64String(byte[] inArray) => global::System.Convert.ToBase64String(inArray);
+        public string ToBase64String(byte[] inArray)
+             => global::System.Convert.ToBase64String(inArray);
 
         /// <inheritdoc cref="global::System.Convert.ToBase64String"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToBase64String(byte[] inArray, global::System.Base64FormattingOptions options) => global::System.Convert.ToBase64String(inArray, options);
+        public string ToBase64String(byte[] inArray, global::System.Base64FormattingOptions options)
+             => global::System.Convert.ToBase64String(inArray, options);
 
         /// <inheritdoc cref="global::System.Convert.ToBase64String"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToBase64String(byte[] inArray, int offset, int length) => global::System.Convert.ToBase64String(inArray, offset, length);
+        public string ToBase64String(byte[] inArray, int offset, int length)
+             => global::System.Convert.ToBase64String(inArray, offset, length);
 
         /// <inheritdoc cref="global::System.Convert.ToBase64String"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToBase64String(byte[] inArray, int offset, int length, global::System.Base64FormattingOptions options) => global::System.Convert.ToBase64String(inArray, offset, length, options);
+        public string ToBase64String(byte[] inArray, int offset, int length, global::System.Base64FormattingOptions options)
+             => global::System.Convert.ToBase64String(inArray, offset, length, options);
 
         /// <inheritdoc cref="global::System.Convert.ToBase64String"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToBase64String(global::System.ReadOnlySpan<byte> bytes, global::System.Base64FormattingOptions options) => global::System.Convert.ToBase64String(bytes, options);
+        public string ToBase64String(global::System.ReadOnlySpan<byte> bytes, global::System.Base64FormattingOptions options)
+             => global::System.Convert.ToBase64String(bytes, options);
 
         /// <inheritdoc cref="global::System.Convert.ToBase64CharArray"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int ToBase64CharArray(byte[] inArray, int offsetIn, int length, char[] outArray, int offsetOut) => global::System.Convert.ToBase64CharArray(inArray, offsetIn, length, outArray, offsetOut);
+        public int ToBase64CharArray(byte[] inArray, int offsetIn, int length, char[] outArray, int offsetOut)
+             => global::System.Convert.ToBase64CharArray(inArray, offsetIn, length, outArray, offsetOut);
 
         /// <inheritdoc cref="global::System.Convert.ToBase64CharArray"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int ToBase64CharArray(byte[] inArray, int offsetIn, int length, char[] outArray, int offsetOut, global::System.Base64FormattingOptions options) => global::System.Convert.ToBase64CharArray(inArray, offsetIn, length, outArray, offsetOut, options);
+        public int ToBase64CharArray(byte[] inArray, int offsetIn, int length, char[] outArray, int offsetOut, global::System.Base64FormattingOptions options)
+             => global::System.Convert.ToBase64CharArray(inArray, offsetIn, length, outArray, offsetOut, options);
 
         /// <inheritdoc cref="global::System.Convert.TryToBase64Chars"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public bool TryToBase64Chars(global::System.ReadOnlySpan<byte> bytes, global::System.Span<char> chars, out int charsWritten, global::System.Base64FormattingOptions options) => global::System.Convert.TryToBase64Chars(bytes, chars, out charsWritten, options);
+        public bool TryToBase64Chars(global::System.ReadOnlySpan<byte> bytes, global::System.Span<char> chars, out int charsWritten, global::System.Base64FormattingOptions options)
+             => global::System.Convert.TryToBase64Chars(bytes, chars, out charsWritten, options);
 
         /// <inheritdoc cref="global::System.Convert.FromBase64String"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public byte[] FromBase64String(string s) => global::System.Convert.FromBase64String(s);
+        public byte[] FromBase64String(string s)
+             => global::System.Convert.FromBase64String(s);
 
         /// <inheritdoc cref="global::System.Convert.TryFromBase64String"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public bool TryFromBase64String(string s, global::System.Span<byte> bytes, out int bytesWritten) => global::System.Convert.TryFromBase64String(s, bytes, out bytesWritten);
+        public bool TryFromBase64String(string s, global::System.Span<byte> bytes, out int bytesWritten)
+             => global::System.Convert.TryFromBase64String(s, bytes, out bytesWritten);
 
         /// <inheritdoc cref="global::System.Convert.TryFromBase64Chars"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public bool TryFromBase64Chars(global::System.ReadOnlySpan<char> chars, global::System.Span<byte> bytes, out int bytesWritten) => global::System.Convert.TryFromBase64Chars(chars, bytes, out bytesWritten);
+        public bool TryFromBase64Chars(global::System.ReadOnlySpan<char> chars, global::System.Span<byte> bytes, out int bytesWritten)
+             => global::System.Convert.TryFromBase64Chars(chars, bytes, out bytesWritten);
 
         /// <inheritdoc cref="global::System.Convert.FromBase64CharArray"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public byte[] FromBase64CharArray(char[] inArray, int offset, int length) => global::System.Convert.FromBase64CharArray(inArray, offset, length);
+        public byte[] FromBase64CharArray(char[] inArray, int offset, int length)
+             => global::System.Convert.FromBase64CharArray(inArray, offset, length);
 
         /// <inheritdoc cref="global::System.Convert.FromHexString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public byte[] FromHexString(string s) => global::System.Convert.FromHexString(s);
+        public byte[] FromHexString(string s)
+             => global::System.Convert.FromHexString(s);
 
         /// <inheritdoc cref="global::System.Convert.FromHexString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public byte[] FromHexString(global::System.ReadOnlySpan<char> chars) => global::System.Convert.FromHexString(chars);
+        public byte[] FromHexString(global::System.ReadOnlySpan<char> chars)
+             => global::System.Convert.FromHexString(chars);
 
         /// <inheritdoc cref="global::System.Convert.ToHexString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToHexString(byte[] inArray) => global::System.Convert.ToHexString(inArray);
+        public string ToHexString(byte[] inArray)
+             => global::System.Convert.ToHexString(inArray);
 
         /// <inheritdoc cref="global::System.Convert.ToHexString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToHexString(byte[] inArray, int offset, int length) => global::System.Convert.ToHexString(inArray, offset, length);
+        public string ToHexString(byte[] inArray, int offset, int length)
+             => global::System.Convert.ToHexString(inArray, offset, length);
 
         /// <inheritdoc cref="global::System.Convert.ToHexString"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string ToHexString(global::System.ReadOnlySpan<byte> bytes) => global::System.Convert.ToHexString(bytes);
+        public string ToHexString(global::System.ReadOnlySpan<byte> bytes)
+             => global::System.Convert.ToHexString(bytes);
     }
 }
 #pragma warning restore

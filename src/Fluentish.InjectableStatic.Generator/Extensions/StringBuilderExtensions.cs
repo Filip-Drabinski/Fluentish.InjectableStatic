@@ -116,6 +116,7 @@ namespace Fluentish.InjectableStatic.Generator.Extensions
                 {
                     continue;
                 }
+                builder.Append(endLine);
 
                 builder.AppendIndentation(indentation).Append("where ").Append(typeParam.Name).Append(" : ");
 
@@ -154,8 +155,6 @@ namespace Fluentish.InjectableStatic.Generator.Extensions
                 {
                     builder.AppendIf(typeParam.HasValueTypeConstraint || typeParam.HasValueTypeConstraint || typeParam.HasReferenceTypeConstraint || typeParam.ConstraintTypes.Length > 0, ", ").Append("new()");
                 }
-
-                builder.Append(endLine);
             }
             return builder;
         }
@@ -326,7 +325,7 @@ namespace Fluentish.InjectableStatic.Generator.Extensions
             if (appendedAttribute)
             {
                 builder.Insert(lastIndex, "[");
-                builder.Append("] ");
+                builder.Append("]");
 
                 appendSuffix?.Invoke(builder);
             }

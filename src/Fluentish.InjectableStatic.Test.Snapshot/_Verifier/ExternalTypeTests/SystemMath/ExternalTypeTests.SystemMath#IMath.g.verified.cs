@@ -158,7 +158,7 @@ namespace Fluentish.Injectable.System
         /// <inheritdoc cref="global::System.Math.Abs"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         sbyte Abs(sbyte value);
 
         /// <inheritdoc cref="global::System.Math.Abs"/>
@@ -184,7 +184,7 @@ namespace Fluentish.Injectable.System
         /// <inheritdoc cref="global::System.Math.BigMul"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         ulong BigMul(ulong a, ulong b, out ulong low);
 
         /// <inheritdoc cref="global::System.Math.BigMul"/>
@@ -220,7 +220,7 @@ namespace Fluentish.Injectable.System
         /// <inheritdoc cref="global::System.Math.DivRem"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         (sbyte Quotient, sbyte Remainder) DivRem(sbyte left, sbyte right);
 
         /// <inheritdoc cref="global::System.Math.DivRem"/>
@@ -236,7 +236,7 @@ namespace Fluentish.Injectable.System
         /// <inheritdoc cref="global::System.Math.DivRem"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         (ushort Quotient, ushort Remainder) DivRem(ushort left, ushort right);
 
         /// <inheritdoc cref="global::System.Math.DivRem"/>
@@ -247,7 +247,7 @@ namespace Fluentish.Injectable.System
         /// <inheritdoc cref="global::System.Math.DivRem"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         (uint Quotient, uint Remainder) DivRem(uint left, uint right);
 
         /// <inheritdoc cref="global::System.Math.DivRem"/>
@@ -258,7 +258,7 @@ namespace Fluentish.Injectable.System
         /// <inheritdoc cref="global::System.Math.DivRem"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         (ulong Quotient, ulong Remainder) DivRem(ulong left, ulong right);
 
         /// <inheritdoc cref="global::System.Math.DivRem"/>
@@ -269,7 +269,7 @@ namespace Fluentish.Injectable.System
         /// <inheritdoc cref="global::System.Math.DivRem"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         (nuint Quotient, nuint Remainder) DivRem(nuint left, nuint right);
 
         /// <inheritdoc cref="global::System.Math.Ceiling"/>
@@ -315,7 +315,7 @@ namespace Fluentish.Injectable.System
         /// <inheritdoc cref="global::System.Math.Clamp"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         sbyte Clamp(sbyte value, sbyte min, sbyte max);
 
         /// <inheritdoc cref="global::System.Math.Clamp"/>
@@ -326,25 +326,25 @@ namespace Fluentish.Injectable.System
         /// <inheritdoc cref="global::System.Math.Clamp"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         ushort Clamp(ushort value, ushort min, ushort max);
 
         /// <inheritdoc cref="global::System.Math.Clamp"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         uint Clamp(uint value, uint min, uint max);
 
         /// <inheritdoc cref="global::System.Math.Clamp"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         ulong Clamp(ulong value, ulong min, ulong max);
 
         /// <inheritdoc cref="global::System.Math.Clamp"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         nuint Clamp(nuint value, nuint min, nuint max);
 
         /// <inheritdoc cref="global::System.Math.Floor"/>
@@ -405,7 +405,7 @@ namespace Fluentish.Injectable.System
         /// <inheritdoc cref="global::System.Math.Max"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         sbyte Max(sbyte val1, sbyte val2);
 
         /// <inheritdoc cref="global::System.Math.Max"/>
@@ -416,25 +416,25 @@ namespace Fluentish.Injectable.System
         /// <inheritdoc cref="global::System.Math.Max"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         ushort Max(ushort val1, ushort val2);
 
         /// <inheritdoc cref="global::System.Math.Max"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         uint Max(uint val1, uint val2);
 
         /// <inheritdoc cref="global::System.Math.Max"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         ulong Max(ulong val1, ulong val2);
 
         /// <inheritdoc cref="global::System.Math.Max"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         nuint Max(nuint val1, nuint val2);
 
         /// <inheritdoc cref="global::System.Math.MaxMagnitude"/>
@@ -480,7 +480,7 @@ namespace Fluentish.Injectable.System
         /// <inheritdoc cref="global::System.Math.Min"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         sbyte Min(sbyte val1, sbyte val2);
 
         /// <inheritdoc cref="global::System.Math.Min"/>
@@ -491,25 +491,25 @@ namespace Fluentish.Injectable.System
         /// <inheritdoc cref="global::System.Math.Min"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         ushort Min(ushort val1, ushort val2);
 
         /// <inheritdoc cref="global::System.Math.Min"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         uint Min(uint val1, uint val2);
 
         /// <inheritdoc cref="global::System.Math.Min"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         ulong Min(ulong val1, ulong val2);
 
         /// <inheritdoc cref="global::System.Math.Min"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         nuint Min(nuint val1, nuint val2);
 
         /// <inheritdoc cref="global::System.Math.MinMagnitude"/>
@@ -600,7 +600,7 @@ namespace Fluentish.Injectable.System
         /// <inheritdoc cref="global::System.Math.Sign"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         int Sign(sbyte value);
 
         /// <inheritdoc cref="global::System.Math.Sign"/>

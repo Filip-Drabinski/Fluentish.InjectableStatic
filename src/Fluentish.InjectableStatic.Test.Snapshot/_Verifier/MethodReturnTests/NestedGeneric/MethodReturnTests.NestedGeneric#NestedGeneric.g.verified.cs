@@ -10,7 +10,8 @@ namespace Fluentish.Injectable.MethodReturnTests
         /// <inheritdoc cref="global::MethodReturnTests.NestedGeneric.Test"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::MethodReturnTests.OuterType.InnerType<global::System.DateTime> Test() => global::MethodReturnTests.NestedGeneric.Test();
+        public global::MethodReturnTests.OuterType.InnerType<global::System.DateTime> Test()
+             => global::MethodReturnTests.NestedGeneric.Test();
     }
 }
 #pragma warning restore

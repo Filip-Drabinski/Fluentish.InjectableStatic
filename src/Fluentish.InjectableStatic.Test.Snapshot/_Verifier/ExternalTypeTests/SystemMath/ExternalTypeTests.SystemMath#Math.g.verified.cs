@@ -28,610 +28,727 @@ namespace Fluentish.Injectable.System
         /// <inheritdoc cref="global::System.Math.Acos"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double Acos(double d) => global::System.Math.Acos(d);
+        public double Acos(double d)
+             => global::System.Math.Acos(d);
 
         /// <inheritdoc cref="global::System.Math.Acosh"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double Acosh(double d) => global::System.Math.Acosh(d);
+        public double Acosh(double d)
+             => global::System.Math.Acosh(d);
 
         /// <inheritdoc cref="global::System.Math.Asin"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double Asin(double d) => global::System.Math.Asin(d);
+        public double Asin(double d)
+             => global::System.Math.Asin(d);
 
         /// <inheritdoc cref="global::System.Math.Asinh"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double Asinh(double d) => global::System.Math.Asinh(d);
+        public double Asinh(double d)
+             => global::System.Math.Asinh(d);
 
         /// <inheritdoc cref="global::System.Math.Atan"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double Atan(double d) => global::System.Math.Atan(d);
+        public double Atan(double d)
+             => global::System.Math.Atan(d);
 
         /// <inheritdoc cref="global::System.Math.Atanh"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double Atanh(double d) => global::System.Math.Atanh(d);
+        public double Atanh(double d)
+             => global::System.Math.Atanh(d);
 
         /// <inheritdoc cref="global::System.Math.Atan2"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double Atan2(double y, double x) => global::System.Math.Atan2(y, x);
+        public double Atan2(double y, double x)
+             => global::System.Math.Atan2(y, x);
 
         /// <inheritdoc cref="global::System.Math.Cbrt"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double Cbrt(double d) => global::System.Math.Cbrt(d);
+        public double Cbrt(double d)
+             => global::System.Math.Cbrt(d);
 
         /// <inheritdoc cref="global::System.Math.Ceiling"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double Ceiling(double a) => global::System.Math.Ceiling(a);
+        public double Ceiling(double a)
+             => global::System.Math.Ceiling(a);
 
         /// <inheritdoc cref="global::System.Math.Cos"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double Cos(double d) => global::System.Math.Cos(d);
+        public double Cos(double d)
+             => global::System.Math.Cos(d);
 
         /// <inheritdoc cref="global::System.Math.Cosh"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double Cosh(double value) => global::System.Math.Cosh(value);
+        public double Cosh(double value)
+             => global::System.Math.Cosh(value);
 
         /// <inheritdoc cref="global::System.Math.Exp"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double Exp(double d) => global::System.Math.Exp(d);
+        public double Exp(double d)
+             => global::System.Math.Exp(d);
 
         /// <inheritdoc cref="global::System.Math.Floor"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double Floor(double d) => global::System.Math.Floor(d);
+        public double Floor(double d)
+             => global::System.Math.Floor(d);
 
         /// <inheritdoc cref="global::System.Math.FusedMultiplyAdd"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double FusedMultiplyAdd(double x, double y, double z) => global::System.Math.FusedMultiplyAdd(x, y, z);
+        public double FusedMultiplyAdd(double x, double y, double z)
+             => global::System.Math.FusedMultiplyAdd(x, y, z);
 
         /// <inheritdoc cref="global::System.Math.Log"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double Log(double d) => global::System.Math.Log(d);
+        public double Log(double d)
+             => global::System.Math.Log(d);
 
         /// <inheritdoc cref="global::System.Math.Log2"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double Log2(double x) => global::System.Math.Log2(x);
+        public double Log2(double x)
+             => global::System.Math.Log2(x);
 
         /// <inheritdoc cref="global::System.Math.Log10"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double Log10(double d) => global::System.Math.Log10(d);
+        public double Log10(double d)
+             => global::System.Math.Log10(d);
 
         /// <inheritdoc cref="global::System.Math.Pow"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double Pow(double x, double y) => global::System.Math.Pow(x, y);
+        public double Pow(double x, double y)
+             => global::System.Math.Pow(x, y);
 
         /// <inheritdoc cref="global::System.Math.Sin"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double Sin(double a) => global::System.Math.Sin(a);
+        public double Sin(double a)
+             => global::System.Math.Sin(a);
 
         /// <inheritdoc cref="global::System.Math.SinCos"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public (double Sin, double Cos) SinCos(double x) => global::System.Math.SinCos(x);
+        public (double Sin, double Cos) SinCos(double x)
+             => global::System.Math.SinCos(x);
 
         /// <inheritdoc cref="global::System.Math.Sinh"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double Sinh(double value) => global::System.Math.Sinh(value);
+        public double Sinh(double value)
+             => global::System.Math.Sinh(value);
 
         /// <inheritdoc cref="global::System.Math.Sqrt"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double Sqrt(double d) => global::System.Math.Sqrt(d);
+        public double Sqrt(double d)
+             => global::System.Math.Sqrt(d);
 
         /// <inheritdoc cref="global::System.Math.Tan"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double Tan(double a) => global::System.Math.Tan(a);
+        public double Tan(double a)
+             => global::System.Math.Tan(a);
 
         /// <inheritdoc cref="global::System.Math.Tanh"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double Tanh(double value) => global::System.Math.Tanh(value);
+        public double Tanh(double value)
+             => global::System.Math.Tanh(value);
 
         /// <inheritdoc cref="global::System.Math.Abs"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public short Abs(short value) => global::System.Math.Abs(value);
+        public short Abs(short value)
+             => global::System.Math.Abs(value);
 
         /// <inheritdoc cref="global::System.Math.Abs"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int Abs(int value) => global::System.Math.Abs(value);
+        public int Abs(int value)
+             => global::System.Math.Abs(value);
 
         /// <inheritdoc cref="global::System.Math.Abs"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public long Abs(long value) => global::System.Math.Abs(value);
+        public long Abs(long value)
+             => global::System.Math.Abs(value);
 
         /// <inheritdoc cref="global::System.Math.Abs"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public nint Abs(nint value) => global::System.Math.Abs(value);
+        public nint Abs(nint value)
+             => global::System.Math.Abs(value);
 
         /// <inheritdoc cref="global::System.Math.Abs"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public sbyte Abs(sbyte value) => global::System.Math.Abs(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public sbyte Abs(sbyte value)
+             => global::System.Math.Abs(value);
 
         /// <inheritdoc cref="global::System.Math.Abs"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public decimal Abs(decimal value) => global::System.Math.Abs(value);
+        public decimal Abs(decimal value)
+             => global::System.Math.Abs(value);
 
         /// <inheritdoc cref="global::System.Math.Abs"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double Abs(double value) => global::System.Math.Abs(value);
+        public double Abs(double value)
+             => global::System.Math.Abs(value);
 
         /// <inheritdoc cref="global::System.Math.Abs"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public float Abs(float value) => global::System.Math.Abs(value);
+        public float Abs(float value)
+             => global::System.Math.Abs(value);
 
         /// <inheritdoc cref="global::System.Math.BigMul"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public long BigMul(int a, int b) => global::System.Math.BigMul(a, b);
+        public long BigMul(int a, int b)
+             => global::System.Math.BigMul(a, b);
 
         /// <inheritdoc cref="global::System.Math.BigMul"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ulong BigMul(ulong a, ulong b, out ulong low) => global::System.Math.BigMul(a, b, out low);
+        [global::System.CLSCompliantAttribute(false)]
+        public ulong BigMul(ulong a, ulong b, out ulong low)
+             => global::System.Math.BigMul(a, b, out low);
 
         /// <inheritdoc cref="global::System.Math.BigMul"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public long BigMul(long a, long b, out long low) => global::System.Math.BigMul(a, b, out low);
+        public long BigMul(long a, long b, out long low)
+             => global::System.Math.BigMul(a, b, out low);
 
         /// <inheritdoc cref="global::System.Math.BitDecrement"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double BitDecrement(double x) => global::System.Math.BitDecrement(x);
+        public double BitDecrement(double x)
+             => global::System.Math.BitDecrement(x);
 
         /// <inheritdoc cref="global::System.Math.BitIncrement"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double BitIncrement(double x) => global::System.Math.BitIncrement(x);
+        public double BitIncrement(double x)
+             => global::System.Math.BitIncrement(x);
 
         /// <inheritdoc cref="global::System.Math.CopySign"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double CopySign(double x, double y) => global::System.Math.CopySign(x, y);
+        public double CopySign(double x, double y)
+             => global::System.Math.CopySign(x, y);
 
         /// <inheritdoc cref="global::System.Math.DivRem"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int DivRem(int a, int b, out int result) => global::System.Math.DivRem(a, b, out result);
+        public int DivRem(int a, int b, out int result)
+             => global::System.Math.DivRem(a, b, out result);
 
         /// <inheritdoc cref="global::System.Math.DivRem"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public long DivRem(long a, long b, out long result) => global::System.Math.DivRem(a, b, out result);
+        public long DivRem(long a, long b, out long result)
+             => global::System.Math.DivRem(a, b, out result);
 
         /// <inheritdoc cref="global::System.Math.DivRem"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public (sbyte Quotient, sbyte Remainder) DivRem(sbyte left, sbyte right) => global::System.Math.DivRem(left, right);
+        [global::System.CLSCompliantAttribute(false)]
+        public (sbyte Quotient, sbyte Remainder) DivRem(sbyte left, sbyte right)
+             => global::System.Math.DivRem(left, right);
 
         /// <inheritdoc cref="global::System.Math.DivRem"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public (byte Quotient, byte Remainder) DivRem(byte left, byte right) => global::System.Math.DivRem(left, right);
+        public (byte Quotient, byte Remainder) DivRem(byte left, byte right)
+             => global::System.Math.DivRem(left, right);
 
         /// <inheritdoc cref="global::System.Math.DivRem"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public (short Quotient, short Remainder) DivRem(short left, short right) => global::System.Math.DivRem(left, right);
+        public (short Quotient, short Remainder) DivRem(short left, short right)
+             => global::System.Math.DivRem(left, right);
 
         /// <inheritdoc cref="global::System.Math.DivRem"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public (ushort Quotient, ushort Remainder) DivRem(ushort left, ushort right) => global::System.Math.DivRem(left, right);
+        [global::System.CLSCompliantAttribute(false)]
+        public (ushort Quotient, ushort Remainder) DivRem(ushort left, ushort right)
+             => global::System.Math.DivRem(left, right);
 
         /// <inheritdoc cref="global::System.Math.DivRem"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public (int Quotient, int Remainder) DivRem(int left, int right) => global::System.Math.DivRem(left, right);
+        public (int Quotient, int Remainder) DivRem(int left, int right)
+             => global::System.Math.DivRem(left, right);
 
         /// <inheritdoc cref="global::System.Math.DivRem"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public (uint Quotient, uint Remainder) DivRem(uint left, uint right) => global::System.Math.DivRem(left, right);
+        [global::System.CLSCompliantAttribute(false)]
+        public (uint Quotient, uint Remainder) DivRem(uint left, uint right)
+             => global::System.Math.DivRem(left, right);
 
         /// <inheritdoc cref="global::System.Math.DivRem"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public (long Quotient, long Remainder) DivRem(long left, long right) => global::System.Math.DivRem(left, right);
+        public (long Quotient, long Remainder) DivRem(long left, long right)
+             => global::System.Math.DivRem(left, right);
 
         /// <inheritdoc cref="global::System.Math.DivRem"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public (ulong Quotient, ulong Remainder) DivRem(ulong left, ulong right) => global::System.Math.DivRem(left, right);
+        [global::System.CLSCompliantAttribute(false)]
+        public (ulong Quotient, ulong Remainder) DivRem(ulong left, ulong right)
+             => global::System.Math.DivRem(left, right);
 
         /// <inheritdoc cref="global::System.Math.DivRem"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public (nint Quotient, nint Remainder) DivRem(nint left, nint right) => global::System.Math.DivRem(left, right);
+        public (nint Quotient, nint Remainder) DivRem(nint left, nint right)
+             => global::System.Math.DivRem(left, right);
 
         /// <inheritdoc cref="global::System.Math.DivRem"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public (nuint Quotient, nuint Remainder) DivRem(nuint left, nuint right) => global::System.Math.DivRem(left, right);
+        [global::System.CLSCompliantAttribute(false)]
+        public (nuint Quotient, nuint Remainder) DivRem(nuint left, nuint right)
+             => global::System.Math.DivRem(left, right);
 
         /// <inheritdoc cref="global::System.Math.Ceiling"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public decimal Ceiling(decimal d) => global::System.Math.Ceiling(d);
+        public decimal Ceiling(decimal d)
+             => global::System.Math.Ceiling(d);
 
         /// <inheritdoc cref="global::System.Math.Clamp"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public byte Clamp(byte value, byte min, byte max) => global::System.Math.Clamp(value, min, max);
+        public byte Clamp(byte value, byte min, byte max)
+             => global::System.Math.Clamp(value, min, max);
 
         /// <inheritdoc cref="global::System.Math.Clamp"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public decimal Clamp(decimal value, decimal min, decimal max) => global::System.Math.Clamp(value, min, max);
+        public decimal Clamp(decimal value, decimal min, decimal max)
+             => global::System.Math.Clamp(value, min, max);
 
         /// <inheritdoc cref="global::System.Math.Clamp"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double Clamp(double value, double min, double max) => global::System.Math.Clamp(value, min, max);
+        public double Clamp(double value, double min, double max)
+             => global::System.Math.Clamp(value, min, max);
 
         /// <inheritdoc cref="global::System.Math.Clamp"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public short Clamp(short value, short min, short max) => global::System.Math.Clamp(value, min, max);
+        public short Clamp(short value, short min, short max)
+             => global::System.Math.Clamp(value, min, max);
 
         /// <inheritdoc cref="global::System.Math.Clamp"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int Clamp(int value, int min, int max) => global::System.Math.Clamp(value, min, max);
+        public int Clamp(int value, int min, int max)
+             => global::System.Math.Clamp(value, min, max);
 
         /// <inheritdoc cref="global::System.Math.Clamp"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public long Clamp(long value, long min, long max) => global::System.Math.Clamp(value, min, max);
+        public long Clamp(long value, long min, long max)
+             => global::System.Math.Clamp(value, min, max);
 
         /// <inheritdoc cref="global::System.Math.Clamp"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public nint Clamp(nint value, nint min, nint max) => global::System.Math.Clamp(value, min, max);
+        public nint Clamp(nint value, nint min, nint max)
+             => global::System.Math.Clamp(value, min, max);
 
         /// <inheritdoc cref="global::System.Math.Clamp"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public sbyte Clamp(sbyte value, sbyte min, sbyte max) => global::System.Math.Clamp(value, min, max);
+        [global::System.CLSCompliantAttribute(false)]
+        public sbyte Clamp(sbyte value, sbyte min, sbyte max)
+             => global::System.Math.Clamp(value, min, max);
 
         /// <inheritdoc cref="global::System.Math.Clamp"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public float Clamp(float value, float min, float max) => global::System.Math.Clamp(value, min, max);
+        public float Clamp(float value, float min, float max)
+             => global::System.Math.Clamp(value, min, max);
 
         /// <inheritdoc cref="global::System.Math.Clamp"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ushort Clamp(ushort value, ushort min, ushort max) => global::System.Math.Clamp(value, min, max);
+        [global::System.CLSCompliantAttribute(false)]
+        public ushort Clamp(ushort value, ushort min, ushort max)
+             => global::System.Math.Clamp(value, min, max);
 
         /// <inheritdoc cref="global::System.Math.Clamp"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public uint Clamp(uint value, uint min, uint max) => global::System.Math.Clamp(value, min, max);
+        [global::System.CLSCompliantAttribute(false)]
+        public uint Clamp(uint value, uint min, uint max)
+             => global::System.Math.Clamp(value, min, max);
 
         /// <inheritdoc cref="global::System.Math.Clamp"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ulong Clamp(ulong value, ulong min, ulong max) => global::System.Math.Clamp(value, min, max);
+        [global::System.CLSCompliantAttribute(false)]
+        public ulong Clamp(ulong value, ulong min, ulong max)
+             => global::System.Math.Clamp(value, min, max);
 
         /// <inheritdoc cref="global::System.Math.Clamp"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public nuint Clamp(nuint value, nuint min, nuint max) => global::System.Math.Clamp(value, min, max);
+        [global::System.CLSCompliantAttribute(false)]
+        public nuint Clamp(nuint value, nuint min, nuint max)
+             => global::System.Math.Clamp(value, min, max);
 
         /// <inheritdoc cref="global::System.Math.Floor"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public decimal Floor(decimal d) => global::System.Math.Floor(d);
+        public decimal Floor(decimal d)
+             => global::System.Math.Floor(d);
 
         /// <inheritdoc cref="global::System.Math.IEEERemainder"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double IEEERemainder(double x, double y) => global::System.Math.IEEERemainder(x, y);
+        public double IEEERemainder(double x, double y)
+             => global::System.Math.IEEERemainder(x, y);
 
         /// <inheritdoc cref="global::System.Math.ILogB"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int ILogB(double x) => global::System.Math.ILogB(x);
+        public int ILogB(double x)
+             => global::System.Math.ILogB(x);
 
         /// <inheritdoc cref="global::System.Math.Log"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double Log(double a, double newBase) => global::System.Math.Log(a, newBase);
+        public double Log(double a, double newBase)
+             => global::System.Math.Log(a, newBase);
 
         /// <inheritdoc cref="global::System.Math.Max"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public byte Max(byte val1, byte val2) => global::System.Math.Max(val1, val2);
+        public byte Max(byte val1, byte val2)
+             => global::System.Math.Max(val1, val2);
 
         /// <inheritdoc cref="global::System.Math.Max"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public decimal Max(decimal val1, decimal val2) => global::System.Math.Max(val1, val2);
+        public decimal Max(decimal val1, decimal val2)
+             => global::System.Math.Max(val1, val2);
 
         /// <inheritdoc cref="global::System.Math.Max"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double Max(double val1, double val2) => global::System.Math.Max(val1, val2);
+        public double Max(double val1, double val2)
+             => global::System.Math.Max(val1, val2);
 
         /// <inheritdoc cref="global::System.Math.Max"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public short Max(short val1, short val2) => global::System.Math.Max(val1, val2);
+        public short Max(short val1, short val2)
+             => global::System.Math.Max(val1, val2);
 
         /// <inheritdoc cref="global::System.Math.Max"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int Max(int val1, int val2) => global::System.Math.Max(val1, val2);
+        public int Max(int val1, int val2)
+             => global::System.Math.Max(val1, val2);
 
         /// <inheritdoc cref="global::System.Math.Max"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public long Max(long val1, long val2) => global::System.Math.Max(val1, val2);
+        public long Max(long val1, long val2)
+             => global::System.Math.Max(val1, val2);
 
         /// <inheritdoc cref="global::System.Math.Max"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public nint Max(nint val1, nint val2) => global::System.Math.Max(val1, val2);
+        public nint Max(nint val1, nint val2)
+             => global::System.Math.Max(val1, val2);
 
         /// <inheritdoc cref="global::System.Math.Max"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public sbyte Max(sbyte val1, sbyte val2) => global::System.Math.Max(val1, val2);
+        [global::System.CLSCompliantAttribute(false)]
+        public sbyte Max(sbyte val1, sbyte val2)
+             => global::System.Math.Max(val1, val2);
 
         /// <inheritdoc cref="global::System.Math.Max"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public float Max(float val1, float val2) => global::System.Math.Max(val1, val2);
+        public float Max(float val1, float val2)
+             => global::System.Math.Max(val1, val2);
 
         /// <inheritdoc cref="global::System.Math.Max"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ushort Max(ushort val1, ushort val2) => global::System.Math.Max(val1, val2);
+        [global::System.CLSCompliantAttribute(false)]
+        public ushort Max(ushort val1, ushort val2)
+             => global::System.Math.Max(val1, val2);
 
         /// <inheritdoc cref="global::System.Math.Max"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public uint Max(uint val1, uint val2) => global::System.Math.Max(val1, val2);
+        [global::System.CLSCompliantAttribute(false)]
+        public uint Max(uint val1, uint val2)
+             => global::System.Math.Max(val1, val2);
 
         /// <inheritdoc cref="global::System.Math.Max"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ulong Max(ulong val1, ulong val2) => global::System.Math.Max(val1, val2);
+        [global::System.CLSCompliantAttribute(false)]
+        public ulong Max(ulong val1, ulong val2)
+             => global::System.Math.Max(val1, val2);
 
         /// <inheritdoc cref="global::System.Math.Max"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public nuint Max(nuint val1, nuint val2) => global::System.Math.Max(val1, val2);
+        [global::System.CLSCompliantAttribute(false)]
+        public nuint Max(nuint val1, nuint val2)
+             => global::System.Math.Max(val1, val2);
 
         /// <inheritdoc cref="global::System.Math.MaxMagnitude"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double MaxMagnitude(double x, double y) => global::System.Math.MaxMagnitude(x, y);
+        public double MaxMagnitude(double x, double y)
+             => global::System.Math.MaxMagnitude(x, y);
 
         /// <inheritdoc cref="global::System.Math.Min"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public byte Min(byte val1, byte val2) => global::System.Math.Min(val1, val2);
+        public byte Min(byte val1, byte val2)
+             => global::System.Math.Min(val1, val2);
 
         /// <inheritdoc cref="global::System.Math.Min"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public decimal Min(decimal val1, decimal val2) => global::System.Math.Min(val1, val2);
+        public decimal Min(decimal val1, decimal val2)
+             => global::System.Math.Min(val1, val2);
 
         /// <inheritdoc cref="global::System.Math.Min"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double Min(double val1, double val2) => global::System.Math.Min(val1, val2);
+        public double Min(double val1, double val2)
+             => global::System.Math.Min(val1, val2);
 
         /// <inheritdoc cref="global::System.Math.Min"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public short Min(short val1, short val2) => global::System.Math.Min(val1, val2);
+        public short Min(short val1, short val2)
+             => global::System.Math.Min(val1, val2);
 
         /// <inheritdoc cref="global::System.Math.Min"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int Min(int val1, int val2) => global::System.Math.Min(val1, val2);
+        public int Min(int val1, int val2)
+             => global::System.Math.Min(val1, val2);
 
         /// <inheritdoc cref="global::System.Math.Min"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public long Min(long val1, long val2) => global::System.Math.Min(val1, val2);
+        public long Min(long val1, long val2)
+             => global::System.Math.Min(val1, val2);
 
         /// <inheritdoc cref="global::System.Math.Min"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public nint Min(nint val1, nint val2) => global::System.Math.Min(val1, val2);
+        public nint Min(nint val1, nint val2)
+             => global::System.Math.Min(val1, val2);
 
         /// <inheritdoc cref="global::System.Math.Min"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public sbyte Min(sbyte val1, sbyte val2) => global::System.Math.Min(val1, val2);
+        [global::System.CLSCompliantAttribute(false)]
+        public sbyte Min(sbyte val1, sbyte val2)
+             => global::System.Math.Min(val1, val2);
 
         /// <inheritdoc cref="global::System.Math.Min"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public float Min(float val1, float val2) => global::System.Math.Min(val1, val2);
+        public float Min(float val1, float val2)
+             => global::System.Math.Min(val1, val2);
 
         /// <inheritdoc cref="global::System.Math.Min"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ushort Min(ushort val1, ushort val2) => global::System.Math.Min(val1, val2);
+        [global::System.CLSCompliantAttribute(false)]
+        public ushort Min(ushort val1, ushort val2)
+             => global::System.Math.Min(val1, val2);
 
         /// <inheritdoc cref="global::System.Math.Min"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public uint Min(uint val1, uint val2) => global::System.Math.Min(val1, val2);
+        [global::System.CLSCompliantAttribute(false)]
+        public uint Min(uint val1, uint val2)
+             => global::System.Math.Min(val1, val2);
 
         /// <inheritdoc cref="global::System.Math.Min"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public ulong Min(ulong val1, ulong val2) => global::System.Math.Min(val1, val2);
+        [global::System.CLSCompliantAttribute(false)]
+        public ulong Min(ulong val1, ulong val2)
+             => global::System.Math.Min(val1, val2);
 
         /// <inheritdoc cref="global::System.Math.Min"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public nuint Min(nuint val1, nuint val2) => global::System.Math.Min(val1, val2);
+        [global::System.CLSCompliantAttribute(false)]
+        public nuint Min(nuint val1, nuint val2)
+             => global::System.Math.Min(val1, val2);
 
         /// <inheritdoc cref="global::System.Math.MinMagnitude"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double MinMagnitude(double x, double y) => global::System.Math.MinMagnitude(x, y);
+        public double MinMagnitude(double x, double y)
+             => global::System.Math.MinMagnitude(x, y);
 
         /// <inheritdoc cref="global::System.Math.ReciprocalEstimate"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double ReciprocalEstimate(double d) => global::System.Math.ReciprocalEstimate(d);
+        public double ReciprocalEstimate(double d)
+             => global::System.Math.ReciprocalEstimate(d);
 
         /// <inheritdoc cref="global::System.Math.ReciprocalSqrtEstimate"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double ReciprocalSqrtEstimate(double d) => global::System.Math.ReciprocalSqrtEstimate(d);
+        public double ReciprocalSqrtEstimate(double d)
+             => global::System.Math.ReciprocalSqrtEstimate(d);
 
         /// <inheritdoc cref="global::System.Math.Round"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public decimal Round(decimal d) => global::System.Math.Round(d);
+        public decimal Round(decimal d)
+             => global::System.Math.Round(d);
 
         /// <inheritdoc cref="global::System.Math.Round"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public decimal Round(decimal d, int decimals) => global::System.Math.Round(d, decimals);
+        public decimal Round(decimal d, int decimals)
+             => global::System.Math.Round(d, decimals);
 
         /// <inheritdoc cref="global::System.Math.Round"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public decimal Round(decimal d, global::System.MidpointRounding mode) => global::System.Math.Round(d, mode);
+        public decimal Round(decimal d, global::System.MidpointRounding mode)
+             => global::System.Math.Round(d, mode);
 
         /// <inheritdoc cref="global::System.Math.Round"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public decimal Round(decimal d, int decimals, global::System.MidpointRounding mode) => global::System.Math.Round(d, decimals, mode);
+        public decimal Round(decimal d, int decimals, global::System.MidpointRounding mode)
+             => global::System.Math.Round(d, decimals, mode);
 
         /// <inheritdoc cref="global::System.Math.Round"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double Round(double a) => global::System.Math.Round(a);
+        public double Round(double a)
+             => global::System.Math.Round(a);
 
         /// <inheritdoc cref="global::System.Math.Round"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double Round(double value, int digits) => global::System.Math.Round(value, digits);
+        public double Round(double value, int digits)
+             => global::System.Math.Round(value, digits);
 
         /// <inheritdoc cref="global::System.Math.Round"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double Round(double value, global::System.MidpointRounding mode) => global::System.Math.Round(value, mode);
+        public double Round(double value, global::System.MidpointRounding mode)
+             => global::System.Math.Round(value, mode);
 
         /// <inheritdoc cref="global::System.Math.Round"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double Round(double value, int digits, global::System.MidpointRounding mode) => global::System.Math.Round(value, digits, mode);
+        public double Round(double value, int digits, global::System.MidpointRounding mode)
+             => global::System.Math.Round(value, digits, mode);
 
         /// <inheritdoc cref="global::System.Math.Sign"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int Sign(decimal value) => global::System.Math.Sign(value);
+        public int Sign(decimal value)
+             => global::System.Math.Sign(value);
 
         /// <inheritdoc cref="global::System.Math.Sign"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int Sign(double value) => global::System.Math.Sign(value);
+        public int Sign(double value)
+             => global::System.Math.Sign(value);
 
         /// <inheritdoc cref="global::System.Math.Sign"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int Sign(short value) => global::System.Math.Sign(value);
+        public int Sign(short value)
+             => global::System.Math.Sign(value);
 
         /// <inheritdoc cref="global::System.Math.Sign"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int Sign(int value) => global::System.Math.Sign(value);
+        public int Sign(int value)
+             => global::System.Math.Sign(value);
 
         /// <inheritdoc cref="global::System.Math.Sign"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int Sign(long value) => global::System.Math.Sign(value);
+        public int Sign(long value)
+             => global::System.Math.Sign(value);
 
         /// <inheritdoc cref="global::System.Math.Sign"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int Sign(nint value) => global::System.Math.Sign(value);
+        public int Sign(nint value)
+             => global::System.Math.Sign(value);
 
         /// <inheritdoc cref="global::System.Math.Sign"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
-        public int Sign(sbyte value) => global::System.Math.Sign(value);
+        [global::System.CLSCompliantAttribute(false)]
+        public int Sign(sbyte value)
+             => global::System.Math.Sign(value);
 
         /// <inheritdoc cref="global::System.Math.Sign"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int Sign(float value) => global::System.Math.Sign(value);
+        public int Sign(float value)
+             => global::System.Math.Sign(value);
 
         /// <inheritdoc cref="global::System.Math.Truncate"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public decimal Truncate(decimal d) => global::System.Math.Truncate(d);
+        public decimal Truncate(decimal d)
+             => global::System.Math.Truncate(d);
 
         /// <inheritdoc cref="global::System.Math.Truncate"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double Truncate(double d) => global::System.Math.Truncate(d);
+        public double Truncate(double d)
+             => global::System.Math.Truncate(d);
 
         /// <inheritdoc cref="global::System.Math.ScaleB"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public double ScaleB(double x, int n) => global::System.Math.ScaleB(x, n);
+        public double ScaleB(double x, int n)
+             => global::System.Math.ScaleB(x, n);
     }
 }
 #pragma warning restore

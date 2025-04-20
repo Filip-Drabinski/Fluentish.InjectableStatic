@@ -11,7 +11,8 @@ namespace Fluentish.Injectable.MethodReturnTests
         /// <inheritdoc cref="global::MethodReturnTests.StructNullable.Test"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Nullable<global::MethodReturnTests.Example> Test() => global::MethodReturnTests.StructNullable.Test();
+        public global::System.Nullable<global::MethodReturnTests.Example> Test()
+             => global::MethodReturnTests.StructNullable.Test();
     }
 }
 #pragma warning restore

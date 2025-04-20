@@ -10,91 +10,91 @@ namespace Fluentish.Injectable.System
         /// <inheritdoc cref="global::System.Console.ReadKey"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")]
         global::System.ConsoleKeyInfo ReadKey();
 
         /// <inheritdoc cref="global::System.Console.ReadKey"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")]
         global::System.ConsoleKeyInfo ReadKey(bool intercept);
 
         /// <inheritdoc cref="global::System.Console.ResetColor"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")]
         void ResetColor();
 
         /// <inheritdoc cref="global::System.Console.SetBufferSize"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.SupportedOSPlatformAttribute("windows")] 
+        [global::System.Runtime.Versioning.SupportedOSPlatformAttribute("windows")]
         void SetBufferSize(int width, int height);
 
         /// <inheritdoc cref="global::System.Console.SetWindowPosition"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.SupportedOSPlatformAttribute("windows")] 
+        [global::System.Runtime.Versioning.SupportedOSPlatformAttribute("windows")]
         void SetWindowPosition(int left, int top);
 
         /// <inheritdoc cref="global::System.Console.SetWindowSize"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")]
         void SetWindowSize(int width, int height);
 
         /// <inheritdoc cref="global::System.Console.GetCursorPosition"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")]
         (int Left, int Top) GetCursorPosition();
 
         /// <inheritdoc cref="global::System.Console.Beep"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")]
         void Beep();
 
         /// <inheritdoc cref="global::System.Console.Beep"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.SupportedOSPlatformAttribute("windows")] 
+        [global::System.Runtime.Versioning.SupportedOSPlatformAttribute("windows")]
         void Beep(int frequency, int duration);
 
         /// <inheritdoc cref="global::System.Console.MoveBufferArea"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.SupportedOSPlatformAttribute("windows")] 
+        [global::System.Runtime.Versioning.SupportedOSPlatformAttribute("windows")]
         void MoveBufferArea(int sourceLeft, int sourceTop, int sourceWidth, int sourceHeight, int targetLeft, int targetTop);
 
         /// <inheritdoc cref="global::System.Console.MoveBufferArea"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.SupportedOSPlatformAttribute("windows")] 
+        [global::System.Runtime.Versioning.SupportedOSPlatformAttribute("windows")]
         void MoveBufferArea(int sourceLeft, int sourceTop, int sourceWidth, int sourceHeight, int targetLeft, int targetTop, char sourceChar, global::System.ConsoleColor sourceForeColor, global::System.ConsoleColor sourceBackColor);
 
         /// <inheritdoc cref="global::System.Console.Clear"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")]
         void Clear();
 
         /// <inheritdoc cref="global::System.Console.SetCursorPosition"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")]
         void SetCursorPosition(int left, int top);
 
         /// <inheritdoc cref="global::System.Console.OpenStandardInput"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")]
         global::System.IO.Stream OpenStandardInput();
 
         /// <inheritdoc cref="global::System.Console.OpenStandardInput"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser")]
         global::System.IO.Stream OpenStandardInput(int bufferSize);
 
         /// <inheritdoc cref="global::System.Console.OpenStandardOutput"/>
@@ -120,7 +120,7 @@ namespace Fluentish.Injectable.System
         /// <inheritdoc cref="global::System.Console.SetIn"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")]
         void SetIn(global::System.IO.TextReader newIn);
 
         /// <inheritdoc cref="global::System.Console.SetOut"/>
@@ -136,13 +136,13 @@ namespace Fluentish.Injectable.System
         /// <inheritdoc cref="global::System.Console.Read"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser")]
         int Read();
 
         /// <inheritdoc cref="global::System.Console.ReadLine"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser")]
         string? ReadLine();
 
         /// <inheritdoc cref="global::System.Console.WriteLine"/>
@@ -193,7 +193,7 @@ namespace Fluentish.Injectable.System
         /// <inheritdoc cref="global::System.Console.WriteLine"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         void WriteLine(uint value);
 
         /// <inheritdoc cref="global::System.Console.WriteLine"/>
@@ -204,7 +204,7 @@ namespace Fluentish.Injectable.System
         /// <inheritdoc cref="global::System.Console.WriteLine"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         void WriteLine(ulong value);
 
         /// <inheritdoc cref="global::System.Console.WriteLine"/>
@@ -300,7 +300,7 @@ namespace Fluentish.Injectable.System
         /// <inheritdoc cref="global::System.Console.Write"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         void Write(uint value);
 
         /// <inheritdoc cref="global::System.Console.Write"/>
@@ -311,7 +311,7 @@ namespace Fluentish.Injectable.System
         /// <inheritdoc cref="global::System.Console.Write"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         void Write(ulong value);
 
         /// <inheritdoc cref="global::System.Console.Write"/>
@@ -325,11 +325,11 @@ namespace Fluentish.Injectable.System
         void Write(string? value);
 
         /// <inheritdoc cref="global::System.Console.In"/>
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")]
         global::System.IO.TextReader In { get; }
 
         /// <inheritdoc cref="global::System.Console.InputEncoding"/>
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")]
         global::System.Text.Encoding InputEncoding { get; set; }
 
         /// <inheritdoc cref="global::System.Console.OutputEncoding"/>
@@ -357,19 +357,19 @@ namespace Fluentish.Injectable.System
         int CursorSize { get; set; }
 
         /// <inheritdoc cref="global::System.Console.NumberLock"/>
-        [global::System.Runtime.Versioning.SupportedOSPlatformAttribute("windows")] 
+        [global::System.Runtime.Versioning.SupportedOSPlatformAttribute("windows")]
         bool NumberLock { get; }
 
         /// <inheritdoc cref="global::System.Console.CapsLock"/>
-        [global::System.Runtime.Versioning.SupportedOSPlatformAttribute("windows")] 
+        [global::System.Runtime.Versioning.SupportedOSPlatformAttribute("windows")]
         bool CapsLock { get; }
 
         /// <inheritdoc cref="global::System.Console.BackgroundColor"/>
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")]
         global::System.ConsoleColor BackgroundColor { get; set; }
 
         /// <inheritdoc cref="global::System.Console.ForegroundColor"/>
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")]
         global::System.ConsoleColor ForegroundColor { get; set; }
 
         /// <inheritdoc cref="global::System.Console.BufferWidth"/>
@@ -385,41 +385,41 @@ namespace Fluentish.Injectable.System
         int WindowTop { get; set; }
 
         /// <inheritdoc cref="global::System.Console.WindowWidth"/>
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")]
         int WindowWidth { get; set; }
 
         /// <inheritdoc cref="global::System.Console.WindowHeight"/>
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")]
         int WindowHeight { get; set; }
 
         /// <inheritdoc cref="global::System.Console.LargestWindowWidth"/>
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")]
         int LargestWindowWidth { get; }
 
         /// <inheritdoc cref="global::System.Console.LargestWindowHeight"/>
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")]
         int LargestWindowHeight { get; }
 
         /// <inheritdoc cref="global::System.Console.CursorVisible"/>
         bool CursorVisible { get; set; }
 
         /// <inheritdoc cref="global::System.Console.CursorLeft"/>
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")]
         int CursorLeft { get; set; }
 
         /// <inheritdoc cref="global::System.Console.CursorTop"/>
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")]
         int CursorTop { get; set; }
 
         /// <inheritdoc cref="global::System.Console.Title"/>
         string Title { get; set; }
 
         /// <inheritdoc cref="global::System.Console.TreatControlCAsInput"/>
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")]
         bool TreatControlCAsInput { get; set; }
 
         /// <inheritdoc cref="global::System.Console.CancelKeyPress"/>
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("android"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("ios"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("tvos")]
         event global::System.ConsoleCancelEventHandler? CancelKeyPress;
 
     }

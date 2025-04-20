@@ -58,8 +58,8 @@ namespace Fluentish.InjectableStatic.Generator.MemberBuilders
                     implementationBuilder.Append(", ");
                 }
 
-                interfaceBuilder.AppendAttributes(methodSymbol.Parameters[i].GetAttributes(), ref requireNullable);
-                implementationBuilder.AppendAttributes(methodSymbol.Parameters[i].GetAttributes(), ref requireNullable);
+                interfaceBuilder.AppendAttributes(methodSymbol.Parameters[i].GetAttributes(), ref requireNullable, b => b.Append(" "));
+                implementationBuilder.AppendAttributes(methodSymbol.Parameters[i].GetAttributes(), ref requireNullable, b => b.Append(" "));
 
                 if (methodSymbol.Parameters[i].IsParams)
                 {
@@ -74,12 +74,32 @@ namespace Fluentish.InjectableStatic.Generator.MemberBuilders
                 implementationBuilder.AppendType(methodSymbol.Parameters[i].Type, ref requireNullable).Append(" ").Append(methodSymbol.Parameters[i].Name);
             }
 
-            interfaceBuilder
-                .Append(");").Append(newLineSymbol);
+            if (methodSymbol.TypeArguments.Any())
+            {
+                interfaceBuilder
+                    .Append(")").AppendTypeConstraints(methodSymbol.TypeArguments, methodSymbol.OriginalDefinition.TypeParameters, baseIndentation + 1, newLineSymbol, ref requireNullable).Append(";")
+                    .Append(newLineSymbol);
+            }
+            else
+            {
+                interfaceBuilder
+                    .Append(");").Append(newLineSymbol);
+            }
 
-            implementationBuilder
-                .Append(")")
-                .Append(" => ").AppendType(type, ref requireNullable).Append(".").Append(methodSymbol.Name).AppendTypeArguments(methodSymbol.TypeArguments).Append("(");
+            if (methodSymbol.TypeArguments.Any())
+            {
+                implementationBuilder
+                    .Append(")").AppendTypeConstraints(methodSymbol.TypeArguments, methodSymbol.OriginalDefinition.TypeParameters, baseIndentation + 1, newLineSymbol, ref requireNullable);
+            }
+            else
+            {
+                implementationBuilder
+                    .Append(")");
+            }
+
+
+            implementationBuilder.Append(newLineSymbol)
+                .AppendIndentation(baseIndentation + 2).Append(" => ").AppendType(type, ref requireNullable).Append(".").Append(methodSymbol.Name).AppendTypeArguments(methodSymbol.TypeArguments).Append("(");
 
             for (int i = 0; i < methodSymbol.Parameters.Length; i++)
             {

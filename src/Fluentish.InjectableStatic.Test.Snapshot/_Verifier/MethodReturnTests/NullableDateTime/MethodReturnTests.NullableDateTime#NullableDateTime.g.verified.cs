@@ -11,7 +11,8 @@ namespace Fluentish.Injectable.MethodReturnTests
         /// <inheritdoc cref="global::MethodReturnTests.NullableDateTime.Test"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Nullable<global::System.DateTime> Test() => global::MethodReturnTests.NullableDateTime.Test();
+        public global::System.Nullable<global::System.DateTime> Test()
+             => global::MethodReturnTests.NullableDateTime.Test();
     }
 }
 #pragma warning restore

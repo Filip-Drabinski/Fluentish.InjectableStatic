@@ -70,13 +70,13 @@ namespace Fluentish.Injectable.System.Diagnostics
         /// <inheritdoc cref="global::System.Diagnostics.Debug.Fail"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute()] 
+        [global::System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute()]
         void Fail(string? message);
 
         /// <inheritdoc cref="global::System.Diagnostics.Debug.Fail"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute()] 
+        [global::System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute()]
         void Fail(string? message, string? detailMessage);
 
         /// <inheritdoc cref="global::System.Diagnostics.Debug.WriteLine"/>

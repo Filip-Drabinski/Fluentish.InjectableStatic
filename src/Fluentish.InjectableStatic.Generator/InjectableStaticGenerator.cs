@@ -73,8 +73,9 @@ namespace Fluentish.InjectableStatic.Generator
                 interfaceBuilder.AppendTypeArguments(classInfo.type.TypeArguments);
             }
 
-            interfaceBuilder.Append(configuration.EndLine)
+            interfaceBuilder
                 .AppendTypeConstraints(classInfo.type.TypeArguments, classInfo.type.OriginalDefinition.TypeParameters, baseIndentation, configuration.EndLine, ref requireNullable)
+                .Append(configuration.EndLine)
                 .AppendIndentation(baseIndentation).Append("{").Append(configuration.EndLine);
 
             var implementationHint = $"{classInfo.type.Name}.g.cs";
@@ -100,8 +101,9 @@ namespace Fluentish.InjectableStatic.Generator
                 implementationBuilder.AppendTypeArguments(classInfo.type.TypeArguments).Append(" : I").Append(classInfo.type.Name).AppendTypeArguments(classInfo.type.TypeArguments);
             }
 
-            implementationBuilder.Append(configuration.EndLine)
+            implementationBuilder
                 .AppendTypeConstraints(classInfo.type.TypeArguments, classInfo.type.OriginalDefinition.TypeParameters, baseIndentation, configuration.EndLine, ref requireNullable)
+                .Append(configuration.EndLine)
                 .AppendIndentation(baseIndentation).Append("{").Append(configuration.EndLine);
 
             var allMembers = classInfo.type.GetMembers();

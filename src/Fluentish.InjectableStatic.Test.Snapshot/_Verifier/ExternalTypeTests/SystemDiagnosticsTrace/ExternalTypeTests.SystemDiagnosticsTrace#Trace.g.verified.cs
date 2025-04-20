@@ -11,164 +11,196 @@ namespace Fluentish.Injectable.System.Diagnostics
         /// <inheritdoc cref="global::System.Diagnostics.Trace.Flush"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void Flush() => global::System.Diagnostics.Trace.Flush();
+        public void Flush()
+             => global::System.Diagnostics.Trace.Flush();
 
         /// <inheritdoc cref="global::System.Diagnostics.Trace.Close"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void Close() => global::System.Diagnostics.Trace.Close();
+        public void Close()
+             => global::System.Diagnostics.Trace.Close();
 
         /// <inheritdoc cref="global::System.Diagnostics.Trace.Assert"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void Assert([global::System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute(false)] bool condition) => global::System.Diagnostics.Trace.Assert(condition);
+        public void Assert([global::System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute(false)] bool condition)
+             => global::System.Diagnostics.Trace.Assert(condition);
 
         /// <inheritdoc cref="global::System.Diagnostics.Trace.Assert"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void Assert([global::System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute(false)] bool condition, string? message) => global::System.Diagnostics.Trace.Assert(condition, message);
+        public void Assert([global::System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute(false)] bool condition, string? message)
+             => global::System.Diagnostics.Trace.Assert(condition, message);
 
         /// <inheritdoc cref="global::System.Diagnostics.Trace.Assert"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void Assert([global::System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute(false)] bool condition, string? message, string? detailMessage) => global::System.Diagnostics.Trace.Assert(condition, message, detailMessage);
+        public void Assert([global::System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute(false)] bool condition, string? message, string? detailMessage)
+             => global::System.Diagnostics.Trace.Assert(condition, message, detailMessage);
 
         /// <inheritdoc cref="global::System.Diagnostics.Trace.Fail"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute()] 
-        public void Fail(string? message) => global::System.Diagnostics.Trace.Fail(message);
+        [global::System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute()]
+        public void Fail(string? message)
+             => global::System.Diagnostics.Trace.Fail(message);
 
         /// <inheritdoc cref="global::System.Diagnostics.Trace.Fail"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute()] 
-        public void Fail(string? message, string? detailMessage) => global::System.Diagnostics.Trace.Fail(message, detailMessage);
+        [global::System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute()]
+        public void Fail(string? message, string? detailMessage)
+             => global::System.Diagnostics.Trace.Fail(message, detailMessage);
 
         /// <inheritdoc cref="global::System.Diagnostics.Trace.Refresh"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void Refresh() => global::System.Diagnostics.Trace.Refresh();
+        public void Refresh()
+             => global::System.Diagnostics.Trace.Refresh();
 
         /// <inheritdoc cref="global::System.Diagnostics.Trace.TraceInformation"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void TraceInformation(string? message) => global::System.Diagnostics.Trace.TraceInformation(message);
+        public void TraceInformation(string? message)
+             => global::System.Diagnostics.Trace.TraceInformation(message);
 
         /// <inheritdoc cref="global::System.Diagnostics.Trace.TraceInformation"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void TraceInformation([global::System.Diagnostics.CodeAnalysis.StringSyntaxAttribute("CompositeFormat")] string format, params object?[] args) => global::System.Diagnostics.Trace.TraceInformation(format, args);
+        public void TraceInformation([global::System.Diagnostics.CodeAnalysis.StringSyntaxAttribute("CompositeFormat")] string format, params object?[] args)
+             => global::System.Diagnostics.Trace.TraceInformation(format, args);
 
         /// <inheritdoc cref="global::System.Diagnostics.Trace.TraceWarning"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void TraceWarning(string? message) => global::System.Diagnostics.Trace.TraceWarning(message);
+        public void TraceWarning(string? message)
+             => global::System.Diagnostics.Trace.TraceWarning(message);
 
         /// <inheritdoc cref="global::System.Diagnostics.Trace.TraceWarning"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void TraceWarning([global::System.Diagnostics.CodeAnalysis.StringSyntaxAttribute("CompositeFormat")] string format, params object?[] args) => global::System.Diagnostics.Trace.TraceWarning(format, args);
+        public void TraceWarning([global::System.Diagnostics.CodeAnalysis.StringSyntaxAttribute("CompositeFormat")] string format, params object?[] args)
+             => global::System.Diagnostics.Trace.TraceWarning(format, args);
 
         /// <inheritdoc cref="global::System.Diagnostics.Trace.TraceError"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void TraceError(string? message) => global::System.Diagnostics.Trace.TraceError(message);
+        public void TraceError(string? message)
+             => global::System.Diagnostics.Trace.TraceError(message);
 
         /// <inheritdoc cref="global::System.Diagnostics.Trace.TraceError"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void TraceError([global::System.Diagnostics.CodeAnalysis.StringSyntaxAttribute("CompositeFormat")] string format, params object?[] args) => global::System.Diagnostics.Trace.TraceError(format, args);
+        public void TraceError([global::System.Diagnostics.CodeAnalysis.StringSyntaxAttribute("CompositeFormat")] string format, params object?[] args)
+             => global::System.Diagnostics.Trace.TraceError(format, args);
 
         /// <inheritdoc cref="global::System.Diagnostics.Trace.Write"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void Write(string? message) => global::System.Diagnostics.Trace.Write(message);
+        public void Write(string? message)
+             => global::System.Diagnostics.Trace.Write(message);
 
         /// <inheritdoc cref="global::System.Diagnostics.Trace.Write"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void Write(object? value) => global::System.Diagnostics.Trace.Write(value);
+        public void Write(object? value)
+             => global::System.Diagnostics.Trace.Write(value);
 
         /// <inheritdoc cref="global::System.Diagnostics.Trace.Write"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void Write(string? message, string? category) => global::System.Diagnostics.Trace.Write(message, category);
+        public void Write(string? message, string? category)
+             => global::System.Diagnostics.Trace.Write(message, category);
 
         /// <inheritdoc cref="global::System.Diagnostics.Trace.Write"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void Write(object? value, string? category) => global::System.Diagnostics.Trace.Write(value, category);
+        public void Write(object? value, string? category)
+             => global::System.Diagnostics.Trace.Write(value, category);
 
         /// <inheritdoc cref="global::System.Diagnostics.Trace.WriteLine"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void WriteLine(string? message) => global::System.Diagnostics.Trace.WriteLine(message);
+        public void WriteLine(string? message)
+             => global::System.Diagnostics.Trace.WriteLine(message);
 
         /// <inheritdoc cref="global::System.Diagnostics.Trace.WriteLine"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void WriteLine(object? value) => global::System.Diagnostics.Trace.WriteLine(value);
+        public void WriteLine(object? value)
+             => global::System.Diagnostics.Trace.WriteLine(value);
 
         /// <inheritdoc cref="global::System.Diagnostics.Trace.WriteLine"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void WriteLine(string? message, string? category) => global::System.Diagnostics.Trace.WriteLine(message, category);
+        public void WriteLine(string? message, string? category)
+             => global::System.Diagnostics.Trace.WriteLine(message, category);
 
         /// <inheritdoc cref="global::System.Diagnostics.Trace.WriteLine"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void WriteLine(object? value, string? category) => global::System.Diagnostics.Trace.WriteLine(value, category);
+        public void WriteLine(object? value, string? category)
+             => global::System.Diagnostics.Trace.WriteLine(value, category);
 
         /// <inheritdoc cref="global::System.Diagnostics.Trace.WriteIf"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void WriteIf(bool condition, string? message) => global::System.Diagnostics.Trace.WriteIf(condition, message);
+        public void WriteIf(bool condition, string? message)
+             => global::System.Diagnostics.Trace.WriteIf(condition, message);
 
         /// <inheritdoc cref="global::System.Diagnostics.Trace.WriteIf"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void WriteIf(bool condition, object? value) => global::System.Diagnostics.Trace.WriteIf(condition, value);
+        public void WriteIf(bool condition, object? value)
+             => global::System.Diagnostics.Trace.WriteIf(condition, value);
 
         /// <inheritdoc cref="global::System.Diagnostics.Trace.WriteIf"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void WriteIf(bool condition, string? message, string? category) => global::System.Diagnostics.Trace.WriteIf(condition, message, category);
+        public void WriteIf(bool condition, string? message, string? category)
+             => global::System.Diagnostics.Trace.WriteIf(condition, message, category);
 
         /// <inheritdoc cref="global::System.Diagnostics.Trace.WriteIf"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void WriteIf(bool condition, object? value, string? category) => global::System.Diagnostics.Trace.WriteIf(condition, value, category);
+        public void WriteIf(bool condition, object? value, string? category)
+             => global::System.Diagnostics.Trace.WriteIf(condition, value, category);
 
         /// <inheritdoc cref="global::System.Diagnostics.Trace.WriteLineIf"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void WriteLineIf(bool condition, string? message) => global::System.Diagnostics.Trace.WriteLineIf(condition, message);
+        public void WriteLineIf(bool condition, string? message)
+             => global::System.Diagnostics.Trace.WriteLineIf(condition, message);
 
         /// <inheritdoc cref="global::System.Diagnostics.Trace.WriteLineIf"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void WriteLineIf(bool condition, object? value) => global::System.Diagnostics.Trace.WriteLineIf(condition, value);
+        public void WriteLineIf(bool condition, object? value)
+             => global::System.Diagnostics.Trace.WriteLineIf(condition, value);
 
         /// <inheritdoc cref="global::System.Diagnostics.Trace.WriteLineIf"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void WriteLineIf(bool condition, string? message, string? category) => global::System.Diagnostics.Trace.WriteLineIf(condition, message, category);
+        public void WriteLineIf(bool condition, string? message, string? category)
+             => global::System.Diagnostics.Trace.WriteLineIf(condition, message, category);
 
         /// <inheritdoc cref="global::System.Diagnostics.Trace.WriteLineIf"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void WriteLineIf(bool condition, object? value, string? category) => global::System.Diagnostics.Trace.WriteLineIf(condition, value, category);
+        public void WriteLineIf(bool condition, object? value, string? category)
+             => global::System.Diagnostics.Trace.WriteLineIf(condition, value, category);
 
         /// <inheritdoc cref="global::System.Diagnostics.Trace.Indent"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void Indent() => global::System.Diagnostics.Trace.Indent();
+        public void Indent()
+             => global::System.Diagnostics.Trace.Indent();
 
         /// <inheritdoc cref="global::System.Diagnostics.Trace.Unindent"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void Unindent() => global::System.Diagnostics.Trace.Unindent();
+        public void Unindent()
+             => global::System.Diagnostics.Trace.Unindent();
 
         /// <inheritdoc cref="global::System.Diagnostics.Trace.CorrelationManager"/>
         public global::System.Diagnostics.CorrelationManager CorrelationManager

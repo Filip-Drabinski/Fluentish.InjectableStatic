@@ -11,11 +11,12 @@ namespace Fluentish.Injectable.System.Net.NetworkInformation
         /// <inheritdoc cref="global::System.Net.NetworkInformation.NetworkChange.RegisterNetworkChange"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never), global::System.ObsoleteAttribute("This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.", true)] 
-        public void RegisterNetworkChange(global::System.Net.NetworkInformation.NetworkChange nc) => global::System.Net.NetworkInformation.NetworkChange.RegisterNetworkChange(nc);
+        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never), global::System.ObsoleteAttribute("This API supports the .NET Framework infrastructure and is not intended to be used directly from your code.", true)]
+        public void RegisterNetworkChange(global::System.Net.NetworkInformation.NetworkChange nc)
+             => global::System.Net.NetworkInformation.NetworkChange.RegisterNetworkChange(nc);
 
         /// <inheritdoc cref="global::System.Net.NetworkInformation.NetworkChange.NetworkAvailabilityChanged"/>
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("illumos"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("solaris")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("illumos"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("solaris")]
         public event global::System.Net.NetworkInformation.NetworkAvailabilityChangedEventHandler? NetworkAvailabilityChanged
         {
             add => global::System.Net.NetworkInformation.NetworkChange.NetworkAvailabilityChanged += value;
@@ -23,7 +24,7 @@ namespace Fluentish.Injectable.System.Net.NetworkInformation
         }
 
         /// <inheritdoc cref="global::System.Net.NetworkInformation.NetworkChange.NetworkAddressChanged"/>
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("illumos"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("solaris")] 
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("illumos"), global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("solaris")]
         public event global::System.Net.NetworkInformation.NetworkAddressChangedEventHandler? NetworkAddressChanged
         {
             add => global::System.Net.NetworkInformation.NetworkChange.NetworkAddressChanged += value;

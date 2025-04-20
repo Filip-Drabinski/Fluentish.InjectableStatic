@@ -20,7 +20,7 @@ namespace Fluentish.Injectable.System.IO
         char PathSeparator { get; }
 
         /// <inheritdoc cref="global::System.IO.Path.InvalidPathChars"/>
-        [global::System.ObsoleteAttribute("Path.InvalidPathChars has been deprecated. Use GetInvalidPathChars or GetInvalidFileNameChars instead.")] 
+        [global::System.ObsoleteAttribute("Path.InvalidPathChars has been deprecated. Use GetInvalidPathChars or GetInvalidFileNameChars instead.")]
         char[] InvalidPathChars { get; }
 
         /// <inheritdoc cref="global::System.IO.Path.ChangeExtension"/>

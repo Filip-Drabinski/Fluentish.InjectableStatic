@@ -10,7 +10,8 @@ namespace Fluentish.Injectable.MethodParameterTests
         /// <inheritdoc cref="global::MethodParameterTests.ParameterParamsPrimitive.Test"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void Test(params int[] parameter) => global::MethodParameterTests.ParameterParamsPrimitive.Test(parameter);
+        public void Test(params int[] parameter)
+             => global::MethodParameterTests.ParameterParamsPrimitive.Test(parameter);
     }
 }
 #pragma warning restore
