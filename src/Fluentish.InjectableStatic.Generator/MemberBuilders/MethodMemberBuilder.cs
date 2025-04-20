@@ -18,6 +18,7 @@ namespace Fluentish.InjectableStatic.Generator.MemberBuilders
                 || methodSymbol.MethodKind == MethodKind.EventRaise
                 || methodSymbol.MethodKind == MethodKind.BuiltinOperator
                 || methodSymbol.MethodKind == MethodKind.UserDefinedOperator
+                || methodSymbol.MethodKind == MethodKind.Conversion
             )
             {
                 return false;
