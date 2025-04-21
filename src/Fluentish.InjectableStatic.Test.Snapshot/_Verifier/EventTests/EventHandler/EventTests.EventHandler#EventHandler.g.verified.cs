@@ -5,7 +5,7 @@ namespace Fluentish.Injectable.EventTests
 {
     /// <inheritdoc cref="global::EventTests.EventHandler"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class EventHandlerService: IEventHandler
+    public class EventHandlerService : IEventHandler
     {
         /// <inheritdoc cref="global::EventTests.EventHandler.Test"/>
         public event global::System.EventHandler Test
@@ -13,6 +13,7 @@ namespace Fluentish.Injectable.EventTests
             add => global::EventTests.EventHandler.Test += value;
             remove => global::EventTests.EventHandler.Test -= value;
         }
+
     }
 }
 #pragma warning restore

@@ -1,274 +1,357 @@
 ﻿using Fluentish.InjectableStatic.Generator.Extensions;
-using Fluentish.InjectableStatic.Generator.MemberBuilders;
+using Fluentish.InjectableStatic.Generator.GeneratedAttributes;
+using Fluentish.InjectableStatic.Generator.ValueProviders;
+using Fluentish.InjectableStatic.Generator.ValueProviders.Mappers;
 using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
-using Microsoft.CodeAnalysis.Diagnostics;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
+
 namespace Fluentish.InjectableStatic.Generator
 {
-    internal enum FilterType
-    {
-        Exclude = 0,
-        Include = 1
-    }
-
     [Generator]
     public class InjectableStaticGenerator : IIncrementalGenerator
     {
         public void Initialize(IncrementalGeneratorInitializationContext context)
         {
-
-            context.RegisterPostInitializationOutput(ctx =>
+            var typeSerializer = new TypeSerializer();
+            context.RegisterPostInitializationOutput(context =>
             {
-                ctx.AddSource("InjectableStaticAttribute.g.cs",
-                    """
-                    namespace Fluentish.InjectableStatic
-                    {
-                        public enum FilterType
-                        {
-                            Exclude = 0,
-                            Include = 1
-                        }
-
-                        [System.AttributeUsage(System.AttributeTargets.Assembly, AllowMultiple = true)]
-                        public sealed class InjectableAttribute : System.Attribute
-                        {
-                            public System.Type TargetType { get; }
-                            public Fluentish.InjectableStatic.FilterType FilterType { get; }
-                            public string[] FilteredMembers { get; }
-
-                            public InjectableAttribute(System.Type targetType)
-                            {
-                                TargetType = targetType;
-                                FilterType = Fluentish.InjectableStatic.FilterType.Exclude;
-                                FilteredMembers = System.Array.Empty<string>();
-                            }
-                    
-                            public InjectableAttribute(
-                                System.Type targetType,
-                                Fluentish.InjectableStatic.FilterType filterType,
-                                params string[] filteredMembers
-                            )
-                            {
-                                TargetType = targetType;
-                                FilterType = filterType;
-                                FilteredMembers = filteredMembers;
-                            }
-                        }
-                    }
-                    """
-                );
-
-                ctx.AddSource("InjectableNamespacePrefixAttribute.g.cs",
-                    """
-                    namespace Fluentish.InjectableStatic
-                    {
-
-                        [System.AttributeUsage(System.AttributeTargets.Assembly, AllowMultiple = false)]
-                        public sealed class InjectableNamespacePrefixAttribute : System.Attribute
-                        {
-                            public string NamespacePrefix { get; }
-
-                            public InjectableNamespacePrefixAttribute(string namespacePrefix)
-                            {
-                                NamespacePrefix = namespacePrefix;
-                            }
-                        }
-                    }
-                    """
-                );
+                context.AddInjectableStaticAttribute();
+                context.AddInjectableStaticConfigurationAttribute();
             });
 
-            var namespacePrefixProvider = context.CompilationProvider
-                .SelectMany((compilation, ct) =>
-                {
-                    var attributes = compilation.Assembly.GetAttributes();
+            var namespacePrefixProvider = context.GetInjectableStaticConfigurationProvider();
 
-                    var injectableAttributeSymbol = compilation.GetTypeByMetadataName("Fluentish.InjectableStatic.InjectableNamespacePrefixAttribute");
+            var injectableClassInfoProvider = context.GetInjectableClassInfoProvider();
 
-                    var matchingAttributes = attributes
-                        .Where(attr => SymbolEqualityComparer.Default.Equals(attr.AttributeClass, injectableAttributeSymbol));
-
-                    var selectedTypes = matchingAttributes.Select(attribute =>
-                    {
-                        var targetTypeArgument = attribute.ConstructorArguments.First();
-                        var namespacePrefixValue = targetTypeArgument.Value!.ToString();
-
-                        return namespacePrefixValue;
-                    });
-
-                    return selectedTypes;
-                })
-                .Collect();
-
-            var typesToMakeInjectable = context.CompilationProvider
-                .SelectMany((compilation, ct) =>
-                {
-                    var attributes = compilation.Assembly.GetAttributes();
-
-                    var injectableAttributeSymbol = compilation.GetTypeByMetadataName("Fluentish.InjectableStatic.InjectableAttribute");
-
-                    var matchingAttributes = attributes
-                        .Where(attr => SymbolEqualityComparer.Default.Equals(attr.AttributeClass, injectableAttributeSymbol));
-
-                    var selectedTypes = matchingAttributes
-                        .Select(attribute =>
-                        {
-                            if (attribute.ConstructorArguments.Length == 1)
-                            {
-                                var targetTypeArgument = attribute.ConstructorArguments[0];
-                                var targetTypeName = targetTypeArgument.Value!.ToString();
-
-                                var injectableAttributeSymbol = compilation.GetTypeByMetadataName(targetTypeName);
-
-                                return (injectableAttributeSymbol, FilterType.Exclude, System.Array.Empty<string>());
-                            }
-                            else if (attribute.ConstructorArguments.Length == 3)
-                            {
-
-                                var targetTypeArgument = attribute.ConstructorArguments[0];
-                                var targetTypeName = targetTypeArgument.Value!.ToString();
-
-                                var filterKind = (FilterType)attribute.ConstructorArguments[1].Value!;
-                                var filteredTypes = attribute.ConstructorArguments[2].Values.Select(x => x.Value?.ToString()).ToArray();
-
-                                var injectableAttributeSymbol = compilation.GetTypeByMetadataName(targetTypeName);
-
-                                return (injectableAttributeSymbol, filterKind, filteredTypes);
-                            }
-                            return default;
-                        })
-                        .Where(x => x != default);
-
-                    return selectedTypes;
-                })
-                .Combine(context.AnalyzerConfigOptionsProvider)
+            var infoProvider = injectableClassInfoProvider
                 .Combine(namespacePrefixProvider);
 
-            context.RegisterSourceOutput(typesToMakeInjectable, (sourceProductionContext, value) =>
-            {
-                var (left, namespacePrefixes) = value;
-                var (data, optionsProvider) = left;
-                var namespacePrefix = namespacePrefixes.FirstOrDefault();
+            var modelProvider = infoProvider.GetClassModelProvider(typeSerializer);
 
-                GenerateInjectable(sourceProductionContext, data!, optionsProvider, namespacePrefix);
-            });
+            context.RegisterSourceOutput(modelProvider, ProcessModels);
         }
 
-        private static void GenerateInjectable(SourceProductionContext SourceProductionContext, (INamedTypeSymbol type, FilterType filter, string[] members) data, AnalyzerConfigOptionsProvider optionsProvider, string? namespacePrefix)
+        private static void ProcessModels(SourceProductionContext SourceProductionContext, Models.ClassModel model)
         {
-            var newLineSymbol = optionsProvider.GlobalOptions.GetNewLineSymbol();
+            var indentationDepth = 0;
 
-            namespacePrefix ??= "Fluentish.Injectable.";
-
-            if (string.IsNullOrWhiteSpace(namespacePrefix))
-            {
-                namespacePrefix = "";
-            }
-            else if (!namespacePrefix.EndsWith("."))
-            {
-                namespacePrefix += ".";
-            }
-
-            if (data.type is null)
-            {
-                return;
-            }
-
-            var typeModifiers = data.type.DeclaringSyntaxReferences.Select(x => x.GetSyntax()).Cast<TypeDeclarationSyntax>().SelectMany(x => x.Modifiers);
-
-            var isUnsafe = typeModifiers.Any(x => x.IsKind(SyntaxKind.UnsafeKeyword));
-
-            var requireNullable = false;
-            var typeFullName = data.type.ToDisplayString();
-            var @namespace = data.type.ContainingNamespace.ToDisplayString();
-
-            var interfaceHint = $"I{data.type.Name}.g.cs";
+            var interfaceHint = $"I{model.Name}.g.cs";
             var interfaceBuilder = new StringBuilder()
-                .Append("#pragma warning disable").Append(newLineSymbol)
-                .Append("namespace ").Append(namespacePrefix).Append(@namespace).Append(newLineSymbol)
-                .Append("{").Append(newLineSymbol)
-                .AppendIndentation().AppendInheritdoc(data.type, ref requireNullable).Append(newLineSymbol)
-                .AppendIndentation().Append("public ").Append(isUnsafe ? "unsafe " : "").Append("interface I").Append(data.type.Name).Append(newLineSymbol)
-                .AppendIndentation().Append("{").Append(newLineSymbol);
+                .Append("// <auto-generated />").Append(model.EndLine);
 
-            var implementationHint = $"{data.type.Name}.g.cs";
+            var implementationHint = $"{model.Name}.g.cs";
             var implementationBuilder = new StringBuilder()
-                .Append("#pragma warning disable").Append(newLineSymbol)
-                .Append("namespace ").Append(namespacePrefix).Append(@namespace).Append(newLineSymbol)
-                .Append("{").Append(newLineSymbol)
-                .AppendIndentation().AppendInheritdoc(data.type, ref requireNullable).Append(newLineSymbol)
-                .AppendIndentation().Append("[global::System.Diagnostics.DebuggerStepThrough]").Append(newLineSymbol)
-                .AppendIndentation().Append("public ").Append(isUnsafe ? "unsafe " : "").Append("class ").Append(data.type.Name).Append("Service").Append(": I").Append(data.type.Name).Append(newLineSymbol)
-                .AppendIndentation().Append("{").Append(newLineSymbol);
+                .Append("// <auto-generated />").Append(model.EndLine);
 
-            var allMembers = data.type.GetMembers();
-
-            for (int memberIndex = 0; memberIndex < allMembers.Length; memberIndex++)
+            if (model.RequireNullable)
             {
-                ISymbol? memberSymbol = allMembers[memberIndex];
+                interfaceBuilder
+                    .Append("#nullable enable").Append(model.EndLine);
 
-                if (memberSymbol.DeclaredAccessibility != Accessibility.Public
-                    || !memberSymbol.IsStatic)
-                {
-                    continue;
-                }
-                if(data.filter == FilterType.Exclude && data.members.Contains(memberSymbol.Name))
-                {
-                    continue;
-                }
-                if(data.filter == FilterType.Include && !data.members.Contains(memberSymbol.Name))
-                {
-                    continue;
-                }
-                var generatedMember = false;
-
-                if (EventMemberBuilder.TryAppend(data.type, memberSymbol, interfaceBuilder, implementationBuilder, newLineSymbol, ref requireNullable, out var eventName))
-                {
-                    generatedMember = true;
-                }
-                else if (PropertyMemberBuilder.TryAppend(data.type, memberSymbol, interfaceBuilder, implementationBuilder, newLineSymbol, ref requireNullable, out var propertyName))
-                {
-                    generatedMember = true;
-                }
-                else if (FieldMemberBuilder.TryAppend(data.type, memberSymbol, interfaceBuilder, implementationBuilder, newLineSymbol, ref requireNullable))
-                {
-                    generatedMember = true;
-                }
-                else if (MethodMemberBuilder.TryAppend(data.type, memberSymbol, interfaceBuilder, implementationBuilder, newLineSymbol, ref requireNullable))
-                {
-                    generatedMember = true;
-                }
-
-                if (generatedMember && memberIndex < allMembers.Length - 1)
-                {
-                    interfaceBuilder.Append(newLineSymbol);
-                    implementationBuilder.Append(newLineSymbol);
-                }
-
+                implementationBuilder
+                    .Append("#nullable enable").Append(model.EndLine);
             }
 
             interfaceBuilder
-                .Append("    }").Append(newLineSymbol)
-                .Append("}").Append(newLineSymbol)
-                .Append("#pragma warning restore").Append(newLineSymbol);
-
+                .Append("#pragma warning disable").Append(model.EndLine);
             implementationBuilder
-                .Append("    }").Append(newLineSymbol)
-                .Append("}").Append(newLineSymbol)
-                .Append("#pragma warning restore").Append(newLineSymbol);
+                .Append("#pragma warning disable").Append(model.EndLine);
 
-            if (requireNullable)
+            if (!string.IsNullOrWhiteSpace(model.Namespace))
             {
-                interfaceBuilder.Insert(0, newLineSymbol).Insert(0, "#nullable enable");
-                implementationBuilder.Insert(0, newLineSymbol).Insert(0, "#nullable enable");
+                interfaceBuilder
+                    .Append("namespace ").Append(model.Namespace).Append(model.EndLine)
+                    .Append("{").Append(model.EndLine);
+
+                implementationBuilder
+                    .Append("namespace ").Append(model.Namespace).Append(model.EndLine)
+                    .Append("{").Append(model.EndLine);
+
+                indentationDepth++;
             }
 
-            interfaceBuilder.Insert(0, newLineSymbol).Insert(0, "// <auto-generated />");
-            implementationBuilder.Insert(0, newLineSymbol).Insert(0, "// <auto-generated />");
+            interfaceBuilder
+                .AppendIndentation(indentationDepth).AppendInheridoc(model.OriginalTypeFullName).Append(model.EndLine);
+            implementationBuilder
+                .AppendIndentation(indentationDepth).AppendInheridoc(model.OriginalTypeFullName).Append(model.EndLine)
+                .AppendIndentation(indentationDepth).Append("[global::System.Diagnostics.DebuggerStepThrough]").Append(model.EndLine);
+
+            interfaceBuilder
+                .AppendIndentation(indentationDepth).Append("public ").AppendIf(model.IsUnsafe, "unsafe ").Append("interface I").Append(model.Name);
+            implementationBuilder
+                .AppendIndentation(indentationDepth).Append("public ").AppendIf(model.IsUnsafe, "unsafe ").Append("class ").Append(model.Name).Append("Service");
+
+            if (model.GenericArguments.Length > 0)
+            {
+                interfaceBuilder
+                    .AppendTypeGenericArguments(model.GenericArguments);
+                implementationBuilder
+                    .AppendTypeGenericArguments(model.GenericArguments);
+            }
+
+            implementationBuilder
+                .Append(" : I").Append(model.Name);
+
+            if (model.GenericArguments.Length == 0)
+            {
+                implementationBuilder.Append(model.EndLine);
+            }
+            else if (model.GenericArguments.Length > 0)
+            {
+                implementationBuilder
+                    .AppendTypeGenericArguments(model.GenericArguments);
+
+                indentationDepth++;
+
+                interfaceBuilder
+                    .AppendTypeGenericConstraint(model.GenericArguments, indentationDepth, model.EndLine);
+                implementationBuilder
+                    .AppendTypeGenericConstraint(model.GenericArguments, indentationDepth, model.EndLine)
+                    .Append(model.EndLine);
+
+                indentationDepth--;
+            }
+
+            interfaceBuilder.Append(model.EndLine)
+                .AppendIndentation(indentationDepth).Append("{");
+            implementationBuilder
+                .AppendIndentation(indentationDepth).Append("{");
+
+            indentationDepth++;
+            foreach (var member in model.Properties)
+            {
+                interfaceBuilder
+                    .Append(model.EndLine)
+                    .AppendIndentation(indentationDepth).AppendInheridoc(model.OriginalTypeFullName, member.Name).Append(model.EndLine)
+                    .AppendAttributes(member.Attributes, indentationDepth, model.EndLine);
+                implementationBuilder
+                    .Append(model.EndLine)
+                    .AppendIndentation(indentationDepth).AppendInheridoc(model.OriginalTypeFullName, member.Name).Append(model.EndLine)
+                    .AppendAttributes(member.Attributes, indentationDepth, model.EndLine);
+
+                interfaceBuilder
+                    .AppendIndentation(indentationDepth).Append(member.Type).Append(" ").Append(member.Name).Append(" {");
+                implementationBuilder
+                    .AppendIndentation(indentationDepth).Append("public ").Append(member.Type).Append(" ").Append(member.Name).Append(model.EndLine)
+                    .AppendIndentation(indentationDepth).Append("{");
+
+                indentationDepth++;
+
+                if (member.IsReadable)
+                {
+                    interfaceBuilder
+                        .Append(" get;");
+
+                    implementationBuilder
+                        .Append(model.EndLine)
+                        .AppendIndentation(indentationDepth).Append("get => ").Append(model.OriginalTypeFullName).Append(".").Append(member.Name).Append(";");
+                }
+
+                if (member.IsMutable)
+                {
+                    interfaceBuilder
+                        .Append(" set;");
+                    implementationBuilder
+                        .Append(model.EndLine)
+                        .AppendIndentation(indentationDepth).Append("set => ").Append(model.OriginalTypeFullName).Append(".").Append(member.Name).Append(" = value;");
+                }
+
+                indentationDepth--;
+
+                interfaceBuilder
+                    .Append(" }").Append(model.EndLine);
+                implementationBuilder
+                    .Append(model.EndLine)
+                    .AppendIndentation(indentationDepth).Append("}").Append(model.EndLine);
+
+            }
+
+            foreach (var member in model.Events)
+            {
+                interfaceBuilder
+                    .Append(model.EndLine)
+                    .AppendIndentation(indentationDepth).AppendInheridoc(model.OriginalTypeFullName, member.Name).Append(model.EndLine)
+                    .AppendAttributes(member.Attributes, indentationDepth, model.EndLine);
+                implementationBuilder
+                    .Append(model.EndLine)
+                    .AppendIndentation(indentationDepth).AppendInheridoc(model.OriginalTypeFullName, member.Name).Append(model.EndLine)
+                    .AppendAttributes(member.Attributes, indentationDepth, model.EndLine);
+
+                interfaceBuilder
+                    .AppendIndentation(indentationDepth).Append("event ").Append(member.Type).Append(" ").Append(member.Name).Append(";");
+                implementationBuilder
+                    .AppendIndentation(indentationDepth).Append("public event ").Append(member.Type).Append(" ").Append(member.Name).Append(model.EndLine)
+                    .AppendIndentation(indentationDepth).Append("{");
+
+                indentationDepth++;
+
+                if (member.IsAddable)
+                {
+                    implementationBuilder
+                        .Append(model.EndLine)
+                        .AppendIndentation(indentationDepth).Append("add => ").Append(model.OriginalTypeFullName).Append(".").Append(member.Name).Append(" += value;");
+                }
+
+                if (member.IsRemovable)
+                {
+                    implementationBuilder
+                        .Append(model.EndLine)
+                        .AppendIndentation(indentationDepth).Append("remove => ").Append(model.OriginalTypeFullName).Append(".").Append(member.Name).Append(" -= value;");
+                }
+
+                indentationDepth--;
+
+                interfaceBuilder
+                    .Append(model.EndLine);
+                implementationBuilder
+                    .Append(model.EndLine)
+                    .AppendIndentation(indentationDepth).Append("}").Append(model.EndLine);
+            }
+
+            foreach (var member in model.Fields)
+            {
+                interfaceBuilder
+                    .Append(model.EndLine)
+                    .AppendIndentation(indentationDepth).AppendInheridoc(model.OriginalTypeFullName, member.Name).Append(model.EndLine)
+                    .AppendAttributes(member.Attributes, indentationDepth, model.EndLine);
+                implementationBuilder
+                    .Append(model.EndLine)
+                    .AppendIndentation(indentationDepth).AppendInheridoc(model.OriginalTypeFullName, member.Name).Append(model.EndLine)
+                    .AppendAttributes(member.Attributes, indentationDepth, model.EndLine);
+
+                interfaceBuilder
+                    .AppendIndentation(indentationDepth).Append(member.Type).Append(" ").Append(member.Name).Append(" {");
+                implementationBuilder
+                    .AppendIndentation(indentationDepth).Append("public ").Append(member.Type).Append(" ").Append(member.Name).Append(model.EndLine)
+                    .AppendIndentation(indentationDepth).Append("{");
+
+                indentationDepth++;
+
+                interfaceBuilder
+                    .Append(" get;");
+                implementationBuilder
+                    .Append(model.EndLine)
+                    .AppendIndentation(indentationDepth).Append("get => ").Append(model.OriginalTypeFullName).Append(".").Append(member.Name).Append(";");
+
+                if (member.IsMutable)
+                {
+                    interfaceBuilder
+                        .Append(" set;");
+                    implementationBuilder
+                        .Append(model.EndLine)
+                        .AppendIndentation(indentationDepth).Append("set => ").Append(model.OriginalTypeFullName).Append(".").Append(member.Name).Append(" = value;");
+                }
+
+                indentationDepth--;
+
+                interfaceBuilder
+                    .Append(" }").Append(model.EndLine);
+                implementationBuilder
+                    .Append(model.EndLine)
+                    .AppendIndentation(indentationDepth).Append("}").Append(model.EndLine);
+            }
+
+            foreach (var member in model.Methods)
+            {
+                interfaceBuilder
+                    .Append(model.EndLine)
+                    .AppendIndentation(indentationDepth).AppendInheridoc(model.OriginalTypeFullName, member.Name).Append(model.EndLine)
+                    .AppendIndentation(indentationDepth).Append("[global::System.Diagnostics.DebuggerStepThrough]").Append(model.EndLine)
+                    .AppendIndentation(indentationDepth).Append("[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]").Append(model.EndLine)
+                    .AppendAttributes(member.Attributes, indentationDepth, model.EndLine);
+                implementationBuilder
+                    .Append(model.EndLine)
+                    .AppendIndentation(indentationDepth).AppendInheridoc(model.OriginalTypeFullName, member.Name).Append(model.EndLine)
+                    .AppendIndentation(indentationDepth).Append("[global::System.Diagnostics.DebuggerStepThrough]").Append(model.EndLine)
+                    .AppendIndentation(indentationDepth).Append("[global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]").Append(model.EndLine)
+                    .AppendAttributes(member.Attributes, indentationDepth, model.EndLine);
+
+                interfaceBuilder
+                    .AppendIndentation(indentationDepth).Append(member.ReturnType).Append(" ").Append(member.Name).AppendTypeGenericArguments(member.GenericArguments).Append("(");
+                implementationBuilder
+                    .AppendIndentation(indentationDepth).Append("public ").Append(member.ReturnType).Append(" ").Append(member.Name).AppendTypeGenericArguments(member.GenericArguments).Append("(");
+
+                for (int i = 0; i < member.Parameters.Length; i++)
+                {
+                    if (i > 0)
+                    {
+                        interfaceBuilder
+                            .Append(", ");
+                        implementationBuilder
+                            .Append(", ");
+                    }
+
+                    interfaceBuilder
+                        .AppendAttributes(member.Parameters[i].Attributes).AppendIf(!string.IsNullOrWhiteSpace(member.Parameters[i].Modifier), member.Parameters[i].Modifier).Append(member.Parameters[i].Type).Append(" ").Append(member.Parameters[i].Name);
+                    implementationBuilder
+                        .AppendAttributes(member.Parameters[i].Attributes).AppendIf(!string.IsNullOrWhiteSpace(member.Parameters[i].Modifier), member.Parameters[i].Modifier).Append(member.Parameters[i].Type).Append(" ").Append(member.Parameters[i].Name);
+
+                }
+
+                interfaceBuilder
+                    .Append(")");
+                implementationBuilder
+                    .Append(")");
+
+                indentationDepth++;
+                if (member.GenericArguments.Length > 0)
+                {
+                    interfaceBuilder
+                        .AppendTypeGenericConstraint(member.GenericArguments, indentationDepth, model.EndLine);
+                    implementationBuilder
+                        .AppendTypeGenericConstraint(member.GenericArguments, indentationDepth, model.EndLine);
+
+                }
+
+                implementationBuilder
+                    .Append(model.EndLine)
+                    .AppendIndentation(indentationDepth).Append("=> ").Append(model.OriginalTypeFullName).Append(".").Append(member.Name).AppendTypeGenericArguments(member.GenericArguments).Append("(");
+
+
+                for (int i = 0; i < member.Parameters.Length; i++)
+                {
+                    if (i > 0)
+                    {
+                        implementationBuilder
+                            .Append(", ");
+                    }
+
+                    implementationBuilder
+                        .AppendIf(!string.IsNullOrWhiteSpace(member.Parameters[i].Modifier) && member.Parameters[i].Modifier != "params ", member.Parameters[i].Modifier).Append(member.Parameters[i].Name);
+                }
+
+                implementationBuilder
+                    .Append(")");
+
+                interfaceBuilder
+                    .Append(";").Append(model.EndLine);
+                implementationBuilder
+                    .Append(";").Append(model.EndLine);
+
+                indentationDepth--;
+            }
+
+            indentationDepth--;
+
+            interfaceBuilder
+                .Append(model.EndLine)
+                .AppendIndentation(indentationDepth).Append("}").Append(model.EndLine);
+            implementationBuilder
+                .Append(model.EndLine)
+                .AppendIndentation(indentationDepth).Append("}").Append(model.EndLine);
+
+            if (!string.IsNullOrWhiteSpace(model.Namespace))
+            {
+                interfaceBuilder
+                    .Append("}").Append(model.EndLine);
+                implementationBuilder
+                    .Append("}").Append(model.EndLine);
+            }
+
+            interfaceBuilder
+                .Append("#pragma warning restore").Append(model.EndLine);
+            implementationBuilder
+                .Append("#pragma warning restore").Append(model.EndLine);
 
             var interfaceSource = interfaceBuilder.ToString();
             var implementationSource = implementationBuilder.ToString();

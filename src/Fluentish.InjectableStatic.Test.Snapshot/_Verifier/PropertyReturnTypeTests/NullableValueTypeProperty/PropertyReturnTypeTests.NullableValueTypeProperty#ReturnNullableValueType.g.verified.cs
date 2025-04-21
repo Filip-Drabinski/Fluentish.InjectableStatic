@@ -6,7 +6,7 @@ namespace Fluentish.Injectable.PropertyReturnTypeTests
 {
     /// <inheritdoc cref="global::PropertyReturnTypeTests.ReturnNullableValueType"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class ReturnNullableValueTypeService: IReturnNullableValueType
+    public class ReturnNullableValueTypeService : IReturnNullableValueType
     {
         /// <inheritdoc cref="global::PropertyReturnTypeTests.ReturnNullableValueType.Test"/>
         public global::System.Nullable<global::PropertyReturnTypeTests.Example> Test

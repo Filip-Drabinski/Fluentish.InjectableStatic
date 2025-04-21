@@ -98,6 +98,10 @@ indent_size = 4
 end_of_line = crlf
 dotnet_style_prefer_conditional_expression_over_assignment = true:silent
 
+# IDE0305: Simplify collection initialization
+dotnet_diagnostic.IDE0305.severity = none
+dotnet_diagnostic.IDE0290.severity = none
+
 # Verify settings
 [*.{received,verified}.{json,txt,xml,cs}]
 charset = "utf-8-bom"

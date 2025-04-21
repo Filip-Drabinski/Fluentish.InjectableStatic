@@ -5,12 +5,14 @@ namespace Fluentish.Injectable.MethodParameterTests
 {
     /// <inheritdoc cref="global::MethodParameterTests.ParameterPrimitive"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class ParameterPrimitiveService: IParameterPrimitive
+    public class ParameterPrimitiveService : IParameterPrimitive
     {
         /// <inheritdoc cref="global::MethodParameterTests.ParameterPrimitive.Test"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void Test(int parameter) => global::MethodParameterTests.ParameterPrimitive.Test(parameter);
+        public void Test(int parameter)
+            => global::MethodParameterTests.ParameterPrimitive.Test(parameter);
+
     }
 }
 #pragma warning restore

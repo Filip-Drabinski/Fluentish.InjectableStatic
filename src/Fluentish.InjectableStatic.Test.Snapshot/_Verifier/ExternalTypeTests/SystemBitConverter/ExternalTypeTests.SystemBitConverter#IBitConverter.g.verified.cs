@@ -62,37 +62,37 @@ namespace Fluentish.Injectable.System
         /// <inheritdoc cref="global::System.BitConverter.GetBytes"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         byte[] GetBytes(ushort value);
 
         /// <inheritdoc cref="global::System.BitConverter.TryWriteBytes"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         bool TryWriteBytes(global::System.Span<byte> destination, ushort value);
 
         /// <inheritdoc cref="global::System.BitConverter.GetBytes"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         byte[] GetBytes(uint value);
 
         /// <inheritdoc cref="global::System.BitConverter.TryWriteBytes"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         bool TryWriteBytes(global::System.Span<byte> destination, uint value);
 
         /// <inheritdoc cref="global::System.BitConverter.GetBytes"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         byte[] GetBytes(ulong value);
 
         /// <inheritdoc cref="global::System.BitConverter.TryWriteBytes"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         bool TryWriteBytes(global::System.Span<byte> destination, ulong value);
 
         /// <inheritdoc cref="global::System.BitConverter.GetBytes"/>
@@ -168,37 +168,37 @@ namespace Fluentish.Injectable.System
         /// <inheritdoc cref="global::System.BitConverter.ToUInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         ushort ToUInt16(byte[] value, int startIndex);
 
         /// <inheritdoc cref="global::System.BitConverter.ToUInt16"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         ushort ToUInt16(global::System.ReadOnlySpan<byte> value);
 
         /// <inheritdoc cref="global::System.BitConverter.ToUInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         uint ToUInt32(byte[] value, int startIndex);
 
         /// <inheritdoc cref="global::System.BitConverter.ToUInt32"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         uint ToUInt32(global::System.ReadOnlySpan<byte> value);
 
         /// <inheritdoc cref="global::System.BitConverter.ToUInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         ulong ToUInt64(byte[] value, int startIndex);
 
         /// <inheritdoc cref="global::System.BitConverter.ToUInt64"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         ulong ToUInt64(global::System.ReadOnlySpan<byte> value);
 
         /// <inheritdoc cref="global::System.BitConverter.ToHalf"/>
@@ -289,38 +289,39 @@ namespace Fluentish.Injectable.System
         /// <inheritdoc cref="global::System.BitConverter.DoubleToUInt64Bits"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         ulong DoubleToUInt64Bits(double value);
 
         /// <inheritdoc cref="global::System.BitConverter.UInt64BitsToDouble"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         double UInt64BitsToDouble(ulong value);
 
         /// <inheritdoc cref="global::System.BitConverter.SingleToUInt32Bits"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         uint SingleToUInt32Bits(float value);
 
         /// <inheritdoc cref="global::System.BitConverter.UInt32BitsToSingle"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         float UInt32BitsToSingle(uint value);
 
         /// <inheritdoc cref="global::System.BitConverter.HalfToUInt16Bits"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         ushort HalfToUInt16Bits(global::System.Half value);
 
         /// <inheritdoc cref="global::System.BitConverter.UInt16BitsToHalf"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         global::System.Half UInt16BitsToHalf(ushort value);
+
     }
 }
 #pragma warning restore

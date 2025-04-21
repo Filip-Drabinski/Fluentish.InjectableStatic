@@ -5,12 +5,14 @@ namespace Fluentish.Injectable.MethodReturnTests
 {
     /// <inheritdoc cref="global::MethodReturnTests.ValueType"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class ValueTypeService: IValueType
+    public class ValueTypeService : IValueType
     {
         /// <inheritdoc cref="global::MethodReturnTests.ValueType.Test"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::MethodReturnTests.Example Test() => global::MethodReturnTests.ValueType.Test();
+        public global::MethodReturnTests.Example Test()
+            => global::MethodReturnTests.ValueType.Test();
+
     }
 }
 #pragma warning restore

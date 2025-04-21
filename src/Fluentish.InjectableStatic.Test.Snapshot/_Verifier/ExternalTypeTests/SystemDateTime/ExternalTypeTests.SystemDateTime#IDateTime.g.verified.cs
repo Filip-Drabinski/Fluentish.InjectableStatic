@@ -7,6 +7,15 @@ namespace Fluentish.Injectable.System
     /// <inheritdoc cref="global::System.DateTime"/>
     public interface IDateTime
     {
+        /// <inheritdoc cref="global::System.DateTime.Now"/>
+        global::System.DateTime Now { get; }
+
+        /// <inheritdoc cref="global::System.DateTime.Today"/>
+        global::System.DateTime Today { get; }
+
+        /// <inheritdoc cref="global::System.DateTime.UtcNow"/>
+        global::System.DateTime UtcNow { get; }
+
         /// <inheritdoc cref="global::System.DateTime.MinValue"/>
         global::System.DateTime MinValue { get; }
 
@@ -160,15 +169,6 @@ namespace Fluentish.Injectable.System
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         bool TryParse(global::System.ReadOnlySpan<char> s, global::System.IFormatProvider? provider, out global::System.DateTime result);
-
-        /// <inheritdoc cref="global::System.DateTime.Now"/>
-        global::System.DateTime Now { get; }
-
-        /// <inheritdoc cref="global::System.DateTime.Today"/>
-        global::System.DateTime Today { get; }
-
-        /// <inheritdoc cref="global::System.DateTime.UtcNow"/>
-        global::System.DateTime UtcNow { get; }
 
     }
 }

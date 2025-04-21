@@ -9,6 +9,7 @@ namespace Fluentish.Injectable.FieldReturnTypeTests
     {
         /// <inheritdoc cref="global::FieldReturnTypeTests.ReturnNullableValueType.Test"/>
         global::System.Nullable<global::FieldReturnTypeTests.Example> Test { get; set; }
+
     }
 }
 #pragma warning restore

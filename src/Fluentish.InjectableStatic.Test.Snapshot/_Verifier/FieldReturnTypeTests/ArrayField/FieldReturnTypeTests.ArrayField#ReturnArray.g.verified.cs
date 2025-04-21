@@ -5,7 +5,7 @@ namespace Fluentish.Injectable.FieldReturnTypeTests
 {
     /// <inheritdoc cref="global::FieldReturnTypeTests.ReturnArray"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class ReturnArrayService: IReturnArray
+    public class ReturnArrayService : IReturnArray
     {
         /// <inheritdoc cref="global::FieldReturnTypeTests.ReturnArray.Test"/>
         public global::FieldReturnTypeTests.Example[] Test
@@ -13,6 +13,7 @@ namespace Fluentish.Injectable.FieldReturnTypeTests
             get => global::FieldReturnTypeTests.ReturnArray.Test;
             set => global::FieldReturnTypeTests.ReturnArray.Test = value;
         }
+
     }
 }
 #pragma warning restore

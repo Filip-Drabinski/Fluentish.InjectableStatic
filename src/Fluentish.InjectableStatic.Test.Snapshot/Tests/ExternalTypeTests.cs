@@ -205,8 +205,10 @@ namespace Fluentish.InjectableStatic.Test.Snapshot.Tests
                     """
                     [assembly: Fluentish.InjectableStatic.Injectable(
                         typeof(System.Diagnostics.Debug),
-                        Fluentish.InjectableStatic.FilterType.Exclude,
-                        "SetProvider"
+                        FilterType = Fluentish.InjectableStatic.FilterType.Exclude,
+                        FilteredMembers = new string[] {
+                            "SetProvider"
+                        }
                     )]
                     """
                 ],

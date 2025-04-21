@@ -5,12 +5,14 @@ namespace Fluentish.Injectable.MethodReturnTests
 {
     /// <inheritdoc cref="global::MethodReturnTests.List"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class ListService: IList
+    public class ListService : IList
     {
         /// <inheritdoc cref="global::MethodReturnTests.List.Test"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Collections.Generic.List<string> Test() => global::MethodReturnTests.List.Test();
+        public global::System.Collections.Generic.List<string> Test()
+            => global::MethodReturnTests.List.Test();
+
     }
 }
 #pragma warning restore

@@ -5,7 +5,7 @@ namespace Fluentish.Injectable.PropertyReturnTypeTests
 {
     /// <inheritdoc cref="global::PropertyReturnTypeTests.ReturnPrimitive"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class ReturnPrimitiveService: IReturnPrimitive
+    public class ReturnPrimitiveService : IReturnPrimitive
     {
         /// <inheritdoc cref="global::PropertyReturnTypeTests.ReturnPrimitive.Test"/>
         public int Test

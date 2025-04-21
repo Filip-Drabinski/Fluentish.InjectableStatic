@@ -7,6 +7,15 @@ namespace Fluentish.Injectable.System.Diagnostics
     /// <inheritdoc cref="global::System.Diagnostics.Debug"/>
     public interface IDebug
     {
+        /// <inheritdoc cref="global::System.Diagnostics.Debug.AutoFlush"/>
+        bool AutoFlush { get; set; }
+
+        /// <inheritdoc cref="global::System.Diagnostics.Debug.IndentLevel"/>
+        int IndentLevel { get; set; }
+
+        /// <inheritdoc cref="global::System.Diagnostics.Debug.IndentSize"/>
+        int IndentSize { get; set; }
+
         /// <inheritdoc cref="global::System.Diagnostics.Debug.Close"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
@@ -70,13 +79,13 @@ namespace Fluentish.Injectable.System.Diagnostics
         /// <inheritdoc cref="global::System.Diagnostics.Debug.Fail"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute()] 
+        [global::System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute()]
         void Fail(string? message);
 
         /// <inheritdoc cref="global::System.Diagnostics.Debug.Fail"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute()] 
+        [global::System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute()]
         void Fail(string? message, string? detailMessage);
 
         /// <inheritdoc cref="global::System.Diagnostics.Debug.WriteLine"/>
@@ -183,15 +192,6 @@ namespace Fluentish.Injectable.System.Diagnostics
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         void WriteLineIf(bool condition, ref global::System.Diagnostics.Debug.WriteIfInterpolatedStringHandler message, string? category);
-
-        /// <inheritdoc cref="global::System.Diagnostics.Debug.AutoFlush"/>
-        bool AutoFlush { get; set; }
-
-        /// <inheritdoc cref="global::System.Diagnostics.Debug.IndentLevel"/>
-        int IndentLevel { get; set; }
-
-        /// <inheritdoc cref="global::System.Diagnostics.Debug.IndentSize"/>
-        int IndentSize { get; set; }
 
     }
 }

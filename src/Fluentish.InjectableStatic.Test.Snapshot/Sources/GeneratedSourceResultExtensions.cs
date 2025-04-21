@@ -6,7 +6,7 @@ namespace Fluentish.InjectableStatic.Test.Snapshot.Sources
     {
         public static bool IsPostInitializationOutput(this GeneratedSourceResult sourceResult)
         {
-            return sourceResult.HintName == "InjectableNamespacePrefixAttribute.g.cs"
+            return sourceResult.HintName == "InjectableStaticConfigurationAttribute.g.cs"
                 || sourceResult.HintName == "InjectableStaticAttribute.g.cs";
         }
     }

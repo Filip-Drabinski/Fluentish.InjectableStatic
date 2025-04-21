@@ -5,12 +5,14 @@ namespace Fluentish.Injectable.MethodReturnTests
 {
     /// <inheritdoc cref="global::MethodReturnTests.Void"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class VoidService: IVoid
+    public class VoidService : IVoid
     {
         /// <inheritdoc cref="global::MethodReturnTests.Void.Test"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void Test() => global::MethodReturnTests.Void.Test();
+        public void Test()
+            => global::MethodReturnTests.Void.Test();
+
     }
 }
 #pragma warning restore

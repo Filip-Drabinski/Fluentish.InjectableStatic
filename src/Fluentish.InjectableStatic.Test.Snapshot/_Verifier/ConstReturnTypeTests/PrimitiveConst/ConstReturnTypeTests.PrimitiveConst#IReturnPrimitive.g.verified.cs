@@ -8,6 +8,7 @@ namespace Fluentish.Injectable.ConstReturnTypeTests
     {
         /// <inheritdoc cref="global::ConstReturnTypeTests.ReturnPrimitive.Test"/>
         int Test { get; }
+
     }
 }
 #pragma warning restore

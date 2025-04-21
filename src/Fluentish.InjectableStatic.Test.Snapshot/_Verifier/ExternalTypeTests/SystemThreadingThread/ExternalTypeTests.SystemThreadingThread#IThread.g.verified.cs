@@ -7,6 +7,12 @@ namespace Fluentish.Injectable.System.Threading
     /// <inheritdoc cref="global::System.Threading.Thread"/>
     public interface IThread
     {
+        /// <inheritdoc cref="global::System.Threading.Thread.CurrentPrincipal"/>
+        global::System.Security.Principal.IPrincipal? CurrentPrincipal { get; set; }
+
+        /// <inheritdoc cref="global::System.Threading.Thread.CurrentThread"/>
+        global::System.Threading.Thread CurrentThread { get; }
+
         /// <inheritdoc cref="global::System.Threading.Thread.SpinWait"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
@@ -25,7 +31,7 @@ namespace Fluentish.Injectable.System.Threading
         /// <inheritdoc cref="global::System.Threading.Thread.ResetAbort"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.ObsoleteAttribute("Thread.ResetAbort is not supported and throws PlatformNotSupportedException.", DiagnosticId = "SYSLIB0006", UrlFormat = "https://aka.ms/dotnet-warnings/{0}")] 
+        [global::System.ObsoleteAttribute("Thread.ResetAbort is not supported and throws PlatformNotSupportedException.", DiagnosticId = "SYSLIB0006", UrlFormat = "https://aka.ms/dotnet-warnings/{0}")]
         void ResetAbort();
 
         /// <inheritdoc cref="global::System.Threading.Thread.BeginCriticalRegion"/>
@@ -136,7 +142,7 @@ namespace Fluentish.Injectable.System.Threading
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileRead"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         sbyte VolatileRead(ref sbyte address);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileRead"/>
@@ -147,25 +153,25 @@ namespace Fluentish.Injectable.System.Threading
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileRead"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         ushort VolatileRead(ref ushort address);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileRead"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         uint VolatileRead(ref uint address);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileRead"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         ulong VolatileRead(ref ulong address);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileRead"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         nuint VolatileRead(ref nuint address);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileWrite"/>
@@ -206,7 +212,7 @@ namespace Fluentish.Injectable.System.Threading
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileWrite"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         void VolatileWrite(ref sbyte address, sbyte value);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileWrite"/>
@@ -217,37 +223,31 @@ namespace Fluentish.Injectable.System.Threading
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileWrite"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         void VolatileWrite(ref ushort address, ushort value);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileWrite"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         void VolatileWrite(ref uint address, uint value);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileWrite"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         void VolatileWrite(ref ulong address, ulong value);
 
         /// <inheritdoc cref="global::System.Threading.Thread.VolatileWrite"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.CLSCompliantAttribute(false)] 
+        [global::System.CLSCompliantAttribute(false)]
         void VolatileWrite(ref nuint address, nuint value);
 
         /// <inheritdoc cref="global::System.Threading.Thread.GetCurrentProcessorId"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         int GetCurrentProcessorId();
-
-        /// <inheritdoc cref="global::System.Threading.Thread.CurrentPrincipal"/>
-        global::System.Security.Principal.IPrincipal? CurrentPrincipal { get; set; }
-
-        /// <inheritdoc cref="global::System.Threading.Thread.CurrentThread"/>
-        global::System.Threading.Thread CurrentThread { get; }
 
     }
 }

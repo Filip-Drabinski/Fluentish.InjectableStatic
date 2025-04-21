@@ -8,6 +8,7 @@ namespace Fluentish.Injectable.FieldReturnTypeTests
     {
         /// <inheritdoc cref="global::FieldReturnTypeTests.ReturnPrimitiveArray.Test"/>
         object[] Test { get; set; }
+
     }
 }
 #pragma warning restore

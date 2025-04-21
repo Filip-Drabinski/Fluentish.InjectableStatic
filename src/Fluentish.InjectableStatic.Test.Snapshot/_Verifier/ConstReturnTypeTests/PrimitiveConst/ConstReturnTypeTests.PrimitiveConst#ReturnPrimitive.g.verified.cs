@@ -5,13 +5,14 @@ namespace Fluentish.Injectable.ConstReturnTypeTests
 {
     /// <inheritdoc cref="global::ConstReturnTypeTests.ReturnPrimitive"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class ReturnPrimitiveService: IReturnPrimitive
+    public class ReturnPrimitiveService : IReturnPrimitive
     {
         /// <inheritdoc cref="global::ConstReturnTypeTests.ReturnPrimitive.Test"/>
         public int Test
         {
             get => global::ConstReturnTypeTests.ReturnPrimitive.Test;
         }
+
     }
 }
 #pragma warning restore

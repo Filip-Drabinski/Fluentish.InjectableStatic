@@ -8,6 +8,7 @@ namespace Fluentish.Injectable.EventTests
     {
         /// <inheritdoc cref="global::EventTests.EventHandler.Test"/>
         event global::System.EventHandler Test;
+
     }
 }
 #pragma warning restore

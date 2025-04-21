@@ -6,7 +6,7 @@ namespace Fluentish.Injectable.FieldReturnTypeTests
 {
     /// <inheritdoc cref="global::FieldReturnTypeTests.ReturnNullableValueType"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class ReturnNullableValueTypeService: IReturnNullableValueType
+    public class ReturnNullableValueTypeService : IReturnNullableValueType
     {
         /// <inheritdoc cref="global::FieldReturnTypeTests.ReturnNullableValueType.Test"/>
         public global::System.Nullable<global::FieldReturnTypeTests.Example> Test
@@ -14,6 +14,7 @@ namespace Fluentish.Injectable.FieldReturnTypeTests
             get => global::FieldReturnTypeTests.ReturnNullableValueType.Test;
             set => global::FieldReturnTypeTests.ReturnNullableValueType.Test = value;
         }
+
     }
 }
 #pragma warning restore

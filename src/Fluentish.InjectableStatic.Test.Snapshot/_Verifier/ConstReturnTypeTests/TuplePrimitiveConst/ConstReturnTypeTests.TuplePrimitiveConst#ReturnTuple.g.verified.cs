@@ -5,13 +5,14 @@ namespace Fluentish.Injectable.ConstReturnTypeTests
 {
     /// <inheritdoc cref="global::ConstReturnTypeTests.ReturnTuple"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class ReturnTupleService: IReturnTuple
+    public class ReturnTupleService : IReturnTuple
     {
         /// <inheritdoc cref="global::ConstReturnTypeTests.ReturnTuple.Test"/>
         public global::System.Tuple<global::ConstReturnTypeTests.Example, global::ConstReturnTypeTests.Example> Test
         {
             get => global::ConstReturnTypeTests.ReturnTuple.Test;
         }
+
     }
 }
 #pragma warning restore

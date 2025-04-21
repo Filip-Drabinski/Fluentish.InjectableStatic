@@ -8,6 +8,7 @@ namespace Fluentish.Injectable.FieldReturnTypeTests
     {
         /// <inheritdoc cref="global::FieldReturnTypeTests.ReturnSugarTuple.Test"/>
         (string left, object right) Test { get; set; }
+
     }
 }
 #pragma warning restore

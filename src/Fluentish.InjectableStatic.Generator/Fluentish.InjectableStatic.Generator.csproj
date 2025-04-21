@@ -14,12 +14,12 @@
 
 		<Title>Fluentish.InjectableStatic</Title>
 		<RepositoryUrl>https://github.com/Filip-Drabinski/Fluentish.InjectableStatic</RepositoryUrl>
-		<VersionPrefix>0.1.0</VersionPrefix>
+		<VersionPrefix>0.2.0</VersionPrefix>
 		<Description>Generate injectable wrappers for static classes</Description>
 		<PackageProjectUrl>https://github.com/Filip-Drabinski/Fluentish.InjectableStatic</PackageProjectUrl>
 		<RepositoryType>
 		</RepositoryType>
-		<PackageTags>dependency-injection, di, IIncrementalGenerator, wrapper, injectable</PackageTags>
+		<PackageTags>dependency-injection injectable static-class injectable-service roslyn-generator source-generator</PackageTags>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
@@ -33,11 +33,12 @@
 	</ItemGroup>
 	
 	<ItemGroup>
+		<PackageReference Include="Microsoft.Bcl.HashCode" Version="6.0.0" PrivateAssets="all" />
 		<PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.9.2"  PrivateAssets="all"/>
+		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.9.2" PrivateAssets="all" />
 	</ItemGroup>
 
 </Project>

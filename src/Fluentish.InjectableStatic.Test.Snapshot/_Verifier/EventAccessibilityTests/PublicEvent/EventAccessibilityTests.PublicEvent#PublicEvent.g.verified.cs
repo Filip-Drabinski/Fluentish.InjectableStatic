@@ -5,7 +5,7 @@ namespace Fluentish.Injectable.EventAccessibilityTests
 {
     /// <inheritdoc cref="global::EventAccessibilityTests.PublicEvent"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class PublicEventService: IPublicEvent
+    public class PublicEventService : IPublicEvent
     {
         /// <inheritdoc cref="global::EventAccessibilityTests.PublicEvent.Test"/>
         public event global::System.EventHandler Test
@@ -13,6 +13,7 @@ namespace Fluentish.Injectable.EventAccessibilityTests
             add => global::EventAccessibilityTests.PublicEvent.Test += value;
             remove => global::EventAccessibilityTests.PublicEvent.Test -= value;
         }
+
     }
 }
 #pragma warning restore

@@ -6,258 +6,309 @@ namespace Fluentish.Injectable.System.IO
 {
     /// <inheritdoc cref="global::System.IO.Directory"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class DirectoryService: IDirectory
+    public class DirectoryService : IDirectory
     {
         /// <inheritdoc cref="global::System.IO.Directory.GetParent"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.IO.DirectoryInfo? GetParent(string path) => global::System.IO.Directory.GetParent(path);
+        public global::System.IO.DirectoryInfo? GetParent(string path)
+            => global::System.IO.Directory.GetParent(path);
 
         /// <inheritdoc cref="global::System.IO.Directory.CreateDirectory"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.IO.DirectoryInfo CreateDirectory(string path) => global::System.IO.Directory.CreateDirectory(path);
+        public global::System.IO.DirectoryInfo CreateDirectory(string path)
+            => global::System.IO.Directory.CreateDirectory(path);
 
         /// <inheritdoc cref="global::System.IO.Directory.CreateDirectory"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("windows")] 
-        public global::System.IO.DirectoryInfo CreateDirectory(string path, global::System.IO.UnixFileMode unixCreateMode) => global::System.IO.Directory.CreateDirectory(path, unixCreateMode);
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("windows")]
+        public global::System.IO.DirectoryInfo CreateDirectory(string path, global::System.IO.UnixFileMode unixCreateMode)
+            => global::System.IO.Directory.CreateDirectory(path, unixCreateMode);
 
         /// <inheritdoc cref="global::System.IO.Directory.CreateTempSubdirectory"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.IO.DirectoryInfo CreateTempSubdirectory(string? prefix) => global::System.IO.Directory.CreateTempSubdirectory(prefix);
+        public global::System.IO.DirectoryInfo CreateTempSubdirectory(string? prefix)
+            => global::System.IO.Directory.CreateTempSubdirectory(prefix);
 
         /// <inheritdoc cref="global::System.IO.Directory.Exists"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public bool Exists([global::System.Diagnostics.CodeAnalysis.NotNullWhenAttribute(true)] string? path) => global::System.IO.Directory.Exists(path);
+        public bool Exists([global::System.Diagnostics.CodeAnalysis.NotNullWhenAttribute(true)] string? path)
+            => global::System.IO.Directory.Exists(path);
 
         /// <inheritdoc cref="global::System.IO.Directory.SetCreationTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void SetCreationTime(string path, global::System.DateTime creationTime) => global::System.IO.Directory.SetCreationTime(path, creationTime);
+        public void SetCreationTime(string path, global::System.DateTime creationTime)
+            => global::System.IO.Directory.SetCreationTime(path, creationTime);
 
         /// <inheritdoc cref="global::System.IO.Directory.SetCreationTimeUtc"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void SetCreationTimeUtc(string path, global::System.DateTime creationTimeUtc) => global::System.IO.Directory.SetCreationTimeUtc(path, creationTimeUtc);
+        public void SetCreationTimeUtc(string path, global::System.DateTime creationTimeUtc)
+            => global::System.IO.Directory.SetCreationTimeUtc(path, creationTimeUtc);
 
         /// <inheritdoc cref="global::System.IO.Directory.GetCreationTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.DateTime GetCreationTime(string path) => global::System.IO.Directory.GetCreationTime(path);
+        public global::System.DateTime GetCreationTime(string path)
+            => global::System.IO.Directory.GetCreationTime(path);
 
         /// <inheritdoc cref="global::System.IO.Directory.GetCreationTimeUtc"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.DateTime GetCreationTimeUtc(string path) => global::System.IO.Directory.GetCreationTimeUtc(path);
+        public global::System.DateTime GetCreationTimeUtc(string path)
+            => global::System.IO.Directory.GetCreationTimeUtc(path);
 
         /// <inheritdoc cref="global::System.IO.Directory.SetLastWriteTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void SetLastWriteTime(string path, global::System.DateTime lastWriteTime) => global::System.IO.Directory.SetLastWriteTime(path, lastWriteTime);
+        public void SetLastWriteTime(string path, global::System.DateTime lastWriteTime)
+            => global::System.IO.Directory.SetLastWriteTime(path, lastWriteTime);
 
         /// <inheritdoc cref="global::System.IO.Directory.SetLastWriteTimeUtc"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void SetLastWriteTimeUtc(string path, global::System.DateTime lastWriteTimeUtc) => global::System.IO.Directory.SetLastWriteTimeUtc(path, lastWriteTimeUtc);
+        public void SetLastWriteTimeUtc(string path, global::System.DateTime lastWriteTimeUtc)
+            => global::System.IO.Directory.SetLastWriteTimeUtc(path, lastWriteTimeUtc);
 
         /// <inheritdoc cref="global::System.IO.Directory.GetLastWriteTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.DateTime GetLastWriteTime(string path) => global::System.IO.Directory.GetLastWriteTime(path);
+        public global::System.DateTime GetLastWriteTime(string path)
+            => global::System.IO.Directory.GetLastWriteTime(path);
 
         /// <inheritdoc cref="global::System.IO.Directory.GetLastWriteTimeUtc"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.DateTime GetLastWriteTimeUtc(string path) => global::System.IO.Directory.GetLastWriteTimeUtc(path);
+        public global::System.DateTime GetLastWriteTimeUtc(string path)
+            => global::System.IO.Directory.GetLastWriteTimeUtc(path);
 
         /// <inheritdoc cref="global::System.IO.Directory.SetLastAccessTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void SetLastAccessTime(string path, global::System.DateTime lastAccessTime) => global::System.IO.Directory.SetLastAccessTime(path, lastAccessTime);
+        public void SetLastAccessTime(string path, global::System.DateTime lastAccessTime)
+            => global::System.IO.Directory.SetLastAccessTime(path, lastAccessTime);
 
         /// <inheritdoc cref="global::System.IO.Directory.SetLastAccessTimeUtc"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void SetLastAccessTimeUtc(string path, global::System.DateTime lastAccessTimeUtc) => global::System.IO.Directory.SetLastAccessTimeUtc(path, lastAccessTimeUtc);
+        public void SetLastAccessTimeUtc(string path, global::System.DateTime lastAccessTimeUtc)
+            => global::System.IO.Directory.SetLastAccessTimeUtc(path, lastAccessTimeUtc);
 
         /// <inheritdoc cref="global::System.IO.Directory.GetLastAccessTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.DateTime GetLastAccessTime(string path) => global::System.IO.Directory.GetLastAccessTime(path);
+        public global::System.DateTime GetLastAccessTime(string path)
+            => global::System.IO.Directory.GetLastAccessTime(path);
 
         /// <inheritdoc cref="global::System.IO.Directory.GetLastAccessTimeUtc"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.DateTime GetLastAccessTimeUtc(string path) => global::System.IO.Directory.GetLastAccessTimeUtc(path);
+        public global::System.DateTime GetLastAccessTimeUtc(string path)
+            => global::System.IO.Directory.GetLastAccessTimeUtc(path);
 
         /// <inheritdoc cref="global::System.IO.Directory.GetFiles"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string[] GetFiles(string path) => global::System.IO.Directory.GetFiles(path);
+        public string[] GetFiles(string path)
+            => global::System.IO.Directory.GetFiles(path);
 
         /// <inheritdoc cref="global::System.IO.Directory.GetFiles"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string[] GetFiles(string path, string searchPattern) => global::System.IO.Directory.GetFiles(path, searchPattern);
+        public string[] GetFiles(string path, string searchPattern)
+            => global::System.IO.Directory.GetFiles(path, searchPattern);
 
         /// <inheritdoc cref="global::System.IO.Directory.GetFiles"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string[] GetFiles(string path, string searchPattern, global::System.IO.SearchOption searchOption) => global::System.IO.Directory.GetFiles(path, searchPattern, searchOption);
+        public string[] GetFiles(string path, string searchPattern, global::System.IO.SearchOption searchOption)
+            => global::System.IO.Directory.GetFiles(path, searchPattern, searchOption);
 
         /// <inheritdoc cref="global::System.IO.Directory.GetFiles"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string[] GetFiles(string path, string searchPattern, global::System.IO.EnumerationOptions enumerationOptions) => global::System.IO.Directory.GetFiles(path, searchPattern, enumerationOptions);
+        public string[] GetFiles(string path, string searchPattern, global::System.IO.EnumerationOptions enumerationOptions)
+            => global::System.IO.Directory.GetFiles(path, searchPattern, enumerationOptions);
 
         /// <inheritdoc cref="global::System.IO.Directory.GetDirectories"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string[] GetDirectories(string path) => global::System.IO.Directory.GetDirectories(path);
+        public string[] GetDirectories(string path)
+            => global::System.IO.Directory.GetDirectories(path);
 
         /// <inheritdoc cref="global::System.IO.Directory.GetDirectories"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string[] GetDirectories(string path, string searchPattern) => global::System.IO.Directory.GetDirectories(path, searchPattern);
+        public string[] GetDirectories(string path, string searchPattern)
+            => global::System.IO.Directory.GetDirectories(path, searchPattern);
 
         /// <inheritdoc cref="global::System.IO.Directory.GetDirectories"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string[] GetDirectories(string path, string searchPattern, global::System.IO.SearchOption searchOption) => global::System.IO.Directory.GetDirectories(path, searchPattern, searchOption);
+        public string[] GetDirectories(string path, string searchPattern, global::System.IO.SearchOption searchOption)
+            => global::System.IO.Directory.GetDirectories(path, searchPattern, searchOption);
 
         /// <inheritdoc cref="global::System.IO.Directory.GetDirectories"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string[] GetDirectories(string path, string searchPattern, global::System.IO.EnumerationOptions enumerationOptions) => global::System.IO.Directory.GetDirectories(path, searchPattern, enumerationOptions);
+        public string[] GetDirectories(string path, string searchPattern, global::System.IO.EnumerationOptions enumerationOptions)
+            => global::System.IO.Directory.GetDirectories(path, searchPattern, enumerationOptions);
 
         /// <inheritdoc cref="global::System.IO.Directory.GetFileSystemEntries"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string[] GetFileSystemEntries(string path) => global::System.IO.Directory.GetFileSystemEntries(path);
+        public string[] GetFileSystemEntries(string path)
+            => global::System.IO.Directory.GetFileSystemEntries(path);
 
         /// <inheritdoc cref="global::System.IO.Directory.GetFileSystemEntries"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string[] GetFileSystemEntries(string path, string searchPattern) => global::System.IO.Directory.GetFileSystemEntries(path, searchPattern);
+        public string[] GetFileSystemEntries(string path, string searchPattern)
+            => global::System.IO.Directory.GetFileSystemEntries(path, searchPattern);
 
         /// <inheritdoc cref="global::System.IO.Directory.GetFileSystemEntries"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string[] GetFileSystemEntries(string path, string searchPattern, global::System.IO.SearchOption searchOption) => global::System.IO.Directory.GetFileSystemEntries(path, searchPattern, searchOption);
+        public string[] GetFileSystemEntries(string path, string searchPattern, global::System.IO.SearchOption searchOption)
+            => global::System.IO.Directory.GetFileSystemEntries(path, searchPattern, searchOption);
 
         /// <inheritdoc cref="global::System.IO.Directory.GetFileSystemEntries"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string[] GetFileSystemEntries(string path, string searchPattern, global::System.IO.EnumerationOptions enumerationOptions) => global::System.IO.Directory.GetFileSystemEntries(path, searchPattern, enumerationOptions);
+        public string[] GetFileSystemEntries(string path, string searchPattern, global::System.IO.EnumerationOptions enumerationOptions)
+            => global::System.IO.Directory.GetFileSystemEntries(path, searchPattern, enumerationOptions);
 
         /// <inheritdoc cref="global::System.IO.Directory.EnumerateDirectories"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Collections.Generic.IEnumerable<string> EnumerateDirectories(string path) => global::System.IO.Directory.EnumerateDirectories(path);
+        public global::System.Collections.Generic.IEnumerable<string> EnumerateDirectories(string path)
+            => global::System.IO.Directory.EnumerateDirectories(path);
 
         /// <inheritdoc cref="global::System.IO.Directory.EnumerateDirectories"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Collections.Generic.IEnumerable<string> EnumerateDirectories(string path, string searchPattern) => global::System.IO.Directory.EnumerateDirectories(path, searchPattern);
+        public global::System.Collections.Generic.IEnumerable<string> EnumerateDirectories(string path, string searchPattern)
+            => global::System.IO.Directory.EnumerateDirectories(path, searchPattern);
 
         /// <inheritdoc cref="global::System.IO.Directory.EnumerateDirectories"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Collections.Generic.IEnumerable<string> EnumerateDirectories(string path, string searchPattern, global::System.IO.SearchOption searchOption) => global::System.IO.Directory.EnumerateDirectories(path, searchPattern, searchOption);
+        public global::System.Collections.Generic.IEnumerable<string> EnumerateDirectories(string path, string searchPattern, global::System.IO.SearchOption searchOption)
+            => global::System.IO.Directory.EnumerateDirectories(path, searchPattern, searchOption);
 
         /// <inheritdoc cref="global::System.IO.Directory.EnumerateDirectories"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Collections.Generic.IEnumerable<string> EnumerateDirectories(string path, string searchPattern, global::System.IO.EnumerationOptions enumerationOptions) => global::System.IO.Directory.EnumerateDirectories(path, searchPattern, enumerationOptions);
+        public global::System.Collections.Generic.IEnumerable<string> EnumerateDirectories(string path, string searchPattern, global::System.IO.EnumerationOptions enumerationOptions)
+            => global::System.IO.Directory.EnumerateDirectories(path, searchPattern, enumerationOptions);
 
         /// <inheritdoc cref="global::System.IO.Directory.EnumerateFiles"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Collections.Generic.IEnumerable<string> EnumerateFiles(string path) => global::System.IO.Directory.EnumerateFiles(path);
+        public global::System.Collections.Generic.IEnumerable<string> EnumerateFiles(string path)
+            => global::System.IO.Directory.EnumerateFiles(path);
 
         /// <inheritdoc cref="global::System.IO.Directory.EnumerateFiles"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Collections.Generic.IEnumerable<string> EnumerateFiles(string path, string searchPattern) => global::System.IO.Directory.EnumerateFiles(path, searchPattern);
+        public global::System.Collections.Generic.IEnumerable<string> EnumerateFiles(string path, string searchPattern)
+            => global::System.IO.Directory.EnumerateFiles(path, searchPattern);
 
         /// <inheritdoc cref="global::System.IO.Directory.EnumerateFiles"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Collections.Generic.IEnumerable<string> EnumerateFiles(string path, string searchPattern, global::System.IO.SearchOption searchOption) => global::System.IO.Directory.EnumerateFiles(path, searchPattern, searchOption);
+        public global::System.Collections.Generic.IEnumerable<string> EnumerateFiles(string path, string searchPattern, global::System.IO.SearchOption searchOption)
+            => global::System.IO.Directory.EnumerateFiles(path, searchPattern, searchOption);
 
         /// <inheritdoc cref="global::System.IO.Directory.EnumerateFiles"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Collections.Generic.IEnumerable<string> EnumerateFiles(string path, string searchPattern, global::System.IO.EnumerationOptions enumerationOptions) => global::System.IO.Directory.EnumerateFiles(path, searchPattern, enumerationOptions);
+        public global::System.Collections.Generic.IEnumerable<string> EnumerateFiles(string path, string searchPattern, global::System.IO.EnumerationOptions enumerationOptions)
+            => global::System.IO.Directory.EnumerateFiles(path, searchPattern, enumerationOptions);
 
         /// <inheritdoc cref="global::System.IO.Directory.EnumerateFileSystemEntries"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Collections.Generic.IEnumerable<string> EnumerateFileSystemEntries(string path) => global::System.IO.Directory.EnumerateFileSystemEntries(path);
+        public global::System.Collections.Generic.IEnumerable<string> EnumerateFileSystemEntries(string path)
+            => global::System.IO.Directory.EnumerateFileSystemEntries(path);
 
         /// <inheritdoc cref="global::System.IO.Directory.EnumerateFileSystemEntries"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Collections.Generic.IEnumerable<string> EnumerateFileSystemEntries(string path, string searchPattern) => global::System.IO.Directory.EnumerateFileSystemEntries(path, searchPattern);
+        public global::System.Collections.Generic.IEnumerable<string> EnumerateFileSystemEntries(string path, string searchPattern)
+            => global::System.IO.Directory.EnumerateFileSystemEntries(path, searchPattern);
 
         /// <inheritdoc cref="global::System.IO.Directory.EnumerateFileSystemEntries"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Collections.Generic.IEnumerable<string> EnumerateFileSystemEntries(string path, string searchPattern, global::System.IO.SearchOption searchOption) => global::System.IO.Directory.EnumerateFileSystemEntries(path, searchPattern, searchOption);
+        public global::System.Collections.Generic.IEnumerable<string> EnumerateFileSystemEntries(string path, string searchPattern, global::System.IO.SearchOption searchOption)
+            => global::System.IO.Directory.EnumerateFileSystemEntries(path, searchPattern, searchOption);
 
         /// <inheritdoc cref="global::System.IO.Directory.EnumerateFileSystemEntries"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Collections.Generic.IEnumerable<string> EnumerateFileSystemEntries(string path, string searchPattern, global::System.IO.EnumerationOptions enumerationOptions) => global::System.IO.Directory.EnumerateFileSystemEntries(path, searchPattern, enumerationOptions);
+        public global::System.Collections.Generic.IEnumerable<string> EnumerateFileSystemEntries(string path, string searchPattern, global::System.IO.EnumerationOptions enumerationOptions)
+            => global::System.IO.Directory.EnumerateFileSystemEntries(path, searchPattern, enumerationOptions);
 
         /// <inheritdoc cref="global::System.IO.Directory.GetDirectoryRoot"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string GetDirectoryRoot(string path) => global::System.IO.Directory.GetDirectoryRoot(path);
+        public string GetDirectoryRoot(string path)
+            => global::System.IO.Directory.GetDirectoryRoot(path);
 
         /// <inheritdoc cref="global::System.IO.Directory.GetCurrentDirectory"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string GetCurrentDirectory() => global::System.IO.Directory.GetCurrentDirectory();
+        public string GetCurrentDirectory()
+            => global::System.IO.Directory.GetCurrentDirectory();
 
         /// <inheritdoc cref="global::System.IO.Directory.SetCurrentDirectory"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void SetCurrentDirectory(string path) => global::System.IO.Directory.SetCurrentDirectory(path);
+        public void SetCurrentDirectory(string path)
+            => global::System.IO.Directory.SetCurrentDirectory(path);
 
         /// <inheritdoc cref="global::System.IO.Directory.Move"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void Move(string sourceDirName, string destDirName) => global::System.IO.Directory.Move(sourceDirName, destDirName);
+        public void Move(string sourceDirName, string destDirName)
+            => global::System.IO.Directory.Move(sourceDirName, destDirName);
 
         /// <inheritdoc cref="global::System.IO.Directory.Delete"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void Delete(string path) => global::System.IO.Directory.Delete(path);
+        public void Delete(string path)
+            => global::System.IO.Directory.Delete(path);
 
         /// <inheritdoc cref="global::System.IO.Directory.Delete"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public void Delete(string path, bool recursive) => global::System.IO.Directory.Delete(path, recursive);
+        public void Delete(string path, bool recursive)
+            => global::System.IO.Directory.Delete(path, recursive);
 
         /// <inheritdoc cref="global::System.IO.Directory.GetLogicalDrives"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public string[] GetLogicalDrives() => global::System.IO.Directory.GetLogicalDrives();
+        public string[] GetLogicalDrives()
+            => global::System.IO.Directory.GetLogicalDrives();
 
         /// <inheritdoc cref="global::System.IO.Directory.CreateSymbolicLink"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.IO.FileSystemInfo CreateSymbolicLink(string path, string pathToTarget) => global::System.IO.Directory.CreateSymbolicLink(path, pathToTarget);
+        public global::System.IO.FileSystemInfo CreateSymbolicLink(string path, string pathToTarget)
+            => global::System.IO.Directory.CreateSymbolicLink(path, pathToTarget);
 
         /// <inheritdoc cref="global::System.IO.Directory.ResolveLinkTarget"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.IO.FileSystemInfo? ResolveLinkTarget(string linkPath, bool returnFinalTarget) => global::System.IO.Directory.ResolveLinkTarget(linkPath, returnFinalTarget);
+        public global::System.IO.FileSystemInfo? ResolveLinkTarget(string linkPath, bool returnFinalTarget)
+            => global::System.IO.Directory.ResolveLinkTarget(linkPath, returnFinalTarget);
+
     }
 }
 #pragma warning restore

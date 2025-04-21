@@ -5,7 +5,7 @@ namespace Fluentish.Injectable.PropertyReturnTypeTests
 {
     /// <inheritdoc cref="global::PropertyReturnTypeTests.ReturnSugarTuple"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public class ReturnSugarTupleService: IReturnSugarTuple
+    public class ReturnSugarTupleService : IReturnSugarTuple
     {
         /// <inheritdoc cref="global::PropertyReturnTypeTests.ReturnSugarTuple.Test"/>
         public (string left, object right) Test

@@ -7,6 +7,27 @@ namespace Fluentish.Injectable.System.Diagnostics
     /// <inheritdoc cref="global::System.Diagnostics.Trace"/>
     public interface ITrace
     {
+        /// <inheritdoc cref="global::System.Diagnostics.Trace.CorrelationManager"/>
+        global::System.Diagnostics.CorrelationManager CorrelationManager { get; }
+
+        /// <inheritdoc cref="global::System.Diagnostics.Trace.Listeners"/>
+        global::System.Diagnostics.TraceListenerCollection Listeners { get; }
+
+        /// <inheritdoc cref="global::System.Diagnostics.Trace.AutoFlush"/>
+        bool AutoFlush { get; set; }
+
+        /// <inheritdoc cref="global::System.Diagnostics.Trace.UseGlobalLock"/>
+        bool UseGlobalLock { get; set; }
+
+        /// <inheritdoc cref="global::System.Diagnostics.Trace.IndentLevel"/>
+        int IndentLevel { get; set; }
+
+        /// <inheritdoc cref="global::System.Diagnostics.Trace.IndentSize"/>
+        int IndentSize { get; set; }
+
+        /// <inheritdoc cref="global::System.Diagnostics.Trace.Refreshing"/>
+        event global::System.EventHandler? Refreshing;
+
         /// <inheritdoc cref="global::System.Diagnostics.Trace.Flush"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
@@ -35,13 +56,13 @@ namespace Fluentish.Injectable.System.Diagnostics
         /// <inheritdoc cref="global::System.Diagnostics.Trace.Fail"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute()] 
+        [global::System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute()]
         void Fail(string? message);
 
         /// <inheritdoc cref="global::System.Diagnostics.Trace.Fail"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute()] 
+        [global::System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute()]
         void Fail(string? message, string? detailMessage);
 
         /// <inheritdoc cref="global::System.Diagnostics.Trace.Refresh"/>
@@ -169,26 +190,6 @@ namespace Fluentish.Injectable.System.Diagnostics
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         void Unindent();
 
-        /// <inheritdoc cref="global::System.Diagnostics.Trace.CorrelationManager"/>
-        global::System.Diagnostics.CorrelationManager CorrelationManager { get; }
-
-        /// <inheritdoc cref="global::System.Diagnostics.Trace.Listeners"/>
-        global::System.Diagnostics.TraceListenerCollection Listeners { get; }
-
-        /// <inheritdoc cref="global::System.Diagnostics.Trace.AutoFlush"/>
-        bool AutoFlush { get; set; }
-
-        /// <inheritdoc cref="global::System.Diagnostics.Trace.UseGlobalLock"/>
-        bool UseGlobalLock { get; set; }
-
-        /// <inheritdoc cref="global::System.Diagnostics.Trace.IndentLevel"/>
-        int IndentLevel { get; set; }
-
-        /// <inheritdoc cref="global::System.Diagnostics.Trace.IndentSize"/>
-        int IndentSize { get; set; }
-
-        /// <inheritdoc cref="global::System.Diagnostics.Trace.Refreshing"/>
-        event global::System.EventHandler? Refreshing;
     }
 }
 #pragma warning restore

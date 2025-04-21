@@ -5,12 +5,14 @@ namespace Fluentish.Injectable.MethodReturnTests
 {
     /// <inheritdoc cref="global::MethodReturnTests.Pointer"/>
     [global::System.Diagnostics.DebuggerStepThrough]
-    public unsafe class PointerService: IPointer
+    public unsafe class PointerService : IPointer
     {
         /// <inheritdoc cref="global::MethodReturnTests.Pointer.Test"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int* Test() => global::MethodReturnTests.Pointer.Test();
+        public int* Test()
+            => global::MethodReturnTests.Pointer.Test();
+
     }
 }
 #pragma warning restore

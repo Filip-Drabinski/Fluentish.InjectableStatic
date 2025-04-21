@@ -7,79 +7,6 @@ namespace Fluentish.Injectable.System
     /// <inheritdoc cref="global::System.Environment"/>
     public interface IEnvironment
     {
-        /// <inheritdoc cref="global::System.Environment.Exit"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute()] 
-        void Exit(int exitCode);
-
-        /// <inheritdoc cref="global::System.Environment.FailFast"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute()] 
-        void FailFast(string? message);
-
-        /// <inheritdoc cref="global::System.Environment.FailFast"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute()] 
-        void FailFast(string? message, global::System.Exception? exception);
-
-        /// <inheritdoc cref="global::System.Environment.GetEnvironmentVariable"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        string? GetEnvironmentVariable(string variable);
-
-        /// <inheritdoc cref="global::System.Environment.GetEnvironmentVariable"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        string? GetEnvironmentVariable(string variable, global::System.EnvironmentVariableTarget target);
-
-        /// <inheritdoc cref="global::System.Environment.GetEnvironmentVariables"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        global::System.Collections.IDictionary GetEnvironmentVariables(global::System.EnvironmentVariableTarget target);
-
-        /// <inheritdoc cref="global::System.Environment.SetEnvironmentVariable"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        void SetEnvironmentVariable(string variable, string? value);
-
-        /// <inheritdoc cref="global::System.Environment.SetEnvironmentVariable"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        void SetEnvironmentVariable(string variable, string? value, global::System.EnvironmentVariableTarget target);
-
-        /// <inheritdoc cref="global::System.Environment.GetCommandLineArgs"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        string[] GetCommandLineArgs();
-
-        /// <inheritdoc cref="global::System.Environment.ExpandEnvironmentVariables"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        string ExpandEnvironmentVariables(string name);
-
-        /// <inheritdoc cref="global::System.Environment.GetFolderPath"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        string GetFolderPath(global::System.Environment.SpecialFolder folder);
-
-        /// <inheritdoc cref="global::System.Environment.GetFolderPath"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        string GetFolderPath(global::System.Environment.SpecialFolder folder, global::System.Environment.SpecialFolderOption option);
-
-        /// <inheritdoc cref="global::System.Environment.GetLogicalDrives"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        string[] GetLogicalDrives();
-
-        /// <inheritdoc cref="global::System.Environment.GetEnvironmentVariables"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        global::System.Collections.IDictionary GetEnvironmentVariables();
-
         /// <inheritdoc cref="global::System.Environment.CurrentManagedThreadId"/>
         int CurrentManagedThreadId { get; }
 
@@ -151,6 +78,79 @@ namespace Fluentish.Injectable.System
 
         /// <inheritdoc cref="global::System.Environment.WorkingSet"/>
         long WorkingSet { get; }
+
+        /// <inheritdoc cref="global::System.Environment.Exit"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        [global::System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute()]
+        void Exit(int exitCode);
+
+        /// <inheritdoc cref="global::System.Environment.FailFast"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        [global::System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute()]
+        void FailFast(string? message);
+
+        /// <inheritdoc cref="global::System.Environment.FailFast"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        [global::System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute()]
+        void FailFast(string? message, global::System.Exception? exception);
+
+        /// <inheritdoc cref="global::System.Environment.GetEnvironmentVariable"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        string? GetEnvironmentVariable(string variable);
+
+        /// <inheritdoc cref="global::System.Environment.GetEnvironmentVariable"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        string? GetEnvironmentVariable(string variable, global::System.EnvironmentVariableTarget target);
+
+        /// <inheritdoc cref="global::System.Environment.GetEnvironmentVariables"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        global::System.Collections.IDictionary GetEnvironmentVariables(global::System.EnvironmentVariableTarget target);
+
+        /// <inheritdoc cref="global::System.Environment.SetEnvironmentVariable"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        void SetEnvironmentVariable(string variable, string? value);
+
+        /// <inheritdoc cref="global::System.Environment.SetEnvironmentVariable"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        void SetEnvironmentVariable(string variable, string? value, global::System.EnvironmentVariableTarget target);
+
+        /// <inheritdoc cref="global::System.Environment.GetCommandLineArgs"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        string[] GetCommandLineArgs();
+
+        /// <inheritdoc cref="global::System.Environment.ExpandEnvironmentVariables"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        string ExpandEnvironmentVariables(string name);
+
+        /// <inheritdoc cref="global::System.Environment.GetFolderPath"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        string GetFolderPath(global::System.Environment.SpecialFolder folder);
+
+        /// <inheritdoc cref="global::System.Environment.GetFolderPath"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        string GetFolderPath(global::System.Environment.SpecialFolder folder, global::System.Environment.SpecialFolderOption option);
+
+        /// <inheritdoc cref="global::System.Environment.GetLogicalDrives"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        string[] GetLogicalDrives();
+
+        /// <inheritdoc cref="global::System.Environment.GetEnvironmentVariables"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        global::System.Collections.IDictionary GetEnvironmentVariables();
 
     }
 }
