@@ -14,7 +14,7 @@
 
 		<Title>Fluentish.InjectableStatic</Title>
 		<RepositoryUrl>https://github.com/Filip-Drabinski/Fluentish.InjectableStatic</RepositoryUrl>
-		<VersionPrefix>0.2.0</VersionPrefix>
+		<VersionPrefix>0.2.1</VersionPrefix>
 		<Description>Generate injectable wrappers for static classes</Description>
 		<PackageProjectUrl>https://github.com/Filip-Drabinski/Fluentish.InjectableStatic</PackageProjectUrl>
 		<RepositoryType>
