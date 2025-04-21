@@ -3,19 +3,21 @@
 
 `Fluentish.InjectableStatic.Generator` is a source generator for C#. It allows you to generate interface and service classes that wrap static members of your target classes. By applying attributes, you can control which static classes and members become “injectable,” making it easier to work with otherwise rigid static code through a dependency injection container.
 
-### Features
+## Features
 - Automatically generate wrapper classes and corresponding interfaces
+- open generics support
 - Supported member types:
   - Constants
   - static Properties
+  - static Events
   - static Fields
   - static Methods
-
 - Filter which members are included in generated code
 - Customize namespace prefix
 
-### Usage
-#### Basic usage:
+
+## Usage
+### Basic usage:
 ```csharp
 [assembly: Fluentish.InjectableStatic.Injectable(typeof(System.Console))]
 
@@ -25,33 +27,36 @@ console.WriteLine("Hello, World!");
 ```
 Will generate `Fluentish.Injectable.System.IConsole` and `Fluentish.Injectable.System.ConsoleService`, which contain all the static members.
 
-#### Filtering members:
-```csharp
-[assembly: Fluentish.InjectableStatic.Injectable(
-    typeof(System.Diagnostics.Debug),
-    FilterType.Exclude,
-    nameof(System.Diagnostics.Debug.Print)
-)]
-```
-Will generate `Fluentish.Injectable.System.Diagnostics.IDebug` and `Fluentish.Injectable.System.Diagnostics.DebugService` without the `Print` method.
 
-```csharp
-[assembly: Fluentish.InjectableStatic.Injectable(
-    typeof(System.Diagnostics.Debug),
-    FilterType.Include,
-    nameof(System.Diagnostics.Debug.Write),
-    nameof(System.Diagnostics.Debug.WriteIf),
-    nameof(System.Diagnostics.Debug.WriteLine),
-    nameof(System.Diagnostics.Debug.WriteLineIf)
-)]
-```
-Will generate `Fluentish.Injectable.System.Diagnostics.IDebug` and `Fluentish.Injectable.System.Diagnostics.DebugService` containing only the listed members.
+### Filtering members:
+
+1. **Exclude**
+   ```csharp
+   [assembly: Fluentish.InjectableStatic.Injectable(
+       typeof(System.Diagnostics.Debug),
+       Fluentish.InjectableStatic.FilterType.Exclude,
+       nameof(System.Diagnostics.Debug.Print)
+   )]
+   ```
+   Will generate `Fluentish.Injectable.System.Diagnostics.IDebug` and `Fluentish.Injectable.System.Diagnostics.DebugService` without the `Print` method.
+2. **Include**
+   ```csharp
+   [assembly: Fluentish.InjectableStatic.Injectable(
+       typeof(System.Diagnostics.Debug),
+       Fluentish.InjectableStatic.FilterType.Include,
+       nameof(System.Diagnostics.Debug.Write),
+       nameof(System.Diagnostics.Debug.WriteIf),
+       nameof(System.Diagnostics.Debug.WriteLine),
+       nameof(System.Diagnostics.Debug.WriteLineIf)
+   )]
+   ```
+   Will generate `Fluentish.Injectable.System.Diagnostics.IDebug` and `Fluentish.Injectable.System.Diagnostics.DebugService` containing only the listed members.
 
 ## Configuration
 
 By default, generated classes are prefixed with `Fluentish.Injectable.` to avoid name collisions. You can customize this behavior using the `InjectableStaticConfigurationAttribute` at the assembly level.
 
-#### Available Options
+### Available Options
 
 ```csharp
 [assembly: Fluentish.InjectableStatic.InjectableStaticConfigurationAttribute(
@@ -61,11 +66,11 @@ By default, generated classes are prefixed with `Fluentish.Injectable.` to avoid
 ```
 
 | Property        | Description |
-|----------------|-------------|
+|-|-|
 | `Namespace`     | The base namespace for generated wrappers. Set to an empty string (`""`) to disable namespace prefixing entirely. |
 | `NamespaceMode` | Determines how the namespace is applied. See below for details. |
 
-#### Namespace Modes
+### Namespace Modes
 
 - `NamespaceMode.Prefix` (default):  
   The value of `Namespace` is used as a prefix. For example, if set to `"My.Custom"`, generated classes will be in `"My.Custom.Original.Namespace"`.
@@ -73,7 +78,7 @@ By default, generated classes are prefixed with `Fluentish.Injectable.` to avoid
 - `NamespaceMode.Const`:  
   The value of `Namespace` replaces the entire namespace. All generated classes will reside in exactly the specified namespace.
 
-#### Examples
+### Examples
 
 **Remove the default prefix:**
 ```csharp
@@ -100,7 +105,8 @@ By default, generated classes are prefixed with `Fluentish.Injectable.` to avoid
 Please note that this project is in its early stages of development and may require significant improvements. While it is functional, it may not be suitable for production use in its current state. Any feedback, suggestions, or contributions to improve the source generator are highly appreciated.
 
 ## Contributing
-Currently, I'm not accepting any code contributions because the project requires a major refactoring.
+All contributions are appreciated, but please discuss any ideas or planned changes with me through a GitHub issue beforehand to avoid unnecessary or conflicting work.
+
 
 ## Support
 If you have any questions, issues, or suggestions, please create a new issue on the GitHub repository.
