@@ -15,7 +15,7 @@ namespace Fluentish.InjectableStatic.Test.Snapshot.Tests
         {
             var res = await _verifier.Verify(
                 diagnosticCodesToIgnore: [
-                    "CS0067" //The event * is never used
+                    "CS0067" //The * is never used
                 ],
                 sources: [
                     StaticSource.Program,
