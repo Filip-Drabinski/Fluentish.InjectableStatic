@@ -19,7 +19,7 @@
 		<PackageProjectUrl>https://github.com/Filip-Drabinski/Fluentish.InjectableStatic</PackageProjectUrl>
 		<RepositoryType>
 		</RepositoryType>
-		<PackageTags>dependency-injection, di, IIncrementalGenerator, wrapper, injectable</PackageTags>
+		<PackageTags>dependency-injection injectable static-class injectable-service roslyn-generator source-generator</PackageTags>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
