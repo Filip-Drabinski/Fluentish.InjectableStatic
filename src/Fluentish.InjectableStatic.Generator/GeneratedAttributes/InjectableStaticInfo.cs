@@ -13,7 +13,7 @@ namespace Fluentish.InjectableStatic.Generator.GeneratedAttributes
         /// <summary>
         /// required to avoid nullablility issues after using `Where` with `is not null` filtering
         /// </summary>
-        public static readonly InjectableStaticInfo Default = new(null!, FilterType.Exclude, System.Array.Empty<string>());
+        public static readonly InjectableStaticInfo Default = new(null!, FilterType.Exclude, []);
 
         public INamedTypeSymbol type;
         public FilterType filter;

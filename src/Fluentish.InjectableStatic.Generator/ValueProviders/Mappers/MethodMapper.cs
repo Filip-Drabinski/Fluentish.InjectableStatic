@@ -1,12 +1,12 @@
-﻿using Microsoft.CodeAnalysis;
+﻿using Fluentish.InjectableStatic.Generator.Models.Members;
+using Microsoft.CodeAnalysis;
 using System.Collections.Immutable;
-using Fluentish.InjectableStatic.Generator.Models.Members;
 
 namespace Fluentish.InjectableStatic.Generator.ValueProviders.Mappers
 {
     internal static class MethodMapper
     {
-        public static bool TryParseMethodModel(this ISymbol memberSymbol, out MethodModel methodModel, out bool requireNullable)
+        public static bool TryParseMethodModel(this ISymbol memberSymbol, TypeSerializer typeSerializer, out MethodModel methodModel, out bool requireNullable)
         {
             if (
                 memberSymbol is not IMethodSymbol methodSymbol
@@ -29,16 +29,16 @@ namespace Fluentish.InjectableStatic.Generator.ValueProviders.Mappers
             var attributeModels = methodSymbol
                 .GetAttributes()
                 .WhereGeneratable()
-                .ToAttributeModels(out var attributeNullable);
+                .ToAttributeModels(typeSerializer, out var attributeNullable);
             requireNullable |= attributeNullable;
 
-            var returnType = methodSymbol.ReturnType.ToFullyQualifiedName(out var returnTypeNullable);
+            var returnType = typeSerializer.Serialize( methodSymbol.ReturnType, out var returnTypeNullable);
             requireNullable |= returnTypeNullable;
             
-            var parameterModels = methodSymbol.Parameters.ToMethodParameterModels(out var parametersNullable);
+            var parameterModels = methodSymbol.Parameters.ToMethodParameterModels(typeSerializer, out var parametersNullable);
             requireNullable |= parametersNullable;
             
-            var genericArguments = methodSymbol.ToGenericArgumentModels(out var genericTypesNullable);
+            var genericArguments = methodSymbol.ToGenericArgumentModels(typeSerializer, out var genericTypesNullable);
             requireNullable |= genericTypesNullable;
 
             methodModel = new MethodModel(
@@ -50,27 +50,27 @@ namespace Fluentish.InjectableStatic.Generator.ValueProviders.Mappers
             );
             return true;
         }
-        public static MethodParameterModel[] ToMethodParameterModels(this ImmutableArray<IParameterSymbol> parameters, out bool requireNullable)
+        public static MethodParameterModel[] ToMethodParameterModels(this ImmutableArray<IParameterSymbol> parameters, TypeSerializer typeSerializer, out bool requireNullable)
         {
             requireNullable = false;
             var result = new MethodParameterModel[parameters.Length];
             for (int i = 0; i < result.Length; i++)
             {
-                result[i] = parameters[i].ToMethodParameterModel(out var parameterNullable);
+                result[i] = parameters[i].ToMethodParameterModel(typeSerializer, out var parameterNullable);
                 requireNullable |= parameterNullable;
             }
             return result;
         }
-        public static MethodParameterModel ToMethodParameterModel(this IParameterSymbol parameter, out bool requireNullable)
+        public static MethodParameterModel ToMethodParameterModel(this IParameterSymbol parameter, TypeSerializer typeSerializer, out bool requireNullable)
         {
             requireNullable = parameter.NullableAnnotation == NullableAnnotation.Annotated;
 
-            var typeName = parameter.Type.ToFullyQualifiedName(out var nullableType);
+            var typeName = typeSerializer.Serialize(parameter.Type, out var nullableType);
             requireNullable |= nullableType;
 
             var parameterName = parameter.Name;
 
-            var attributes = parameter.GetAttributes().WhereGeneratable().ToAttributeModels(out var attributeNullable);
+            var attributes = parameter.GetAttributes().WhereGeneratable().ToAttributeModels(typeSerializer, out var attributeNullable);
             requireNullable |= attributeNullable;
 
             var modifier = parameter switch

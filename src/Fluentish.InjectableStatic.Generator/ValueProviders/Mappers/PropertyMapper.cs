@@ -1,11 +1,11 @@
-﻿using Microsoft.CodeAnalysis;
-using Fluentish.InjectableStatic.Generator.Models.Members;
+﻿using Fluentish.InjectableStatic.Generator.Models.Members;
+using Microsoft.CodeAnalysis;
 
 namespace Fluentish.InjectableStatic.Generator.ValueProviders.Mappers
 {
     internal static class PropertyMapper
     {
-        public static bool TryParsePropertyModel(this ISymbol memberSymbol, out PropertyModel propertyModel, out bool requireNullable)
+        public static bool TryParsePropertyModel(this ISymbol memberSymbol, TypeSerializer typeSerializer, out PropertyModel propertyModel, out bool requireNullable)
         {
             if (memberSymbol is not IPropertySymbol propertySymbol)
             {
@@ -18,10 +18,10 @@ namespace Fluentish.InjectableStatic.Generator.ValueProviders.Mappers
             var attributeModels = propertySymbol
                 .GetAttributes()
                 .WhereGeneratable()
-                .ToAttributeModels(out var attributeNullable);
+                .ToAttributeModels(typeSerializer, out var attributeNullable);
             requireNullable |= attributeNullable;
 
-            var type = propertySymbol.Type.ToFullyQualifiedName(out var nullableType);
+            var type = typeSerializer.Serialize(propertySymbol.Type, out var nullableType);
             requireNullable |= nullableType;
 
             var name = propertySymbol.Name;

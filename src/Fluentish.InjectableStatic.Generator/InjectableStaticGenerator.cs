@@ -1,8 +1,10 @@
-﻿using Fluentish.InjectableStatic.Generator.Attributes;
-using Fluentish.InjectableStatic.Generator.Extensions;
+﻿using Fluentish.InjectableStatic.Generator.Extensions;
+using Fluentish.InjectableStatic.Generator.GeneratedAttributes;
 using Fluentish.InjectableStatic.Generator.ValueProviders;
+using Fluentish.InjectableStatic.Generator.ValueProviders.Mappers;
 using Microsoft.CodeAnalysis;
 using System.Text;
+
 namespace Fluentish.InjectableStatic.Generator
 {
     [Generator]
@@ -10,7 +12,7 @@ namespace Fluentish.InjectableStatic.Generator
     {
         public void Initialize(IncrementalGeneratorInitializationContext context)
         {
-
+            var typeSerializer = new TypeSerializer();
             context.RegisterPostInitializationOutput(context =>
             {
                 context.AddInjectableStaticAttribute();
@@ -24,7 +26,7 @@ namespace Fluentish.InjectableStatic.Generator
             var infoProvider = injectableClassInfoProvider
                 .Combine(namespacePrefixProvider);
 
-            var modelProvider = infoProvider.GetClassModelProvider();
+            var modelProvider = infoProvider.GetClassModelProvider(typeSerializer);
 
             context.RegisterSourceOutput(modelProvider, ProcessModels);
         }

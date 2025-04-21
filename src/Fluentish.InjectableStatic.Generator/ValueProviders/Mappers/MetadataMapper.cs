@@ -1,58 +1,191 @@
-﻿using Microsoft.CodeAnalysis;
+﻿using Fluentish.InjectableStatic.Generator.Models.Metadata;
+using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
-using System.Text;
-using Fluentish.InjectableStatic.Generator.Extensions;
+using System.Collections.Concurrent;
 using System.Collections.Immutable;
-using Fluentish.InjectableStatic.Generator.Models.Metadata;
 using System.Linq;
 
 namespace Fluentish.InjectableStatic.Generator.ValueProviders.Mappers
 {
+    public class TypeSerializer
+    {
+        private readonly ConcurrentDictionary<ITypeSymbol, (string value, bool requireNullable)> _cache;
+        public TypeSerializer()
+        {
+            _cache = new ConcurrentDictionary<ITypeSymbol, (string value, bool requireNullable)>(SymbolEqualityComparer.IncludeNullability);
+        }
+        public string Serialize(ITypeSymbol typeSymbol, out bool requireNullable)
+        {
+            var needsNullable = false;
+
+            var returnType = ToFullyQualifiedType(typeSymbol, ref needsNullable).ToString();
+            requireNullable = needsNullable;
+
+            return returnType;
+        }
+
+        private string ToFullyQualifiedType(ITypeSymbol type, ref bool requireNullable)
+        {
+            if (_cache.TryGetValue(type, out var cacheHit))
+            {
+                requireNullable |= cacheHit.requireNullable;
+                return cacheHit.value;
+            }
+            var isNullable = false;
+            string result;
+            switch (type)
+            {
+                case IArrayTypeSymbol arrayType:
+                    result = ToFullyQualifiedType(arrayType.ElementType, ref isNullable) + "[]";
+                    break;
+                case IPointerTypeSymbol pointerType:
+                    result = ToFullyQualifiedType(pointerType.PointedAtType, ref isNullable) + "*";
+                    break;
+                case INamedTypeSymbol { IsTupleType: true } tupleType:
+                    result = ToFullyQualifiedTuple(tupleType, ref isNullable);
+                    break;
+                case INamedTypeSymbol { IsTupleType: false } namedType:
+                    result = ToFullyQualifiedNamedType(namedType, ref isNullable);
+                    break;
+                case IDynamicTypeSymbol:
+                    result = "dynamic";
+                    break;
+                case IFunctionPointerTypeSymbol funcPtr:
+                    var funcDisplayString = funcPtr.ToDisplayString(SymbolDisplayFormat.MinimallyQualifiedFormat);
+                    result = funcDisplayString;
+                    break;
+                default:
+                    var displayString = type.ToDisplayString(SymbolDisplayFormat.FullyQualifiedFormat);
+                    result = displayString;
+                    break;
+            }
+
+            _cache.TryAdd(type, (result, isNullable));
+
+            requireNullable |= isNullable || type.NullableAnnotation == NullableAnnotation.Annotated;
+            return result;
+        }
+
+        private string ToFullyQualifiedTuple(INamedTypeSymbol tupleType, ref bool requireNullable)
+        {
+            var elements = tupleType.TupleElements;
+
+            var result = "(";
+            for (int i = 0; i < elements.Length; i++)
+            {
+                var element = elements[i];
+                result += ToFullyQualifiedType(element.Type, ref requireNullable);
+                if (!string.IsNullOrEmpty(element.Name))
+                {
+                    result += " " + element.Name;
+                }
+
+                if (i < elements.Length - 1)
+                {
+                    result += ", ";
+                }
+            }
+            result += ")";
+            return result;
+        }
+
+        private string ToFullyQualifiedNamedType(INamedTypeSymbol typeSymbol, ref bool requireNullable)
+        {
+            if (
+                typeSymbol.SpecialType != SpecialType.None
+                && typeSymbol.SpecialType != SpecialType.System_DateTime
+                && typeSymbol.TypeKind != TypeKind.Interface
+            )
+            {
+                return typeSymbol.ToDisplayString(SymbolDisplayFormat.MinimallyQualifiedFormat);
+            }
+            var result = "";
+
+            if (typeSymbol.ContainingType != null)
+            {
+                result += ToFullyQualifiedNamedType(typeSymbol.ContainingType, ref requireNullable) + ".";
+            }
+            else if (
+                typeSymbol.ContainingNamespace != null
+                && !typeSymbol.ContainingNamespace.IsGlobalNamespace
+            )
+            {
+                result += "global::" + typeSymbol.ContainingNamespace.ToDisplayString() + ".";
+            }
+
+
+            result += typeSymbol.Name;
+
+            if (typeSymbol.TypeArguments.Length > 0)
+            {
+                result += "<";
+                for (int i = 0; i < typeSymbol.TypeArguments.Length; i++)
+                {
+                    result += ToFullyQualifiedType(typeSymbol.TypeArguments[i], ref requireNullable);
+
+                    if (i < typeSymbol.TypeArguments.Length - 1)
+                    {
+                        result += ", ";
+                    }
+                }
+                result += ">";
+            }
+
+            if (typeSymbol.Name != "Nullable" && typeSymbol.NullableAnnotation == NullableAnnotation.Annotated)
+            {
+                result += "?";
+            }
+            return result;
+        }
+
+    }
+
     internal static class MetadataMapper
     {
-        public static AttributeModel[] ToAttributeModels(this ImmutableArray<AttributeData> attributes, out bool requireNullable)
+        public static AttributeModel[] ToAttributeModels(this ImmutableArray<AttributeData> attributes, TypeSerializer typeSerializer, out bool requireNullable)
         {
             requireNullable = false;
             var result = new AttributeModel[attributes.Length];
             for (int i = 0; i < result.Length; i++)
             {
-                result[i] = attributes[i].ToAttributeModel(out var attributeNullable);
+                result[i] = attributes[i].ToAttributeModel(typeSerializer, out var attributeNullable);
                 requireNullable |= attributeNullable;
             }
             return result;
         }
 
-        public static GenericArgumentModel[] ToGenericArgumentModels(this IMethodSymbol methodSymbol, out bool requireNullable)
+        public static GenericArgumentModel[] ToGenericArgumentModels(this IMethodSymbol methodSymbol, TypeSerializer typeSerializer, out bool requireNullable)
         {
-            return methodSymbol.TypeArguments.ToGenericArgumentModels(methodSymbol.OriginalDefinition.TypeParameters, out requireNullable);
+            return methodSymbol.TypeArguments.ToGenericArgumentModels(methodSymbol.OriginalDefinition.TypeParameters, typeSerializer, out requireNullable);
         }
 
-        public static GenericArgumentModel[] ToGenericArgumentModels(this INamedTypeSymbol namedType, out bool requireNullable)
+        public static GenericArgumentModel[] ToGenericArgumentModels(this INamedTypeSymbol namedType, TypeSerializer typeSerializer, out bool requireNullable)
         {
-            return namedType.TypeArguments.ToGenericArgumentModels(namedType.OriginalDefinition.TypeParameters, out requireNullable);
+            return namedType.TypeArguments.ToGenericArgumentModels(namedType.OriginalDefinition.TypeParameters, typeSerializer, out requireNullable);
         }
 
-        public static GenericArgumentModel[] ToGenericArgumentModels(this ImmutableArray<ITypeSymbol> typeArguments, ImmutableArray<ITypeParameterSymbol> typeParameters, out bool requireNullable)
+        public static GenericArgumentModel[] ToGenericArgumentModels(this ImmutableArray<ITypeSymbol> typeArguments, ImmutableArray<ITypeParameterSymbol> typeParameters, TypeSerializer typeSerializer, out bool requireNullable)
         {
             var result = new GenericArgumentModel[typeArguments.Length];
             requireNullable = false;
             for (int i = 0; i < result.Length; i++)
             {
-                result[i] = typeArguments[i].ToGenericArgumentModel(typeParameters[i], out var nullableArgument);
+                result[i] = typeArguments[i].ToGenericArgumentModel(typeSerializer, typeParameters[i], out var nullableArgument);
                 requireNullable |= nullableArgument;
             }
             return result;
         }
 
-        public static AttributeModel ToAttributeModel(this AttributeData attribute, out bool requireNullable)
+        public static AttributeModel ToAttributeModel(this AttributeData attribute, TypeSerializer typeSerializer, out bool requireNullable)
         {
             requireNullable = false;
-            var typeFullName = attribute.AttributeClass!.ToFullyQualifiedName(out var _);
+            var typeFullName = typeSerializer.Serialize(attribute.AttributeClass!, out var attributeNullable);
+            requireNullable |= attributeNullable;
 
             var arguments = new string[attribute.ConstructorArguments.Length];
             for (int i = 0; i < attribute.ConstructorArguments.Length; i++)
             {
-                arguments[i] = attribute.ConstructorArguments[i].ToFullValue(out var argumentNullable);
+                arguments[i] = attribute.ConstructorArguments[i].ToFullValue(typeSerializer, out var argumentNullable);
 
                 requireNullable |= argumentNullable;
             }
@@ -62,7 +195,7 @@ namespace Fluentish.InjectableStatic.Generator.ValueProviders.Mappers
             {
                 var name = attribute.NamedArguments[i].Key;
 
-                var value = attribute.NamedArguments[i].Value.ToFullValue(out var argumentNullable);
+                var value = attribute.NamedArguments[i].Value.ToFullValue(typeSerializer, out var argumentNullable);
                 requireNullable |= argumentNullable;
 
                 namedArguments[i] = (name, value);
@@ -75,7 +208,7 @@ namespace Fluentish.InjectableStatic.Generator.ValueProviders.Mappers
             );
         }
 
-        public static GenericArgumentModel ToGenericArgumentModel(this ITypeSymbol typeArgument, ITypeParameterSymbol typeParameter, out bool requireNullable)
+        public static GenericArgumentModel ToGenericArgumentModel(this ITypeSymbol typeArgument, TypeSerializer typeSerializer, ITypeParameterSymbol typeParameter, out bool requireNullable)
         {
             requireNullable = false;
 
@@ -97,7 +230,7 @@ namespace Fluentish.InjectableStatic.Generator.ValueProviders.Mappers
             var typeConstraints = new string[typeParameter.ConstraintTypes.Length];
             for (int i = 0; i < typeParameter.ConstraintTypes.Length; i++)
             {
-                typeConstraints[i] = typeParameter.ConstraintTypes[i].ToFullyQualifiedName(out var typeConstraintNullable);
+                typeConstraints[i] = typeSerializer.Serialize(typeParameter.ConstraintTypes[i], out var typeConstraintNullable);
                 requireNullable |= typeConstraintNullable;
             }
 
@@ -115,16 +248,7 @@ namespace Fluentish.InjectableStatic.Generator.ValueProviders.Mappers
             );
         }
 
-        public static string ToFullyQualifiedName(this ITypeSymbol typeSymbol, out bool requireNullable)
-        {
-            var needsNullable = false;
-
-            var returnType = new StringBuilder().AppendType(typeSymbol, ref needsNullable).ToString();
-            requireNullable = needsNullable;
-
-            return returnType;
-        }
-        public static string ToFullValue(this TypedConstant constant, out bool requireNullable)
+        public static string ToFullValue(this TypedConstant constant, TypeSerializer typeSerializer, out bool requireNullable)
         {
             requireNullable = false;
             if (constant.IsNull)
@@ -141,7 +265,7 @@ namespace Fluentish.InjectableStatic.Generator.ValueProviders.Mappers
                     {
                         res += ", ";
                     }
-                    res += constant.Values[i].ToFullValue(out var itemNullable);
+                    res += constant.Values[i].ToFullValue(typeSerializer, out var itemNullable);
                     requireNullable |= itemNullable;
                 }
                 res += "}";
@@ -150,7 +274,7 @@ namespace Fluentish.InjectableStatic.Generator.ValueProviders.Mappers
 
             if (constant.Kind == TypedConstantKind.Type || constant.Type!.SpecialType == SpecialType.System_Object)
             {
-                var res = $"typeof({constant.Type!.ToFullyQualifiedName(out var typeNullable)})"; ;
+                var res = $"typeof({typeSerializer.Serialize(constant.Type!, out var typeNullable)})"; ;
                 requireNullable |= typeNullable;
                 return res;
             }

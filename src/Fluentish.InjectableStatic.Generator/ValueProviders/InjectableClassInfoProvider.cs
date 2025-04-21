@@ -1,5 +1,4 @@
-﻿using Fluentish.InjectableStatic.Generator.Attributes;
-using Fluentish.InjectableStatic.Generator.GeneratedAttributes;
+﻿using Fluentish.InjectableStatic.Generator.GeneratedAttributes;
 using Microsoft.CodeAnalysis;
 using System.Linq;
 

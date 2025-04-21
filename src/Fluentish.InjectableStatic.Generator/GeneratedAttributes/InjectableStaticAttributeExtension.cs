@@ -1,6 +1,6 @@
 ﻿using Microsoft.CodeAnalysis;
 
-namespace Fluentish.InjectableStatic.Generator.Attributes
+namespace Fluentish.InjectableStatic.Generator.GeneratedAttributes
 {
     internal static class InjectableStaticAttributeExtension
     {

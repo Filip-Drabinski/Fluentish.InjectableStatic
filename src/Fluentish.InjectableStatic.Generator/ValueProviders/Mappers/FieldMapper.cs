@@ -1,11 +1,11 @@
-﻿using Microsoft.CodeAnalysis;
-using Fluentish.InjectableStatic.Generator.Models.Members;
+﻿using Fluentish.InjectableStatic.Generator.Models.Members;
+using Microsoft.CodeAnalysis;
 
 namespace Fluentish.InjectableStatic.Generator.ValueProviders.Mappers
 {
     internal static class FieldMapper
     {
-        public static bool TryParseFieldModel(this ISymbol symbol, out FieldModel fieldModel, out bool requireNullable)
+        public static bool TryParseFieldModel(this ISymbol symbol, TypeSerializer typeSerializer, out FieldModel fieldModel, out bool requireNullable)
         {
             if (symbol is not IFieldSymbol fieldSymbol)
             {
@@ -18,10 +18,10 @@ namespace Fluentish.InjectableStatic.Generator.ValueProviders.Mappers
             var attributeModels = fieldSymbol
                 .GetAttributes()
                 .WhereGeneratable()
-                .ToAttributeModels(out var attributeNullable);
+                .ToAttributeModels(typeSerializer, out var attributeNullable);
             requireNullable |= attributeNullable;
 
-            var type = fieldSymbol.Type.ToFullyQualifiedName(out var nullableType);
+            var type = typeSerializer.Serialize(fieldSymbol.Type, out var nullableType);
             requireNullable |= nullableType;
 
             var name = fieldSymbol.Name;

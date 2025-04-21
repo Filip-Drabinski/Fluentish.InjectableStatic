@@ -1,11 +1,11 @@
-﻿using Microsoft.CodeAnalysis;
-using Fluentish.InjectableStatic.Generator.Models.Members;
+﻿using Fluentish.InjectableStatic.Generator.Models.Members;
+using Microsoft.CodeAnalysis;
 
 namespace Fluentish.InjectableStatic.Generator.ValueProviders.Mappers
 {
     internal static class EventMapper
     {
-        public static bool TryParseEventModel(this ISymbol memberSymbol, out EventModel eventModel, out bool requireNullable)
+        public static bool TryParseEventModel(this ISymbol memberSymbol, TypeSerializer typeSerializer, out EventModel eventModel, out bool requireNullable)
         {
             if (memberSymbol is not IEventSymbol eventSymbol)
             {
@@ -18,10 +18,10 @@ namespace Fluentish.InjectableStatic.Generator.ValueProviders.Mappers
             var attributeModels = eventSymbol
                 .GetAttributes()
                 .WhereGeneratable()
-                .ToAttributeModels(out var attributeNullable);
+                .ToAttributeModels(typeSerializer, out var attributeNullable);
             requireNullable |= attributeNullable;
 
-            var type = eventSymbol.Type.ToFullyQualifiedName(out var nullableType);
+            var type = typeSerializer.Serialize(eventSymbol.Type, out var nullableType);
             requireNullable |= nullableType;
 
             var name = eventSymbol.Name;

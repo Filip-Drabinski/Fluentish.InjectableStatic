@@ -1,21 +1,25 @@
-﻿using Fluentish.InjectableStatic.Generator.Models;
-using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
-using Microsoft.CodeAnalysis.CSharp;
-using System.Linq;
-using System.Collections.Generic;
-using System.Collections.Immutable;
-using System;
+﻿using Fluentish.InjectableStatic.Generator.GeneratedAttributes;
+using Fluentish.InjectableStatic.Generator.Models;
 using Fluentish.InjectableStatic.Generator.Models.Members;
 using Fluentish.InjectableStatic.Generator.ValueProviders.Mappers;
-using Fluentish.InjectableStatic.Generator.GeneratedAttributes;
+using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+using System;
+using System.Collections.Generic;
+using System.Collections.Immutable;
+using System.Linq;
 
 namespace Fluentish.InjectableStatic.Generator.ValueProviders
 {
     internal static class ClassModelProvider
     {
-        public static IncrementalValuesProvider<ClassModel> GetClassModelProvider(this IncrementalValuesProvider<(InjectableStaticInfo classInfo, InjectableStaticConfigurationInfo configuration)> injectableClassInfoProvider)
+        public static IncrementalValuesProvider<ClassModel> GetClassModelProvider(
+            this IncrementalValuesProvider<(InjectableStaticInfo classInfo, InjectableStaticConfigurationInfo configuration)> injectableClassInfoProvider,
+            TypeSerializer typeSerializer
+        )
         {
+
             return injectableClassInfoProvider.Select((data, ct) =>
             {
                 var (classInfo, configuration) = data;
@@ -29,9 +33,9 @@ namespace Fluentish.InjectableStatic.Generator.ValueProviders
                     ? configuration.Namespace
                     : configuration.Namespace + classInfo.type.ContainingNamespace.ToDisplayString();
 
-                var originalTypeFullName = classInfo.type.ToFullyQualifiedName(out var requireNullable);
+                var originalTypeFullName = typeSerializer.Serialize(classInfo.type, out var requireNullable);
 
-                var genericArguments = classInfo.type.ToGenericArgumentModels(out var genericTypesNullable);
+                var genericArguments = classInfo.type.ToGenericArgumentModels(typeSerializer, out var genericTypesNullable);
                 requireNullable |= genericTypesNullable;
 
                 var propertyModels = new List<PropertyModel>();
@@ -58,25 +62,25 @@ namespace Fluentish.InjectableStatic.Generator.ValueProviders
                         continue;
                     }
 
-                    if (memberSymbol.TryParseEventModel(out var eventModel, out var eventNullable))
+                    if (memberSymbol.TryParseEventModel(typeSerializer, out var eventModel, out var eventNullable))
                     {
                         requireNullable |= eventNullable;
                         eventModels.Add(eventModel);
                     }
 
-                    if (memberSymbol.TryParsePropertyModel(out var propertyModel, out var propertyNullable))
+                    if (memberSymbol.TryParsePropertyModel(typeSerializer, out var propertyModel, out var propertyNullable))
                     {
                         requireNullable |= propertyNullable;
                         propertyModels.Add(propertyModel);
                     }
 
-                    if (memberSymbol.TryParseFieldModel(out var fieldModel, out var fieldNullable))
+                    if (memberSymbol.TryParseFieldModel(typeSerializer, out var fieldModel, out var fieldNullable))
                     {
                         requireNullable |= fieldNullable;
                         fieldModels.Add(fieldModel);
                     }
 
-                    if (memberSymbol.TryParseMethodModel(out var methodModel, out var methodNullable))
+                    if (memberSymbol.TryParseMethodModel(typeSerializer, out var methodModel, out var methodNullable))
                     {
                         requireNullable |= methodNullable;
                         methodModels.Add(methodModel);
