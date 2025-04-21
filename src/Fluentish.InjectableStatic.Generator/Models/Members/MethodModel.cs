@@ -1,4 +1,5 @@
-﻿using Fluentish.InjectableStatic.Generator.Models.Metadata;
+﻿using Fluentish.InjectableStatic.Generator.Extensions;
+using Fluentish.InjectableStatic.Generator.Models.Metadata;
 using System.Diagnostics;
 
 namespace Fluentish.InjectableStatic.Generator.Models.Members
@@ -23,7 +24,7 @@ namespace Fluentish.InjectableStatic.Generator.Models.Members
             Attributes = attributes;
             GenericArguments = genericArguments;
             ReturnType = returnType;
-            Name = name;
+            Name = name.EscapeKeyword();
             Parameters = parameters;
         }
     }

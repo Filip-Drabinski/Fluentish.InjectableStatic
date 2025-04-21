@@ -1,4 +1,5 @@
 ﻿using Fluentish.InjectableStatic.Generator.Models.Metadata;
+using Microsoft.CodeAnalysis;
 using System.Text;
 
 namespace Fluentish.InjectableStatic.Generator.Extensions
@@ -238,6 +239,14 @@ namespace Fluentish.InjectableStatic.Generator.Extensions
             return builder;
         }
 
+        public static string EscapeKeyword(this string value)
+        {
+            if (Microsoft.CodeAnalysis.CSharp.SyntaxFacts.GetKeywordKind(value) == Microsoft.CodeAnalysis.CSharp.SyntaxKind.None)
+            {
+                return value;
+            }
 
+            return $"@{value}";
+        }
     }
 }
