@@ -13,6 +13,7 @@ namespace Fluentish.Injectable.EventAccessibilityTests
             add => global::EventAccessibilityTests.PublicEvent.Test += value;
             remove => global::EventAccessibilityTests.PublicEvent.Test -= value;
         }
+
     }
 }
 #pragma warning restore

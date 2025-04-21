@@ -7,6 +7,12 @@ namespace Fluentish.Injectable.System.Threading
     /// <inheritdoc cref="global::System.Threading.Thread"/>
     public interface IThread
     {
+        /// <inheritdoc cref="global::System.Threading.Thread.CurrentPrincipal"/>
+        global::System.Security.Principal.IPrincipal? CurrentPrincipal { get; set; }
+
+        /// <inheritdoc cref="global::System.Threading.Thread.CurrentThread"/>
+        global::System.Threading.Thread CurrentThread { get; }
+
         /// <inheritdoc cref="global::System.Threading.Thread.SpinWait"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
@@ -242,12 +248,6 @@ namespace Fluentish.Injectable.System.Threading
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         int GetCurrentProcessorId();
-
-        /// <inheritdoc cref="global::System.Threading.Thread.CurrentPrincipal"/>
-        global::System.Security.Principal.IPrincipal? CurrentPrincipal { get; set; }
-
-        /// <inheritdoc cref="global::System.Threading.Thread.CurrentThread"/>
-        global::System.Threading.Thread CurrentThread { get; }
 
     }
 }

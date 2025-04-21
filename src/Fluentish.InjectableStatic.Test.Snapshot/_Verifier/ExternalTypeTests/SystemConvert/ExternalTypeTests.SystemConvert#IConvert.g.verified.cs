@@ -1728,6 +1728,7 @@ namespace Fluentish.Injectable.System
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         string ToHexString(global::System.ReadOnlySpan<byte> bytes);
+
     }
 }
 #pragma warning restore

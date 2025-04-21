@@ -11,7 +11,8 @@ namespace Fluentish.Injectable.GenericMethodTests
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public void Test<TType>()
-             => global::GenericMethodTests.GenericTypeArgument.Test<TType>();
+            => global::GenericMethodTests.GenericTypeArgument.Test<TType>();
+
     }
 }
 #pragma warning restore

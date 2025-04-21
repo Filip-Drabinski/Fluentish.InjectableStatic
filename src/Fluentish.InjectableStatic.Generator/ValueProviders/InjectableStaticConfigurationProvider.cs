@@ -1,14 +1,14 @@
 ﻿using Fluentish.InjectableStatic.Generator.Attributes;
 using Fluentish.InjectableStatic.Generator.Extensions;
+using Fluentish.InjectableStatic.Generator.GeneratedAttributes;
 using Microsoft.CodeAnalysis;
-using System;
 using System.Linq;
 
 namespace Fluentish.InjectableStatic.Generator.ValueProviders
 {
     internal static class InjectableStaticConfigurationProvider
     {
-        public static IncrementalValueProvider<InjectableStaticConfiguration> GetInjectableStaticConfigurationProvider(this IncrementalGeneratorInitializationContext context)
+        public static IncrementalValueProvider<InjectableStaticConfigurationInfo> GetInjectableStaticConfigurationProvider(this IncrementalGeneratorInitializationContext context)
         {
             return context.CompilationProvider
                 .Combine(context.AnalyzerConfigOptionsProvider)
@@ -27,7 +27,7 @@ namespace Fluentish.InjectableStatic.Generator.ValueProviders
 
                     if (injectableStaticConfigurationAttribute is null)
                     {
-                        return new InjectableStaticConfiguration(
+                        return new InjectableStaticConfigurationInfo(
                             endLine: newLineSymbol,
                             namespaceMode: NamespaceMode.Prefix,
                             @namespace: null
@@ -43,7 +43,7 @@ namespace Fluentish.InjectableStatic.Generator.ValueProviders
                         ? (NamespaceMode)namespaceModeArgument.Value.Value!
                         : NamespaceMode.Prefix;
 
-                    return new InjectableStaticConfiguration(
+                    return new InjectableStaticConfigurationInfo(
                         endLine: newLineSymbol,
                         namespaceMode: namespaceMode,
                         @namespace: namespaceValue

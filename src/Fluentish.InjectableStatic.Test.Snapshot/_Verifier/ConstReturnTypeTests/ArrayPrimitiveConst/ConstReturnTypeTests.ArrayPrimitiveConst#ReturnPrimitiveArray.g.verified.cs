@@ -12,6 +12,7 @@ namespace Fluentish.Injectable.ConstReturnTypeTests
         {
             get => global::ConstReturnTypeTests.ReturnPrimitiveArray.Test;
         }
+
     }
 }
 #pragma warning restore

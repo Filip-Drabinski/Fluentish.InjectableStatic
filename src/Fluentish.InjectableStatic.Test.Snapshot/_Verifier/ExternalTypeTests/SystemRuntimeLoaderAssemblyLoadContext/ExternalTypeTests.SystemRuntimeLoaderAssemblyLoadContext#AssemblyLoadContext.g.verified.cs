@@ -8,24 +8,6 @@ namespace Fluentish.Injectable.System.Runtime.Loader
     [global::System.Diagnostics.DebuggerStepThrough]
     public class AssemblyLoadContextService : IAssemblyLoadContext
     {
-        /// <inheritdoc cref="global::System.Runtime.Loader.AssemblyLoadContext.GetLoadContext"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Runtime.Loader.AssemblyLoadContext? GetLoadContext(global::System.Reflection.Assembly assembly)
-             => global::System.Runtime.Loader.AssemblyLoadContext.GetLoadContext(assembly);
-
-        /// <inheritdoc cref="global::System.Runtime.Loader.AssemblyLoadContext.GetAssemblyName"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Reflection.AssemblyName GetAssemblyName(string assemblyPath)
-             => global::System.Runtime.Loader.AssemblyLoadContext.GetAssemblyName(assemblyPath);
-
-        /// <inheritdoc cref="global::System.Runtime.Loader.AssemblyLoadContext.EnterContextualReflection"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Runtime.Loader.AssemblyLoadContext.ContextualReflectionScope EnterContextualReflection(global::System.Reflection.Assembly? activating)
-             => global::System.Runtime.Loader.AssemblyLoadContext.EnterContextualReflection(activating);
-
         /// <inheritdoc cref="global::System.Runtime.Loader.AssemblyLoadContext.Default"/>
         public global::System.Runtime.Loader.AssemblyLoadContext Default
         {
@@ -43,6 +25,24 @@ namespace Fluentish.Injectable.System.Runtime.Loader
         {
             get => global::System.Runtime.Loader.AssemblyLoadContext.CurrentContextualReflectionContext;
         }
+
+        /// <inheritdoc cref="global::System.Runtime.Loader.AssemblyLoadContext.GetLoadContext"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public global::System.Runtime.Loader.AssemblyLoadContext? GetLoadContext(global::System.Reflection.Assembly assembly)
+            => global::System.Runtime.Loader.AssemblyLoadContext.GetLoadContext(assembly);
+
+        /// <inheritdoc cref="global::System.Runtime.Loader.AssemblyLoadContext.GetAssemblyName"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public global::System.Reflection.AssemblyName GetAssemblyName(string assemblyPath)
+            => global::System.Runtime.Loader.AssemblyLoadContext.GetAssemblyName(assemblyPath);
+
+        /// <inheritdoc cref="global::System.Runtime.Loader.AssemblyLoadContext.EnterContextualReflection"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public global::System.Runtime.Loader.AssemblyLoadContext.ContextualReflectionScope EnterContextualReflection(global::System.Reflection.Assembly? activating)
+            => global::System.Runtime.Loader.AssemblyLoadContext.EnterContextualReflection(activating);
 
     }
 }

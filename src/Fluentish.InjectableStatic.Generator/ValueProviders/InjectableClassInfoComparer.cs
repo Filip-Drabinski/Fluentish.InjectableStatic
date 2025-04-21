@@ -1,18 +1,19 @@
-﻿using System;
+﻿using Fluentish.InjectableStatic.Generator.GeneratedAttributes;
+using System;
 using System.Collections.Generic;
 
 namespace Fluentish.InjectableStatic.Generator.ValueProviders
 {
-    public class InjectableClassInfoComparer : IEqualityComparer<InjectableClassInfo>
+    public class InjectableClassInfoComparer : IEqualityComparer<InjectableStaticInfo>
     {
         public static readonly InjectableClassInfoComparer Instance = new();
 
-        public bool Equals(InjectableClassInfo x, InjectableClassInfo y)
+        public bool Equals(InjectableStaticInfo x, InjectableStaticInfo y)
         {
             return Instance.GetHashCode(x) == Instance.GetHashCode(y);
         }
 
-        public int GetHashCode(InjectableClassInfo obj)
+        public int GetHashCode(InjectableStaticInfo obj)
         {
             var hashCodeBuilder = new HashCode();
             hashCodeBuilder.Add(obj.type);

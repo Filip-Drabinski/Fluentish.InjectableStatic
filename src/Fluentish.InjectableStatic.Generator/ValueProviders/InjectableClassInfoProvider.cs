@@ -1,4 +1,5 @@
 ﻿using Fluentish.InjectableStatic.Generator.Attributes;
+using Fluentish.InjectableStatic.Generator.GeneratedAttributes;
 using Microsoft.CodeAnalysis;
 using System.Linq;
 
@@ -6,7 +7,7 @@ namespace Fluentish.InjectableStatic.Generator.ValueProviders
 {
     internal static class InjectableClassInfoProvider
     {
-        public static IncrementalValuesProvider<InjectableClassInfo> GetInjectableClassInfoProvider(this IncrementalGeneratorInitializationContext context)
+        public static IncrementalValuesProvider<InjectableStaticInfo> GetInjectableClassInfoProvider(this IncrementalGeneratorInitializationContext context)
         {
             return context.CompilationProvider
                 .SelectMany((compilation, ct) =>
@@ -28,7 +29,7 @@ namespace Fluentish.InjectableStatic.Generator.ValueProviders
 
                             if (injectableAttributeSymbol is null)
                             {
-                                return InjectableClassInfo.Default;
+                                return InjectableStaticInfo.Default;
                             }
 
                             var filterTypeArgument = attribute.NamedArguments.FirstOrDefault(x => x.Key == "FilterType");
@@ -41,9 +42,9 @@ namespace Fluentish.InjectableStatic.Generator.ValueProviders
                                 ? filteredTypesArgument.Value.Values.Where(x => !x.IsNull).Select(x => x.Value!.ToString()).ToArray()
                                 : [];
 
-                            return new InjectableClassInfo(injectableAttributeSymbol, filterType, filteredTypes);
+                            return new InjectableStaticInfo(injectableAttributeSymbol, filterType, filteredTypes);
                         })
-                        .Where(x => x != InjectableClassInfo.Default);
+                        .Where(x => x != InjectableStaticInfo.Default);
 
                     return selectedTypes;
                 });

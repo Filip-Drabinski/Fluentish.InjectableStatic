@@ -8,251 +8,6 @@ namespace Fluentish.Injectable.System.Threading.Tasks
     [global::System.Diagnostics.DebuggerStepThrough]
     public class TaskService : ITask
     {
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.Yield"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Runtime.CompilerServices.YieldAwaitable Yield()
-             => global::System.Threading.Tasks.Task.Yield();
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WaitAll"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser")]
-        public void WaitAll(params global::System.Threading.Tasks.Task[] tasks)
-             => global::System.Threading.Tasks.Task.WaitAll(tasks);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WaitAll"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser")]
-        public bool WaitAll(global::System.Threading.Tasks.Task[] tasks, global::System.TimeSpan timeout)
-             => global::System.Threading.Tasks.Task.WaitAll(tasks, timeout);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WaitAll"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser")]
-        public bool WaitAll(global::System.Threading.Tasks.Task[] tasks, int millisecondsTimeout)
-             => global::System.Threading.Tasks.Task.WaitAll(tasks, millisecondsTimeout);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WaitAll"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser")]
-        public void WaitAll(global::System.Threading.Tasks.Task[] tasks, global::System.Threading.CancellationToken cancellationToken)
-             => global::System.Threading.Tasks.Task.WaitAll(tasks, cancellationToken);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WaitAll"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser")]
-        public bool WaitAll(global::System.Threading.Tasks.Task[] tasks, int millisecondsTimeout, global::System.Threading.CancellationToken cancellationToken)
-             => global::System.Threading.Tasks.Task.WaitAll(tasks, millisecondsTimeout, cancellationToken);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WaitAny"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int WaitAny(params global::System.Threading.Tasks.Task[] tasks)
-             => global::System.Threading.Tasks.Task.WaitAny(tasks);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WaitAny"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int WaitAny(global::System.Threading.Tasks.Task[] tasks, global::System.TimeSpan timeout)
-             => global::System.Threading.Tasks.Task.WaitAny(tasks, timeout);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WaitAny"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int WaitAny(global::System.Threading.Tasks.Task[] tasks, global::System.Threading.CancellationToken cancellationToken)
-             => global::System.Threading.Tasks.Task.WaitAny(tasks, cancellationToken);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WaitAny"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int WaitAny(global::System.Threading.Tasks.Task[] tasks, int millisecondsTimeout)
-             => global::System.Threading.Tasks.Task.WaitAny(tasks, millisecondsTimeout);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WaitAny"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public int WaitAny(global::System.Threading.Tasks.Task[] tasks, int millisecondsTimeout, global::System.Threading.CancellationToken cancellationToken)
-             => global::System.Threading.Tasks.Task.WaitAny(tasks, millisecondsTimeout, cancellationToken);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.FromResult"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task<TResult> FromResult<TResult>(TResult result)
-             => global::System.Threading.Tasks.Task.FromResult<TResult>(result);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.FromException"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task FromException(global::System.Exception exception)
-             => global::System.Threading.Tasks.Task.FromException(exception);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.FromException"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task<TResult> FromException<TResult>(global::System.Exception exception)
-             => global::System.Threading.Tasks.Task.FromException<TResult>(exception);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.FromCanceled"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task FromCanceled(global::System.Threading.CancellationToken cancellationToken)
-             => global::System.Threading.Tasks.Task.FromCanceled(cancellationToken);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.FromCanceled"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task<TResult> FromCanceled<TResult>(global::System.Threading.CancellationToken cancellationToken)
-             => global::System.Threading.Tasks.Task.FromCanceled<TResult>(cancellationToken);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.Run"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task Run(global::System.Action action)
-             => global::System.Threading.Tasks.Task.Run(action);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.Run"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task Run(global::System.Action action, global::System.Threading.CancellationToken cancellationToken)
-             => global::System.Threading.Tasks.Task.Run(action, cancellationToken);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.Run"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task<TResult> Run<TResult>(global::System.Func<TResult> function)
-             => global::System.Threading.Tasks.Task.Run<TResult>(function);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.Run"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task<TResult> Run<TResult>(global::System.Func<TResult> function, global::System.Threading.CancellationToken cancellationToken)
-             => global::System.Threading.Tasks.Task.Run<TResult>(function, cancellationToken);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.Run"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task Run(global::System.Func<global::System.Threading.Tasks.Task?> function)
-             => global::System.Threading.Tasks.Task.Run(function);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.Run"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task Run(global::System.Func<global::System.Threading.Tasks.Task?> function, global::System.Threading.CancellationToken cancellationToken)
-             => global::System.Threading.Tasks.Task.Run(function, cancellationToken);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.Run"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task<TResult> Run<TResult>(global::System.Func<global::System.Threading.Tasks.Task<TResult>?> function)
-             => global::System.Threading.Tasks.Task.Run<TResult>(function);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.Run"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task<TResult> Run<TResult>(global::System.Func<global::System.Threading.Tasks.Task<TResult>?> function, global::System.Threading.CancellationToken cancellationToken)
-             => global::System.Threading.Tasks.Task.Run<TResult>(function, cancellationToken);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.Delay"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task Delay(global::System.TimeSpan delay)
-             => global::System.Threading.Tasks.Task.Delay(delay);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.Delay"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task Delay(global::System.TimeSpan delay, global::System.TimeProvider timeProvider)
-             => global::System.Threading.Tasks.Task.Delay(delay, timeProvider);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.Delay"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task Delay(global::System.TimeSpan delay, global::System.Threading.CancellationToken cancellationToken)
-             => global::System.Threading.Tasks.Task.Delay(delay, cancellationToken);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.Delay"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task Delay(global::System.TimeSpan delay, global::System.TimeProvider timeProvider, global::System.Threading.CancellationToken cancellationToken)
-             => global::System.Threading.Tasks.Task.Delay(delay, timeProvider, cancellationToken);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.Delay"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task Delay(int millisecondsDelay)
-             => global::System.Threading.Tasks.Task.Delay(millisecondsDelay);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.Delay"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task Delay(int millisecondsDelay, global::System.Threading.CancellationToken cancellationToken)
-             => global::System.Threading.Tasks.Task.Delay(millisecondsDelay, cancellationToken);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WhenAll"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task WhenAll(global::System.Collections.Generic.IEnumerable<global::System.Threading.Tasks.Task> tasks)
-             => global::System.Threading.Tasks.Task.WhenAll(tasks);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WhenAll"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task WhenAll(params global::System.Threading.Tasks.Task[] tasks)
-             => global::System.Threading.Tasks.Task.WhenAll(tasks);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WhenAll"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task<TResult[]> WhenAll<TResult>(global::System.Collections.Generic.IEnumerable<global::System.Threading.Tasks.Task<TResult>> tasks)
-             => global::System.Threading.Tasks.Task.WhenAll<TResult>(tasks);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WhenAll"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task<TResult[]> WhenAll<TResult>(params global::System.Threading.Tasks.Task<TResult>[] tasks)
-             => global::System.Threading.Tasks.Task.WhenAll<TResult>(tasks);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WhenAny"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task<global::System.Threading.Tasks.Task> WhenAny(params global::System.Threading.Tasks.Task[] tasks)
-             => global::System.Threading.Tasks.Task.WhenAny(tasks);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WhenAny"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task<global::System.Threading.Tasks.Task> WhenAny(global::System.Threading.Tasks.Task task1, global::System.Threading.Tasks.Task task2)
-             => global::System.Threading.Tasks.Task.WhenAny(task1, task2);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WhenAny"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task<global::System.Threading.Tasks.Task> WhenAny(global::System.Collections.Generic.IEnumerable<global::System.Threading.Tasks.Task> tasks)
-             => global::System.Threading.Tasks.Task.WhenAny(tasks);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WhenAny"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task<global::System.Threading.Tasks.Task<TResult>> WhenAny<TResult>(params global::System.Threading.Tasks.Task<TResult>[] tasks)
-             => global::System.Threading.Tasks.Task.WhenAny<TResult>(tasks);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WhenAny"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task<global::System.Threading.Tasks.Task<TResult>> WhenAny<TResult>(global::System.Threading.Tasks.Task<TResult> task1, global::System.Threading.Tasks.Task<TResult> task2)
-             => global::System.Threading.Tasks.Task.WhenAny<TResult>(task1, task2);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WhenAny"/>
-        [global::System.Diagnostics.DebuggerStepThrough]
-        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
-        public global::System.Threading.Tasks.Task<global::System.Threading.Tasks.Task<TResult>> WhenAny<TResult>(global::System.Collections.Generic.IEnumerable<global::System.Threading.Tasks.Task<TResult>> tasks)
-             => global::System.Threading.Tasks.Task.WhenAny<TResult>(tasks);
-
         /// <inheritdoc cref="global::System.Threading.Tasks.Task.CurrentId"/>
         public global::System.Nullable<int> CurrentId
         {
@@ -270,6 +25,251 @@ namespace Fluentish.Injectable.System.Threading.Tasks
         {
             get => global::System.Threading.Tasks.Task.CompletedTask;
         }
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.Yield"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public global::System.Runtime.CompilerServices.YieldAwaitable Yield()
+            => global::System.Threading.Tasks.Task.Yield();
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WaitAll"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser")]
+        public void WaitAll(params global::System.Threading.Tasks.Task[] tasks)
+            => global::System.Threading.Tasks.Task.WaitAll(tasks);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WaitAll"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser")]
+        public bool WaitAll(global::System.Threading.Tasks.Task[] tasks, global::System.TimeSpan timeout)
+            => global::System.Threading.Tasks.Task.WaitAll(tasks, timeout);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WaitAll"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser")]
+        public bool WaitAll(global::System.Threading.Tasks.Task[] tasks, int millisecondsTimeout)
+            => global::System.Threading.Tasks.Task.WaitAll(tasks, millisecondsTimeout);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WaitAll"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser")]
+        public void WaitAll(global::System.Threading.Tasks.Task[] tasks, global::System.Threading.CancellationToken cancellationToken)
+            => global::System.Threading.Tasks.Task.WaitAll(tasks, cancellationToken);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WaitAll"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        [global::System.Runtime.Versioning.UnsupportedOSPlatformAttribute("browser")]
+        public bool WaitAll(global::System.Threading.Tasks.Task[] tasks, int millisecondsTimeout, global::System.Threading.CancellationToken cancellationToken)
+            => global::System.Threading.Tasks.Task.WaitAll(tasks, millisecondsTimeout, cancellationToken);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WaitAny"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public int WaitAny(params global::System.Threading.Tasks.Task[] tasks)
+            => global::System.Threading.Tasks.Task.WaitAny(tasks);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WaitAny"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public int WaitAny(global::System.Threading.Tasks.Task[] tasks, global::System.TimeSpan timeout)
+            => global::System.Threading.Tasks.Task.WaitAny(tasks, timeout);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WaitAny"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public int WaitAny(global::System.Threading.Tasks.Task[] tasks, global::System.Threading.CancellationToken cancellationToken)
+            => global::System.Threading.Tasks.Task.WaitAny(tasks, cancellationToken);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WaitAny"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public int WaitAny(global::System.Threading.Tasks.Task[] tasks, int millisecondsTimeout)
+            => global::System.Threading.Tasks.Task.WaitAny(tasks, millisecondsTimeout);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WaitAny"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public int WaitAny(global::System.Threading.Tasks.Task[] tasks, int millisecondsTimeout, global::System.Threading.CancellationToken cancellationToken)
+            => global::System.Threading.Tasks.Task.WaitAny(tasks, millisecondsTimeout, cancellationToken);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.FromResult"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public global::System.Threading.Tasks.Task<TResult> FromResult<TResult>(TResult result)
+            => global::System.Threading.Tasks.Task.FromResult<TResult>(result);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.FromException"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public global::System.Threading.Tasks.Task FromException(global::System.Exception exception)
+            => global::System.Threading.Tasks.Task.FromException(exception);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.FromException"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public global::System.Threading.Tasks.Task<TResult> FromException<TResult>(global::System.Exception exception)
+            => global::System.Threading.Tasks.Task.FromException<TResult>(exception);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.FromCanceled"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public global::System.Threading.Tasks.Task FromCanceled(global::System.Threading.CancellationToken cancellationToken)
+            => global::System.Threading.Tasks.Task.FromCanceled(cancellationToken);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.FromCanceled"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public global::System.Threading.Tasks.Task<TResult> FromCanceled<TResult>(global::System.Threading.CancellationToken cancellationToken)
+            => global::System.Threading.Tasks.Task.FromCanceled<TResult>(cancellationToken);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.Run"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public global::System.Threading.Tasks.Task Run(global::System.Action action)
+            => global::System.Threading.Tasks.Task.Run(action);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.Run"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public global::System.Threading.Tasks.Task Run(global::System.Action action, global::System.Threading.CancellationToken cancellationToken)
+            => global::System.Threading.Tasks.Task.Run(action, cancellationToken);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.Run"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public global::System.Threading.Tasks.Task<TResult> Run<TResult>(global::System.Func<TResult> function)
+            => global::System.Threading.Tasks.Task.Run<TResult>(function);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.Run"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public global::System.Threading.Tasks.Task<TResult> Run<TResult>(global::System.Func<TResult> function, global::System.Threading.CancellationToken cancellationToken)
+            => global::System.Threading.Tasks.Task.Run<TResult>(function, cancellationToken);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.Run"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public global::System.Threading.Tasks.Task Run(global::System.Func<global::System.Threading.Tasks.Task?> function)
+            => global::System.Threading.Tasks.Task.Run(function);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.Run"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public global::System.Threading.Tasks.Task Run(global::System.Func<global::System.Threading.Tasks.Task?> function, global::System.Threading.CancellationToken cancellationToken)
+            => global::System.Threading.Tasks.Task.Run(function, cancellationToken);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.Run"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public global::System.Threading.Tasks.Task<TResult> Run<TResult>(global::System.Func<global::System.Threading.Tasks.Task<TResult>?> function)
+            => global::System.Threading.Tasks.Task.Run<TResult>(function);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.Run"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public global::System.Threading.Tasks.Task<TResult> Run<TResult>(global::System.Func<global::System.Threading.Tasks.Task<TResult>?> function, global::System.Threading.CancellationToken cancellationToken)
+            => global::System.Threading.Tasks.Task.Run<TResult>(function, cancellationToken);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.Delay"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public global::System.Threading.Tasks.Task Delay(global::System.TimeSpan delay)
+            => global::System.Threading.Tasks.Task.Delay(delay);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.Delay"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public global::System.Threading.Tasks.Task Delay(global::System.TimeSpan delay, global::System.TimeProvider timeProvider)
+            => global::System.Threading.Tasks.Task.Delay(delay, timeProvider);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.Delay"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public global::System.Threading.Tasks.Task Delay(global::System.TimeSpan delay, global::System.Threading.CancellationToken cancellationToken)
+            => global::System.Threading.Tasks.Task.Delay(delay, cancellationToken);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.Delay"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public global::System.Threading.Tasks.Task Delay(global::System.TimeSpan delay, global::System.TimeProvider timeProvider, global::System.Threading.CancellationToken cancellationToken)
+            => global::System.Threading.Tasks.Task.Delay(delay, timeProvider, cancellationToken);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.Delay"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public global::System.Threading.Tasks.Task Delay(int millisecondsDelay)
+            => global::System.Threading.Tasks.Task.Delay(millisecondsDelay);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.Delay"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public global::System.Threading.Tasks.Task Delay(int millisecondsDelay, global::System.Threading.CancellationToken cancellationToken)
+            => global::System.Threading.Tasks.Task.Delay(millisecondsDelay, cancellationToken);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WhenAll"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public global::System.Threading.Tasks.Task WhenAll(global::System.Collections.Generic.IEnumerable<global::System.Threading.Tasks.Task> tasks)
+            => global::System.Threading.Tasks.Task.WhenAll(tasks);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WhenAll"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public global::System.Threading.Tasks.Task WhenAll(params global::System.Threading.Tasks.Task[] tasks)
+            => global::System.Threading.Tasks.Task.WhenAll(tasks);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WhenAll"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public global::System.Threading.Tasks.Task<TResult[]> WhenAll<TResult>(global::System.Collections.Generic.IEnumerable<global::System.Threading.Tasks.Task<TResult>> tasks)
+            => global::System.Threading.Tasks.Task.WhenAll<TResult>(tasks);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WhenAll"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public global::System.Threading.Tasks.Task<TResult[]> WhenAll<TResult>(params global::System.Threading.Tasks.Task<TResult>[] tasks)
+            => global::System.Threading.Tasks.Task.WhenAll<TResult>(tasks);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WhenAny"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public global::System.Threading.Tasks.Task<global::System.Threading.Tasks.Task> WhenAny(params global::System.Threading.Tasks.Task[] tasks)
+            => global::System.Threading.Tasks.Task.WhenAny(tasks);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WhenAny"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public global::System.Threading.Tasks.Task<global::System.Threading.Tasks.Task> WhenAny(global::System.Threading.Tasks.Task task1, global::System.Threading.Tasks.Task task2)
+            => global::System.Threading.Tasks.Task.WhenAny(task1, task2);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WhenAny"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public global::System.Threading.Tasks.Task<global::System.Threading.Tasks.Task> WhenAny(global::System.Collections.Generic.IEnumerable<global::System.Threading.Tasks.Task> tasks)
+            => global::System.Threading.Tasks.Task.WhenAny(tasks);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WhenAny"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public global::System.Threading.Tasks.Task<global::System.Threading.Tasks.Task<TResult>> WhenAny<TResult>(params global::System.Threading.Tasks.Task<TResult>[] tasks)
+            => global::System.Threading.Tasks.Task.WhenAny<TResult>(tasks);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WhenAny"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public global::System.Threading.Tasks.Task<global::System.Threading.Tasks.Task<TResult>> WhenAny<TResult>(global::System.Threading.Tasks.Task<TResult> task1, global::System.Threading.Tasks.Task<TResult> task2)
+            => global::System.Threading.Tasks.Task.WhenAny<TResult>(task1, task2);
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.WhenAny"/>
+        [global::System.Diagnostics.DebuggerStepThrough]
+        [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        public global::System.Threading.Tasks.Task<global::System.Threading.Tasks.Task<TResult>> WhenAny<TResult>(global::System.Collections.Generic.IEnumerable<global::System.Threading.Tasks.Task<TResult>> tasks)
+            => global::System.Threading.Tasks.Task.WhenAny<TResult>(tasks);
 
     }
 }

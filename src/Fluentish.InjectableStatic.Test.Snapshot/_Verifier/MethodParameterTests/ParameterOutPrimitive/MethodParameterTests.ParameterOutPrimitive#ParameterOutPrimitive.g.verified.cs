@@ -11,7 +11,8 @@ namespace Fluentish.Injectable.MethodParameterTests
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public void Test(out int parameter)
-             => global::MethodParameterTests.ParameterOutPrimitive.Test(out parameter);
+            => global::MethodParameterTests.ParameterOutPrimitive.Test(out parameter);
+
     }
 }
 #pragma warning restore

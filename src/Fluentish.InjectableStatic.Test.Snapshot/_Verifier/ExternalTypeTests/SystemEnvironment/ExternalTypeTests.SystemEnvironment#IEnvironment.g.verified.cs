@@ -7,6 +7,78 @@ namespace Fluentish.Injectable.System
     /// <inheritdoc cref="global::System.Environment"/>
     public interface IEnvironment
     {
+        /// <inheritdoc cref="global::System.Environment.CurrentManagedThreadId"/>
+        int CurrentManagedThreadId { get; }
+
+        /// <inheritdoc cref="global::System.Environment.ExitCode"/>
+        int ExitCode { get; set; }
+
+        /// <inheritdoc cref="global::System.Environment.TickCount"/>
+        int TickCount { get; }
+
+        /// <inheritdoc cref="global::System.Environment.TickCount64"/>
+        long TickCount64 { get; }
+
+        /// <inheritdoc cref="global::System.Environment.ProcessorCount"/>
+        int ProcessorCount { get; }
+
+        /// <inheritdoc cref="global::System.Environment.IsPrivilegedProcess"/>
+        bool IsPrivilegedProcess { get; }
+
+        /// <inheritdoc cref="global::System.Environment.HasShutdownStarted"/>
+        bool HasShutdownStarted { get; }
+
+        /// <inheritdoc cref="global::System.Environment.CommandLine"/>
+        string CommandLine { get; }
+
+        /// <inheritdoc cref="global::System.Environment.CurrentDirectory"/>
+        string CurrentDirectory { get; set; }
+
+        /// <inheritdoc cref="global::System.Environment.ProcessId"/>
+        int ProcessId { get; }
+
+        /// <inheritdoc cref="global::System.Environment.ProcessPath"/>
+        string? ProcessPath { get; }
+
+        /// <inheritdoc cref="global::System.Environment.Is64BitProcess"/>
+        bool Is64BitProcess { get; }
+
+        /// <inheritdoc cref="global::System.Environment.Is64BitOperatingSystem"/>
+        bool Is64BitOperatingSystem { get; }
+
+        /// <inheritdoc cref="global::System.Environment.NewLine"/>
+        string NewLine { get; }
+
+        /// <inheritdoc cref="global::System.Environment.OSVersion"/>
+        global::System.OperatingSystem OSVersion { get; }
+
+        /// <inheritdoc cref="global::System.Environment.Version"/>
+        global::System.Version Version { get; }
+
+        /// <inheritdoc cref="global::System.Environment.StackTrace"/>
+        string StackTrace { get; }
+
+        /// <inheritdoc cref="global::System.Environment.SystemPageSize"/>
+        int SystemPageSize { get; }
+
+        /// <inheritdoc cref="global::System.Environment.UserName"/>
+        string UserName { get; }
+
+        /// <inheritdoc cref="global::System.Environment.UserDomainName"/>
+        string UserDomainName { get; }
+
+        /// <inheritdoc cref="global::System.Environment.MachineName"/>
+        string MachineName { get; }
+
+        /// <inheritdoc cref="global::System.Environment.SystemDirectory"/>
+        string SystemDirectory { get; }
+
+        /// <inheritdoc cref="global::System.Environment.UserInteractive"/>
+        bool UserInteractive { get; }
+
+        /// <inheritdoc cref="global::System.Environment.WorkingSet"/>
+        long WorkingSet { get; }
+
         /// <inheritdoc cref="global::System.Environment.Exit"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
@@ -79,78 +151,6 @@ namespace Fluentish.Injectable.System
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         global::System.Collections.IDictionary GetEnvironmentVariables();
-
-        /// <inheritdoc cref="global::System.Environment.CurrentManagedThreadId"/>
-        int CurrentManagedThreadId { get; }
-
-        /// <inheritdoc cref="global::System.Environment.ExitCode"/>
-        int ExitCode { get; set; }
-
-        /// <inheritdoc cref="global::System.Environment.TickCount"/>
-        int TickCount { get; }
-
-        /// <inheritdoc cref="global::System.Environment.TickCount64"/>
-        long TickCount64 { get; }
-
-        /// <inheritdoc cref="global::System.Environment.ProcessorCount"/>
-        int ProcessorCount { get; }
-
-        /// <inheritdoc cref="global::System.Environment.IsPrivilegedProcess"/>
-        bool IsPrivilegedProcess { get; }
-
-        /// <inheritdoc cref="global::System.Environment.HasShutdownStarted"/>
-        bool HasShutdownStarted { get; }
-
-        /// <inheritdoc cref="global::System.Environment.CommandLine"/>
-        string CommandLine { get; }
-
-        /// <inheritdoc cref="global::System.Environment.CurrentDirectory"/>
-        string CurrentDirectory { get; set; }
-
-        /// <inheritdoc cref="global::System.Environment.ProcessId"/>
-        int ProcessId { get; }
-
-        /// <inheritdoc cref="global::System.Environment.ProcessPath"/>
-        string? ProcessPath { get; }
-
-        /// <inheritdoc cref="global::System.Environment.Is64BitProcess"/>
-        bool Is64BitProcess { get; }
-
-        /// <inheritdoc cref="global::System.Environment.Is64BitOperatingSystem"/>
-        bool Is64BitOperatingSystem { get; }
-
-        /// <inheritdoc cref="global::System.Environment.NewLine"/>
-        string NewLine { get; }
-
-        /// <inheritdoc cref="global::System.Environment.OSVersion"/>
-        global::System.OperatingSystem OSVersion { get; }
-
-        /// <inheritdoc cref="global::System.Environment.Version"/>
-        global::System.Version Version { get; }
-
-        /// <inheritdoc cref="global::System.Environment.StackTrace"/>
-        string StackTrace { get; }
-
-        /// <inheritdoc cref="global::System.Environment.SystemPageSize"/>
-        int SystemPageSize { get; }
-
-        /// <inheritdoc cref="global::System.Environment.UserName"/>
-        string UserName { get; }
-
-        /// <inheritdoc cref="global::System.Environment.UserDomainName"/>
-        string UserDomainName { get; }
-
-        /// <inheritdoc cref="global::System.Environment.MachineName"/>
-        string MachineName { get; }
-
-        /// <inheritdoc cref="global::System.Environment.SystemDirectory"/>
-        string SystemDirectory { get; }
-
-        /// <inheritdoc cref="global::System.Environment.UserInteractive"/>
-        bool UserInteractive { get; }
-
-        /// <inheritdoc cref="global::System.Environment.WorkingSet"/>
-        long WorkingSet { get; }
 
     }
 }

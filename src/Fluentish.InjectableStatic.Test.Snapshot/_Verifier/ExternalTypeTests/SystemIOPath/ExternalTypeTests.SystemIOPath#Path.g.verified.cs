@@ -43,259 +43,259 @@ namespace Fluentish.Injectable.System.IO
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public string? ChangeExtension(string? path, string? extension)
-             => global::System.IO.Path.ChangeExtension(path, extension);
+            => global::System.IO.Path.ChangeExtension(path, extension);
 
         /// <inheritdoc cref="global::System.IO.Path.Exists"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public bool Exists([global::System.Diagnostics.CodeAnalysis.NotNullWhenAttribute(true)] string? path)
-             => global::System.IO.Path.Exists(path);
+            => global::System.IO.Path.Exists(path);
 
         /// <inheritdoc cref="global::System.IO.Path.GetDirectoryName"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public string? GetDirectoryName(string? path)
-             => global::System.IO.Path.GetDirectoryName(path);
+            => global::System.IO.Path.GetDirectoryName(path);
 
         /// <inheritdoc cref="global::System.IO.Path.GetDirectoryName"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public global::System.ReadOnlySpan<char> GetDirectoryName(global::System.ReadOnlySpan<char> path)
-             => global::System.IO.Path.GetDirectoryName(path);
+            => global::System.IO.Path.GetDirectoryName(path);
 
         /// <inheritdoc cref="global::System.IO.Path.GetExtension"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public string? GetExtension(string? path)
-             => global::System.IO.Path.GetExtension(path);
+            => global::System.IO.Path.GetExtension(path);
 
         /// <inheritdoc cref="global::System.IO.Path.GetExtension"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public global::System.ReadOnlySpan<char> GetExtension(global::System.ReadOnlySpan<char> path)
-             => global::System.IO.Path.GetExtension(path);
+            => global::System.IO.Path.GetExtension(path);
 
         /// <inheritdoc cref="global::System.IO.Path.GetFileName"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public string? GetFileName(string? path)
-             => global::System.IO.Path.GetFileName(path);
+            => global::System.IO.Path.GetFileName(path);
 
         /// <inheritdoc cref="global::System.IO.Path.GetFileName"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public global::System.ReadOnlySpan<char> GetFileName(global::System.ReadOnlySpan<char> path)
-             => global::System.IO.Path.GetFileName(path);
+            => global::System.IO.Path.GetFileName(path);
 
         /// <inheritdoc cref="global::System.IO.Path.GetFileNameWithoutExtension"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public string? GetFileNameWithoutExtension(string? path)
-             => global::System.IO.Path.GetFileNameWithoutExtension(path);
+            => global::System.IO.Path.GetFileNameWithoutExtension(path);
 
         /// <inheritdoc cref="global::System.IO.Path.GetFileNameWithoutExtension"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public global::System.ReadOnlySpan<char> GetFileNameWithoutExtension(global::System.ReadOnlySpan<char> path)
-             => global::System.IO.Path.GetFileNameWithoutExtension(path);
+            => global::System.IO.Path.GetFileNameWithoutExtension(path);
 
         /// <inheritdoc cref="global::System.IO.Path.GetRandomFileName"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public string GetRandomFileName()
-             => global::System.IO.Path.GetRandomFileName();
+            => global::System.IO.Path.GetRandomFileName();
 
         /// <inheritdoc cref="global::System.IO.Path.IsPathFullyQualified"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public bool IsPathFullyQualified(string path)
-             => global::System.IO.Path.IsPathFullyQualified(path);
+            => global::System.IO.Path.IsPathFullyQualified(path);
 
         /// <inheritdoc cref="global::System.IO.Path.IsPathFullyQualified"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public bool IsPathFullyQualified(global::System.ReadOnlySpan<char> path)
-             => global::System.IO.Path.IsPathFullyQualified(path);
+            => global::System.IO.Path.IsPathFullyQualified(path);
 
         /// <inheritdoc cref="global::System.IO.Path.HasExtension"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public bool HasExtension([global::System.Diagnostics.CodeAnalysis.NotNullWhenAttribute(true)] string? path)
-             => global::System.IO.Path.HasExtension(path);
+            => global::System.IO.Path.HasExtension(path);
 
         /// <inheritdoc cref="global::System.IO.Path.HasExtension"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public bool HasExtension(global::System.ReadOnlySpan<char> path)
-             => global::System.IO.Path.HasExtension(path);
+            => global::System.IO.Path.HasExtension(path);
 
         /// <inheritdoc cref="global::System.IO.Path.Combine"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public string Combine(string path1, string path2)
-             => global::System.IO.Path.Combine(path1, path2);
+            => global::System.IO.Path.Combine(path1, path2);
 
         /// <inheritdoc cref="global::System.IO.Path.Combine"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public string Combine(string path1, string path2, string path3)
-             => global::System.IO.Path.Combine(path1, path2, path3);
+            => global::System.IO.Path.Combine(path1, path2, path3);
 
         /// <inheritdoc cref="global::System.IO.Path.Combine"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public string Combine(string path1, string path2, string path3, string path4)
-             => global::System.IO.Path.Combine(path1, path2, path3, path4);
+            => global::System.IO.Path.Combine(path1, path2, path3, path4);
 
         /// <inheritdoc cref="global::System.IO.Path.Combine"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public string Combine(params string[] paths)
-             => global::System.IO.Path.Combine(paths);
+            => global::System.IO.Path.Combine(paths);
 
         /// <inheritdoc cref="global::System.IO.Path.Join"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public string Join(global::System.ReadOnlySpan<char> path1, global::System.ReadOnlySpan<char> path2)
-             => global::System.IO.Path.Join(path1, path2);
+            => global::System.IO.Path.Join(path1, path2);
 
         /// <inheritdoc cref="global::System.IO.Path.Join"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public string Join(global::System.ReadOnlySpan<char> path1, global::System.ReadOnlySpan<char> path2, global::System.ReadOnlySpan<char> path3)
-             => global::System.IO.Path.Join(path1, path2, path3);
+            => global::System.IO.Path.Join(path1, path2, path3);
 
         /// <inheritdoc cref="global::System.IO.Path.Join"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public string Join(global::System.ReadOnlySpan<char> path1, global::System.ReadOnlySpan<char> path2, global::System.ReadOnlySpan<char> path3, global::System.ReadOnlySpan<char> path4)
-             => global::System.IO.Path.Join(path1, path2, path3, path4);
+            => global::System.IO.Path.Join(path1, path2, path3, path4);
 
         /// <inheritdoc cref="global::System.IO.Path.Join"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public string Join(string? path1, string? path2)
-             => global::System.IO.Path.Join(path1, path2);
+            => global::System.IO.Path.Join(path1, path2);
 
         /// <inheritdoc cref="global::System.IO.Path.Join"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public string Join(string? path1, string? path2, string? path3)
-             => global::System.IO.Path.Join(path1, path2, path3);
+            => global::System.IO.Path.Join(path1, path2, path3);
 
         /// <inheritdoc cref="global::System.IO.Path.Join"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public string Join(string? path1, string? path2, string? path3, string? path4)
-             => global::System.IO.Path.Join(path1, path2, path3, path4);
+            => global::System.IO.Path.Join(path1, path2, path3, path4);
 
         /// <inheritdoc cref="global::System.IO.Path.Join"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public string Join(params string?[] paths)
-             => global::System.IO.Path.Join(paths);
+            => global::System.IO.Path.Join(paths);
 
         /// <inheritdoc cref="global::System.IO.Path.TryJoin"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public bool TryJoin(global::System.ReadOnlySpan<char> path1, global::System.ReadOnlySpan<char> path2, global::System.Span<char> destination, out int charsWritten)
-             => global::System.IO.Path.TryJoin(path1, path2, destination, out charsWritten);
+            => global::System.IO.Path.TryJoin(path1, path2, destination, out charsWritten);
 
         /// <inheritdoc cref="global::System.IO.Path.TryJoin"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public bool TryJoin(global::System.ReadOnlySpan<char> path1, global::System.ReadOnlySpan<char> path2, global::System.ReadOnlySpan<char> path3, global::System.Span<char> destination, out int charsWritten)
-             => global::System.IO.Path.TryJoin(path1, path2, path3, destination, out charsWritten);
+            => global::System.IO.Path.TryJoin(path1, path2, path3, destination, out charsWritten);
 
         /// <inheritdoc cref="global::System.IO.Path.GetRelativePath"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public string GetRelativePath(string relativeTo, string path)
-             => global::System.IO.Path.GetRelativePath(relativeTo, path);
+            => global::System.IO.Path.GetRelativePath(relativeTo, path);
 
         /// <inheritdoc cref="global::System.IO.Path.TrimEndingDirectorySeparator"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public string TrimEndingDirectorySeparator(string path)
-             => global::System.IO.Path.TrimEndingDirectorySeparator(path);
+            => global::System.IO.Path.TrimEndingDirectorySeparator(path);
 
         /// <inheritdoc cref="global::System.IO.Path.TrimEndingDirectorySeparator"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public global::System.ReadOnlySpan<char> TrimEndingDirectorySeparator(global::System.ReadOnlySpan<char> path)
-             => global::System.IO.Path.TrimEndingDirectorySeparator(path);
+            => global::System.IO.Path.TrimEndingDirectorySeparator(path);
 
         /// <inheritdoc cref="global::System.IO.Path.EndsInDirectorySeparator"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public bool EndsInDirectorySeparator(global::System.ReadOnlySpan<char> path)
-             => global::System.IO.Path.EndsInDirectorySeparator(path);
+            => global::System.IO.Path.EndsInDirectorySeparator(path);
 
         /// <inheritdoc cref="global::System.IO.Path.EndsInDirectorySeparator"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public bool EndsInDirectorySeparator([global::System.Diagnostics.CodeAnalysis.NotNullWhenAttribute(true)] string? path)
-             => global::System.IO.Path.EndsInDirectorySeparator(path);
+            => global::System.IO.Path.EndsInDirectorySeparator(path);
 
         /// <inheritdoc cref="global::System.IO.Path.GetInvalidFileNameChars"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public char[] GetInvalidFileNameChars()
-             => global::System.IO.Path.GetInvalidFileNameChars();
+            => global::System.IO.Path.GetInvalidFileNameChars();
 
         /// <inheritdoc cref="global::System.IO.Path.GetInvalidPathChars"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public char[] GetInvalidPathChars()
-             => global::System.IO.Path.GetInvalidPathChars();
+            => global::System.IO.Path.GetInvalidPathChars();
 
         /// <inheritdoc cref="global::System.IO.Path.GetFullPath"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public string GetFullPath(string path)
-             => global::System.IO.Path.GetFullPath(path);
+            => global::System.IO.Path.GetFullPath(path);
 
         /// <inheritdoc cref="global::System.IO.Path.GetFullPath"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public string GetFullPath(string path, string basePath)
-             => global::System.IO.Path.GetFullPath(path, basePath);
+            => global::System.IO.Path.GetFullPath(path, basePath);
 
         /// <inheritdoc cref="global::System.IO.Path.GetTempPath"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public string GetTempPath()
-             => global::System.IO.Path.GetTempPath();
+            => global::System.IO.Path.GetTempPath();
 
         /// <inheritdoc cref="global::System.IO.Path.GetTempFileName"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public string GetTempFileName()
-             => global::System.IO.Path.GetTempFileName();
+            => global::System.IO.Path.GetTempFileName();
 
         /// <inheritdoc cref="global::System.IO.Path.IsPathRooted"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public bool IsPathRooted([global::System.Diagnostics.CodeAnalysis.NotNullWhenAttribute(true)] string? path)
-             => global::System.IO.Path.IsPathRooted(path);
+            => global::System.IO.Path.IsPathRooted(path);
 
         /// <inheritdoc cref="global::System.IO.Path.IsPathRooted"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public bool IsPathRooted(global::System.ReadOnlySpan<char> path)
-             => global::System.IO.Path.IsPathRooted(path);
+            => global::System.IO.Path.IsPathRooted(path);
 
         /// <inheritdoc cref="global::System.IO.Path.GetPathRoot"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public string? GetPathRoot(string? path)
-             => global::System.IO.Path.GetPathRoot(path);
+            => global::System.IO.Path.GetPathRoot(path);
 
         /// <inheritdoc cref="global::System.IO.Path.GetPathRoot"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public global::System.ReadOnlySpan<char> GetPathRoot(global::System.ReadOnlySpan<char> path)
-             => global::System.IO.Path.GetPathRoot(path);
+            => global::System.IO.Path.GetPathRoot(path);
 
     }
 }

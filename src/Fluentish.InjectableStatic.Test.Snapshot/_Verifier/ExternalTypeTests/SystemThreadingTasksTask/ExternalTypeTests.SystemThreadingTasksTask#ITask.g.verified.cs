@@ -7,6 +7,15 @@ namespace Fluentish.Injectable.System.Threading.Tasks
     /// <inheritdoc cref="global::System.Threading.Tasks.Task"/>
     public interface ITask
     {
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.CurrentId"/>
+        global::System.Nullable<int> CurrentId { get; }
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.Factory"/>
+        global::System.Threading.Tasks.TaskFactory Factory { get; }
+
+        /// <inheritdoc cref="global::System.Threading.Tasks.Task.CompletedTask"/>
+        global::System.Threading.Tasks.Task CompletedTask { get; }
+
         /// <inheritdoc cref="global::System.Threading.Tasks.Task.Yield"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
@@ -211,15 +220,6 @@ namespace Fluentish.Injectable.System.Threading.Tasks
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         global::System.Threading.Tasks.Task<global::System.Threading.Tasks.Task<TResult>> WhenAny<TResult>(global::System.Collections.Generic.IEnumerable<global::System.Threading.Tasks.Task<TResult>> tasks);
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.CurrentId"/>
-        global::System.Nullable<int> CurrentId { get; }
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.Factory"/>
-        global::System.Threading.Tasks.TaskFactory Factory { get; }
-
-        /// <inheritdoc cref="global::System.Threading.Tasks.Task.CompletedTask"/>
-        global::System.Threading.Tasks.Task CompletedTask { get; }
 
     }
 }

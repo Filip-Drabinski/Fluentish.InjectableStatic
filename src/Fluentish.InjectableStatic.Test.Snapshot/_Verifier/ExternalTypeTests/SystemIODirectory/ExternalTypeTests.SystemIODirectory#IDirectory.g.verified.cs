@@ -257,6 +257,7 @@ namespace Fluentish.Injectable.System.IO
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         global::System.IO.FileSystemInfo? ResolveLinkTarget(string linkPath, bool returnFinalTarget);
+
     }
 }
 #pragma warning restore

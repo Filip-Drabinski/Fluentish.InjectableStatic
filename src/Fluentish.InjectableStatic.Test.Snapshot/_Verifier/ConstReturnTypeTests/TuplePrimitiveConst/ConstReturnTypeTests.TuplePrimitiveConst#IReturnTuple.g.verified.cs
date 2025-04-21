@@ -8,6 +8,7 @@ namespace Fluentish.Injectable.ConstReturnTypeTests
     {
         /// <inheritdoc cref="global::ConstReturnTypeTests.ReturnTuple.Test"/>
         global::System.Tuple<global::ConstReturnTypeTests.Example, global::ConstReturnTypeTests.Example> Test { get; }
+
     }
 }
 #pragma warning restore

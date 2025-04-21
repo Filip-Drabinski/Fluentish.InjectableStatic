@@ -13,6 +13,7 @@ namespace Fluentish.Injectable.FieldReturnTypeTests
             get => global::FieldReturnTypeTests.ReturnArray.Test;
             set => global::FieldReturnTypeTests.ReturnArray.Test = value;
         }
+
     }
 }
 #pragma warning restore

@@ -12,7 +12,8 @@ namespace Fluentish.Injectable.MethodReturnTests
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public global::MethodReturnTests.Example? Test()
-             => global::MethodReturnTests.NullableReferenceType.Test();
+            => global::MethodReturnTests.NullableReferenceType.Test();
+
     }
 }
 #pragma warning restore

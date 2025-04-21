@@ -11,7 +11,8 @@ namespace CustomPrefix.NamespacePrefixTests
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public void Test()
-             => global::NamespacePrefixTests.CustomPrefix.Test();
+            => global::NamespacePrefixTests.CustomPrefix.Test();
+
     }
 }
 #pragma warning restore

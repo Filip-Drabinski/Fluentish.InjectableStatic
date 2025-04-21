@@ -8,6 +8,7 @@ namespace Fluentish.Injectable.EventAccessibilityTests
     {
         /// <inheritdoc cref="global::EventAccessibilityTests.PublicEvent.Test"/>
         event global::System.EventHandler Test;
+
     }
 }
 #pragma warning restore

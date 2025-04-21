@@ -1,6 +1,6 @@
 ﻿using Microsoft.CodeAnalysis;
 
-namespace Fluentish.InjectableStatic.Generator
+namespace Fluentish.InjectableStatic.Generator.GeneratedAttributes
 {
     public enum FilterType
     {
@@ -8,18 +8,18 @@ namespace Fluentish.InjectableStatic.Generator
         Include = 1
     }
 
-    public class InjectableClassInfo
+    public class InjectableStaticInfo
     {
         /// <summary>
         /// required to avoid nullablility issues after using `Where` with `is not null` filtering
         /// </summary>
-        public static readonly InjectableClassInfo Default = new(null!, FilterType.Exclude, System.Array.Empty<string>());
+        public static readonly InjectableStaticInfo Default = new(null!, FilterType.Exclude, System.Array.Empty<string>());
 
         public INamedTypeSymbol type;
         public FilterType filter;
         public string[] members;
 
-        public InjectableClassInfo(
+        public InjectableStaticInfo(
             INamedTypeSymbol typeSymbol,
             FilterType filterType,
             string[] filteredMembers

@@ -8,6 +8,24 @@ namespace Fluentish.Injectable.System
     [global::System.Diagnostics.DebuggerStepThrough]
     public class DateTimeService : IDateTime
     {
+        /// <inheritdoc cref="global::System.DateTime.Now"/>
+        public global::System.DateTime Now
+        {
+            get => global::System.DateTime.Now;
+        }
+
+        /// <inheritdoc cref="global::System.DateTime.Today"/>
+        public global::System.DateTime Today
+        {
+            get => global::System.DateTime.Today;
+        }
+
+        /// <inheritdoc cref="global::System.DateTime.UtcNow"/>
+        public global::System.DateTime UtcNow
+        {
+            get => global::System.DateTime.UtcNow;
+        }
+
         /// <inheritdoc cref="global::System.DateTime.MinValue"/>
         public global::System.DateTime MinValue
         {
@@ -30,193 +48,175 @@ namespace Fluentish.Injectable.System
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public int Compare(global::System.DateTime t1, global::System.DateTime t2)
-             => global::System.DateTime.Compare(t1, t2);
+            => global::System.DateTime.Compare(t1, t2);
 
         /// <inheritdoc cref="global::System.DateTime.DaysInMonth"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public int DaysInMonth(int year, int month)
-             => global::System.DateTime.DaysInMonth(year, month);
+            => global::System.DateTime.DaysInMonth(year, month);
 
         /// <inheritdoc cref="global::System.DateTime.Equals"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public bool Equals(global::System.DateTime t1, global::System.DateTime t2)
-             => global::System.DateTime.Equals(t1, t2);
+            => global::System.DateTime.Equals(t1, t2);
 
         /// <inheritdoc cref="global::System.DateTime.FromBinary"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public global::System.DateTime FromBinary(long dateData)
-             => global::System.DateTime.FromBinary(dateData);
+            => global::System.DateTime.FromBinary(dateData);
 
         /// <inheritdoc cref="global::System.DateTime.FromFileTime"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public global::System.DateTime FromFileTime(long fileTime)
-             => global::System.DateTime.FromFileTime(fileTime);
+            => global::System.DateTime.FromFileTime(fileTime);
 
         /// <inheritdoc cref="global::System.DateTime.FromFileTimeUtc"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public global::System.DateTime FromFileTimeUtc(long fileTime)
-             => global::System.DateTime.FromFileTimeUtc(fileTime);
+            => global::System.DateTime.FromFileTimeUtc(fileTime);
 
         /// <inheritdoc cref="global::System.DateTime.FromOADate"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public global::System.DateTime FromOADate(double d)
-             => global::System.DateTime.FromOADate(d);
+            => global::System.DateTime.FromOADate(d);
 
         /// <inheritdoc cref="global::System.DateTime.SpecifyKind"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public global::System.DateTime SpecifyKind(global::System.DateTime value, global::System.DateTimeKind kind)
-             => global::System.DateTime.SpecifyKind(value, kind);
+            => global::System.DateTime.SpecifyKind(value, kind);
 
         /// <inheritdoc cref="global::System.DateTime.IsLeapYear"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public bool IsLeapYear(int year)
-             => global::System.DateTime.IsLeapYear(year);
+            => global::System.DateTime.IsLeapYear(year);
 
         /// <inheritdoc cref="global::System.DateTime.Parse"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public global::System.DateTime Parse(string s)
-             => global::System.DateTime.Parse(s);
+            => global::System.DateTime.Parse(s);
 
         /// <inheritdoc cref="global::System.DateTime.Parse"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public global::System.DateTime Parse(string s, global::System.IFormatProvider? provider)
-             => global::System.DateTime.Parse(s, provider);
+            => global::System.DateTime.Parse(s, provider);
 
         /// <inheritdoc cref="global::System.DateTime.Parse"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public global::System.DateTime Parse(string s, global::System.IFormatProvider? provider, global::System.Globalization.DateTimeStyles styles)
-             => global::System.DateTime.Parse(s, provider, styles);
+            => global::System.DateTime.Parse(s, provider, styles);
 
         /// <inheritdoc cref="global::System.DateTime.Parse"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public global::System.DateTime Parse(global::System.ReadOnlySpan<char> s, global::System.IFormatProvider? provider, global::System.Globalization.DateTimeStyles styles)
-             => global::System.DateTime.Parse(s, provider, styles);
+            => global::System.DateTime.Parse(s, provider, styles);
 
         /// <inheritdoc cref="global::System.DateTime.ParseExact"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public global::System.DateTime ParseExact(string s, [global::System.Diagnostics.CodeAnalysis.StringSyntaxAttribute("DateTimeFormat")] string format, global::System.IFormatProvider? provider)
-             => global::System.DateTime.ParseExact(s, format, provider);
+            => global::System.DateTime.ParseExact(s, format, provider);
 
         /// <inheritdoc cref="global::System.DateTime.ParseExact"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public global::System.DateTime ParseExact(string s, [global::System.Diagnostics.CodeAnalysis.StringSyntaxAttribute("DateTimeFormat")] string format, global::System.IFormatProvider? provider, global::System.Globalization.DateTimeStyles style)
-             => global::System.DateTime.ParseExact(s, format, provider, style);
+            => global::System.DateTime.ParseExact(s, format, provider, style);
 
         /// <inheritdoc cref="global::System.DateTime.ParseExact"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public global::System.DateTime ParseExact(global::System.ReadOnlySpan<char> s, [global::System.Diagnostics.CodeAnalysis.StringSyntaxAttribute("DateTimeFormat")] global::System.ReadOnlySpan<char> format, global::System.IFormatProvider? provider, global::System.Globalization.DateTimeStyles style)
-             => global::System.DateTime.ParseExact(s, format, provider, style);
+            => global::System.DateTime.ParseExact(s, format, provider, style);
 
         /// <inheritdoc cref="global::System.DateTime.ParseExact"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public global::System.DateTime ParseExact(string s, [global::System.Diagnostics.CodeAnalysis.StringSyntaxAttribute("DateTimeFormat")] string[] formats, global::System.IFormatProvider? provider, global::System.Globalization.DateTimeStyles style)
-             => global::System.DateTime.ParseExact(s, formats, provider, style);
+            => global::System.DateTime.ParseExact(s, formats, provider, style);
 
         /// <inheritdoc cref="global::System.DateTime.ParseExact"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public global::System.DateTime ParseExact(global::System.ReadOnlySpan<char> s, [global::System.Diagnostics.CodeAnalysis.StringSyntaxAttribute("DateTimeFormat")] string[] formats, global::System.IFormatProvider? provider, global::System.Globalization.DateTimeStyles style)
-             => global::System.DateTime.ParseExact(s, formats, provider, style);
+            => global::System.DateTime.ParseExact(s, formats, provider, style);
 
         /// <inheritdoc cref="global::System.DateTime.TryParse"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public bool TryParse([global::System.Diagnostics.CodeAnalysis.NotNullWhenAttribute(true)] string? s, out global::System.DateTime result)
-             => global::System.DateTime.TryParse(s, out result);
+            => global::System.DateTime.TryParse(s, out result);
 
         /// <inheritdoc cref="global::System.DateTime.TryParse"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public bool TryParse(global::System.ReadOnlySpan<char> s, out global::System.DateTime result)
-             => global::System.DateTime.TryParse(s, out result);
+            => global::System.DateTime.TryParse(s, out result);
 
         /// <inheritdoc cref="global::System.DateTime.TryParse"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public bool TryParse([global::System.Diagnostics.CodeAnalysis.NotNullWhenAttribute(true)] string? s, global::System.IFormatProvider? provider, global::System.Globalization.DateTimeStyles styles, out global::System.DateTime result)
-             => global::System.DateTime.TryParse(s, provider, styles, out result);
+            => global::System.DateTime.TryParse(s, provider, styles, out result);
 
         /// <inheritdoc cref="global::System.DateTime.TryParse"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public bool TryParse(global::System.ReadOnlySpan<char> s, global::System.IFormatProvider? provider, global::System.Globalization.DateTimeStyles styles, out global::System.DateTime result)
-             => global::System.DateTime.TryParse(s, provider, styles, out result);
+            => global::System.DateTime.TryParse(s, provider, styles, out result);
 
         /// <inheritdoc cref="global::System.DateTime.TryParseExact"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public bool TryParseExact([global::System.Diagnostics.CodeAnalysis.NotNullWhenAttribute(true)] string? s, [global::System.Diagnostics.CodeAnalysis.NotNullWhenAttribute(true), global::System.Diagnostics.CodeAnalysis.StringSyntaxAttribute("DateTimeFormat")] string? format, global::System.IFormatProvider? provider, global::System.Globalization.DateTimeStyles style, out global::System.DateTime result)
-             => global::System.DateTime.TryParseExact(s, format, provider, style, out result);
+            => global::System.DateTime.TryParseExact(s, format, provider, style, out result);
 
         /// <inheritdoc cref="global::System.DateTime.TryParseExact"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public bool TryParseExact(global::System.ReadOnlySpan<char> s, [global::System.Diagnostics.CodeAnalysis.StringSyntaxAttribute("DateTimeFormat")] global::System.ReadOnlySpan<char> format, global::System.IFormatProvider? provider, global::System.Globalization.DateTimeStyles style, out global::System.DateTime result)
-             => global::System.DateTime.TryParseExact(s, format, provider, style, out result);
+            => global::System.DateTime.TryParseExact(s, format, provider, style, out result);
 
         /// <inheritdoc cref="global::System.DateTime.TryParseExact"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public bool TryParseExact([global::System.Diagnostics.CodeAnalysis.NotNullWhenAttribute(true)] string? s, [global::System.Diagnostics.CodeAnalysis.NotNullWhenAttribute(true), global::System.Diagnostics.CodeAnalysis.StringSyntaxAttribute("DateTimeFormat")] string?[] formats, global::System.IFormatProvider? provider, global::System.Globalization.DateTimeStyles style, out global::System.DateTime result)
-             => global::System.DateTime.TryParseExact(s, formats, provider, style, out result);
+            => global::System.DateTime.TryParseExact(s, formats, provider, style, out result);
 
         /// <inheritdoc cref="global::System.DateTime.TryParseExact"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public bool TryParseExact(global::System.ReadOnlySpan<char> s, [global::System.Diagnostics.CodeAnalysis.NotNullWhenAttribute(true), global::System.Diagnostics.CodeAnalysis.StringSyntaxAttribute("DateTimeFormat")] string?[] formats, global::System.IFormatProvider? provider, global::System.Globalization.DateTimeStyles style, out global::System.DateTime result)
-             => global::System.DateTime.TryParseExact(s, formats, provider, style, out result);
+            => global::System.DateTime.TryParseExact(s, formats, provider, style, out result);
 
         /// <inheritdoc cref="global::System.DateTime.TryParse"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public bool TryParse([global::System.Diagnostics.CodeAnalysis.NotNullWhenAttribute(true)] string? s, global::System.IFormatProvider? provider, out global::System.DateTime result)
-             => global::System.DateTime.TryParse(s, provider, out result);
+            => global::System.DateTime.TryParse(s, provider, out result);
 
         /// <inheritdoc cref="global::System.DateTime.Parse"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public global::System.DateTime Parse(global::System.ReadOnlySpan<char> s, global::System.IFormatProvider? provider)
-             => global::System.DateTime.Parse(s, provider);
+            => global::System.DateTime.Parse(s, provider);
 
         /// <inheritdoc cref="global::System.DateTime.TryParse"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public bool TryParse(global::System.ReadOnlySpan<char> s, global::System.IFormatProvider? provider, out global::System.DateTime result)
-             => global::System.DateTime.TryParse(s, provider, out result);
-
-        /// <inheritdoc cref="global::System.DateTime.Now"/>
-        public global::System.DateTime Now
-        {
-            get => global::System.DateTime.Now;
-        }
-
-        /// <inheritdoc cref="global::System.DateTime.Today"/>
-        public global::System.DateTime Today
-        {
-            get => global::System.DateTime.Today;
-        }
-
-        /// <inheritdoc cref="global::System.DateTime.UtcNow"/>
-        public global::System.DateTime UtcNow
-        {
-            get => global::System.DateTime.UtcNow;
-        }
+            => global::System.DateTime.TryParse(s, provider, out result);
 
     }
 }

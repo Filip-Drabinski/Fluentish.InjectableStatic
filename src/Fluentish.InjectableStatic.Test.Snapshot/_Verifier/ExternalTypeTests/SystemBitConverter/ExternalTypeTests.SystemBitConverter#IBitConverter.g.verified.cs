@@ -321,6 +321,7 @@ namespace Fluentish.Injectable.System
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         [global::System.CLSCompliantAttribute(false)]
         global::System.Half UInt16BitsToHalf(ushort value);
+
     }
 }
 #pragma warning restore

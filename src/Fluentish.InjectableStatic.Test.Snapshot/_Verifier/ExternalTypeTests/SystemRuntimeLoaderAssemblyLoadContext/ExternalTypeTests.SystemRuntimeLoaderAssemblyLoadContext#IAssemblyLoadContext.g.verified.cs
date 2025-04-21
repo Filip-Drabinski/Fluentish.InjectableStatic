@@ -7,6 +7,15 @@ namespace Fluentish.Injectable.System.Runtime.Loader
     /// <inheritdoc cref="global::System.Runtime.Loader.AssemblyLoadContext"/>
     public interface IAssemblyLoadContext
     {
+        /// <inheritdoc cref="global::System.Runtime.Loader.AssemblyLoadContext.Default"/>
+        global::System.Runtime.Loader.AssemblyLoadContext Default { get; }
+
+        /// <inheritdoc cref="global::System.Runtime.Loader.AssemblyLoadContext.All"/>
+        global::System.Collections.Generic.IEnumerable<global::System.Runtime.Loader.AssemblyLoadContext> All { get; }
+
+        /// <inheritdoc cref="global::System.Runtime.Loader.AssemblyLoadContext.CurrentContextualReflectionContext"/>
+        global::System.Runtime.Loader.AssemblyLoadContext? CurrentContextualReflectionContext { get; }
+
         /// <inheritdoc cref="global::System.Runtime.Loader.AssemblyLoadContext.GetLoadContext"/>
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
@@ -21,15 +30,6 @@ namespace Fluentish.Injectable.System.Runtime.Loader
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         global::System.Runtime.Loader.AssemblyLoadContext.ContextualReflectionScope EnterContextualReflection(global::System.Reflection.Assembly? activating);
-
-        /// <inheritdoc cref="global::System.Runtime.Loader.AssemblyLoadContext.Default"/>
-        global::System.Runtime.Loader.AssemblyLoadContext Default { get; }
-
-        /// <inheritdoc cref="global::System.Runtime.Loader.AssemblyLoadContext.All"/>
-        global::System.Collections.Generic.IEnumerable<global::System.Runtime.Loader.AssemblyLoadContext> All { get; }
-
-        /// <inheritdoc cref="global::System.Runtime.Loader.AssemblyLoadContext.CurrentContextualReflectionContext"/>
-        global::System.Runtime.Loader.AssemblyLoadContext? CurrentContextualReflectionContext { get; }
 
     }
 }

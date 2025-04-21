@@ -13,6 +13,7 @@ namespace Fluentish.Injectable.EventTests
             add => global::EventTests.EventHandler.Test += value;
             remove => global::EventTests.EventHandler.Test -= value;
         }
+
     }
 }
 #pragma warning restore

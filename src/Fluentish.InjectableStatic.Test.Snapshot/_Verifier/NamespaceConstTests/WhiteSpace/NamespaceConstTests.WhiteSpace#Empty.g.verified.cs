@@ -9,6 +9,7 @@ public class EmptyService : IEmpty
     [global::System.Diagnostics.DebuggerStepThrough]
     [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
     public void Test()
-         => global::NamespaceConstTests.Empty.Test();
+        => global::NamespaceConstTests.Empty.Test();
+
 }
 #pragma warning restore

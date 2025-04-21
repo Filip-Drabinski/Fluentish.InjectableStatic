@@ -1,4 +1,4 @@
-﻿namespace Fluentish.InjectableStatic.Generator
+﻿namespace Fluentish.InjectableStatic.Generator.GeneratedAttributes
 {
     public enum NamespaceMode
     {
@@ -6,13 +6,13 @@
         Const = 1,
     }
 
-    public record InjectableStaticConfiguration
+    public record InjectableStaticConfigurationInfo
     {
-        public string? Namespace { get; set; }
+        public string Namespace { get; set; }
         public string EndLine { get; set; }
         public NamespaceMode NamespaceMode { get; }
 
-        public InjectableStaticConfiguration(
+        public InjectableStaticConfigurationInfo(
             string endLine,
             NamespaceMode namespaceMode,
             string? @namespace

@@ -12,7 +12,8 @@ namespace Fluentish.Injectable.GenericMethodTests
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         public void Test<TType>()
             where TType : struct
-             => global::GenericMethodTests.GenericTypeArgumentConstraintValueType.Test<TType>();
+            => global::GenericMethodTests.GenericTypeArgumentConstraintValueType.Test<TType>();
+
     }
 }
 #pragma warning restore

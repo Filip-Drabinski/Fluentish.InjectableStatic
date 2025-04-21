@@ -11,6 +11,7 @@ namespace Fluentish.Injectable.GenericMethodTests
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         void Test<TType>()
             where TType : class, global::System.IDisposable, new();
+
     }
 }
 #pragma warning restore

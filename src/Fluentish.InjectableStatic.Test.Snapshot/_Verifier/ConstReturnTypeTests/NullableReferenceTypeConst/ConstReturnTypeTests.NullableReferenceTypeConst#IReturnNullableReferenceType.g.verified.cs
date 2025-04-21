@@ -9,6 +9,7 @@ namespace Fluentish.Injectable.ConstReturnTypeTests
     {
         /// <inheritdoc cref="global::ConstReturnTypeTests.ReturnNullableReferenceType.Test"/>
         global::ConstReturnTypeTests.Example? Test { get; }
+
     }
 }
 #pragma warning restore

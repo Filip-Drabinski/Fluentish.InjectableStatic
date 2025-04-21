@@ -13,6 +13,7 @@ namespace Fluentish.Injectable.FieldReturnTypeTests
             get => global::FieldReturnTypeTests.ReturnSugarTuple.Test;
             set => global::FieldReturnTypeTests.ReturnSugarTuple.Test = value;
         }
+
     }
 }
 #pragma warning restore

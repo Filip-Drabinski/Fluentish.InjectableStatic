@@ -10,6 +10,7 @@ namespace Fluentish.Injectable.NamespacePrefixTests
         [global::System.Diagnostics.DebuggerStepThrough]
         [global::System.Runtime.CompilerServices.MethodImpl(global::System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
         void Test();
+
     }
 }
 #pragma warning restore
